@@ -5,7 +5,7 @@ module.exports = {
   
   packagerConfig: {
     asar: true,
-    icon: '/path/to/icon',
+    icon: '/src/img/icon',
   },
   rebuildConfig: {},
   makers: [
@@ -70,7 +70,8 @@ module.exports = {
           owner: 'ndiing',
           name: 'satusehat-public'
         },
-        prerelease: true
+        prerelease: false,
+        draft: true
       }
     }
   ],
