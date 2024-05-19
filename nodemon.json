@@ -1,11 +1,7 @@
 {
-    "ignore": [
-      ".git",
-      "node_modules/**/node_modules",
-      "src/api/satusehat/controllers/**"
-    ],
+    "ignore": [".git", "node_modules/**/node_modules", "src/api/satusehat/controllers/**"],
     "env": {
-      "NODE_ENV": "development"
+        "NODE_ENV": "development"
     },
     "ext": "js"
-  }
+}
