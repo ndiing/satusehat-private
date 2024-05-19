@@ -2,18 +2,7 @@ const { FusesPlugin } = require('@electron-forge/plugin-fuses');
 const { FuseV1Options, FuseVersion } = require('@electron/fuses');
 
 module.exports = {
-  publishers: [
-    {
-      name: '@electron-forge/publisher-github',
-      config: {
-        repository: {
-          owner: 'ndiing',
-          name: 'satusehat-public'
-        },
-        prerelease: true
-      }
-    }
-  ],
+  
   packagerConfig: {
     asar: true,
   },
@@ -71,5 +60,17 @@ module.exports = {
       [FuseV1Options.EnableEmbeddedAsarIntegrityValidation]: true,
       [FuseV1Options.OnlyLoadAppFromAsar]: true,
     }),
+  ],
+  publishers: [
+    {
+      name: '@electron-forge/publisher-github',
+      config: {
+        repository: {
+          owner: 'ndiing',
+          name: 'satusehat-public'
+        },
+        prerelease: true
+      }
+    }
   ],
 };

@@ -1,4 +1,5 @@
 {
+  
   "name": "satusehat-private",
   "productName": "satusehat-private",
   "version": "1.0.0",
@@ -29,10 +30,7 @@
     "style-loader": "^3.0.0"
   },
   "keywords": [],
-  "author": {
-    "name": "Ridho Prasetya",
-    "email": "ndiing.inc@gmail.com"
-  },
+  "author": "Ridho Prasetya <ndiing.inc@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
@@ -40,5 +38,9 @@
     "express": "^4.19.2",
     "sqlite3": "^5.1.7",
     "undici": "^6.17.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github:ndiing/satusehat-public"
   }
 }
