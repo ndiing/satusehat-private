@@ -164,7 +164,7 @@ function parseItem3(item3, names) {
 
         if(rawBody){
             let pathname=(names.map(name=>toKebabCase(name)).join('/'))
-            write(`./message/${pathname}.json`,JSON.stringify(helper.flatten(rawBody),null,4))
+            write(`./data/${pathname}.json`,JSON.stringify(helper.flatten(rawBody),null,4))
         }
     }
 }

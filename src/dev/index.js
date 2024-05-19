@@ -3,7 +3,7 @@
 // require('./controller-generator.js')
 // require('./router-generator.js')
 // require('./http-generator.js')
-// require('./message-generator.js')
+// require('./data-generator.js')
 
 // const {flatten,unflatten,merge} = require('../lib/helper')
 
