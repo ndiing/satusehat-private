@@ -2,7 +2,7 @@
     "name": "satusehat",
     "productName": "satusehat",
     "version": "1.0.0",
-    "description": "",
+    "description": "satusehat",
     "main": ".webpack/main",
     "scripts": {
         "dev": "nodemon src/index.js",
