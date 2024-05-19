@@ -1,0 +1,12 @@
+
+###
+GET http://localhost:3000/api/hl7/CodeSystem-organization-type
+
+###
+GET http://localhost:3000/api/hl7/CodeSystem-location-physical-type
+
+###
+GET http://localhost:3000/api/hl7/CodeSystem-v3-ActCode
+
+###
+GET http://localhost:3000/api/hl7/CodeSystem-v3-ParticipationType

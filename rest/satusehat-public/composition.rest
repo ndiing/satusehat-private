@@ -1,0 +1,172 @@
+@Encounter_uuid=
+
+### Composition - Edukasi Diet
+POST {{base_url}}/Composition
+Authorization: Bearer {{token}}
+Content-type: application/json
+
+{
+    "resourceType": "Composition",
+    "identifier": {
+        "system": "http://sys-ids.kemkes.go.id/composition/{{Org_id}}",
+        "value": "P20240001"
+    },
+    "status": "final",
+    "type": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "18842-5",
+                "display": "Discharge summary"
+            }
+        ]
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "LP173421-1",
+                    "display": "Report"
+                }
+            ]
+        }
+    ],
+    "subject": {
+        "reference": "Patient/100000030009",
+        "display": "Budi Santoso"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_uuid}}",
+        "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+    },
+    "date": "2022-06-14",
+    "author": [
+        {
+            "reference": "Practitioner/N10000001",
+            "display": "Dokter Bronsig"
+        }
+    ],
+    "title": "Resume Medis Rawat Jalan",
+    "custodian": {
+        "reference": "Organization/{{Org_id}}"
+    },
+    "section": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "42344-2",
+                        "display": "Discharge diet (narrative)"
+                    }
+                ]
+            },
+            "text": {
+                "status": "additional",
+                "div": "Rekomendasi diet rendah lemak, rendah kalori"
+            }
+        }
+    ]
+}
+
+### Composition - Search by Subject
+GET {{base_url}}/Composition?subject=100000030009
+Authorization: Bearer {{token}}
+
+### Composition - Search by Subject and Encounter
+GET {{base_url}}/Composition?subject=100000030009&encounter={{Encounter_uuid}}
+Authorization: Bearer {{token}}
+
+### Composition - Search by Encounter
+GET {{base_url}}/Composition?encounter={{Encounter_uuid}}
+Authorization: Bearer {{token}}
+
+### Composition - By ID
+GET {{base_url}}/Composition/:id
+Authorization: Bearer {{token}}
+
+### Composition - Update
+PUT {{base_url}}/Composition/:id
+Authorization: Bearer {{token}}
+Content-type: application/json
+
+{
+    "resourceType": "Composition",
+    "id": "e511fb00-3641-4816-a9fd-db2a55d1897d",
+    "identifier": {
+        "system": "http://sys-ids.kemkes.go.id/composition/{{Org_id}}",
+        "value": "P20240001"
+    },
+    "status": "final",
+    "type": {
+        "coding": [
+            {
+                "system": "http://loinc.org",
+                "code": "18842-5",
+                "display": "Discharge summary"
+            }
+        ]
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://loinc.org",
+                    "code": "LP173421-1",
+                    "display": "Report"
+                }
+            ]
+        }
+    ],
+    "subject": {
+        "reference": "Patient/100000030009",
+        "display": "Budi Santoso"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_uuid}}",
+        "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+    },
+    "date": "2022-06-14",
+    "author": [
+        {
+            "reference": "Practitioner/N10000001",
+            "display": "Dokter Bronsig"
+        }
+    ],
+    "title": "Resume Medis Rawat Jalan",
+    "custodian": {
+        "reference": "Organization/{{Org_id}}"
+    },
+    "section": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://loinc.org",
+                        "code": "42344-2",
+                        "display": "Discharge diet (narrative)"
+                    }
+                ]
+            },
+            "text": {
+                "status": "additional",
+                "div": "Rekomendasi diet rendah karbohidrat"
+            }
+        }
+    ]
+}
+
+### Composition - PATCH
+PATCH {{base_url}}/Composition/:id
+Content-Type: application/json-patch+json
+Authorization: Bearer {{token}}
+
+[
+    {
+        "op": "replace",
+        "path": "/status",
+        "value": "amended"
+    }
+]
+

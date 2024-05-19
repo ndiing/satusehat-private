@@ -1,0 +1,25 @@
+###
+POST http://localhost:3000/api/master/telecom
+Content-Type: application/json
+
+{
+    "system": "phone",
+    "value": "2328",
+    "use": "work"
+}
+
+###
+GET http://localhost:3000/api/master/telecom
+
+###
+PATCH http://localhost:3000/api/master/telecom
+Content-Type: application/json
+
+{
+    "system": "phone",
+    "value": "2328",
+    "use": "work"
+}
+
+###
+DELETE http://localhost:3000/api/master/telecom?system=phone&value=2328

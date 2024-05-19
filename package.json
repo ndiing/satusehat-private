@@ -5,6 +5,7 @@
   "description": "My Electron application description",
   "main": ".webpack/main",
   "scripts": {
+    "dev": "nodemon src/index.js",
     "start": "electron-forge start",
     "package": "electron-forge package",
     "make": "electron-forge make",
@@ -35,6 +36,9 @@
   "license": "MIT",
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1",
-    "update-electron-app": "^3.0.0"
+    "update-electron-app": "^3.0.0",
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7",
+    "undici": "^6.17.0"
   }
 }

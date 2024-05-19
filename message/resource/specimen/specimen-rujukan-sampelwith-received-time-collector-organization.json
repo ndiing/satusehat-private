@@ -1,0 +1,20 @@
+{
+    "resourceType": "Specimen",
+    "id": "dbee2404-e11d-421f-8399-57cee518e0c7",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+    "identifier.0.value": "00001",
+    "identifier.0.assigner.reference": "Organization/{{Org_id}}",
+    "status": "available",
+    "type.coding.0.system": "http://snomed.info/sct",
+    "type.coding.0.code": "119294007",
+    "type.coding.0.display": "Dried blood specimen",
+    "collection.collectedDateTime": "2022-06-14T08:15:00+07:00",
+    "collection.extension.0.url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
+    "collection.extension.0.valueReference.reference": "Organization/{{Org_id}}",
+    "subject.reference": "Patient/100000030004",
+    "subject.display": "Budi Santoso",
+    "request.0.reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab",
+    "receivedTime": "2022-06-14T08:25:00+07:00",
+    "extension.0.url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
+    "extension.0.valueDateTime": "2022-06-14T08:23:00+07:00"
+}

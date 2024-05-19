@@ -1,0 +1,13 @@
+
+### Practitioner - Search NIK
+GET {{base_url}}/Practitioner?identifier=https://fhir.kemkes.go.id/id/nik|367400001111222
+Authorization: Bearer {{token}}
+
+### Practitioner - Search Name, Gender, Birthdate
+GET {{base_url}}/Practitioner?name=Voigt&gender=male&birthdate=1945
+Authorization: Bearer {{token}}
+
+### Practitioner - By ID
+GET {{base_url}}/Practitioner/:id
+Authorization: Bearer {{token}}
+

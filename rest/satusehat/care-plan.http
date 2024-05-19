@@ -1,0 +1,65 @@
+@Encounter_uuid=
+
+### CarePlan - Post
+POST http://localhost:3000/api/satusehat/CarePlan
+Content-type: application/json
+
+{
+    "resourceType": "CarePlan",
+    "status": "active",
+    "intent": "plan",
+    "description": "Rujuk ke RS Rujukan Tumbuh Kembang level 1",
+    "subject": {
+        "reference": "Patient/100000030004",
+        "display": "Anak Smith"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_uuid}}"
+    },
+    "created": "2022-07-26",
+    "author": {
+        "reference": "Practitioner/N10000001"
+    }
+}
+
+### CarePlan - Search by ID Copy
+GET http://localhost:3000/api/satusehat/CarePlan/:id
+
+### CarePlan - Search by Patient with/without Encounter
+GET http://localhost:3000/api/satusehat/CarePlan?subject=100000030004&encounter={{Encounter_uuid}}
+
+### CarePlan - UPDATE
+PUT http://localhost:3000/api/satusehat/CarePlan/:id
+Content-type: application/json
+
+{
+    "resourceType": "CarePlan",
+    "id": "d16e2819-be08-40f7-888b-3f81a3a3518d",
+    "status": "active",
+    "intent": "plan",
+    "description": "Rujuk ke RS Rujukan Tumbuh Kembang ABCDEFG level 1",
+    "subject": {
+        "reference": "Patient/100000030004",
+        "display": "Anak Smith"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_uuid}}"
+    },
+    "created": "2022-07-26",
+    "author": {
+        "reference": "Practitioner/N10000001"
+    }
+}
+
+### CarePlan - PATCH
+PATCH http://localhost:3000/api/satusehat/CarePlan/:id
+Content-Type: application/json-patch+json
+
+[
+    {
+        "op": "replace",
+        "path": "/description",
+        "value": "Rujuk ke PAUD terdekat untuk stimulasi tumbuh kembang"
+    }
+]
+
