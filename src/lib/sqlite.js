@@ -20,13 +20,11 @@ class DB {
         this.db.get = promisify(this.db.get);
         this.db.all = promisify(this.db.all);
 
-        this.db.serialize();
-
         this.init();
     }
 
-    init() {
-        this.db.run(
+    async init() {
+        return this.db.run(
             `CREATE TABLE IF NOT EXISTS ${this.name} (
                 _id TEXT PRIMARY KEY,
                 doc TEXT,
@@ -35,7 +33,7 @@ class DB {
         );
     }
 
-    put(doc) {
+    async put(doc) {
         return this.db.run(
             `INSERT INTO ${this.name} (_id, doc)
         VALUES (?, ?)
@@ -56,14 +54,14 @@ class DB {
         }
         return res;
     }
-    post(doc) {
+    async post(doc) {
         return this.db.run(
             `INSERT INTO ${this.name} (_id, doc)
         VALUES (?, ?);`,
             [doc._id, JSON.stringify(doc)]
         );
     }
-    remove(_id) {
+    async remove(_id) {
         return this.db.run(
             `DELETE FROM ${this.name}
         WHERE _id = ?;`,
@@ -89,7 +87,7 @@ class DB {
         };
     }
 
-    destroy() {
+    async destroy() {
         return this.db.run(`DROP TABLE IF EXISTS ${this.name};`);
     }
 }

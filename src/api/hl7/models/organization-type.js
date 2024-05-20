@@ -119,6 +119,8 @@ class Model extends DB {
                 await this.put(doc);
             }
         }
+
+        return Promise.resolve()
     }
 }
 
