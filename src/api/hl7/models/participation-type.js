@@ -1,6 +1,6 @@
 const DB = require("../../../lib/sqlite");
 
-class Model extends DB {
+class ParticipationType extends DB {
     constructor() {
         super("ParticipationType");
     }
@@ -394,4 +394,4 @@ class Model extends DB {
     }
 }
 
-module.exports = Model;
+module.exports = ParticipationType;

@@ -108,7 +108,9 @@ app.use((err, req, res, next) => {
         res.status(500);
     }
 
-    res.json(err);
+    const {message} = err
+
+    res.json({message});
 });
 
 const port = Number(process.env.port);

@@ -13,7 +13,7 @@ process.env.consent_url = "https://api-satusehat.kemkes.go.id/consent/v1";
 // Service class for handling API requests
 class Service {
     constructor(options = {}) {
-        const { storage } = options;
+        const { storage, } = options;
         this.storage = storage;
         // Initializing SQLite database for logging
         this.log = new DB("log");
@@ -96,6 +96,21 @@ class Service {
                 text,
             },
         };
+
+        // remove it later
+        // stop before request
+        // in development stage
+        return {
+            json:() => {
+                try {
+                    return JSON.parse(body)
+                } catch (error) {
+                    return body
+                }
+            }
+        }
+
+
         const doc = {
             // Generating UUID for log entry
             _id: crypto.randomUUID(),

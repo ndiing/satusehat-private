@@ -22,19 +22,19 @@ class Telecom {
         this.db.get = promisify(this.db.get);
         this.db.all = promisify(this.db.all);
 
+        this.db.serialize()
+
         this.init();
     }
 
     init() {
-        this.db.serialize(() => {
-            this.db.run(`CREATE TABLE IF NOT EXISTS telecom (
-                system TEXT,
-                value TEXT,
-                use TEXT,
-                PRIMARY KEY (system, value)
-            );
-            `);
-        });
+        return this.db.run(`CREATE TABLE IF NOT EXISTS telecom (
+            system TEXT,
+            value TEXT,
+            use TEXT,
+            PRIMARY KEY (system, value)
+        );
+        `);
     }
 
     insert(data={}) {

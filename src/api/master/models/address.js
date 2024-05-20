@@ -30,21 +30,21 @@ class Address {
         this.db.get = promisify(this.db.get);
         this.db.all = promisify(this.db.all);
 
+        this.db.serialize()
+
         this.init();
     }
 
     init() {
-        this.db.serialize(() => {
-            this.db.run(`CREATE TABLE IF NOT EXISTS address (
-                use TEXT PRIMARY KEY,
-                line TEXT,
-                city TEXT,
-                postalCode TEXT,
-                country TEXT,
-                administrativeCode TEXT
-            );
-            `);
-        });
+        return this.db.run(`CREATE TABLE IF NOT EXISTS address (
+            use TEXT PRIMARY KEY,
+            line TEXT,
+            city TEXT,
+            postalCode TEXT,
+            country TEXT,
+            administrativeCode TEXT
+        );
+        `);
     }
 
     insert(data={}) {

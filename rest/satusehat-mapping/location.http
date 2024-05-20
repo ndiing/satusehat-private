@@ -1,0 +1,18 @@
+@Org_id=
+
+### Location - Create
+POST http://localhost:3000/api/satusehat/v1/Location
+Content-type: application/json
+
+{
+    "identifier.0.value": "G-2-R-1A",
+    "status": "active",
+    "name": "Ruang 1A IRJT",
+    "description": "Ruang 1A, Poliklinik Bedah Rawat Jalan Terpadu, Lantai 2, Gedung G",
+    "mode": "instance",
+    "physicalType.coding.0.code": "ro",
+    "position.longitude": -6.23115426275766,
+    "position.latitude": 106.83239885393944,
+    "position.altitude": 0,
+    "Org_id": "123456"
+}

@@ -1,5 +1,5 @@
 {
-    "ignore": [".git", "node_modules/**/node_modules", "src/api/satusehat/controllers/**"],
+    "ignore": [".git", "node_modules/**"],
     "env": {
         "NODE_ENV": "development"
     },

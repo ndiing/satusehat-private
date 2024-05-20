@@ -1,3 +1,9 @@
+@Org_id=
+
+### Organization - Create
+POST http://localhost:3000/api/satusehat/v1/Organization
+Content-type: application/json
+
 {
     "active": true,
     "identifier.0.use": "official",

@@ -1,3 +1,7 @@
+const { flatten, unflatten, merge } = require("../../../lib/helper");
+const LocationPhysicalType = require("../../hl7/models/location-physical-type");
+const Address = require("../../master/models/address");
+const Telecom = require("../../master/models/telecom");
 const Controller = require("../controller");
 const Service = require("../services/location");
 
@@ -119,9 +123,77 @@ class Location extends Controller {
 //                     "managingOrganization": {
 //                         "reference": "Organization/{{Org_id}}"
 //                     }
-//                 },// 
+//                 },
+// 
 // 
                 body,
+            });
+            res.json(result);
+        } catch (error) {
+            next(error);
+        }
+    }
+
+    static async postV1(req, res, next) {
+        try {
+            const {params,query,body:{Org_id,...body}} = req
+
+            // "physicalType.coding.0.code": "ro",
+            const locationPhysicalTypeModel = new LocationPhysicalType()
+            const locationPhysicalType = await locationPhysicalTypeModel.get(body['physicalType.coding.0.code'])
+            if(!locationPhysicalType){
+                throw new Error(`physicalType.coding.0.code tidak ditemukan`)
+            }
+            body["physicalType.coding.0.display"]=locationPhysicalType.display
+
+            const telecomModel = new Telecom()
+            const telecom = await telecomModel.select()
+
+            const addressModel = new Address()
+            const address = await addressModel.select()
+
+            const target={
+                "resourceType": "Location",
+                "identifier": [
+                    {
+                        "system": "http://sys-ids.kemkes.go.id/location/"+Org_id+"",
+                        // "value": "G-2-R-1A"
+                    }
+                ],
+                // "status": "active",
+                // "name": "Ruang 1A IRJT",
+                // "description": "Ruang 1A, Poliklinik Bedah Rawat Jalan Terpadu, Lantai 2, Gedung G",
+                // "mode": "instance",
+                telecom,
+                address,
+                "physicalType": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                            // "code": "ro",
+                            // "display": "Room"
+                        }
+                    ]
+                },
+                // "position": {
+                //     "longitude": -6.23115426275766,
+                //     "latitude": 106.83239885393944,
+                //     "altitude": 0
+                // },
+                "managingOrganization": {
+                    "reference": "Organization/"+Org_id+""
+                }
+            }
+
+            const source = unflatten(body)
+            const payload=merge(target,source)
+
+            const result = await res.locals.service.post({
+                params: {
+                },
+                query: {
+                },
+                body:payload,
             });
             res.json(result);
         } catch (error) {
@@ -261,7 +333,8 @@ class Location extends Controller {
 //                     "managingOrganization": {
 //                         "reference": "Organization/{{Org_id}}"
 //                     }
-//                 },// 
+//                 },
+// 
 // 
                 body,
             });
@@ -286,7 +359,8 @@ class Location extends Controller {
 //                         "path": "/status",
 //                         "value": "inactive"
 //                     }
-//                 ],// 
+//                 ],
+// 
 // 
                 body,
             });

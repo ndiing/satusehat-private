@@ -20,6 +20,8 @@ class DB {
         this.db.get = promisify(this.db.get);
         this.db.all = promisify(this.db.all);
 
+        this.db.serialize()
+
         this.init();
     }
 
