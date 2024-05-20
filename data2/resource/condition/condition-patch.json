@@ -1,5 +1,0 @@
-{
-    "0.op": "replace",
-    "0.path": "/clinicalStatus/coding/0/code",
-    "0.value": "remission"
-}
