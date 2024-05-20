@@ -4,8 +4,7 @@ Abiyosoft
 
 ## ENV
 
-```env
-# Konfigurasi untuk Port Layanan Web
+``<code>env</code># Konfigurasi untuk Port Layanan Web
 port=3000
 
 # Konfigurasi Server Proxy
@@ -17,10 +16,8 @@ proxy=http://127.0.0.1:8888
 # Pastikan kredensial ini tetap rahasia dan aman.
 client_id=
 client_secret=
-organization_id=
-```
-
-## REST
+organization_id=<code>```
+</code>## REST
 
 http://localhost:3000/api
 
@@ -28,257 +25,257 @@ http://localhost:3000/api
 
 #### telecom
 
--   `post` [/telecom](./rest/master/telecom.http)
--   `get` [/telecom](./rest/master/telecom.http)
--   `patch` [/telecom](./rest/master/telecom.http)
--   `delete` [/telecom](./rest/master/telecom.http)
+-   <code>post</code> [/telecom](./rest/master/telecom.http)
+-   <code>get</code> [/telecom](./rest/master/telecom.http)
+-   <code>patch</code> [/telecom](./rest/master/telecom.http)
+-   <code>delete</code> [/telecom](./rest/master/telecom.http)
 
 #### address
 
--   `post` [/address](./rest/master/address.http)
--   `get` [/address](./rest/master/address.http)
--   `patch` [/address](./rest/master/address.http)
--   `delete` [/address](./rest/master/address.http)
+-   <code>post</code> [/address](./rest/master/address.http)
+-   <code>get</code> [/address](./rest/master/address.http)
+-   <code>patch</code> [/address](./rest/master/address.http)
+-   <code>delete</code> [/address](./rest/master/address.http)
 
 ### HL7
 
--   `get` [/CodeSystem-location-physical-type](./rest/hl7/hl7.http)
--   `get` [/CodeSystem-organization-type](./rest/hl7/hl7.http)
--   `get` [/CodeSystem-v3-ActCode](./rest/hl7/hl7.http)
--   `get` [/CodeSystem-v3-ParticipationType](./rest/hl7/hl7.http)
+-   <code>get</code> [/CodeSystem-location-physical-type](./rest/hl7/hl7.http)
+-   <code>get</code> [/CodeSystem-organization-type](./rest/hl7/hl7.http)
+-   <code>get</code> [/CodeSystem-v3-ActCode](./rest/hl7/hl7.http)
+-   <code>get</code> [/CodeSystem-v3-ParticipationType](./rest/hl7/hl7.http)
 
 ### Satusehat Private
 
 #### Practitioner
 
--   `get` /Practitioner
--   `get` /Practitioner/:id
+-   <code>get</code> /Practitioner
+-   <code>get</code> /Practitioner/:id
 
 #### Organization
 
--   `post` /Organization
--   `get` /Organization/:id
--   `get` /Organization
--   `put` /Organization/:id
--   `patch` /Organization/:id
+-   <code>post</code> /Organization
+-   <code>get</code> /Organization/:id
+-   <code>get</code> /Organization
+-   <code>put</code> /Organization/:id
+-   <code>patch</code> /Organization/:id
 
 #### Location
 
--   `post` /Location
--   `get` /Location
--   `get` /Location/:id
--   `put` /Location/:id
--   `patch` /Location/:id
+-   <code>post</code> /Location
+-   <code>get</code> /Location
+-   <code>get</code> /Location/:id
+-   <code>put</code> /Location/:id
+-   <code>patch</code> /Location/:id
 
 #### Encounter
 
--   `post` /Encounter
--   `get` /Encounter/:id
--   `get` /Encounter
--   `put` /Encounter/:id
--   `patch` /Encounter/:id
+-   <code>post</code> /Encounter
+-   <code>get</code> /Encounter/:id
+-   <code>get</code> /Encounter
+-   <code>put</code> /Encounter/:id
+-   <code>patch</code> /Encounter/:id
 
 #### Condition
 
--   `post` /Condition
--   `get` /Condition
--   `get` /Condition/:id
--   `put` /Condition/:id
--   `patch` /Condition/:id
+-   <code>post</code> /Condition
+-   <code>get</code> /Condition
+-   <code>get</code> /Condition/:id
+-   <code>put</code> /Condition/:id
+-   <code>patch</code> /Condition/:id
 
 #### Observation
 
--   `post` /Observation
--   `get` /Observation
--   `get` /Observation/:id
--   `put` /Observation/:id
--   `patch` /Observation/:id
+-   <code>post</code> /Observation
+-   <code>get</code> /Observation
+-   <code>get</code> /Observation/:id
+-   <code>put</code> /Observation/:id
+-   <code>patch</code> /Observation/:id
 
 #### Composition
 
--   `post` /Composition
--   `get` /Composition
--   `get` /Composition/:id
--   `put` /Composition/:id
--   `patch` /Composition/:id
+-   <code>post</code> /Composition
+-   <code>get</code> /Composition
+-   <code>get</code> /Composition/:id
+-   <code>put</code> /Composition/:id
+-   <code>patch</code> /Composition/:id
 
 #### Procedure
 
--   `post` /Procedure
--   `get` /Procedure
--   `get` /Procedure/:id
--   `put` /Procedure/:id
--   `patch` /Procedure/:id
+-   <code>post</code> /Procedure
+-   <code>get</code> /Procedure
+-   <code>get</code> /Procedure/:id
+-   <code>put</code> /Procedure/:id
+-   <code>patch</code> /Procedure/:id
 
 #### Medication
 
--   `post` /Medication
--   `get` /Medication/:id
--   `put` /Medication/:id
--   `patch` /Medication/:id
+-   <code>post</code> /Medication
+-   <code>get</code> /Medication/:id
+-   <code>put</code> /Medication/:id
+-   <code>patch</code> /Medication/:id
 
 #### MedicationRequest
 
--   `post` /MedicationRequest
--   `get` /MedicationRequest
--   `get` /MedicationRequest/:id
--   `put` /MedicationRequest/:id
--   `patch` /MedicationRequest/:id
+-   <code>post</code> /MedicationRequest
+-   <code>get</code> /MedicationRequest
+-   <code>get</code> /MedicationRequest/:id
+-   <code>put</code> /MedicationRequest/:id
+-   <code>patch</code> /MedicationRequest/:id
 
 #### MedicationDispense
 
--   `post` /MedicationDispense
--   `get` /MedicationDispense
--   `get` /MedicationDispense/:id
--   `put` /MedicationDispense/:id
--   `patch` /MedicationDispense/:id
+-   <code>post</code> /MedicationDispense
+-   <code>get</code> /MedicationDispense
+-   <code>get</code> /MedicationDispense/:id
+-   <code>put</code> /MedicationDispense/:id
+-   <code>patch</code> /MedicationDispense/:id
 
 #### DiagnosticReport
 
--   `post` /DiagnosticReport
--   `get` /DiagnosticReport
--   `get` /DiagnosticReport/:id
--   `put` /DiagnosticReport/:id
--   `patch` /DiagnosticReport/:id
+-   <code>post</code> /DiagnosticReport
+-   <code>get</code> /DiagnosticReport
+-   <code>get</code> /DiagnosticReport/:id
+-   <code>put</code> /DiagnosticReport/:id
+-   <code>patch</code> /DiagnosticReport/:id
 
 #### AllergyIntolerance
 
--   `post` /AllergyIntolerance
--   `get` /AllergyIntolerance
--   `get` /AllergyIntolerance/:id
--   `put` /AllergyIntolerance/:id
--   `patch` /AllergyIntolerance/:id
+-   <code>post</code> /AllergyIntolerance
+-   <code>get</code> /AllergyIntolerance
+-   <code>get</code> /AllergyIntolerance/:id
+-   <code>put</code> /AllergyIntolerance/:id
+-   <code>patch</code> /AllergyIntolerance/:id
 
 #### ClinicalImpression
 
--   `post` /ClinicalImpression
--   `get` /ClinicalImpression
--   `get` /ClinicalImpression/:id
--   `put` /ClinicalImpression/:id
--   `patch` /ClinicalImpression/:id
+-   <code>post</code> /ClinicalImpression
+-   <code>get</code> /ClinicalImpression
+-   <code>get</code> /ClinicalImpression/:id
+-   <code>put</code> /ClinicalImpression/:id
+-   <code>patch</code> /ClinicalImpression/:id
 
 #### HealthcareService
 
--   `post` /HealthcareService
--   `get` /HealthcareService/:id
--   `get` /HealthcareService
--   `put` /HealthcareService/:id
--   `patch` /HealthcareService/:id
+-   <code>post</code> /HealthcareService
+-   <code>get</code> /HealthcareService/:id
+-   <code>get</code> /HealthcareService
+-   <code>put</code> /HealthcareService/:id
+-   <code>patch</code> /HealthcareService/:id
 
 #### Appointment
 
--   `post` /Appointment
--   `get` /Appointment
--   `get` /Appointment/:id
--   `put` /Appointment/:id
--   `patch` /Appointment/:id
+-   <code>post</code> /Appointment
+-   <code>get</code> /Appointment
+-   <code>get</code> /Appointment/:id
+-   <code>put</code> /Appointment/:id
+-   <code>patch</code> /Appointment/:id
 
 #### AppointmentResponse
 
--   `post` /AppointmentResponse
--   `get` /AppointmentResponse/:id
--   `get` /AppointmentResponse
--   `put` /AppointmentResponse/:id
--   `patch` /AppointmentResponse/:id
+-   <code>post</code> /AppointmentResponse
+-   <code>get</code> /AppointmentResponse/:id
+-   <code>get</code> /AppointmentResponse
+-   <code>put</code> /AppointmentResponse/:id
+-   <code>patch</code> /AppointmentResponse/:id
 
 #### PractitionerRole
 
--   `post` /PractitionerRole
--   `get` /PractitionerRole/:id
--   `get` /PractitionerRole
--   `put` /PractitionerRole/:id
--   `patch` /PractitionerRole/:id
+-   <code>post</code> /PractitionerRole
+-   <code>get</code> /PractitionerRole/:id
+-   <code>get</code> /PractitionerRole
+-   <code>put</code> /PractitionerRole/:id
+-   <code>patch</code> /PractitionerRole/:id
 
 #### Slot
 
--   `post` /Slot
--   `get` /Slot/:id
--   `put` /Slot/:id
--   `patch` /Slot/:id
+-   <code>post</code> /Slot
+-   <code>get</code> /Slot/:id
+-   <code>put</code> /Slot/:id
+-   <code>patch</code> /Slot/:id
 
 #### Immunization
 
--   `get` /Immunization
--   `get` /Immunization/:id
--   `put` /Immunization/:id
--   `patch` /Immunization/:id
+-   <code>get</code> /Immunization
+-   <code>get</code> /Immunization/:id
+-   <code>put</code> /Immunization/:id
+-   <code>patch</code> /Immunization/:id
 
 #### ImagingStudy
 
--   `post` /ImagingStudy
--   `get` /ImagingStudy
--   `put` /ImagingStudy/:id
+-   <code>post</code> /ImagingStudy
+-   <code>get</code> /ImagingStudy
+-   <code>put</code> /ImagingStudy/:id
 
 #### EpisodeOfCare
 
--   `post` /EpisodeOfCare
--   `get` /EpisodeOfCare
--   `get` /EpisodeOfCare/:id
--   `put` /EpisodeOfCare/:id
--   `patch` /EpisodeOfCare/:id
+-   <code>post</code> /EpisodeOfCare
+-   <code>get</code> /EpisodeOfCare
+-   <code>get</code> /EpisodeOfCare/:id
+-   <code>put</code> /EpisodeOfCare/:id
+-   <code>patch</code> /EpisodeOfCare/:id
 
 #### CarePlan
 
--   `post` /CarePlan
--   `get` /CarePlan/:id
--   `get` /CarePlan
--   `put` /CarePlan/:id
--   `patch` /CarePlan/:id
+-   <code>post</code> /CarePlan
+-   <code>get</code> /CarePlan/:id
+-   <code>get</code> /CarePlan
+-   <code>put</code> /CarePlan/:id
+-   <code>patch</code> /CarePlan/:id
 
 #### FamilyMemberHistory
 
--   `post` /FamilyMemberHistory
--   `get` /FamilyMemberHistory/:id
--   `get` /FamilyMemberHistory
--   `put` /FamilyMemberHistory/:id
--   `patch` /FamilyMemberHistory/:id
+-   <code>post</code> /FamilyMemberHistory
+-   <code>get</code> /FamilyMemberHistory/:id
+-   <code>get</code> /FamilyMemberHistory
+-   <code>put</code> /FamilyMemberHistory/:id
+-   <code>patch</code> /FamilyMemberHistory/:id
 
 #### QuestionnaireResponse
 
--   `post` /QuestionnaireResponse
--   `put` /QuestionnaireResponse/:id
--   `get` /QuestionnaireResponse
--   `get` /QuestionnaireResponse/:id
+-   <code>post</code> /QuestionnaireResponse
+-   <code>put</code> /QuestionnaireResponse/:id
+-   <code>get</code> /QuestionnaireResponse
+-   <code>get</code> /QuestionnaireResponse/:id
 
 #### ServiceRequest
 
--   `post` /ServiceRequest
--   `get` /ServiceRequest
--   `get` /ServiceRequest/:id
--   `put` /ServiceRequest/:id
--   `patch` /ServiceRequest/:id
+-   <code>post</code> /ServiceRequest
+-   <code>get</code> /ServiceRequest
+-   <code>get</code> /ServiceRequest/:id
+-   <code>put</code> /ServiceRequest/:id
+-   <code>patch</code> /ServiceRequest/:id
 
 #### Specimen
 
--   `post` /Specimen
--   `put` /Specimen/:id
--   `get` /Specimen/:id
--   `get` /Specimen
--   `patch` /Specimen/:id
+-   <code>post</code> /Specimen
+-   <code>put</code> /Specimen/:id
+-   <code>get</code> /Specimen/:id
+-   <code>get</code> /Specimen
+-   <code>patch</code> /Specimen/:id
 
 #### RelatedPerson
 
--   `post` /RelatedPerson
--   `put` /RelatedPerson/:id
--   `get` /RelatedPerson
--   `patch` /RelatedPerson/:id
+-   <code>post</code> /RelatedPerson
+-   <code>put</code> /RelatedPerson/:id
+-   <code>get</code> /RelatedPerson
+-   <code>patch</code> /RelatedPerson/:id
 
 #### Patient
 
--   `get` /Patient
--   `get` /Patient/:id
--   `post` /Patient
+-   <code>get</code> /Patient
+-   <code>get</code> /Patient/:id
+-   <code>post</code> /Patient
 
 ### Satusehat Mapping
 
 #### Organization
 
--   `post` [/v1/Organization](./rest/satusehat-mapping/organization.http) - [Create Organization](./docs/satusehat-mapping/organization.md)
+-   <code>post</code> [/v1/Organization](./rest/satusehat-mapping/organization.http) - [Create Organization](./docs/satusehat-mapping/organization.md)
 
 #### Location
 
--   `post` [/v1/Location](./rest/satusehat-mapping/location.http) - [Create Location](./docs/satusehat-mapping/location.md)
+-   <code>post</code> [/v1/Location](./rest/satusehat-mapping/location.http) - [Create Location](./docs/satusehat-mapping/location.md)
 
 #### Encounter
 
--   `post` [/v1/Encounter](./rest/satusehat-mapping/encounter.http) - [Create Encounter](./docs/satusehat-mapping/encounter.md)
+-   <code>post</code> [/v1/Encounter](./rest/satusehat-mapping/encounter.http) - [Create Encounter](./docs/satusehat-mapping/encounter.md)
