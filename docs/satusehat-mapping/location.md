@@ -1,14 +1,14 @@
-### Location - Create
+### Pembuatan Lokasi - Location
 
-#### HTTP Request
+#### Permintaan HTTP
 **POST** `http://localhost:3000/api/satusehat/v1/Location`
 
-#### Headers
+#### Header
 | Key            | Value               |
 |----------------|---------------------|
 | Content-type   | application/json    |
 
-#### Request Body
+#### Isi Permintaan
 <pre>
 {
     "identifier.0.value": "GT1-R-IGD-PONEK",
@@ -24,21 +24,24 @@
 }
 </pre>
 
-#### Request Body Fields
-| Field                            | Type    | Description                                                                                  |
-|----------------------------------|---------|----------------------------------------------------------------------------------------------|
-| `identifier.0.value`             | String  | The identifier value for the location, e.g., "GT1-R-IGD-PONEK".                              |
-| `status`                         | String  | The status of the location, e.g., "active".                                                 |
-| `name`                           | String  | The name of the location.                                                                    |
-| `description`                    | String  | The description of the location.                                                             |
-| `mode`                           | String  | The mode of the location, e.g., "instance".                                                  |
-| `physicalType.coding.0.code`    | String  | The code for the physical type of the location, e.g., "ro" for room.                         |
-| `position.longitude`            | Float   | The longitude coordinate of the location.                                                    |
-| `position.latitude`              | Float   | The latitude coordinate of the location.                                                     |
-| `position.altitude`              | Float   | The altitude of the location.                                                                |
-| `Org_id`                         | String  | The organization identifier associated with the location.                                     |
+#### Field Permintaan
+| Field                            | Tipe    | Deskripsi                                                                                       |
+|----------------------------------|---------|-------------------------------------------------------------------------------------------------|
+| `identifier.0.value`             | String  | Nilai pengenal untuk lokasi, contoh: "GT1-R-IGD-PONEK".                                        |
+| `status`                         | String  | Status lokasi, contoh: "active".                                                                |
+| `name`                           | String  | Nama lokasi.                                                                                    |
+| `description`                    | String  | Deskripsi lokasi.                                                                               |
+| `mode`                           | String  | Mode lokasi, contoh: "instance".                                                                |
+| `physicalType.coding.0.code`    | String  | Kode untuk tipe fisik lokasi, contoh: "ro" untuk ruangan.                                       |
+| `position.longitude`            | Float   | Koordinat garis bujur lokasi.                                                                   |
+| `position.latitude`              | Float   | Koordinat garis lintang lokasi.                                                                 |
+| `position.altitude`              | Float   | Ketinggian lokasi.                                                                              |
+| `Org_id`                         | String  | Pengenal organisasi yang terkait dengan lokasi.                                                 |
 
-#### Example
+Keterangan `physicalType.coding.0.code`:
+- Kode `"ro"` merujuk pada tipe fisik "Ruang" yang didefinisikan dalam [CodeSystem-location-physical-type](http://localhost:3000/api/hl7/CodeSystem-location-physical-type).
+
+#### Contoh
 <pre>
 curl -X POST "http://localhost:3000/api/satusehat/v1/Location" \
      -H "Content-type: application/json" \

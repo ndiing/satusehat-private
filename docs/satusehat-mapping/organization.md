@@ -1,14 +1,14 @@
-### Organization - Create
+### Pembuatan Organisasi - Organization
 
-#### HTTP Request
+#### Permintaan HTTP
 **POST** `http://localhost:3000/api/satusehat/v1/Organization`
 
-#### Headers
+#### Header
 | Key            | Value               |
 |----------------|---------------------|
 | Content-type   | application/json    |
 
-#### Request Body
+#### Isi Permintaan
 <pre>
 {
     "active": false,
@@ -19,16 +19,19 @@
 }
 </pre>
 
-#### Request Body Fields
-| Field                    | Type    | Description                                                        |
-|--------------------------|---------|--------------------------------------------------------------------|
-| `active`                 | Boolean | Indicates whether the organization is active or not.               |
-| `identifier.0.use`       | String  | The use of the identifier, e.g., "official".                      |
-| `identifier.0.value`     | String  | The value of the identifier for the organization.                  |
-| `type.0.coding.0.code`   | String  | The code for the type of organization, e.g., "dept" for department.|
-| `name`                   | String  | The name of the organization.                                      |
+#### Field Permintaan
+| Field                    | Tipe    | Deskripsi                                                        |
+|--------------------------|---------|------------------------------------------------------------------|
+| `active`                 | Boolean | Menunjukkan apakah organisasi aktif atau tidak.                  |
+| `identifier.0.use`       | String  | Penggunaan pengenal, contoh: "official".                         |
+| `identifier.0.value`     | String  | Nilai pengenal untuk organisasi.                                 |
+| `type.0.coding.0.code`   | String  | Kode untuk jenis organisasi, contoh: "dept" untuk departemen.    |
+| `name`                   | String  | Nama organisasi.                                                |
 
-#### Example
+Keterangan `type.0.coding.0.code`:
+- Kode `"dept"` merujuk pada tipe "Departemen" yang didefinisikan dalam [CodeSystem-organization-type](http://localhost:3000/api/hl7/CodeSystem-organization-type).
+
+#### Contoh
 <pre>
 curl -X POST "http://localhost:3000/api/satusehat/v1/Organization" \
      -H "Content-type: application/json" \

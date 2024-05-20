@@ -1,14 +1,14 @@
-# Encounter - Create
+# Pembuatan Pertemuan - Encounter
 
-### HTTP Request
+### Permintaan HTTP
 **POST** `http://localhost:3000/api/satusehat/v1/Encounter`
 
-### Headers
+### Header
 | Key          | Value                |
 |--------------|----------------------|
 | Content-type | application/json     |
 
-### Request Body
+### Isi Permintaan
 <pre>
 {
     "status": "arrived",
@@ -25,22 +25,22 @@
 }
 </pre>
 
-### Request Body Fields
-| Field                                      | Type   | Description                                                                                      |
-|--------------------------------------------|--------|--------------------------------------------------------------------------------------------------|
-| `status`                                   | String | The status of the encounter, e.g., "arrived".                                                    |
-| `class.code`                               | String | The class code of the encounter, e.g., "AMB" for ambulance.                                      |
-| `Patient_nik`                              | String | The NIK (National Identification Number) of the patient.                                         |
-| `participant.0.type.0.coding.0.code`       | String | The code for the type of participant, e.g., "ATND" for attending.                                |
-| `Practitioner_nik`                         | String | The NIK of the practitioner.                                                                     |
-| `period.start`                             | String | The start time of the encounter period in ISO 8601 format.                                       |
-| `Location_id`                              | String | The identifier of the location, e.g., "GT1-R-IGD-PONEK".                                         |
-| `statusHistory.0.status`                   | String | The status history entry status, e.g., "arrived".                                                |
-| `statusHistory.0.period.start`             | String | The start time of the status history entry period in ISO 8601 format.                            |
-| `Org_id`                                   | String | The organization identifier, e.g., "5a90444d-01bd-405c-957b-6648a533132d".                       |
-| `identifier.0.value`                       | String | The encounter identifier, e.g., "P20240001".                                                     |
+### Field Permintaan
+| Field                                      | Tipe    | Deskripsi                                                                                       |
+|--------------------------------------------|---------|-------------------------------------------------------------------------------------------------|
+| `status`                                   | String  | Status pertemuan, contoh: "arrived".                                                            |
+| `class.code`                               | String  | Kode kelas pertemuan, contoh: "AMB" untuk ambulans.                                             |
+| `Patient_nik`                              | String  | NIK (Nomor Identifikasi Nasional) pasien.                                                       |
+| `participant.0.type.0.coding.0.code`       | String  | Kode untuk jenis peserta, contoh: "ATND" untuk yang hadir.                                      |
+| `Practitioner_nik`                         | String  | NIK praktisi yang terlibat.                                                                     |
+| `period.start`                             | String  | Waktu mulai periode pertemuan dalam format ISO 8601.                                            |
+| `Location_id`                              | String  | Pengenal lokasi, contoh: "GT1-R-IGD-PONEK".                                                     |
+| `statusHistory.0.status`                   | String  | Status entri riwayat status, contoh: "arrived".                                                 |
+| `statusHistory.0.period.start`             | String  | Waktu mulai periode entri riwayat status dalam format ISO 8601.                                 |
+| `Org_id`                                   | String  | Pengenal organisasi, contoh: "5a90444d-01bd-405c-957b-6648a533132d".                            |
+| `identifier.0.value`                       | String  | Pengenal pertemuan, contoh: "P20240001".                                                        |
 
-### Example
+### Contoh
 <pre>
 curl -X POST "http://localhost:3000/api/satusehat/v1/Encounter" \
      -H "Content-type: application/json" \
@@ -58,3 +58,7 @@ curl -X POST "http://localhost:3000/api/satusehat/v1/Encounter" \
            "identifier.0.value": "P20240001"
          }'
 </pre>
+
+Rujukan:
+- `class.code` = [CodeSystem-v3-ActCode](http://localhost:3000/api/hl7/CodeSystem-v3-ActCode)
+- `participant.0.type.0.coding.0.code` = [CodeSystem-v3-ParticipationType](http://localhost:3000/api/hl7/CodeSystem-v3-ParticipationType)
