@@ -28,8 +28,8 @@
 | `type.0.coding.0.code`   | String  | Kode untuk jenis organisasi, contoh: "dept" untuk departemen.    |
 | `name`                   | String  | Nama organisasi.                                                |
 
-Keterangan `type.0.coding.0.code`:
-- Kode `"dept"` merujuk pada tipe "Departemen" yang didefinisikan dalam [CodeSystem-organization-type](http://localhost:3000/api/hl7/CodeSystem-organization-type).
+Rujukan:
+- `type.0.coding.0.code` = [CodeSystem-organization-type](http://localhost:3000/api/hl7/CodeSystem-organization-type)
 
 #### Contoh
 <pre>

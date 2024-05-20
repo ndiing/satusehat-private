@@ -40,6 +40,10 @@
 | `Org_id`                                   | String  | Pengenal organisasi, contoh: "5a90444d-01bd-405c-957b-6648a533132d".                            |
 | `identifier.0.value`                       | String  | Pengenal pertemuan, contoh: "P20240001".                                                        |
 
+Rujukan:
+- `class.code` = [CodeSystem-v3-ActCode](http://localhost:3000/api/hl7/CodeSystem-v3-ActCode)
+- `participant.0.type.0.coding.0.code` = [CodeSystem-v3-ParticipationType](http://localhost:3000/api/hl7/CodeSystem-v3-ParticipationType)
+
 ### Contoh
 <pre>
 curl -X POST "http://localhost:3000/api/satusehat/v1/Encounter" \
@@ -58,7 +62,3 @@ curl -X POST "http://localhost:3000/api/satusehat/v1/Encounter" \
            "identifier.0.value": "P20240001"
          }'
 </pre>
-
-Rujukan:
-- `class.code` = [CodeSystem-v3-ActCode](http://localhost:3000/api/hl7/CodeSystem-v3-ActCode)
-- `participant.0.type.0.coding.0.code` = [CodeSystem-v3-ParticipationType](http://localhost:3000/api/hl7/CodeSystem-v3-ParticipationType)

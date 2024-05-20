@@ -38,8 +38,8 @@
 | `position.altitude`              | Float   | Ketinggian lokasi.                                                                              |
 | `Org_id`                         | String  | Pengenal organisasi yang terkait dengan lokasi.                                                 |
 
-Keterangan `physicalType.coding.0.code`:
-- Kode `"ro"` merujuk pada tipe fisik "Ruang" yang didefinisikan dalam [CodeSystem-location-physical-type](http://localhost:3000/api/hl7/CodeSystem-location-physical-type).
+Rujukan:
+- `physicalType.coding.0.code` = [CodeSystem-location-physical-type](http://localhost:3000/api/hl7/CodeSystem-location-physical-type)
 
 #### Contoh
 <pre>
