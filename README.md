@@ -270,12 +270,12 @@ http://localhost:3000/api
 
 #### Organization
 
--   **<code>post</code> [/v1/Organization](./rest/satusehat-mapping/organization.http) - [Create Organization](./docs/satusehat-mapping/organization.md)**
+-   **<code>post</code> [/v1/Organization](./rest/satusehat-mapping/organization.http)** - [Create Organization](./docs/satusehat-mapping/organization.md)
 
 #### Location
 
--   **<code>post</code> [/v1/Location](./rest/satusehat-mapping/location.http) - [Create Location](./docs/satusehat-mapping/location.md)**
+-   **<code>post</code> [/v1/Location](./rest/satusehat-mapping/location.http)** - [Create Location](./docs/satusehat-mapping/location.md)
 
 #### Encounter
 
--   **<code>post</code> [/v1/Encounter](./rest/satusehat-mapping/encounter.http) - [Create Encounter](./docs/satusehat-mapping/encounter.md)**
+-   **<code>post</code> [/v1/Encounter](./rest/satusehat-mapping/encounter.http)** - [Create Encounter](./docs/satusehat-mapping/encounter.md)
