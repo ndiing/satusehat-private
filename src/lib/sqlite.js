@@ -20,19 +20,19 @@ class DB {
         this.db.get = promisify(this.db.get);
         this.db.all = promisify(this.db.all);
 
+        this.db.serialize();
+
         this.init();
     }
 
     init() {
-        this.db.serialize(() => {
-            this.db.run(
-                `CREATE TABLE IF NOT EXISTS ${this.name} (
-                    _id TEXT PRIMARY KEY,
-                    doc TEXT,
-                    _rev TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-                );`
-            );
-        });
+        this.db.run(
+            `CREATE TABLE IF NOT EXISTS ${this.name} (
+                _id TEXT PRIMARY KEY,
+                doc TEXT,
+                _rev TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+            );`
+        );
     }
 
     put(doc) {
@@ -52,7 +52,7 @@ class DB {
             [_id]
         );
         if (res) {
-            return {_id:res._id,_rev:res._rev,...JSON.parse(res.doc)};
+            return { _id: res._id, _rev: res._rev, ...JSON.parse(res.doc) };
         }
         return res;
     }
@@ -85,7 +85,7 @@ class DB {
         return {
             ...options,
             ...row,
-            rows: rows.map((row) => ({_id:row._id,_rev:row._rev,...JSON.parse(row.doc)})),
+            rows: rows.map((row) => ({ _id: row._id, _rev: row._rev, ...JSON.parse(row.doc) })),
         };
     }
 
