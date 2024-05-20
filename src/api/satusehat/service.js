@@ -59,7 +59,7 @@ class Service {
 
         let dispatcher;
         // Setting up proxy if in development environment and proxy is defined in environment variables
-        if ((process.env.NODE_ENV = "development" && process.env.proxy)) {
+        if (process.env.proxy) {
             // Disabling TLS certificate verification (not recommended for production)
             process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
             dispatcher = new ProxyAgent(process.env.proxy);

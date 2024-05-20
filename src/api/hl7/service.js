@@ -49,7 +49,6 @@ module.exports = Service;
 // const service = new Service();
 
 // const DB = require("../../lib/sqlite");
-
 // const OrganizationType = new DB("OrganizationType");
 // const LocationPhysicalType = new DB("LocationPhysicalType");
 // const ActCode = new DB("ActCode");
