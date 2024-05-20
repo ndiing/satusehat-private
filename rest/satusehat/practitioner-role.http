@@ -1,0 +1,134 @@
+@Org_id=
+
+### PractitionerRole - Create
+POST http://localhost:3000/api/satusehat/PractitionerRole
+Content-type: application/json
+
+{
+    "resourceType": "PractitionerRole",
+    "active": true,
+    "practitioner": {
+        "reference": "Practitioner/N10000001",
+        "display": "Dokter Bronsig"
+    },
+    "organization": {
+        "reference": "Organization/{{Org_id}}"
+    },
+    "code": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+                    "code": "doctor",
+                    "display": "Doctor"
+                }
+            ]
+        }
+    ],
+    "specialty": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
+                    "code": "S001.09",
+                    "display": "Penyakit dalam kardiovaskular "
+                }
+            ]
+        }
+    ],
+    "healthcareService": [
+        {
+            "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17"
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "(021) 14045",
+            "use": "work"
+        },
+        {
+            "system": "email",
+            "value": "doctor.bronsig@dto.kemkes.go.id",
+            "use": "work"
+        }
+    ]
+}
+
+### PractitionerRole - Get by ID
+GET http://localhost:3000/api/satusehat/PractitionerRole/:id
+
+### PractitionerRole - Get by Practitioner
+GET http://localhost:3000/api/satusehat/PractitionerRole?practitioner=N10000001
+
+### PractitionerRole - Get by Practitioner and Organization
+GET http://localhost:3000/api/satusehat/PractitionerRole?practitioner=N10000001&organization={{Org_id}}
+
+### PractitionerRole - PUT
+PUT http://localhost:3000/api/satusehat/PractitionerRole/:id
+Content-type: application/json
+
+{
+    "resourceType": "PractitionerRole",
+    "id": "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
+    "active": true,
+    "practitioner": {
+        "reference": "Practitioner/N10000001",
+        "display": "Dokter Bronsig"
+    },
+    "organization": {
+        "reference": "Organization/{{Org_id}}"
+    },
+    "code": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+                    "code": "doctor",
+                    "display": "Doctor"
+                }
+            ]
+        }
+    ],
+    "specialty": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
+                    "code": "S001.09",
+                    "display": "Penyakit dalam kardiovaskular "
+                }
+            ]
+        }
+    ],
+    "healthcareService": [
+        {
+            "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17"
+        }
+    ],
+    "telecom": [
+        {
+            "system": "phone",
+            "value": "(021) 14045 I'm Lovin It",
+            "use": "work"
+        },
+        {
+            "system": "email",
+            "value": "doctor.bronsig@dto.kemkes.go.id",
+            "use": "work"
+        }
+    ]
+}
+
+### PractitionerRole - PATCH
+PATCH http://localhost:3000/api/satusehat/PractitionerRole/:id
+Content-Type: application/json-patch+json
+
+[
+    {
+        "op": "replace",
+        "path": "/active",
+        "value": false
+    }
+]
+

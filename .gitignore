@@ -91,6 +91,6 @@ typings/
 # Electron-Forge
 out/
 
-data
-rest
-src/dev
+# data
+# rest
+# src/dev

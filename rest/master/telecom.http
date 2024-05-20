@@ -1,0 +1,25 @@
+### Menambahkan Informasi Telekomunikasi Baru
+POST http://localhost:3000/api/master/telecom
+Content-Type: application/json
+
+{
+    "system": "phone",
+    "value": "2328",
+    "use": "work"
+}
+
+### Mendapatkan Daftar Informasi Telekomunikasi
+GET http://localhost:3000/api/master/telecom
+
+### Memperbarui Informasi Telekomunikasi yang Ada
+PATCH http://localhost:3000/api/master/telecom
+Content-Type: application/json
+
+{
+    "system": "phone",
+    "value": "2328",
+    "use": "work"
+}
+
+### Menghapus Informasi Telekomunikasi Berdasarkan Sistem dan Nilai
+DELETE http://localhost:3000/api/master/telecom?system=phone&value=2328

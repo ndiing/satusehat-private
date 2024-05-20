@@ -1,0 +1,162 @@
+@Encounter_uuid=
+
+### Condition - Diagnosis
+POST http://localhost:3000/api/satusehat/Condition
+Content-type: application/json
+
+{
+    "resourceType": "Condition",
+    "clinicalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active",
+                "display": "Active"
+            }
+        ]
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                    "code": "encounter-diagnosis",
+                    "display": "Encounter Diagnosis"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "K35.8",
+                "display": "Acute appendicitis, other and unspecified"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/100000030009",
+        "display": "Budi Santoso"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_uuid}}",
+        "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+    }
+}
+
+### Condition - Meninggalkan Faskes
+POST http://localhost:3000/api/satusehat/Condition
+Content-type: application/json
+
+{
+    "resourceType": "Condition",
+    "clinicalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "active",
+                "display": "Active"
+            }
+        ]
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                    "code": "encounter-diagnosis",
+                    "display": "Encounter Diagnosis"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "359746009",
+                "display": "Patient's condition stable"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/100000030009",
+        "display": "Budi Santoso"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_uuid}}",
+        "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+    }
+}
+
+### Condition - Search by Subject
+GET http://localhost:3000/api/satusehat/Condition?subject=100000030009
+
+### Condition - Search by Subject and Encounter
+GET http://localhost:3000/api/satusehat/Condition?subject=100000030009&encounter={{Encounter_uuid}}
+
+### Condition - Search by Encounter
+GET http://localhost:3000/api/satusehat/Condition?encounter={{Encounter_uuid}}
+
+### Condition - By ID
+GET http://localhost:3000/api/satusehat/Condition/:id
+
+### Condition - Update
+PUT http://localhost:3000/api/satusehat/Condition/:id
+Content-type: application/json
+
+{
+    "resourceType": "Condition",
+    "id": "f1369adf-26f6-47a5-90f2-ce08442639aa",
+    "clinicalStatus": {
+        "coding": [
+            {
+                "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                "code": "remission",
+                "display": "Remission"
+            }
+        ]
+    },
+    "category": [
+        {
+            "coding": [
+                {
+                    "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                    "code": "encounter-diagnosis",
+                    "display": "Encounter Diagnosis"
+                }
+            ]
+        }
+    ],
+    "code": {
+        "coding": [
+            {
+                "system": "http://hl7.org/fhir/sid/icd-10",
+                "code": "K35.8",
+                "display": "Acute appendicitis, other and unspecified"
+            }
+        ]
+    },
+    "subject": {
+        "reference": "Patient/100000030009",
+        "display": "Budi Santoso"
+    },
+    "encounter": {
+        "reference": "Encounter/{{Encounter_uuid}}",
+        "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+    }
+}
+
+### Condition - Patch
+PATCH http://localhost:3000/api/satusehat/Condition/:id
+Content-Type: application/json-patch+json
+
+[
+    {
+        "op": "replace",
+        "path": "/clinicalStatus/coding/0/code",
+        "value": "remission"
+    }
+]
+

@@ -1,0 +1,7 @@
+
+### Generate Token
+POST {{auth_url}}/accesstoken?grant_type=client_credentials
+Content-type: application/x-www-form-urlencoded
+
+client_id={{client_id}}&client_secret={{client_secret}}
+

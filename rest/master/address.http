@@ -1,0 +1,31 @@
+### Menambahkan Alamat Baru
+POST http://localhost:3000/api/master/address
+Content-Type: application/json
+
+{
+    "use": "work",
+    "line": "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan",
+    "city": "Jakarta",
+    "postalCode": "12950",
+    "country": "ID",
+    "administrativeCode": "1010101101"
+}
+
+### Mendapatkan Daftar Alamat
+GET http://localhost:3000/api/master/address
+
+### Memperbarui Alamat yang Ada
+PATCH http://localhost:3000/api/master/address
+Content-Type: application/json
+
+{
+    "use": "work",
+    "line": "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan",
+    "city": "Jakarta",
+    "postalCode": "12950",
+    "country": "ID",
+    "administrativeCode": "1010101101"
+}
+
+### Menghapus Alamat Berdasarkan Penggunaan
+DELETE http://localhost:3000/api/master/address?use=work

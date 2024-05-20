@@ -1,0 +1,5 @@
+{
+    "0.op": "replace",
+    "0.path": "/deceasedBoolean",
+    "0.value": true
+}

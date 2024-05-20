@@ -1,0 +1,115 @@
+
+### FamilyMemberHistory - POST
+POST {{base_url}}/FamilyMemberHistory
+Authorization: Bearer {{token}}
+Content-type: application/json
+
+{
+    "resourceType": "FamilyMemberHistory",
+    "status": "completed",
+    "relationship": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "38048003",
+                "display": "Uncle"
+            }
+        ]
+    },
+    "deceasedBoolean": true,
+    "patient": {
+        "reference": "Patient/P02280547535",
+        "display": "patient 6"
+    },
+    "condition": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "115665000",
+                        "display": "Atopy"
+                    }
+                ]
+            },
+            "outcome": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "419099009",
+                        "display": "Died"
+                    }
+                ]
+            }
+        }
+    ]
+}
+
+### FamilyMemberHistory - Search by ID
+GET {{base_url}}/FamilyMemberHistory/:id
+Authorization: Bearer {{token}}
+
+### FamilyMemberHistory - Search by Subject & Relationship
+GET {{base_url}}/FamilyMemberHistory?relationship=72705000&patient=P02280547535
+Authorization: Bearer {{token}}
+
+### FamilyMemberHistory - UPDATE
+PUT {{base_url}}/FamilyMemberHistory/:id
+Authorization: Bearer {{token}}
+Content-type: application/json
+
+{
+    "resourceType": "FamilyMemberHistory",
+    "id": "0735510d-ad0b-44ca-92be-b695a9b127d1",
+    "status": "completed",
+    "relationship": {
+        "coding": [
+            {
+                "system": "http://snomed.info/sct",
+                "code": "72705000",
+                "display": "Mother"
+            }
+        ]
+    },
+    "deceasedBoolean": true,
+    "patient": {
+        "reference": "Patient/P02280547535",
+        "display": "patient 6"
+    },
+    "condition": [
+        {
+            "code": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "115665000",
+                        "display": "Atopy"
+                    }
+                ]
+            },
+            "outcome": {
+                "coding": [
+                    {
+                        "system": "http://snomed.info/sct",
+                        "code": "419099009",
+                        "display": "Died"
+                    }
+                ]
+            }
+        }
+    ]
+}
+
+### FamilyMemberHistory - PATCH
+PATCH {{base_url}}/FamilyMemberHistory/:id
+Content-Type: application/json-patch+json
+Authorization: Bearer {{token}}
+
+[
+    {
+        "op": "replace",
+        "path": "/deceasedBoolean",
+        "value": true
+    }
+]
+

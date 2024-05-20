@@ -1,0 +1,13 @@
+
+### Error 20x
+GET see_example
+Authorization: Bearer {{token}}
+
+### Error 40x
+GET see_example
+Authorization: Bearer {{token}}
+
+### Error 50x
+GET see_example
+Authorization: Bearer {{token}}
+
