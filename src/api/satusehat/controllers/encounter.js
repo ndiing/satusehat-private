@@ -115,7 +115,7 @@ class Encounter extends Controller {
             // console.log(patient)
             // "subject.reference": "Patient/100000030009",
             // "subject.display": ?
-            if(!patient?.entry?.[0]?.resource?.id){throw new Error(`subject.reference tidak ditemukan`)}
+            if(!patient?.entry?.[0]?.resource?.id){throw new Error(`Patient_nik tidak ditemukan`)}
             body["subject.reference"]=`Patient/${patient.entry[0].resource.id}`
             body["subject.display"]=patient.entry[0].resource.name[0].text
 
@@ -125,7 +125,7 @@ class Encounter extends Controller {
             // console.log(practitioner)
             // "participant.0.individual.reference": "Practitioner/N10000001",
             // "participant.0.individual.display": ?
-            if(!practitioner?.entry?.[0]?.resource?.id){throw new Error(`participant.0.individual.reference tidak ditemukan`)}
+            if(!practitioner?.entry?.[0]?.resource?.id){throw new Error(`Practitioner_nik tidak ditemukan`)}
             body['participant.0.individual.reference']=`Practitioner/${practitioner.entry[0].resource.id}`
             body['participant.0.individual.display']=practitioner.entry[0].resource.name[0].text
 
@@ -146,7 +146,7 @@ class Encounter extends Controller {
             // console.log(location)
             // "location.0.location.reference": "Location/b017aa54-f1df-4ec2-9d84-8823815d7228",
             // "location.0.location.display": ?
-            if(!location?.entry?.[0]?.resource?.id){throw new Error(`location.0.location.reference tidak ditemukan`)}
+            if(!location?.entry?.[0]?.resource?.id){throw new Error(`Location_id tidak ditemukan`)}
             body['location.0.location.reference']=`Location/${location.entry[0].resource.id}`
             body['location.0.location.display']=location.entry[0].resource.name
 

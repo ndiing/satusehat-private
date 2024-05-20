@@ -176,6 +176,11 @@ class Organization extends Controller {
             const source = unflatten(body)
             const payload = merge(target,source)
 
+        
+            // // remove it later
+            // res.json(payload)
+            // return
+
             const result = await res.locals.service.post({
                 params: {
                 },

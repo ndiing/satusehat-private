@@ -49,21 +49,21 @@ router.get("/Practitioner", OAuth2.init, OAuth2.refresh, Practitioner.init, Prac
 router.get("/Practitioner/:id", OAuth2.init, OAuth2.refresh, Practitioner.init, Practitioner.getId);
 
 router.post("/Organization", OAuth2.init, OAuth2.refresh, Organization.init, Organization.post);
-router.post("/v1/Organization", OAuth2.init, OAuth2.refresh, Organization.init, Organization.postV1);
+router.post("/v1/Organization", OAuth2.init, OAuth2.refresh, Organization.init, Organization.postV1); // mapping
 router.get("/Organization/:id", OAuth2.init, OAuth2.refresh, Organization.init, Organization.getId);
 router.get("/Organization", OAuth2.init, OAuth2.refresh, Organization.init, Organization.get);
 router.put("/Organization/:id", OAuth2.init, OAuth2.refresh, Organization.init, Organization.putId);
 router.patch("/Organization/:id", OAuth2.init, OAuth2.refresh, Organization.init, Organization.patchId);
 
 router.post("/Location", OAuth2.init, OAuth2.refresh, Location.init, Location.post);
-router.post("/v1/Location", OAuth2.init, OAuth2.refresh, Location.init, Location.postV1);
+router.post("/v1/Location", OAuth2.init, OAuth2.refresh, Location.init, Location.postV1); // mapping
 router.get("/Location", OAuth2.init, OAuth2.refresh, Location.init, Location.get);
 router.get("/Location/:id", OAuth2.init, OAuth2.refresh, Location.init, Location.getId);
 router.put("/Location/:id", OAuth2.init, OAuth2.refresh, Location.init, Location.putId);
 router.patch("/Location/:id", OAuth2.init, OAuth2.refresh, Location.init, Location.patchId);
 
 router.post("/Encounter", OAuth2.init, OAuth2.refresh, Encounter.init, Encounter.post);
-router.post("/v1/Encounter", OAuth2.init, OAuth2.refresh, Encounter.init, Encounter.postV1);
+router.post("/v1/Encounter", OAuth2.init, OAuth2.refresh, Encounter.init, Encounter.postV1); // mapping
 router.get("/Encounter/:id", OAuth2.init, OAuth2.refresh, Encounter.init, Encounter.getId);
 router.get("/Encounter", OAuth2.init, OAuth2.refresh, Encounter.init, Encounter.get);
 router.put("/Encounter/:id", OAuth2.init, OAuth2.refresh, Encounter.init, Encounter.putId);
