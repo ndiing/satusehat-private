@@ -211,7 +211,7 @@ for (const fileName in group) {
 
     code += group[fileName];
 
-    fs.writeFileSync(`./rest/satusehat/${fileName}.http`,code)
+    fs.writeFileSync(`./rest/satusehat-private/${fileName}.http`,code)
 }
 
 // console.log(code2)
