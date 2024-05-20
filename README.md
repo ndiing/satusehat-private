@@ -273,12 +273,12 @@ http://localhost:3000/api
 
 #### Organization
 
--   **[`post` /v1/Organization]()**
+-   `post` [/v1/Organization](./rest/satusehat-mapping/organization.http) - [Create Organization](./docs/satusehat-mapping/organization.md)
 
 #### Location
 
--   **[`post` /v1/Location]()**
+-   `post` [/v1/Location](./rest/satusehat-mapping/location.http) - [Create Location](./docs/satusehat-mapping/location.md)
 
 #### Encounter
 
--   **[`post` /v1/Encounter]()**
+-   `post` [/v1/Encounter](./rest/satusehat-mapping/encounter.http) - [Create Encounter](./docs/satusehat-mapping/encounter.md)
