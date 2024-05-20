@@ -1,10 +1,11 @@
 # Satusehat
 
-Abiyosoft
+Abiyosoft - Intergrasi Satusehat
 
 ## ENV
 
-**``<code>env</code># Konfigurasi untuk Port Layanan Web**
+```env
+# Konfigurasi untuk Port Layanan Web
 port=3000
 
 # Konfigurasi Server Proxy
@@ -16,12 +17,16 @@ proxy=http://127.0.0.1:8888
 # Pastikan kredensial ini tetap rahasia dan aman.
 client_id=
 client_secret=
-organization_id**=<code>```**
-</code>## REST
+organization_id=
+```
 
-http://localhost:3000/api
+## REST
+
+End point `http://localhost:<port>/api`
 
 ### **[Master]()**
+
+API Master
 
 #### telecom
 
@@ -39,12 +44,16 @@ http://localhost:3000/api
 
 ### **[HL7]()**
 
+API HL7
+
 -   **<code>get</code> [/CodeSystem-location-physical-type](./rest/hl7/hl7.http)**
 -   **<code>get</code> [/CodeSystem-organization-type](./rest/hl7/hl7.http)**
 -   **<code>get</code> [/CodeSystem-v3-ActCode](./rest/hl7/hl7.http)**
 -   **<code>get</code> [/CodeSystem-v3-ParticipationType](./rest/hl7/hl7.http)**
 
 ### **[Satusehat Private]()**
+
+API Satusehat (menggunakan original payload)
 
 #### Practitioner
 
@@ -267,6 +276,8 @@ http://localhost:3000/api
 -   **<code>post</code> /Patient**
 
 ### **[Satusehat Mapping]()**
+
+API Satusehat (menggunakan payload mapping)
 
 #### Organization
 
