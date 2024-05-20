@@ -4,7 +4,7 @@ const { FuseV1Options, FuseVersion } = require("@electron/fuses");
 module.exports = {
     packagerConfig: {
         asar: true,
-        icon: "src/img/icon",
+        icon: "./src/img/icon",
     },
     rebuildConfig: {},
     makers: [
@@ -12,7 +12,7 @@ module.exports = {
             name: "@electron-forge/maker-squirrel",
             config: {
                 iconUrl: "https://raw.githubusercontent.com/ndiing/satusehat-private/master/src/img/icon.ico",
-                setupIcon: "src/img/icon.ico",
+                setupIcon: "./src/img/icon.ico",
             },
         },
         {
@@ -21,7 +21,9 @@ module.exports = {
         },
         {
             name: "@electron-forge/maker-deb",
-            config: {},
+            config: {
+                icon: "./src/img/icon.png",
+            },
         },
         {
             name: "@electron-forge/maker-rpm",
