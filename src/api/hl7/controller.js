@@ -4,17 +4,20 @@ const Helper = require("./helper.js");
 const Client = require("./client.js");
 const Store = require("./store.js");
 
-const DB = require("../../lib/sqlite");
+const OrganizationType = require('./models/organization-type.js')
+const LocationPhysicalType = require('./models/location-physical-type.js')
+const ActCode = require('./models/act-code.js')
+const ParticipationType = require('./models/participation-type.js')
 
 class Controller {
     static async init(req, res, next) {
         try {
             // res.locals.service = new Service();
 
-            res.locals.OrganizationType = new DB("OrganizationType");
-            res.locals.LocationPhysicalType = new DB("LocationPhysicalType");
-            res.locals.ActCode = new DB("ActCode");
-            res.locals.ParticipationType = new DB("ParticipationType");
+            res.locals.OrganizationType = new OrganizationType()
+            res.locals.LocationPhysicalType = new LocationPhysicalType()
+            res.locals.ActCode = new ActCode()
+            res.locals.ParticipationType = new ParticipationType()
 
             next();
         } catch (error) {

@@ -78,9 +78,9 @@ class DB {
         const rows = await this.db.all(
             `SELECT *
         FROM ${this.name}
-        ORDER BY _id
+        ORDER BY _rev DESC
         LIMIT ? OFFSET ?;`,
-            [options.limit ?? 100, options.offset ?? 0]
+            [options.limit ?? 5000, options.offset ?? 0]
         );
         return {
             ...options,

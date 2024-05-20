@@ -30,7 +30,7 @@
         "style-loader": "^3.0.0"
     },
     "keywords": [],
-    "author": "Ridho Prasetya <ndiing.inc@gmail.com>",
+    "author": "abiyosoft",
     "license": "MIT",
     "dependencies": {
         "electron-squirrel-startup": "^1.0.1",
