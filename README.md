@@ -28,24 +28,24 @@ http://localhost:3000/api
 
 #### telecom
 
--   `post` /telecom
--   `get` /telecom
--   `patch` /telecom
--   `delete` /telecom
+-   `post` [/telecom](./rest/master/telecom.http)
+-   `get` [/telecom](./rest/master/telecom.http)
+-   `patch` [/telecom](./rest/master/telecom.http)
+-   `delete` [/telecom](./rest/master/telecom.http)
 
 #### address
 
--   `post` /address
--   `get` /address
--   `patch` /address
--   `delete` /address
+-   `post` [/address](./rest/master/address.http)
+-   `get` [/address](./rest/master/address.http)
+-   `patch` [/address](./rest/master/address.http)
+-   `delete` [/address](./rest/master/address.http)
 
 ### HL7
 
--   `get` /CodeSystem-location-physical-type
--   `get` /CodeSystem-organization-type
--   `get` /CodeSystem-v3-ActCode
--   `get` /CodeSystem-v3-ParticipationType
+-   `get` [/CodeSystem-location-physical-type](./rest/hl7/hl7.http)
+-   `get` [/CodeSystem-organization-type](./rest/hl7/hl7.http)
+-   `get` [/CodeSystem-v3-ActCode](./rest/hl7/hl7.http)
+-   `get` [/CodeSystem-v3-ParticipationType](./rest/hl7/hl7.http)
 
 ### Satusehat Private
 
