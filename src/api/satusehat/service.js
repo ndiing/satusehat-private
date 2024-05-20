@@ -119,7 +119,9 @@ class Service {
             request,
         };
         // Logging the request
-        this.log.put(doc);
+        this.log.put(doc)
+        // .then(console.log)
+        // .catch(console.error)
 
         // Sending request and receiving response
         const res = await fetch(input, {
@@ -149,7 +151,9 @@ class Service {
             // Adding response to log entry
             doc.response = response;
             // Logging the response
-            this.log.put(doc);
+            this.log.put(doc)
+            // .then(console.log)
+            // .catch(console.error)
         });
 
         // Returning the original response

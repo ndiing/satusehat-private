@@ -150,7 +150,7 @@ class Location extends Controller {
             const telecom = await telecomModel.select()
 
             const addressModel = new Address()
-            const address = await addressModel.select()
+            const address = (await addressModel.select({use:'work'}))[0]||{}
 
             const target={
                 "resourceType": "Location",

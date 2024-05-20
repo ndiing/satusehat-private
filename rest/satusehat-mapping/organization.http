@@ -5,9 +5,9 @@ POST http://localhost:3000/api/satusehat/v1/Organization
 Content-type: application/json
 
 {
-    "active": true,
+    "active": false,
     "identifier.0.use": "official",
-    "identifier.0.value": "Pos Imunisasi LUBUK BATANG",
+    "identifier.0.value": "Pos Imunisasi",
     "type.0.coding.0.code": "dept",
     "name": "Pos Imunisasi"
 }
