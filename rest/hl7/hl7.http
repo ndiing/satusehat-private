@@ -1,12 +1,11 @@
-
-### CodeSystem: Organization type
+### Mendapatkan Jenis Organisasi (CodeSystem: Organization type)
 GET http://localhost:3000/api/hl7/CodeSystem-organization-type
 
-### CodeSystem: Location type
+### Mendapatkan Jenis Lokasi Fisik (CodeSystem: Location type)
 GET http://localhost:3000/api/hl7/CodeSystem-location-physical-type
 
-### CodeSystem: ActCode
+### Mendapatkan Kode Aktivitas (CodeSystem: ActCode)
 GET http://localhost:3000/api/hl7/CodeSystem-v3-ActCode
 
-### CodeSystem: ParticipationType
+### Mendapatkan Jenis Partisipasi (CodeSystem: ParticipationType)
 GET http://localhost:3000/api/hl7/CodeSystem-v3-ParticipationType
