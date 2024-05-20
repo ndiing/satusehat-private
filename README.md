@@ -273,12 +273,12 @@ http://localhost:3000/api
 
 #### Organization
 
--   `post` /v1/Organization
+-   **[`post` /v1/Organization]()**
 
 #### Location
 
--   `post` /v1/Location
+-   **[`post` /v1/Location]()**
 
 #### Encounter
 
--   `post` /v1/Encounter
+-   **[`post` /v1/Encounter]()**
