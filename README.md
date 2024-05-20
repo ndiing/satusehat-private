@@ -57,223 +57,223 @@ API Satusehat (menggunakan original payload)
 
 #### Practitioner
 
--   **<code>get</code> /Practitioner**
--   **<code>get</code> /Practitioner/:id**
+-   **<code>get</code> [/Practitioner](./rest/satusehat-private/practitioner.http)**
+-   **<code>get</code> [/Practitioner/:id](./rest/satusehat-private/practitioner.http)**
 
 #### Organization
 
--   **<code>post</code> /Organization**
--   **<code>get</code> /Organization/:id**
--   **<code>get</code> /Organization**
--   **<code>put</code> /Organization/:id**
--   **<code>patch</code> /Organization/:id**
+-   **<code>post</code> [/Organization](./rest/satusehat-private/organization.http)**
+-   **<code>get</code> [/Organization/:id](./rest/satusehat-private/organization.http)**
+-   **<code>get</code> [/Organization](./rest/satusehat-private/organization.http)**
+-   **<code>put</code> [/Organization/:id](./rest/satusehat-private/organization.http)**
+-   **<code>patch</code> [/Organization/:id](./rest/satusehat-private/organization.http)**
 
 #### Location
 
--   **<code>post</code> /Location**
--   **<code>get</code> /Location**
--   **<code>get</code> /Location/:id**
--   **<code>put</code> /Location/:id**
--   **<code>patch</code> /Location/:id**
+-   **<code>post</code> [/Location](./rest/satusehat-private/location.http)**
+-   **<code>get</code> [/Location](./rest/satusehat-private/location.http)**
+-   **<code>get</code> [/Location/:id](./rest/satusehat-private/location.http)**
+-   **<code>put</code> [/Location/:id](./rest/satusehat-private/location.http)**
+-   **<code>patch</code> [/Location/:id](./rest/satusehat-private/location.http)**
 
 #### Encounter
 
--   **<code>post</code> /Encounter**
--   **<code>get</code> /Encounter/:id**
--   **<code>get</code> /Encounter**
--   **<code>put</code> /Encounter/:id**
--   **<code>patch</code> /Encounter/:id**
+-   **<code>post</code> [/Encounter](./rest/satusehat-private/encounter.http)**
+-   **<code>get</code> [/Encounter/:id](./rest/satusehat-private/encounter.http)**
+-   **<code>get</code> [/Encounter](./rest/satusehat-private/encounter.http)**
+-   **<code>put</code> [/Encounter/:id](./rest/satusehat-private/encounter.http)**
+-   **<code>patch</code> [/Encounter/:id](./rest/satusehat-private/encounter.http)**
 
 #### Condition
 
--   **<code>post</code> /Condition**
--   **<code>get</code> /Condition**
--   **<code>get</code> /Condition/:id**
--   **<code>put</code> /Condition/:id**
--   **<code>patch</code> /Condition/:id**
+-   **<code>post</code> [/Condition](./rest/satusehat-private/condition.http)**
+-   **<code>get</code> [/Condition](./rest/satusehat-private/condition.http)**
+-   **<code>get</code> [/Condition/:id](./rest/satusehat-private/condition.http)**
+-   **<code>put</code> [/Condition/:id](./rest/satusehat-private/condition.http)**
+-   **<code>patch</code> [/Condition/:id](./rest/satusehat-private/condition.http)**
 
 #### Observation
 
--   **<code>post</code> /Observation**
--   **<code>get</code> /Observation**
--   **<code>get</code> /Observation/:id**
--   **<code>put</code> /Observation/:id**
--   **<code>patch</code> /Observation/:id**
+-   **<code>post</code> [/Observation](./rest/satusehat-private/observation.http)**
+-   **<code>get</code> [/Observation](./rest/satusehat-private/observation.http)**
+-   **<code>get</code> [/Observation/:id](./rest/satusehat-private/observation.http)**
+-   **<code>put</code> [/Observation/:id](./rest/satusehat-private/observation.http)**
+-   **<code>patch</code> [/Observation/:id](./rest/satusehat-private/observation.http)**
 
 #### Composition
 
--   **<code>post</code> /Composition**
--   **<code>get</code> /Composition**
--   **<code>get</code> /Composition/:id**
--   **<code>put</code> /Composition/:id**
--   **<code>patch</code> /Composition/:id**
+-   **<code>post</code> [/Composition](./rest/satusehat-private/composition.http)**
+-   **<code>get</code> [/Composition](./rest/satusehat-private/composition.http)**
+-   **<code>get</code> [/Composition/:id](./rest/satusehat-private/composition.http)**
+-   **<code>put</code> [/Composition/:id](./rest/satusehat-private/composition.http)**
+-   **<code>patch</code> [/Composition/:id](./rest/satusehat-private/composition.http)**
 
 #### Procedure
 
--   **<code>post</code> /Procedure**
--   **<code>get</code> /Procedure**
--   **<code>get</code> /Procedure/:id**
--   **<code>put</code> /Procedure/:id**
--   **<code>patch</code> /Procedure/:id**
+-   **<code>post</code> [/Procedure](./rest/satusehat-private/procedure.http)**
+-   **<code>get</code> [/Procedure](./rest/satusehat-private/procedure.http)**
+-   **<code>get</code> [/Procedure/:id](./rest/satusehat-private/procedure.http)**
+-   **<code>put</code> [/Procedure/:id](./rest/satusehat-private/procedure.http)**
+-   **<code>patch</code> [/Procedure/:id](./rest/satusehat-private/procedure.http)**
 
 #### Medication
 
--   **<code>post</code> /Medication**
--   **<code>get</code> /Medication/:id**
--   **<code>put</code> /Medication/:id**
--   **<code>patch</code> /Medication/:id**
+-   **<code>post</code> [/Medication](./rest/satusehat-private/medication.http)**
+-   **<code>get</code> [/Medication/:id](./rest/satusehat-private/medication.http)**
+-   **<code>put</code> [/Medication/:id](./rest/satusehat-private/medication.http)**
+-   **<code>patch</code> [/Medication/:id](./rest/satusehat-private/medication.http)**
 
 #### MedicationRequest
 
--   **<code>post</code> /MedicationRequest**
--   **<code>get</code> /MedicationRequest**
--   **<code>get</code> /MedicationRequest/:id**
--   **<code>put</code> /MedicationRequest/:id**
--   **<code>patch</code> /MedicationRequest/:id**
+-   **<code>post</code> [/MedicationRequest](./rest/satusehat-private/medication-request.http)**
+-   **<code>get</code> [/MedicationRequest](./rest/satusehat-private/medication-request.http)**
+-   **<code>get</code> [/MedicationRequest/:id](./rest/satusehat-private/medication-request.http)**
+-   **<code>put</code> [/MedicationRequest/:id](./rest/satusehat-private/medication-request.http)**
+-   **<code>patch</code> [/MedicationRequest/:id](./rest/satusehat-private/medication-request.http)**
 
 #### MedicationDispense
 
--   **<code>post</code> /MedicationDispense**
--   **<code>get</code> /MedicationDispense**
--   **<code>get</code> /MedicationDispense/:id**
--   **<code>put</code> /MedicationDispense/:id**
--   **<code>patch</code> /MedicationDispense/:id**
+-   **<code>post</code> [/MedicationDispense](./rest/satusehat-private/medication-dispense.http)**
+-   **<code>get</code> [/MedicationDispense](./rest/satusehat-private/medication-dispense.http)**
+-   **<code>get</code> [/MedicationDispense/:id](./rest/satusehat-private/medication-dispense.http)**
+-   **<code>put</code> [/MedicationDispense/:id](./rest/satusehat-private/medication-dispense.http)**
+-   **<code>patch</code> [/MedicationDispense/:id](./rest/satusehat-private/medication-dispense.http)**
 
 #### DiagnosticReport
 
--   **<code>post</code> /DiagnosticReport**
--   **<code>get</code> /DiagnosticReport**
--   **<code>get</code> /DiagnosticReport/:id**
--   **<code>put</code> /DiagnosticReport/:id**
--   **<code>patch</code> /DiagnosticReport/:id**
+-   **<code>post</code> [/DiagnosticReport](./rest/satusehat-private/diagnostic-report.http)**
+-   **<code>get</code> [/DiagnosticReport](./rest/satusehat-private/diagnostic-report.http)**
+-   **<code>get</code> [/DiagnosticReport/:id](./rest/satusehat-private/diagnostic-report.http)**
+-   **<code>put</code> [/DiagnosticReport/:id](./rest/satusehat-private/diagnostic-report.http)**
+-   **<code>patch</code> [/DiagnosticReport/:id](./rest/satusehat-private/diagnostic-report.http)**
 
 #### AllergyIntolerance
 
--   **<code>post</code> /AllergyIntolerance**
--   **<code>get</code> /AllergyIntolerance**
--   **<code>get</code> /AllergyIntolerance/:id**
--   **<code>put</code> /AllergyIntolerance/:id**
--   **<code>patch</code> /AllergyIntolerance/:id**
+-   **<code>post</code> [/AllergyIntolerance](./rest/satusehat-private/allergy-intolerance.http)**
+-   **<code>get</code> [/AllergyIntolerance](./rest/satusehat-private/allergy-intolerance.http)**
+-   **<code>get</code> [/AllergyIntolerance/:id](./rest/satusehat-private/allergy-intolerance.http)**
+-   **<code>put</code> [/AllergyIntolerance/:id](./rest/satusehat-private/allergy-intolerance.http)**
+-   **<code>patch</code> [/AllergyIntolerance/:id](./rest/satusehat-private/allergy-intolerance.http)**
 
 #### ClinicalImpression
 
--   **<code>post</code> /ClinicalImpression**
--   **<code>get</code> /ClinicalImpression**
--   **<code>get</code> /ClinicalImpression/:id**
--   **<code>put</code> /ClinicalImpression/:id**
--   **<code>patch</code> /ClinicalImpression/:id**
+-   **<code>post</code> [/ClinicalImpression](./rest/satusehat-private/clinical-impression.http)**
+-   **<code>get</code> [/ClinicalImpression](./rest/satusehat-private/clinical-impression.http)**
+-   **<code>get</code> [/ClinicalImpression/:id](./rest/satusehat-private/clinical-impression.http)**
+-   **<code>put</code> [/ClinicalImpression/:id](./rest/satusehat-private/clinical-impression.http)**
+-   **<code>patch</code> [/ClinicalImpression/:id](./rest/satusehat-private/clinical-impression.http)**
 
 #### HealthcareService
 
--   **<code>post</code> /HealthcareService**
--   **<code>get</code> /HealthcareService/:id**
--   **<code>get</code> /HealthcareService**
--   **<code>put</code> /HealthcareService/:id**
--   **<code>patch</code> /HealthcareService/:id**
+-   **<code>post</code> [/HealthcareService](./rest/satusehat-private/healthcare-service.http)**
+-   **<code>get</code> [/HealthcareService/:id](./rest/satusehat-private/healthcare-service.http)**
+-   **<code>get</code> [/HealthcareService](./rest/satusehat-private/healthcare-service.http)**
+-   **<code>put</code> [/HealthcareService/:id](./rest/satusehat-private/healthcare-service.http)**
+-   **<code>patch</code> [/HealthcareService/:id](./rest/satusehat-private/healthcare-service.http)**
 
 #### Appointment
 
--   **<code>post</code> /Appointment**
--   **<code>get</code> /Appointment**
--   **<code>get</code> /Appointment/:id**
--   **<code>put</code> /Appointment/:id**
--   **<code>patch</code> /Appointment/:id**
+-   **<code>post</code> [/Appointment](./rest/satusehat-private/appointment.http)**
+-   **<code>get</code> [/Appointment](./rest/satusehat-private/appointment.http)**
+-   **<code>get</code> [/Appointment/:id](./rest/satusehat-private/appointment.http)**
+-   **<code>put</code> [/Appointment/:id](./rest/satusehat-private/appointment.http)**
+-   **<code>patch</code> [/Appointment/:id](./rest/satusehat-private/appointment.http)**
 
 #### AppointmentResponse
 
--   **<code>post</code> /AppointmentResponse**
--   **<code>get</code> /AppointmentResponse/:id**
--   **<code>get</code> /AppointmentResponse**
--   **<code>put</code> /AppointmentResponse/:id**
--   **<code>patch</code> /AppointmentResponse/:id**
+-   **<code>post</code> [/AppointmentResponse](./rest/satusehat-private/appointment-response.http)**
+-   **<code>get</code> [/AppointmentResponse/:id](./rest/satusehat-private/appointment-response.http)**
+-   **<code>get</code> [/AppointmentResponse](./rest/satusehat-private/appointment-response.http)**
+-   **<code>put</code> [/AppointmentResponse/:id](./rest/satusehat-private/appointment-response.http)**
+-   **<code>patch</code> [/AppointmentResponse/:id](./rest/satusehat-private/appointment-response.http)**
 
 #### PractitionerRole
 
--   **<code>post</code> /PractitionerRole**
--   **<code>get</code> /PractitionerRole/:id**
--   **<code>get</code> /PractitionerRole**
--   **<code>put</code> /PractitionerRole/:id**
--   **<code>patch</code> /PractitionerRole/:id**
+-   **<code>post</code> [/PractitionerRole](./rest/satusehat-private/practitioner-role.http)**
+-   **<code>get</code> [/PractitionerRole/:id](./rest/satusehat-private/practitioner-role.http)**
+-   **<code>get</code> [/PractitionerRole](./rest/satusehat-private/practitioner-role.http)**
+-   **<code>put</code> [/PractitionerRole/:id](./rest/satusehat-private/practitioner-role.http)**
+-   **<code>patch</code> [/PractitionerRole/:id](./rest/satusehat-private/practitioner-role.http)**
 
 #### Slot
 
--   **<code>post</code> /Slot**
--   **<code>get</code> /Slot/:id**
--   **<code>put</code> /Slot/:id**
--   **<code>patch</code> /Slot/:id**
+-   **<code>post</code> [/Slot](./rest/satusehat-private/slot.http)**
+-   **<code>get</code> [/Slot/:id](./rest/satusehat-private/slot.http)**
+-   **<code>put</code> [/Slot/:id](./rest/satusehat-private/slot.http)**
+-   **<code>patch</code> [/Slot/:id](./rest/satusehat-private/slot.http)**
 
 #### Immunization
 
--   **<code>get</code> /Immunization**
--   **<code>get</code> /Immunization/:id**
--   **<code>put</code> /Immunization/:id**
--   **<code>patch</code> /Immunization/:id**
+-   **<code>get</code> [/Immunization](./rest/satusehat-private/immunization.http)**
+-   **<code>get</code> [/Immunization/:id](./rest/satusehat-private/immunization.http)**
+-   **<code>put</code> [/Immunization/:id](./rest/satusehat-private/immunization.http)**
+-   **<code>patch</code> [/Immunization/:id](./rest/satusehat-private/immunization.http)**
 
 #### ImagingStudy
 
--   **<code>post</code> /ImagingStudy**
--   **<code>get</code> /ImagingStudy**
--   **<code>put</code> /ImagingStudy/:id**
+-   **<code>post</code> [/ImagingStudy](./rest/satusehat-private/imaging-study.http)**
+-   **<code>get</code> [/ImagingStudy](./rest/satusehat-private/imaging-study.http)**
+-   **<code>put</code> [/ImagingStudy/:id](./rest/satusehat-private/imaging-study.http)**
 
 #### EpisodeOfCare
 
--   **<code>post</code> /EpisodeOfCare**
--   **<code>get</code> /EpisodeOfCare**
--   **<code>get</code> /EpisodeOfCare/:id**
--   **<code>put</code> /EpisodeOfCare/:id**
--   **<code>patch</code> /EpisodeOfCare/:id**
+-   **<code>post</code> [/EpisodeOfCare](./rest/satusehat-private/episode-of-care.http)**
+-   **<code>get</code> [/EpisodeOfCare](./rest/satusehat-private/episode-of-care.http)**
+-   **<code>get</code> [/EpisodeOfCare/:id](./rest/satusehat-private/episode-of-care.http)**
+-   **<code>put</code> [/EpisodeOfCare/:id](./rest/satusehat-private/episode-of-care.http)**
+-   **<code>patch</code> [/EpisodeOfCare/:id](./rest/satusehat-private/episode-of-care.http)**
 
 #### CarePlan
 
--   **<code>post</code> /CarePlan**
--   **<code>get</code> /CarePlan/:id**
--   **<code>get</code> /CarePlan**
--   **<code>put</code> /CarePlan/:id**
--   **<code>patch</code> /CarePlan/:id**
+-   **<code>post</code> [/CarePlan](./rest/satusehat-private/care-plan.http)**
+-   **<code>get</code> [/CarePlan/:id](./rest/satusehat-private/care-plan.http)**
+-   **<code>get</code> [/CarePlan](./rest/satusehat-private/care-plan.http)**
+-   **<code>put</code> [/CarePlan/:id](./rest/satusehat-private/care-plan.http)**
+-   **<code>patch</code> [/CarePlan/:id](./rest/satusehat-private/care-plan.http)**
 
 #### FamilyMemberHistory
 
--   **<code>post</code> /FamilyMemberHistory**
--   **<code>get</code> /FamilyMemberHistory/:id**
--   **<code>get</code> /FamilyMemberHistory**
--   **<code>put</code> /FamilyMemberHistory/:id**
--   **<code>patch</code> /FamilyMemberHistory/:id**
+-   **<code>post</code> [/FamilyMemberHistory](./rest/satusehat-private/family-member-history.http)**
+-   **<code>get</code> [/FamilyMemberHistory/:id](./rest/satusehat-private/family-member-history.http)**
+-   **<code>get</code> [/FamilyMemberHistory](./rest/satusehat-private/family-member-history.http)**
+-   **<code>put</code> [/FamilyMemberHistory/:id](./rest/satusehat-private/family-member-history.http)**
+-   **<code>patch</code> [/FamilyMemberHistory/:id](./rest/satusehat-private/family-member-history.http)**
 
 #### QuestionnaireResponse
 
--   **<code>post</code> /QuestionnaireResponse**
--   **<code>put</code> /QuestionnaireResponse/:id**
--   **<code>get</code> /QuestionnaireResponse**
--   **<code>get</code> /QuestionnaireResponse/:id**
+-   **<code>post</code> [/QuestionnaireResponse](./rest/satusehat-private/questionnaire-response.http)**
+-   **<code>put</code> [/QuestionnaireResponse/:id](./rest/satusehat-private/questionnaire-response.http)**
+-   **<code>get</code> [/QuestionnaireResponse](./rest/satusehat-private/questionnaire-response.http)**
+-   **<code>get</code> [/QuestionnaireResponse/:id](./rest/satusehat-private/questionnaire-response.http)**
 
 #### ServiceRequest
 
--   **<code>post</code> /ServiceRequest**
--   **<code>get</code> /ServiceRequest**
--   **<code>get</code> /ServiceRequest/:id**
--   **<code>put</code> /ServiceRequest/:id**
--   **<code>patch</code> /ServiceRequest/:id**
+-   **<code>post</code> [/ServiceRequest](./rest/satusehat-private/service-request.http)**
+-   **<code>get</code> [/ServiceRequest](./rest/satusehat-private/service-request.http)**
+-   **<code>get</code> [/ServiceRequest/:id](./rest/satusehat-private/service-request.http)**
+-   **<code>put</code> [/ServiceRequest/:id](./rest/satusehat-private/service-request.http)**
+-   **<code>patch</code> [/ServiceRequest/:id](./rest/satusehat-private/service-request.http)**
 
 #### Specimen
 
--   **<code>post</code> /Specimen**
--   **<code>put</code> /Specimen/:id**
--   **<code>get</code> /Specimen/:id**
--   **<code>get</code> /Specimen**
--   **<code>patch</code> /Specimen/:id**
+-   **<code>post</code> [/Specimen](./rest/satusehat-private/specimen.http)**
+-   **<code>put</code> [/Specimen/:id](./rest/satusehat-private/specimen.http)**
+-   **<code>get</code> [/Specimen/:id](./rest/satusehat-private/specimen.http)**
+-   **<code>get</code> [/Specimen](./rest/satusehat-private/specimen.http)**
+-   **<code>patch</code> [/Specimen/:id](./rest/satusehat-private/specimen.http)**
 
 #### RelatedPerson
 
--   **<code>post</code> /RelatedPerson**
--   **<code>put</code> /RelatedPerson/:id**
--   **<code>get</code> /RelatedPerson**
--   **<code>patch</code> /RelatedPerson/:id**
+-   **<code>post</code> [/RelatedPerson](./rest/satusehat-private/related-person.http)**
+-   **<code>put</code> [/RelatedPerson/:id](./rest/satusehat-private/related-person.http)**
+-   **<code>get</code> [/RelatedPerson](./rest/satusehat-private/related-person.http)**
+-   **<code>patch</code> [/RelatedPerson/:id](./rest/satusehat-private/related-person.http)**
 
 #### Patient
 
--   **<code>get</code> /Patient**
--   **<code>get</code> /Patient/:id**
--   **<code>post</code> /Patient**
+-   **<code>get</code> [/Patient](./rest/satusehat-private/patient.http)**
+-   **<code>get</code> [/Patient/:id](./rest/satusehat-private/patient.http)**
+-   **<code>post</code> [/Patient](./rest/satusehat-private/patient.http)**
 
 ### **[Satusehat Mapping]()**
 
@@ -290,3 +290,10 @@ API Satusehat (menggunakan payload mapping)
 #### Encounter
 
 -   **<code>post</code> [/v1/Encounter](./rest/satusehat-mapping/encounter.http)** - [Create Encounter](./docs/satusehat-mapping/encounter.md)
+
+## LINK
+
+-   [DEV](https://github.com/ndiing/satusehat-private)
+-   [Public](https://github.com/ndiing/satusehat-public)
+-   [Public README](https://github.com/ndiing/satusehat-public/blob/main/README.md)
+-   [Public releases Download](https://github.com/ndiing/satusehat-public/releases)
