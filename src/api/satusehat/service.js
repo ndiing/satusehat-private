@@ -36,7 +36,9 @@ class Service {
 
         // Appending query parameters to URL
         for (const name in query) {
-            const value = query[name];
+            const value = query[name].replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
+                return process.env?.[$1] || this.storage?.[$1];
+            });
             url.searchParams.set(name, value);
         }
 
@@ -97,18 +99,18 @@ class Service {
             },
         };
 
-        // remove it later
-        // stop before request
-        // in development stage
-        return {
-            json:() => {
-                try {
-                    return JSON.parse(body)
-                } catch (error) {
-                    return body
-                }
-            }
-        }
+        // // remove it later
+        // // stop before request
+        // // in development stage
+        // return {
+        //     json:() => {
+        //         try {
+        //             return JSON.parse(body)
+        //         } catch (error) {
+        //             return body
+        //         }
+        //     }
+        // }
 
 
         const doc = {

@@ -8,13 +8,13 @@ Content-type: application/json
 {
     "status": "arrived",
     "class.code": "AMB",
-    "subject.reference": "Patient/100000030009",
+    "Patient_nik": "3501041605910002",
     "participant.0.type.0.coding.0.code": "ATND",
-    "participant.0.individual.reference": "Practitioner/N10000001",
+    "Practitioner_nik": "3515146112900002",
     "period.start": "2022-06-14T07:00:00+07:00",
-    "location.0.location.reference": "Location/b017aa54-f1df-4ec2-9d84-8823815d7228",
+    "Location_id": "GT1-R-IGD-PONEK",
     "statusHistory.0.status": "arrived",
     "statusHistory.0.period.start": "2022-06-14T07:00:00+07:00",
-    "serviceProvider.reference": "Organization/{{Org_id}}",
+    "Org_id": "5a90444d-01bd-405c-957b-6648a533132d",
     "identifier.0.value": "P20240001"
 }
