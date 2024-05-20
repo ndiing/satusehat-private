@@ -1,4 +1,4 @@
-###
+### Menambahkan Alamat Baru
 POST http://localhost:3000/api/master/address
 Content-Type: application/json
 
@@ -11,10 +11,10 @@ Content-Type: application/json
     "administrativeCode": "1010101101"
 }
 
-###
+### Mendapatkan Daftar Alamat
 GET http://localhost:3000/api/master/address
 
-###
+### Memperbarui Alamat yang Ada
 PATCH http://localhost:3000/api/master/address
 Content-Type: application/json
 
@@ -27,5 +27,5 @@ Content-Type: application/json
     "administrativeCode": "1010101101"
 }
 
-###
+### Menghapus Alamat Berdasarkan Penggunaan
 DELETE http://localhost:3000/api/master/address?use=work
