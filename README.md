@@ -21,7 +21,7 @@ organization_id**=<code>```**
 
 http://localhost:3000/api
 
-### Master
+### **[Master]()**
 
 #### telecom
 
@@ -37,14 +37,14 @@ http://localhost:3000/api
 -   **<code>patch</code> [/address](./rest/master/address.http)**
 -   **<code>delete</code> [/address](./rest/master/address.http)**
 
-### HL7
+### **[HL7]()**
 
 -   **<code>get</code> [/CodeSystem-location-physical-type](./rest/hl7/hl7.http)**
 -   **<code>get</code> [/CodeSystem-organization-type](./rest/hl7/hl7.http)**
 -   **<code>get</code> [/CodeSystem-v3-ActCode](./rest/hl7/hl7.http)**
 -   **<code>get</code> [/CodeSystem-v3-ParticipationType](./rest/hl7/hl7.http)**
 
-### Satusehat Private
+### **[Satusehat Private]()**
 
 #### Practitioner
 
@@ -266,7 +266,7 @@ http://localhost:3000/api
 -   **<code>get</code> /Patient/:id**
 -   **<code>post</code> /Patient**
 
-### Satusehat Mapping
+### **[Satusehat Mapping]()**
 
 #### Organization
 
