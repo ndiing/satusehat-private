@@ -4,11 +4,11 @@ Content-Type: application/json
 
 {
     "use": "work",
-    "line": "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan",
-    "city": "Jakarta",
-    "postalCode": "12950",
+    "line": "Jl. Raya Saimbang No.10, Sidoarjo",
+    "city": "Sidoarjo",
+    "postalCode": "61258",
     "country": "ID",
-    "administrativeCode": "1010101101"
+    "administrativeCode": "3515142002"
 }
 
 ### Mendapatkan Daftar Alamat
@@ -20,11 +20,11 @@ Content-Type: application/json
 
 {
     "use": "work",
-    "line": "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan",
-    "city": "Jakarta",
-    "postalCode": "12950",
+    "line": "Jl. Raya Saimbang No.10, Sidoarjo",
+    "city": "Sidoarjo",
+    "postalCode": "61258",
     "country": "ID",
-    "administrativeCode": "1010101101"
+    "administrativeCode": "3515142002"
 }
 
 ### Menghapus Alamat Berdasarkan Penggunaan

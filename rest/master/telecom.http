@@ -3,8 +3,8 @@ POST http://localhost:3000/api/master/telecom
 Content-Type: application/json
 
 {
-    "system": "phone",
-    "value": "2328",
+    "system": "website",
+    "value": "rsrahmanrahim.org",
     "use": "work"
 }
 
@@ -17,9 +17,9 @@ Content-Type: application/json
 
 {
     "system": "phone",
-    "value": "2328",
+    "value": "+6231-8830010",
     "use": "work"
 }
 
 ### Menghapus Informasi Telekomunikasi Berdasarkan Sistem dan Nilai
-DELETE http://localhost:3000/api/master/telecom?system=phone&value=2328
+DELETE http://localhost:3000/api/master/telecom?system=website&value=rsrahmanrahim.org
