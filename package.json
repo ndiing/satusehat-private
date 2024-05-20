@@ -1,7 +1,7 @@
 {
     "name": "satusehat",
     "productName": "satusehat",
-    "version": "1.0.0",
+    "version": "0.1",
     "description": "satusehat",
     "main": ".webpack/main",
     "scripts": {
