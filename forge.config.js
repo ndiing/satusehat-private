@@ -79,7 +79,7 @@ module.exports = {
                     name: "satusehat-public",
                 },
                 prerelease: false,
-                draft: true,
+                draft: false,
             },
         },
     ],
