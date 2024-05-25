@@ -114,7 +114,7 @@ class ImagingStudy extends Controller {
                 },
                 query: {
                     ...query,
-                   "identifier": query["identifier"], // "http://sys-ids.kemkes.go.id/acsn/10000004|MR.221102.062",
+                   ...(query["identifier"]&&{"identifier": query["identifier"]}), // "http://sys-ids.kemkes.go.id/acsn/10000004|MR.221102.062",
                 },
             });
             res.json(result);
@@ -910,7 +910,7 @@ class ImagingStudy extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "c4f3bfe3-91cd-40c4-b986-000c2150f051",
+                   ...(params["id"]&&{"id": params["id"]}), // "c4f3bfe3-91cd-40c4-b986-000c2150f051",
                 },
                 query: {
                     ...query,

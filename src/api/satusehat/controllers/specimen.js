@@ -149,7 +149,7 @@ class Specimen extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "dbee2404-e11d-421f-8399-57cee518e0c7",
+                   ...(params["id"]&&{"id": params["id"]}), // "dbee2404-e11d-421f-8399-57cee518e0c7",
                 },
                 query: {
                     ...query,
@@ -168,7 +168,7 @@ class Specimen extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "cb2adef7-3971-4239-9cc2-6ae9981fe57d",
+                   ...(params["id"]&&{"id": params["id"]}), // "cb2adef7-3971-4239-9cc2-6ae9981fe57d",
                 },
                 query: {
                     ...query,
@@ -189,7 +189,7 @@ class Specimen extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -213,7 +213,7 @@ class Specimen extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "cb2adef7-3971-4239-9cc2-6ae9981fe57d",
+                   ...(params["id"]&&{"id": params["id"]}), // "cb2adef7-3971-4239-9cc2-6ae9981fe57d",
                 },
                 query: {
                     ...query,

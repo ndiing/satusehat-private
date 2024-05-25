@@ -115,7 +115,7 @@ class Composition extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -130,7 +130,7 @@ class Composition extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "e511fb00-3641-4816-a9fd-db2a55d1897d",
+                   ...(params["id"]&&{"id": params["id"]}), // "e511fb00-3641-4816-a9fd-db2a55d1897d",
                 },
                 query: {
                     ...query,
@@ -215,7 +215,7 @@ class Composition extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "e511fb00-3641-4816-a9fd-db2a55d1897d",
+                   ...(params["id"]&&{"id": params["id"]}), // "e511fb00-3641-4816-a9fd-db2a55d1897d",
                 },
                 query: {
                     ...query,
@@ -243,7 +243,7 @@ class Composition extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "e511fb00-3641-4816-a9fd-db2a55d1897d",
+                   ...(params["id"]&&{"id": params["id"]}), // "e511fb00-3641-4816-a9fd-db2a55d1897d",
                 },
                 query: {
                     ...query,

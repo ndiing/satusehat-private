@@ -88,7 +88,7 @@ class FamilyMemberHistory extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "0735510d-ad0b-44ca-92be-b695a9b127d1",
+                   ...(params["id"]&&{"id": params["id"]}), // "0735510d-ad0b-44ca-92be-b695a9b127d1",
                 },
                 query: {
                     ...query,
@@ -109,8 +109,8 @@ class FamilyMemberHistory extends Controller {
                 },
                 query: {
                     ...query,
-                   "relationship": query["relationship"], // "72705000",
-                   "patient": query["patient"], // "P02280547535",
+                   ...(query["relationship"]&&{"relationship": query["relationship"]}), // "72705000",
+                   ...(query["patient"]&&{"patient": query["patient"]}), // "P02280547535",
                 },
             });
             res.json(result);
@@ -168,7 +168,7 @@ class FamilyMemberHistory extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "0735510d-ad0b-44ca-92be-b695a9b127d1",
+                   ...(params["id"]&&{"id": params["id"]}), // "0735510d-ad0b-44ca-92be-b695a9b127d1",
                 },
                 query: {
                     ...query,
@@ -196,7 +196,7 @@ class FamilyMemberHistory extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "0735510d-ad0b-44ca-92be-b695a9b127d1",
+                   ...(params["id"]&&{"id": params["id"]}), // "0735510d-ad0b-44ca-92be-b695a9b127d1",
                 },
                 query: {
                     ...query,

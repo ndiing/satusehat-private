@@ -119,7 +119,7 @@ class DiagnosticReport extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -134,7 +134,7 @@ class DiagnosticReport extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "ec63dc9a-738d-4f7b-8a4d-86ca9e621ef6",
+                   ...(params["id"]&&{"id": params["id"]}), // "ec63dc9a-738d-4f7b-8a4d-86ca9e621ef6",
                 },
                 query: {
                     ...query,
@@ -223,7 +223,7 @@ class DiagnosticReport extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "ec63dc9a-738d-4f7b-8a4d-86ca9e621ef6",
+                   ...(params["id"]&&{"id": params["id"]}), // "ec63dc9a-738d-4f7b-8a4d-86ca9e621ef6",
                 },
                 query: {
                     ...query,
@@ -251,7 +251,7 @@ class DiagnosticReport extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "ec63dc9a-738d-4f7b-8a4d-86ca9e621ef6",
+                   ...(params["id"]&&{"id": params["id"]}), // "ec63dc9a-738d-4f7b-8a4d-86ca9e621ef6",
                 },
                 query: {
                     ...query,

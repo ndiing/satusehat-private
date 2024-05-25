@@ -108,7 +108,7 @@ class Encounter extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "{{Encounter_uuid}}",
+                   ...(params["id"]&&{"id": params["id"]}), // "{{Encounter_uuid}}",
                 },
                 query: {
                     ...query,
@@ -129,7 +129,7 @@ class Encounter extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -216,7 +216,7 @@ class Encounter extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "{{Encounter_uuid}}",
+                   ...(params["id"]&&{"id": params["id"]}), // "{{Encounter_uuid}}",
                 },
                 query: {
                     ...query,
@@ -244,7 +244,7 @@ class Encounter extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "{{Encounter_uuid}}",
+                   ...(params["id"]&&{"id": params["id"]}), // "{{Encounter_uuid}}",
                 },
                 query: {
                     ...query,

@@ -91,7 +91,7 @@ class Condition extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -106,7 +106,7 @@ class Condition extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "cfbfb2a9-b261-494b-a6ad-905875fcdec6",
+                   ...(params["id"]&&{"id": params["id"]}), // "cfbfb2a9-b261-494b-a6ad-905875fcdec6",
                 },
                 query: {
                     ...query,
@@ -167,7 +167,7 @@ class Condition extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "f1369adf-26f6-47a5-90f2-ce08442639aa",
+                   ...(params["id"]&&{"id": params["id"]}), // "f1369adf-26f6-47a5-90f2-ce08442639aa",
                 },
                 query: {
                     ...query,
@@ -195,7 +195,7 @@ class Condition extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "f1369adf-26f6-47a5-90f2-ce08442639aa",
+                   ...(params["id"]&&{"id": params["id"]}), // "f1369adf-26f6-47a5-90f2-ce08442639aa",
                 },
                 query: {
                     ...query,

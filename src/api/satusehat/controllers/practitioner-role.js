@@ -98,7 +98,7 @@ class PractitionerRole extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
+                   ...(params["id"]&&{"id": params["id"]}), // "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
                 },
                 query: {
                     ...query,
@@ -119,7 +119,7 @@ class PractitionerRole extends Controller {
                 },
                 query: {
                     ...query,
-                   "practitioner": query["practitioner"], // "N10000001",
+                   ...(query["practitioner"]&&{"practitioner": query["practitioner"]}), // "N10000001",
                 },
             });
             res.json(result);
@@ -187,7 +187,7 @@ class PractitionerRole extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
+                   ...(params["id"]&&{"id": params["id"]}), // "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
                 },
                 query: {
                     ...query,
@@ -215,7 +215,7 @@ class PractitionerRole extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
+                   ...(params["id"]&&{"id": params["id"]}), // "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
                 },
                 query: {
                     ...query,

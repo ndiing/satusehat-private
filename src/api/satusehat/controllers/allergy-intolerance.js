@@ -104,8 +104,8 @@ class AllergyIntolerance extends Controller {
                 },
                 query: {
                     ...query,
-                   "patient": query["patient"], // "100000030009",
-                   "code": query["code"], // "89811004",
+                   ...(query["patient"]&&{"patient": query["patient"]}), // "100000030009",
+                   ...(query["code"]&&{"code": query["code"]}), // "89811004",
                 },
             });
             res.json(result);
@@ -120,7 +120,7 @@ class AllergyIntolerance extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
+                   ...(params["id"]&&{"id": params["id"]}), // "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
                 },
                 query: {
                     ...query,
@@ -194,7 +194,7 @@ class AllergyIntolerance extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
+                   ...(params["id"]&&{"id": params["id"]}), // "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
                 },
                 query: {
                     ...query,
@@ -222,7 +222,7 @@ class AllergyIntolerance extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
+                   ...(params["id"]&&{"id": params["id"]}), // "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
                 },
                 query: {
                     ...query,

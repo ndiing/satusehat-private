@@ -67,7 +67,7 @@ class Slot extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "6ced63df-93c3-4148-bbfd-af741b373993",
+                   ...(params["id"]&&{"id": params["id"]}), // "6ced63df-93c3-4148-bbfd-af741b373993",
                 },
                 query: {
                     ...query,
@@ -107,7 +107,7 @@ class Slot extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "6ced63df-93c3-4148-bbfd-af741b373993",
+                   ...(params["id"]&&{"id": params["id"]}), // "6ced63df-93c3-4148-bbfd-af741b373993",
                 },
                 query: {
                     ...query,
@@ -135,7 +135,7 @@ class Slot extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "6ced63df-93c3-4148-bbfd-af741b373993",
+                   ...(params["id"]&&{"id": params["id"]}), // "6ced63df-93c3-4148-bbfd-af741b373993",
                 },
                 query: {
                     ...query,

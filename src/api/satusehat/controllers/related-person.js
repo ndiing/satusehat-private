@@ -215,7 +215,7 @@ class RelatedPerson extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "c093eab9-a0e5-41b9-a543-51096653cd92",
+                   ...(params["id"]&&{"id": params["id"]}), // "c093eab9-a0e5-41b9-a543-51096653cd92",
                 },
                 query: {
                     ...query,
@@ -237,7 +237,7 @@ class RelatedPerson extends Controller {
                 },
                 query: {
                     ...query,
-                   "identifier": query["identifier"], // "https://fhir.kemkes.go.id/id/nik|367400001111222",
+                   ...(query["identifier"]&&{"identifier": query["identifier"]}), // "https://fhir.kemkes.go.id/id/nik|367400001111222",
                 },
             });
             res.json(result);
@@ -261,7 +261,7 @@ class RelatedPerson extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "c093eab9-a0e5-41b9-a543-51096653cd92",
+                   ...(params["id"]&&{"id": params["id"]}), // "c093eab9-a0e5-41b9-a543-51096653cd92",
                 },
                 query: {
                     ...query,

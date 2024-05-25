@@ -119,7 +119,7 @@ class HealthcareService extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
+                   ...(params["id"]&&{"id": params["id"]}), // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
                 },
                 query: {
                     ...query,
@@ -140,7 +140,7 @@ class HealthcareService extends Controller {
                 },
                 query: {
                     ...query,
-                   "specialty": query["specialty"], // "S001.09",
+                   ...(query["specialty"]&&{"specialty": query["specialty"]}), // "S001.09",
                 },
             });
             res.json(result);
@@ -229,7 +229,7 @@ class HealthcareService extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
+                   ...(params["id"]&&{"id": params["id"]}), // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
                 },
                 query: {
                     ...query,
@@ -257,7 +257,7 @@ class HealthcareService extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
+                   ...(params["id"]&&{"id": params["id"]}), // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
                 },
                 query: {
                     ...query,

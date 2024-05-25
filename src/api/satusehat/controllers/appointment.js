@@ -97,7 +97,7 @@ class Appointment extends Controller {
                 },
                 query: {
                     ...query,
-                   "actor": query["actor"], // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
+                   ...(query["actor"]&&{"actor": query["actor"]}), // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
                 },
             });
             res.json(result);
@@ -112,7 +112,7 @@ class Appointment extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
+                   ...(params["id"]&&{"id": params["id"]}), // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
                 },
                 query: {
                     ...query,
@@ -179,7 +179,7 @@ class Appointment extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
+                   ...(params["id"]&&{"id": params["id"]}), // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
                 },
                 query: {
                     ...query,
@@ -207,7 +207,7 @@ class Appointment extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
+                   ...(params["id"]&&{"id": params["id"]}), // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
                 },
                 query: {
                     ...query,

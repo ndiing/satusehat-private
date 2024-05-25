@@ -119,7 +119,7 @@ class QuestionnaireResponse extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
+                   ...(params["id"]&&{"id": params["id"]}), // "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
                 },
                 query: {
                     ...query,
@@ -141,8 +141,8 @@ class QuestionnaireResponse extends Controller {
                 },
                 query: {
                     ...query,
-                   "encounter": query["encounter"], // "66533eb2-723d-4e7c-b7aa-500cd67dd4c8",
-                   "patient": query["patient"], // "P02280547535",
+                   ...(query["encounter"]&&{"encounter": query["encounter"]}), // "66533eb2-723d-4e7c-b7aa-500cd67dd4c8",
+                   ...(query["patient"]&&{"patient": query["patient"]}), // "P02280547535",
                 },
             });
             res.json(result);
@@ -157,7 +157,7 @@ class QuestionnaireResponse extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
+                   ...(params["id"]&&{"id": params["id"]}), // "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
                 },
                 query: {
                     ...query,

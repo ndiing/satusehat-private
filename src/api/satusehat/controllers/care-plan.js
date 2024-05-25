@@ -65,7 +65,7 @@ class CarePlan extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "d16e2819-be08-40f7-888b-3f81a3a3518d",
+                   ...(params["id"]&&{"id": params["id"]}), // "d16e2819-be08-40f7-888b-3f81a3a3518d",
                 },
                 query: {
                     ...query,
@@ -86,8 +86,8 @@ class CarePlan extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030004",
-                   "encounter": query["encounter"], // "{{Encounter_uuid}}",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030004",
+                   ...(query["encounter"]&&{"encounter": query["encounter"]}), // "{{Encounter_uuid}}",
                 },
             });
             res.json(result);
@@ -122,7 +122,7 @@ class CarePlan extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "d16e2819-be08-40f7-888b-3f81a3a3518d",
+                   ...(params["id"]&&{"id": params["id"]}), // "d16e2819-be08-40f7-888b-3f81a3a3518d",
                 },
                 query: {
                     ...query,
@@ -150,7 +150,7 @@ class CarePlan extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "d16e2819-be08-40f7-888b-3f81a3a3518d",
+                   ...(params["id"]&&{"id": params["id"]}), // "d16e2819-be08-40f7-888b-3f81a3a3518d",
                 },
                 query: {
                     ...query,

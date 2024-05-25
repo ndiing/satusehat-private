@@ -31,7 +31,7 @@ class Practitioner extends Controller {
                 },
                 query: {
                     ...query,
-                   "identifier": query["identifier"], // "https://fhir.kemkes.go.id/id/nik|367400001111222",
+                   ...(query["identifier"]&&{"identifier": query["identifier"]}), // "https://fhir.kemkes.go.id/id/nik|367400001111222",
                 },
             });
             res.json(result);
@@ -46,7 +46,7 @@ class Practitioner extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "N10000001",
+                   ...(params["id"]&&{"id": params["id"]}), // "N10000001",
                 },
                 query: {
                     ...query,

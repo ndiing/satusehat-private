@@ -31,7 +31,7 @@ class Patient extends Controller {
                 },
                 query: {
                     ...query,
-                   "identifier": query["identifier"], // "https://fhir.kemkes.go.id/id/nik|9271060312000001",
+                   ...(query["identifier"]&&{"identifier": query["identifier"]}), // "https://fhir.kemkes.go.id/id/nik|9271060312000001",
                 },
             });
             res.json(result);
@@ -46,7 +46,7 @@ class Patient extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "P02478375538",
+                   ...(params["id"]&&{"id": params["id"]}), // "P02478375538",
                 },
                 query: {
                     ...query,

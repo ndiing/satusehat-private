@@ -108,7 +108,7 @@ class ServiceRequest extends Controller {
                 },
                 query: {
                     ...query,
-                   "identifier": query["identifier"], // "http://sys-ids.kemkes.go.id/acsn/{{Org_id}}|21120054",
+                   ...(query["identifier"]&&{"identifier": query["identifier"]}), // "http://sys-ids.kemkes.go.id/acsn/{{Org_id}}|21120054",
                 },
             });
             res.json(result);
@@ -123,7 +123,7 @@ class ServiceRequest extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
+                   ...(params["id"]&&{"id": params["id"]}), // "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
                 },
                 query: {
                     ...query,
@@ -201,7 +201,7 @@ class ServiceRequest extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
+                   ...(params["id"]&&{"id": params["id"]}), // "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
                 },
                 query: {
                     ...query,
@@ -229,7 +229,7 @@ class ServiceRequest extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
+                   ...(params["id"]&&{"id": params["id"]}), // "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
                 },
                 query: {
                     ...query,

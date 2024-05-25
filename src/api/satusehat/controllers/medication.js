@@ -197,7 +197,7 @@ class Medication extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
+                   ...(params["id"]&&{"id": params["id"]}), // "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
                 },
                 query: {
                     ...query,
@@ -366,7 +366,7 @@ class Medication extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
+                   ...(params["id"]&&{"id": params["id"]}), // "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
                 },
                 query: {
                     ...query,
@@ -394,7 +394,7 @@ class Medication extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
+                   ...(params["id"]&&{"id": params["id"]}), // "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
                 },
                 query: {
                     ...query,

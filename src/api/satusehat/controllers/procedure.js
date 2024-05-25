@@ -121,7 +121,7 @@ class Procedure extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -136,7 +136,7 @@ class Procedure extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "87859868-c35b-4f7b-86dd-da9830ae58c5",
+                   ...(params["id"]&&{"id": params["id"]}), // "87859868-c35b-4f7b-86dd-da9830ae58c5",
                 },
                 query: {
                     ...query,
@@ -227,7 +227,7 @@ class Procedure extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "87859868-c35b-4f7b-86dd-da9830ae58c5",
+                   ...(params["id"]&&{"id": params["id"]}), // "87859868-c35b-4f7b-86dd-da9830ae58c5",
                 },
                 query: {
                     ...query,
@@ -255,7 +255,7 @@ class Procedure extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "87859868-c35b-4f7b-86dd-da9830ae58c5",
+                   ...(params["id"]&&{"id": params["id"]}), // "87859868-c35b-4f7b-86dd-da9830ae58c5",
                 },
                 query: {
                     ...query,

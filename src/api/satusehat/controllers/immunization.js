@@ -31,8 +31,8 @@ class Immunization extends Controller {
                 },
                 query: {
                     ...query,
-                   "date": query["date"], // "2022-01-11",
-                   "patient": query["patient"], // "100000030009",
+                   ...(query["date"]&&{"date": query["date"]}), // "2022-01-11",
+                   ...(query["patient"]&&{"patient": query["patient"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -47,7 +47,7 @@ class Immunization extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "cbda5884-f180-4118-911e-9bd35e09651a",
+                   ...(params["id"]&&{"id": params["id"]}), // "cbda5884-f180-4118-911e-9bd35e09651a",
                 },
                 query: {
                     ...query,
@@ -158,7 +158,7 @@ class Immunization extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "cbda5884-f180-4118-911e-9bd35e09651a",
+                   ...(params["id"]&&{"id": params["id"]}), // "cbda5884-f180-4118-911e-9bd35e09651a",
                 },
                 query: {
                     ...query,
@@ -186,7 +186,7 @@ class Immunization extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "cbda5884-f180-4118-911e-9bd35e09651a",
+                   ...(params["id"]&&{"id": params["id"]}), // "cbda5884-f180-4118-911e-9bd35e09651a",
                 },
                 query: {
                     ...query,

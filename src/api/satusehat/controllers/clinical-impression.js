@@ -124,8 +124,8 @@ class ClinicalImpression extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
-                   "encounter": query["encounter"], // "{{Encounter_uuid}}",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
+                   ...(query["encounter"]&&{"encounter": query["encounter"]}), // "{{Encounter_uuid}}",
                 },
             });
             res.json(result);
@@ -140,7 +140,7 @@ class ClinicalImpression extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "8163695a-6224-401e-9a78-7dbc9bed69af",
+                   ...(params["id"]&&{"id": params["id"]}), // "8163695a-6224-401e-9a78-7dbc9bed69af",
                 },
                 query: {
                     ...query,
@@ -234,7 +234,7 @@ class ClinicalImpression extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "8163695a-6224-401e-9a78-7dbc9bed69af",
+                   ...(params["id"]&&{"id": params["id"]}), // "8163695a-6224-401e-9a78-7dbc9bed69af",
                 },
                 query: {
                     ...query,
@@ -262,7 +262,7 @@ class ClinicalImpression extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "8163695a-6224-401e-9a78-7dbc9bed69af",
+                   ...(params["id"]&&{"id": params["id"]}), // "8163695a-6224-401e-9a78-7dbc9bed69af",
                 },
                 query: {
                     ...query,

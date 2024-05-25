@@ -95,7 +95,7 @@ class ObservationTTV extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -110,7 +110,7 @@ class ObservationTTV extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "6d6186d9-9f29-4837-98f1-b61ac593ce15",
+                   ...(params["id"]&&{"id": params["id"]}), // "6d6186d9-9f29-4837-98f1-b61ac593ce15",
                 },
                 query: {
                     ...query,
@@ -170,7 +170,7 @@ class ObservationTTV extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "40a8c3c0-89fb-4ed3-b646-399c6a909d8a",
+                   ...(params["id"]&&{"id": params["id"]}), // "40a8c3c0-89fb-4ed3-b646-399c6a909d8a",
                 },
                 query: {
                     ...query,
@@ -198,7 +198,7 @@ class ObservationTTV extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "6d6186d9-9f29-4837-98f1-b61ac593ce15",
+                   ...(params["id"]&&{"id": params["id"]}), // "6d6186d9-9f29-4837-98f1-b61ac593ce15",
                 },
                 query: {
                     ...query,

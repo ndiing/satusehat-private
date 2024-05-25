@@ -191,7 +191,7 @@ class MedicationRequest extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -206,7 +206,7 @@ class MedicationRequest extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "b5293e6d-31c6-4111-8214-609ae5890838",
+                   ...(params["id"]&&{"id": params["id"]}), // "b5293e6d-31c6-4111-8214-609ae5890838",
                 },
                 query: {
                     ...query,
@@ -367,7 +367,7 @@ class MedicationRequest extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "b5293e6d-31c6-4111-8214-609ae5890838",
+                   ...(params["id"]&&{"id": params["id"]}), // "b5293e6d-31c6-4111-8214-609ae5890838",
                 },
                 query: {
                     ...query,
@@ -395,7 +395,7 @@ class MedicationRequest extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "b5293e6d-31c6-4111-8214-609ae5890838",
+                   ...(params["id"]&&{"id": params["id"]}), // "b5293e6d-31c6-4111-8214-609ae5890838",
                 },
                 query: {
                     ...query,

@@ -126,7 +126,7 @@ class Organization extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "100025605",
+                   ...(params["id"]&&{"id": params["id"]}), // "100025605",
                 },
                 query: {
                     ...query,
@@ -147,7 +147,7 @@ class Organization extends Controller {
                 },
                 query: {
                     ...query,
-                   "name": query["name"], // "paramarta",
+                   ...(query["name"]&&{"name": query["name"]}), // "paramarta",
                 },
             });
             res.json(result);
@@ -243,7 +243,7 @@ class Organization extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "abddd50b-b22f-4d68-a1c3-d2c29a27698b",
+                   ...(params["id"]&&{"id": params["id"]}), // "abddd50b-b22f-4d68-a1c3-d2c29a27698b",
                 },
                 query: {
                     ...query,
@@ -271,7 +271,7 @@ class Organization extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "abddd50b-b22f-4d68-a1c3-d2c29a27698b",
+                   ...(params["id"]&&{"id": params["id"]}), // "abddd50b-b22f-4d68-a1c3-d2c29a27698b",
                 },
                 query: {
                     ...query,

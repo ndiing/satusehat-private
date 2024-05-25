@@ -121,7 +121,7 @@ class EpisodeOfCare extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -136,7 +136,7 @@ class EpisodeOfCare extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "260aa42f-d8d6-49a9-9d40-bb47c95effff",
+                   ...(params["id"]&&{"id": params["id"]}), // "260aa42f-d8d6-49a9-9d40-bb47c95effff",
                 },
                 query: {
                     ...query,
@@ -227,7 +227,7 @@ class EpisodeOfCare extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "61c138e4-445a-447d-879c-fe3d5f8fb281",
+                   ...(params["id"]&&{"id": params["id"]}), // "61c138e4-445a-447d-879c-fe3d5f8fb281",
                 },
                 query: {
                     ...query,
@@ -255,7 +255,7 @@ class EpisodeOfCare extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "61c138e4-445a-447d-879c-fe3d5f8fb281",
+                   ...(params["id"]&&{"id": params["id"]}), // "61c138e4-445a-447d-879c-fe3d5f8fb281",
                 },
                 query: {
                     ...query,

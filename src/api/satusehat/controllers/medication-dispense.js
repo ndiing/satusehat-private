@@ -149,7 +149,7 @@ class MedicationDispense extends Controller {
                 },
                 query: {
                     ...query,
-                   "subject": query["subject"], // "100000030009",
+                   ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
             });
             res.json(result);
@@ -164,7 +164,7 @@ class MedicationDispense extends Controller {
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
-                   "id": params["id"], // "71e27aa4-89d1-49a0-80ab-20e970a939cc",
+                   ...(params["id"]&&{"id": params["id"]}), // "71e27aa4-89d1-49a0-80ab-20e970a939cc",
                 },
                 query: {
                     ...query,
@@ -283,7 +283,7 @@ class MedicationDispense extends Controller {
             const result = await res.locals.service.putId({
                 params: {
                     ...params,
-                   "id": params["id"], // "71e27aa4-89d1-49a0-80ab-20e970a939cc",
+                   ...(params["id"]&&{"id": params["id"]}), // "71e27aa4-89d1-49a0-80ab-20e970a939cc",
                 },
                 query: {
                     ...query,
@@ -311,7 +311,7 @@ class MedicationDispense extends Controller {
             const result = await res.locals.service.patchId({
                 params: {
                     ...params,
-                   "id": params["id"], // "71e27aa4-89d1-49a0-80ab-20e970a939cc",
+                   ...(params["id"]&&{"id": params["id"]}), // "71e27aa4-89d1-49a0-80ab-20e970a939cc",
                 },
                 query: {
                     ...query,

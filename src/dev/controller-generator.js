@@ -196,7 +196,7 @@ function parseItem3(item3, names) {
         group[fileName] += `                    ...params,\r\n`
         for(const name in variable){
             const value = variable[name]
-            group[fileName] += `                   "${name}": params["${name}"], // "${value}",\r\n`
+            group[fileName] += `                   ...(params["${name}"]&&{"${name}": params["${name}"]}), // "${value}",\r\n`
         }
         group[fileName] += `                },\r\n`
         // group[fileName] += `                query,\r\n`
@@ -204,7 +204,7 @@ function parseItem3(item3, names) {
         group[fileName] += `                    ...query,\r\n`
         for(const name in query){
             const value = query[name]
-            group[fileName] += `                   "${name}": query["${name}"], // "${value}",\r\n`
+            group[fileName] += `                   ...(query["${name}"]&&{"${name}": query["${name}"]}), // "${value}",\r\n`
         }
         group[fileName] += `                },\r\n`
         if(rawBody){
