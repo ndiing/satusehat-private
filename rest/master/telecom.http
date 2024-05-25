@@ -3,9 +3,9 @@ POST http://localhost:3000/api/master/telecom
 Content-Type: application/json
 
 {
-    "system": "website",
-    "value": "rsrahmanrahim.org",
-    "use": "work"
+    "system": "email",
+    "use": "work",
+    "value": "rahmanrahimrs@gmail.com"
 }
 
 ### Mendapatkan Daftar Informasi Telekomunikasi

@@ -33,10 +33,10 @@ class Location extends Controller {
             const address = await res.locals.addressModel.select()
 
             const target = {
-                // "resourceType": "Location",
+                "resourceType": "Location",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/location/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/location/{{Org_id}}",
                         // "value": "G-2-R-1A"
                     }
                 ],
@@ -49,7 +49,7 @@ class Location extends Controller {
                 "physicalType": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                            "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
                             // "code": "ro",
                             // "display": "Room"
                         }
@@ -125,11 +125,11 @@ class Location extends Controller {
             const address = await res.locals.addressModel.select()
 
             const target = {
-                // "resourceType": "Location",
+                "resourceType": "Location",
                 // "id": "dc01c797-547a-4e4d-97cd-4ece0630e380",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/location/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/location/{{Org_id}}",
                         // "value": "G-2-R-1A"
                     }
                 ],
@@ -142,7 +142,7 @@ class Location extends Controller {
                 "physicalType": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
+                            "system": "http://terminology.hl7.org/CodeSystem/location-physical-type",
                             // "code": "ro",
                             // "display": "Room"
                         }

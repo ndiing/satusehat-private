@@ -3,13 +3,14 @@ POST http://localhost:3000/api/master/address
 Content-Type: application/json
 
 {
-    "use": "work",
-    "line": "Jl. Raya Saimbang No.10, Sidoarjo",
-    "city": "Sidoarjo",
-    "postalCode": "61258",
-    "country": "ID",
-    "administrativeCode": "3515142002"
-}
+        "city": "Sidoarjo",
+        "country": "ID",
+        "administrativeCode": "3515142002",
+        "line": "Jl. Raya Saimbang No.10, Sidoarjo",
+        "postalCode": "61258",
+        "type": "both",
+        "use": "work"
+    }
 
 ### Mendapatkan Daftar Alamat
 GET http://localhost:3000/api/master/address
