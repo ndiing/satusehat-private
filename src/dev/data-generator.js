@@ -165,12 +165,12 @@ function parseItem3(item3, names) {
 
         if(rawBody){
             let pathname=(names.map(name=>toKebabCase(name)).join('/'))
-            // write(`./data/${pathname}.json`,JSON.stringify(helper.flatten(rawBody),null,4))
+            write(`./data/${pathname}.json`,JSON.stringify(helper.flatten(rawBody),null,4))
 
-            let json = JSON.stringify(rawBody)
-            for(const [,url] of json.matchAll(/"(http[^"]+)"/g)){
-                set.add(url)
-            }
+            // let json = JSON.stringify(rawBody)
+            // for(const [,url] of json.matchAll(/"(http[^"]+)"/g)){
+            //     set.add(url)
+            // }
         }
     }
 }
