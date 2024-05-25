@@ -25,46 +25,48 @@ class Condition extends Controller {
     static async post(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = {
-                // "resourceType": "Condition",
-                "clinicalStatus": {
-                    "coding": [
-                        {
-                            // "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-                            // "code": "active",
-                            // "display": "Active"
-                        }
-                    ]
-                },
-                "category": [
-                    {
-                        "coding": [
-                            {
-                                // "system": "http://terminology.hl7.org/CodeSystem/condition-category",
-                                // "code": "encounter-diagnosis",
-                                // "display": "Encounter Diagnosis"
-                            }
-                        ]
-                    }
-                ],
-                "code": {
-                    "coding": [
-                        {
-                            // "system": "http://hl7.org/fhir/sid/icd-10",
-                            // "code": "K35.8",
-                            // "display": "Acute appendicitis, other and unspecified"
-                        }
-                    ]
-                },
-                "subject": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
-                },
-                "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}",
-                    // "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
-                }
-            }
+//             const target = {
+//                 "resourceType": "Condition",
+//                 "clinicalStatus": {
+//                     "coding": [
+//                         {
+//                             "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+//                             "code": "active",
+//                             "display": "Active"
+//                         }
+//                     ]
+//                 },
+//                 "category": [
+//                     {
+//                         "coding": [
+//                             {
+//                                 "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+//                                 "code": "encounter-diagnosis",
+//                                 "display": "Encounter Diagnosis"
+//                             }
+//                         ]
+//                     }
+//                 ],
+//                 "code": {
+//                     "coding": [
+//                         {
+//                             "system": "http://hl7.org/fhir/sid/icd-10",
+//                             "code": "K35.8",
+//                             "display": "Acute appendicitis, other and unspecified"
+//                         }
+//                     ]
+//                 },
+//                 "subject": {
+//                     "reference": "Patient/100000030009",
+//                     "display": "Budi Santoso"
+//                 },
+//                 "encounter": {
+//                     "reference": "Encounter/{{Encounter_uuid}}",
+//                     "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+//                 }
+//             }// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.post({
@@ -121,47 +123,49 @@ class Condition extends Controller {
     static async putId(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = {
-                // "resourceType": "Condition",
-                // "id": "f1369adf-26f6-47a5-90f2-ce08442639aa",
-                "clinicalStatus": {
-                    "coding": [
-                        {
-                            // "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-                            // "code": "remission",
-                            // "display": "Remission"
-                        }
-                    ]
-                },
-                "category": [
-                    {
-                        "coding": [
-                            {
-                                // "system": "http://terminology.hl7.org/CodeSystem/condition-category",
-                                // "code": "encounter-diagnosis",
-                                // "display": "Encounter Diagnosis"
-                            }
-                        ]
-                    }
-                ],
-                "code": {
-                    "coding": [
-                        {
-                            // "system": "http://hl7.org/fhir/sid/icd-10",
-                            // "code": "K35.8",
-                            // "display": "Acute appendicitis, other and unspecified"
-                        }
-                    ]
-                },
-                "subject": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
-                },
-                "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}",
-                    // "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
-                }
-            }
+//             const target = {
+//                 "resourceType": "Condition",
+//                 "id": "f1369adf-26f6-47a5-90f2-ce08442639aa",
+//                 "clinicalStatus": {
+//                     "coding": [
+//                         {
+//                             "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+//                             "code": "remission",
+//                             "display": "Remission"
+//                         }
+//                     ]
+//                 },
+//                 "category": [
+//                     {
+//                         "coding": [
+//                             {
+//                                 "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+//                                 "code": "encounter-diagnosis",
+//                                 "display": "Encounter Diagnosis"
+//                             }
+//                         ]
+//                     }
+//                 ],
+//                 "code": {
+//                     "coding": [
+//                         {
+//                             "system": "http://hl7.org/fhir/sid/icd-10",
+//                             "code": "K35.8",
+//                             "display": "Acute appendicitis, other and unspecified"
+//                         }
+//                     ]
+//                 },
+//                 "subject": {
+//                     "reference": "Patient/100000030009",
+//                     "display": "Budi Santoso"
+//                 },
+//                 "encounter": {
+//                     "reference": "Encounter/{{Encounter_uuid}}",
+//                     "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+//                 }
+//             }// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
@@ -183,13 +187,15 @@ class Condition extends Controller {
     static async patchId(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = [
-                {
-                    // "op": "replace",
-                    // "path": "/clinicalStatus/coding/0/code",
-                    // "value": "remission"
-                }
-            ]
+//             const target = [
+//                 {
+//                     "op": "replace",
+//                     "path": "/clinicalStatus/coding/0/code",
+//                     "value": "remission"
+//                 }
+//             ]// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({

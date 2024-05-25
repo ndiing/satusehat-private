@@ -25,18 +25,20 @@ class AppointmentResponse extends Controller {
     static async post(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = {
-                // "resourceType": "AppointmentResponse",
-                "appointment": {
-                    // "reference": "Appointment/0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a"
-                },
-                "actor": {
-                    // "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17",
-                    // "display": "Poliklinik Bedah Rawat Jalan Terpadu"
-                },
-                // "participantStatus": "accepted",
-                // "comment": "A-12"
-            }
+//             const target = {
+//                 "resourceType": "AppointmentResponse",
+//                 "appointment": {
+//                     "reference": "Appointment/0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a"
+//                 },
+//                 "actor": {
+//                     "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17",
+//                     "display": "Poliklinik Bedah Rawat Jalan Terpadu"
+//                 },
+//                 "participantStatus": "accepted",
+//                 "comment": "A-12"
+//             }// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.post({
@@ -93,19 +95,21 @@ class AppointmentResponse extends Controller {
     static async putId(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = {
-                // "resourceType": "AppointmentResponse",
-                // "id": "96bbe117-1738-4e93-abd7-23178dad38d3",
-                "appointment": {
-                    // "reference": "Appointment/0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a"
-                },
-                "actor": {
-                    // "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17",
-                    // "display": "Poliklinik Bedah Rawat Jalan Terpadu"
-                },
-                // "participantStatus": "declined",
-                // "comment": "A-14"
-            }
+//             const target = {
+//                 "resourceType": "AppointmentResponse",
+//                 "id": "96bbe117-1738-4e93-abd7-23178dad38d3",
+//                 "appointment": {
+//                     "reference": "Appointment/0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a"
+//                 },
+//                 "actor": {
+//                     "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17",
+//                     "display": "Poliklinik Bedah Rawat Jalan Terpadu"
+//                 },
+//                 "participantStatus": "declined",
+//                 "comment": "A-14"
+//             }// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
@@ -127,13 +131,15 @@ class AppointmentResponse extends Controller {
     static async patchId(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = [
-                {
-                    // "op": "replace",
-                    // "path": "/comment",
-                    // "value": "A-123"
-                }
-            ]
+//             const target = [
+//                 {
+//                     "op": "replace",
+//                     "path": "/comment",
+//                     "value": "A-123"
+//                 }
+//             ]// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({

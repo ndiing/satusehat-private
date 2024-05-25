@@ -25,55 +25,57 @@ class Specimen extends Controller {
     static async post(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = {
-                // "resourceType": "Specimen",
-                "identifier": [
-                    {
-                        // "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
-                        // "value": "00001",
-                        "assigner": {
-                            // "reference": "Organization/{{Org_id}}"
-                        }
-                    }
-                ],
-                // "status": "available",
-                "type": {
-                    "coding": [
-                        {
-                            // "system": "http://snomed.info/sct",
-                            // "code": "119294007",
-                            // "display": "Dried blood specimen"
-                        }
-                    ]
-                },
-                "collection": {
-                    // "collectedDateTime": "2022-06-14T08:15:00+07:00",
-                    "extension": [
-                        {
-                            // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
-                            "valueReference": {
-                                // "reference": "Organization/{{Org_id}}"
-                            }
-                        }
-                    ]
-                },
-                "subject": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
-                },
-                "request": [
-                    {
-                        // "reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab"
-                    }
-                ],
-                // "receivedTime": "2022-06-14T08:25:00+07:00",
-                "extension": [
-                    {
-                        // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
-                        // "valueDateTime": "2022-06-14T08:23:00+07:00"
-                    }
-                ]
-            }
+//             const target = {
+//                 "resourceType": "Specimen",
+//                 "identifier": [
+//                     {
+//                         "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+//                         "value": "00001",
+//                         "assigner": {
+//                             "reference": "Organization/{{Org_id}}"
+//                         }
+//                     }
+//                 ],
+//                 "status": "available",
+//                 "type": {
+//                     "coding": [
+//                         {
+//                             "system": "http://snomed.info/sct",
+//                             "code": "119294007",
+//                             "display": "Dried blood specimen"
+//                         }
+//                     ]
+//                 },
+//                 "collection": {
+//                     "collectedDateTime": "2022-06-14T08:15:00+07:00",
+//                     "extension": [
+//                         {
+//                             "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
+//                             "valueReference": {
+//                                 "reference": "Organization/{{Org_id}}"
+//                             }
+//                         }
+//                     ]
+//                 },
+//                 "subject": {
+//                     "reference": "Patient/100000030009",
+//                     "display": "Budi Santoso"
+//                 },
+//                 "request": [
+//                     {
+//                         "reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab"
+//                     }
+//                 ],
+//                 "receivedTime": "2022-06-14T08:25:00+07:00",
+//                 "extension": [
+//                     {
+//                         "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
+//                         "valueDateTime": "2022-06-14T08:23:00+07:00"
+//                     }
+//                 ]
+//             }// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.post({
@@ -94,56 +96,58 @@ class Specimen extends Controller {
     static async putId(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = {
-                // "resourceType": "Specimen",
-                // "id": "dbee2404-e11d-421f-8399-57cee518e0c7",
-                "identifier": [
-                    {
-                        // "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
-                        // "value": "00001",
-                        "assigner": {
-                            // "reference": "Organization/{{Org_id}}"
-                        }
-                    }
-                ],
-                // "status": "available",
-                "type": {
-                    "coding": [
-                        {
-                            // "system": "http://snomed.info/sct",
-                            // "code": "119294007",
-                            // "display": "Dried blood specimen"
-                        }
-                    ]
-                },
-                "collection": {
-                    // "collectedDateTime": "2022-06-14T08:15:00+07:00",
-                    "extension": [
-                        {
-                            // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
-                            "valueReference": {
-                                // "reference": "Organization/{{Org_id}}"
-                            }
-                        }
-                    ]
-                },
-                "subject": {
-                    // "reference": "Patient/100000030004",
-                    // "display": "Budi Santoso"
-                },
-                "request": [
-                    {
-                        // "reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab"
-                    }
-                ],
-                // "receivedTime": "2022-06-14T08:25:00+07:00",
-                "extension": [
-                    {
-                        // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
-                        // "valueDateTime": "2022-06-14T08:23:00+07:00"
-                    }
-                ]
-            }
+//             const target = {
+//                 "resourceType": "Specimen",
+//                 "id": "dbee2404-e11d-421f-8399-57cee518e0c7",
+//                 "identifier": [
+//                     {
+//                         "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+//                         "value": "00001",
+//                         "assigner": {
+//                             "reference": "Organization/{{Org_id}}"
+//                         }
+//                     }
+//                 ],
+//                 "status": "available",
+//                 "type": {
+//                     "coding": [
+//                         {
+//                             "system": "http://snomed.info/sct",
+//                             "code": "119294007",
+//                             "display": "Dried blood specimen"
+//                         }
+//                     ]
+//                 },
+//                 "collection": {
+//                     "collectedDateTime": "2022-06-14T08:15:00+07:00",
+//                     "extension": [
+//                         {
+//                             "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
+//                             "valueReference": {
+//                                 "reference": "Organization/{{Org_id}}"
+//                             }
+//                         }
+//                     ]
+//                 },
+//                 "subject": {
+//                     "reference": "Patient/100000030004",
+//                     "display": "Budi Santoso"
+//                 },
+//                 "request": [
+//                     {
+//                         "reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab"
+//                     }
+//                 ],
+//                 "receivedTime": "2022-06-14T08:25:00+07:00",
+//                 "extension": [
+//                     {
+//                         "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
+//                         "valueDateTime": "2022-06-14T08:23:00+07:00"
+//                     }
+//                 ]
+//             }// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
@@ -201,13 +205,15 @@ class Specimen extends Controller {
     static async patchId(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = [
-                {
-                    // "op": "replace",
-                    // "path": "/status",
-                    // "value": "unavailable"
-                }
-            ]
+//             const target = [
+//                 {
+//                     "op": "replace",
+//                     "path": "/status",
+//                     "value": "unavailable"
+//                 }
+//             ]// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({

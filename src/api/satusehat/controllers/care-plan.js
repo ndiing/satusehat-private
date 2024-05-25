@@ -25,23 +25,25 @@ class CarePlan extends Controller {
     static async post(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = {
-                // "resourceType": "CarePlan",
-                // "status": "active",
-                // "intent": "plan",
-                // "description": "Rujuk ke RS Rujukan Tumbuh Kembang level 1",
-                "subject": {
-                    // "reference": "Patient/100000030004",
-                    // "display": "Anak Smith"
-                },
-                "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}"
-                },
-                // "created": "2022-07-26",
-                "author": {
-                    // "reference": "Practitioner/N10000001"
-                }
-            }
+//             const target = {
+//                 "resourceType": "CarePlan",
+//                 "status": "active",
+//                 "intent": "plan",
+//                 "description": "Rujuk ke RS Rujukan Tumbuh Kembang level 1",
+//                 "subject": {
+//                     "reference": "Patient/100000030004",
+//                     "display": "Anak Smith"
+//                 },
+//                 "encounter": {
+//                     "reference": "Encounter/{{Encounter_uuid}}"
+//                 },
+//                 "created": "2022-07-26",
+//                 "author": {
+//                     "reference": "Practitioner/N10000001"
+//                 }
+//             }// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.post({
@@ -99,24 +101,26 @@ class CarePlan extends Controller {
     static async putId(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = {
-                // "resourceType": "CarePlan",
-                // "id": "d16e2819-be08-40f7-888b-3f81a3a3518d",
-                // "status": "active",
-                // "intent": "plan",
-                // "description": "Rujuk ke RS Rujukan Tumbuh Kembang ABCDEFG level 1",
-                "subject": {
-                    // "reference": "Patient/100000030004",
-                    // "display": "Anak Smith"
-                },
-                "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}"
-                },
-                // "created": "2022-07-26",
-                "author": {
-                    // "reference": "Practitioner/N10000001"
-                }
-            }
+//             const target = {
+//                 "resourceType": "CarePlan",
+//                 "id": "d16e2819-be08-40f7-888b-3f81a3a3518d",
+//                 "status": "active",
+//                 "intent": "plan",
+//                 "description": "Rujuk ke RS Rujukan Tumbuh Kembang ABCDEFG level 1",
+//                 "subject": {
+//                     "reference": "Patient/100000030004",
+//                     "display": "Anak Smith"
+//                 },
+//                 "encounter": {
+//                     "reference": "Encounter/{{Encounter_uuid}}"
+//                 },
+//                 "created": "2022-07-26",
+//                 "author": {
+//                     "reference": "Practitioner/N10000001"
+//                 }
+//             }// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
@@ -138,13 +142,15 @@ class CarePlan extends Controller {
     static async patchId(req, res, next) {
         try {
             const {params,query,body} = req
-            const target = [
-                {
-                    // "op": "replace",
-                    // "path": "/description",
-                    // "value": "Rujuk ke PAUD terdekat untuk stimulasi tumbuh kembang"
-                }
-            ]
+//             const target = [
+//                 {
+//                     "op": "replace",
+//                     "path": "/description",
+//                     "value": "Rujuk ke PAUD terdekat untuk stimulasi tumbuh kembang"
+//                 }
+//             ]// 
+// 
+            const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
