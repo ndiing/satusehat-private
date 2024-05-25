@@ -26,10 +26,10 @@ class Encounter extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Encounter",
+                "resourceType": "Encounter",
                 // "status": "arrived",
                 "class": {
-                    // "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
                     // "code": "AMB",
                     // "display": "ambulatory"
                 },
@@ -43,7 +43,7 @@ class Encounter extends Controller {
                             {
                                 "coding": [
                                     {
-                                        // "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
                                         // "code": "ATND",
                                         // "display": "attender"
                                     }
@@ -80,7 +80,7 @@ class Encounter extends Controller {
                 },
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
                         // "value": "P20240001"
                     }
                 ]
@@ -142,17 +142,17 @@ class Encounter extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Encounter",
+                "resourceType": "Encounter",
                 // "id": "{{Encounter_uuid}}",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/encounter/{{Org_id}}",
                         // "value": "P20240001"
                     }
                 ],
                 // "status": "in-progress",
                 "class": {
-                    // "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
                     // "code": "AMB",
                     // "display": "ambulatory"
                 },
@@ -166,7 +166,7 @@ class Encounter extends Controller {
                             {
                                 "coding": [
                                     {
-                                        // "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
+                                        "system": "http://terminology.hl7.org/CodeSystem/v3-ParticipationType",
                                         // "code": "ATND",
                                         // "display": "attender"
                                     }
