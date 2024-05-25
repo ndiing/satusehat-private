@@ -26,7 +26,7 @@ class QuestionnaireResponse extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "QuestionnaireResponse",
+                "resourceType": "QuestionnaireResponse",
                 // "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
                 // "status": "completed",
                 "subject": {
@@ -50,7 +50,7 @@ class QuestionnaireResponse extends Controller {
                         "answer": [
                             {
                                 "valueCoding": {
-                                    // "system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
+                                    "system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
                                     // "code": "KPS",
                                     // "display": "Keluarga Pra Sejahtera (KPS)"
                                 }
@@ -80,7 +80,7 @@ class QuestionnaireResponse extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "QuestionnaireResponse",
+                "resourceType": "QuestionnaireResponse",
                 // "id": "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
                 // "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
                 // "status": "completed",
@@ -105,7 +105,7 @@ class QuestionnaireResponse extends Controller {
                         "answer": [
                             {
                                 "valueCoding": {
-                                    // "system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
+                                    "system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
                                     // "code": "KPS",
                                     // "display": "Keluarga Pra Sejahtera (KPS)"
                                 }

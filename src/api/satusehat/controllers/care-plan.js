@@ -26,7 +26,7 @@ class CarePlan extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "CarePlan",
+                "resourceType": "CarePlan",
                 // "status": "active",
                 // "intent": "plan",
                 // "description": "Rujuk ke RS Rujukan Tumbuh Kembang level 1",
@@ -100,7 +100,7 @@ class CarePlan extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "CarePlan",
+                "resourceType": "CarePlan",
                 // "id": "d16e2819-be08-40f7-888b-3f81a3a3518d",
                 // "status": "active",
                 // "intent": "plan",

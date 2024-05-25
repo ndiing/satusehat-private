@@ -26,13 +26,13 @@ class ObservationTTV extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Observation",
+                "resourceType": "Observation",
                 // "status": "final",
                 "category": [
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
                                 // "code": "vital-signs",
                                 // "display": "Vital Signs"
                             }
@@ -42,7 +42,7 @@ class ObservationTTV extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://loinc.org",
+                            "system": "http://loinc.org",
                             // "code": "8867-4",
                             // "display": "Heart rate"
                         }
@@ -65,7 +65,7 @@ class ObservationTTV extends Controller {
                 "valueQuantity": {
                     // "value": 80,
                     // "unit": "beats/minute",
-                    // "system": "http://unitsofmeasure.org",
+                    "system": "http://unitsofmeasure.org",
                     // "code": "/min"
                 }
             }
@@ -126,14 +126,14 @@ class ObservationTTV extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Observation",
+                "resourceType": "Observation",
                 // "status": "final",
                 // "id": "40a8c3c0-89fb-4ed3-b646-399c6a909d8a",
                 "category": [
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/observation-category",
+                                "system": "http://terminology.hl7.org/CodeSystem/observation-category",
                                 // "code": "vital-signs",
                                 // "display": "Vital Signs"
                             }
@@ -143,7 +143,7 @@ class ObservationTTV extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://loinc.org",
+                            "system": "http://loinc.org",
                             // "code": "9279-1",
                             // "display": "Respiratory rate"
                         }
@@ -161,7 +161,7 @@ class ObservationTTV extends Controller {
                 "valueQuantity": {
                     // "value": 22,
                     // "unit": "breaths/minute",
-                    // "system": "http://unitsofmeasure.org",
+                    "system": "http://unitsofmeasure.org",
                     // "code": "/min"
                 }
             }

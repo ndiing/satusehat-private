@@ -1,4 +1,4 @@
-@Org_id=100027857
+@Org_id=
 
 ### Location - Create
 POST http://localhost:3000/api/satusehat/Location
@@ -19,7 +19,7 @@ Content-type: application/json
 }
 
 ### Location - Search by Identifier
-GET http://localhost:3000/api/satusehat/Location?identifier=http://sys-ids.kemkes.go.id/location/{{organization_id}}|G-2-R-1A
+GET http://localhost:3000/api/satusehat/Location?identifier=http://sys-ids.kemkes.go.id/location/1000001|G-2-R-1A
 
 ### Location - Search by Name
 GET http://localhost:3000/api/satusehat/Location?name=ruang

@@ -63,23 +63,23 @@ class Immunization extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Immunization",
+                "resourceType": "Immunization",
                 // "id": "cbda5884-f180-4118-911e-9bd35e09651a",
                 // "status": "not-done",
                 "vaccineCode": {
                     "coding": [
                         {
-                            // "system": "http://sys-ids.kemkes.go.id/kfa",
+                            "system": "http://sys-ids.kemkes.go.id/kfa",
                             // "code": "93001282",
                             // "display": "Vaksin DTP - HB - Hib 0,5 mL (PENTABIO, 1)"
                         },
                         {
-                            // "system": "http://sys-ids.kemkes.go.id/kfa",
+                            "system": "http://sys-ids.kemkes.go.id/kfa",
                             // "code": "VG17",
                             // "display": "HIB"
                         },
                         {
-                            // "system": "http://hl7.org/fhir/sid/cvx",
+                            "system": "http://hl7.org/fhir/sid/cvx",
                             // "code": "102",
                             // "display": "DTP-Hib-Hep B"
                         }
@@ -103,7 +103,7 @@ class Immunization extends Controller {
                 "route": {
                     "coding": [
                         {
-                            // "system": "http://www.whocc.no/atc",
+                            "system": "http://www.whocc.no/atc",
                             // "code": "inj.intramuscular",
                             // "display": "Injection Intramuscular"
                         }
@@ -112,7 +112,7 @@ class Immunization extends Controller {
                 "doseQuantity": {
                     // "value": 1,
                     // "unit": "mL",
-                    // "system": "http://unitsofmeasure.org",
+                    "system": "http://unitsofmeasure.org",
                     // "code": "ml"
                 },
                 "performer": [
@@ -120,7 +120,7 @@ class Immunization extends Controller {
                         "function": {
                             "coding": [
                                 {
-                                    // "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v2-0443",
                                     // "code": "AP",
                                     // "display": "Administering Provider"
                                 }
@@ -135,12 +135,12 @@ class Immunization extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.kemkes.go.id/CodeSystem/immunization-reason",
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/immunization-reason",
                                 // "code": "IM-Dasar",
                                 // "display": "Imunisasi Program Rutin Dasar"
                             },
                             {
-                                // "system": "http://terminology.kemkes.go.id/CodeSystem/immunization-routine-timing",
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/immunization-routine-timing",
                                 // "code": "IM-Ideal",
                                 // "display": "Imunisasi Ideal"
                             }

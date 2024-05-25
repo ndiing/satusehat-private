@@ -1,5 +1,4 @@
 @Org_id=
-@Organization_id=
 
 ### Organization - Create
 POST http://localhost:3000/api/satusehat/Organization
@@ -12,7 +11,7 @@ Content-type: application/json
     "type.0.coding.0.code": "dept",
     "type.0.coding.0.display": "Hospital Department",
     "name": "Pos Imunisasi",
-    "partOf.reference": "Organization/{{Organization_id}}"
+    "partOf.reference": "Organization/{{Org_id}}"
 }
 
 ### Organization - By ID
@@ -25,7 +24,7 @@ GET http://localhost:3000/api/satusehat/Organization/:id
 GET http://localhost:3000/api/satusehat/Organization?name=paramarta
 
 ### Organization - Search by PartOf
-GET http://localhost:3000/api/satusehat/Organization?partof={{Organization_id}}
+GET http://localhost:3000/api/satusehat/Organization?partof={{Org_id}}
 
 ### Organization - Update
 PUT http://localhost:3000/api/satusehat/Organization/:id
@@ -39,7 +38,7 @@ Content-type: application/json
     "type.0.coding.0.code": "dept",
     "type.0.coding.0.display": "Hospital Department",
     "name": "Rawat Jalan Terpadu",
-    "partOf.reference": "Organization/{{Organization_id}}"
+    "partOf.reference": "Organization/{{Org_id}}"
 }
 
 ### Organization - Patch

@@ -26,10 +26,10 @@ class AllergyIntolerance extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "AllergyIntolerance",
+                "resourceType": "AllergyIntolerance",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/allergy/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/allergy/{{Org_id}}",
                         // "use": "official",
                         // "value": "98457729"
                     }
@@ -37,7 +37,7 @@ class AllergyIntolerance extends Controller {
                 "clinicalStatus": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                            "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
                             // "code": "active",
                             // "display": "Active"
                         }
@@ -46,7 +46,7 @@ class AllergyIntolerance extends Controller {
                 "verificationStatus": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                            "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
                             // "code": "confirmed",
                             // "display": "Confirmed"
                         }
@@ -58,7 +58,7 @@ class AllergyIntolerance extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://snomed.info/sct",
+                            "system": "http://snomed.info/sct",
                             // "code": "89811004",
                             // "display": "Gluten"
                         }
@@ -136,11 +136,11 @@ class AllergyIntolerance extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "AllergyIntolerance",
+                "resourceType": "AllergyIntolerance",
                 // "id": "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/allergy/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/allergy/{{Org_id}}",
                         // "use": "official",
                         // "value": "98457729"
                     }
@@ -148,7 +148,7 @@ class AllergyIntolerance extends Controller {
                 "clinicalStatus": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+                            "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
                             // "code": "resolved",
                             // "display": "resolved"
                         }
@@ -157,7 +157,7 @@ class AllergyIntolerance extends Controller {
                 "verificationStatus": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+                            "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
                             // "code": "confirmed",
                             // "display": "Confirmed"
                         }
@@ -169,7 +169,7 @@ class AllergyIntolerance extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://snomed.info/sct",
+                            "system": "http://snomed.info/sct",
                             // "code": "89811004",
                             // "display": "Gluten"
                         }

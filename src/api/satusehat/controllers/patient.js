@@ -62,7 +62,7 @@ class Patient extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Patient",
+                "resourceType": "Patient",
                 "meta": {
                     "profile": [
                         // "https://fhir.kemkes.go.id/r4/StructureDefinition/Patient"
@@ -71,17 +71,17 @@ class Patient extends Controller {
                 "identifier": [
                     {
                         // "use": "official",
-                        // "system": "https://fhir.kemkes.go.id/id/nik",
+                        "system": "https://fhir.kemkes.go.id/id/nik",
                         // "value": "3174031002890009"
                     },
                     {
                         // "use": "official",
-                        // "system": "https://fhir.kemkes.go.id/id/paspor",
+                        "system": "https://fhir.kemkes.go.id/id/paspor",
                         // "value": "A01111222"
                     },
                     {
                         // "use": "official",
-                        // "system": "https://fhir.kemkes.go.id/id/kk",
+                        "system": "https://fhir.kemkes.go.id/id/kk",
                         // "value": "367400001111111"
                     }
                 ],
@@ -94,17 +94,17 @@ class Patient extends Controller {
                 ],
                 "telecom": [
                     {
-                        // "system": "phone",
+                        "system": "phone",
                         // "value": "08123456789",
                         // "use": "mobile"
                     },
                     {
-                        // "system": "phone",
+                        "system": "phone",
                         // "value": "+622123456789",
                         // "use": "home"
                     },
                     {
-                        // "system": "email",
+                        "system": "email",
                         // "value": "john.smith@xyz.com",
                         // "use": "home"
                     }
@@ -157,7 +157,7 @@ class Patient extends Controller {
                 "maritalStatus": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
+                            "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
                             // "code": "M",
                             // "display": "Married"
                         }
@@ -171,7 +171,7 @@ class Patient extends Controller {
                             {
                                 "coding": [
                                     {
-                                        // "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
+                                        "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
                                         // "code": "C"
                                     }
                                 ]
@@ -183,7 +183,7 @@ class Patient extends Controller {
                         },
                         "telecom": [
                             {
-                                // "system": "phone",
+                                "system": "phone",
                                 // "value": "0690383372",
                                 // "use": "mobile"
                             }
@@ -195,7 +195,7 @@ class Patient extends Controller {
                         "language": {
                             "coding": [
                                 {
-                                    // "system": "urn:ietf:bcp:47",
+                                    "system": "urn:ietf:bcp:47",
                                     // "code": "id-ID",
                                     // "display": "Indonesian"
                                 }

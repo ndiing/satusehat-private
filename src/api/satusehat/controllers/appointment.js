@@ -26,10 +26,10 @@ class Appointment extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Appointment",
+                "resourceType": "Appointment",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/cha-appointment",
+                        "system": "http://sys-ids.kemkes.go.id/cha-appointment",
                         // "value": "123"
                     }
                 ],
@@ -37,7 +37,7 @@ class Appointment extends Controller {
                 "appointmentType": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
                             // "code": "ROUTINE",
                             // "display": "Routine appointment"
                         }
@@ -128,11 +128,11 @@ class Appointment extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Appointment",
+                "resourceType": "Appointment",
                 // "id": "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/cha-appointment",
+                        "system": "http://sys-ids.kemkes.go.id/cha-appointment",
                         // "value": "123"
                     }
                 ],
@@ -140,7 +140,7 @@ class Appointment extends Controller {
                 "appointmentType": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
                             // "code": "ROUTINE",
                             // "display": "Routine appointment"
                         }

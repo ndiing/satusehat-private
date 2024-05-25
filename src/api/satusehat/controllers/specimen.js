@@ -26,10 +26,10 @@ class Specimen extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Specimen",
+                "resourceType": "Specimen",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
                         // "value": "00001",
                         "assigner": {
                             // "reference": "Organization/{{Org_id}}"
@@ -40,7 +40,7 @@ class Specimen extends Controller {
                 "type": {
                     "coding": [
                         {
-                            // "system": "http://snomed.info/sct",
+                            "system": "http://snomed.info/sct",
                             // "code": "119294007",
                             // "display": "Dried blood specimen"
                         }
@@ -95,11 +95,11 @@ class Specimen extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Specimen",
+                "resourceType": "Specimen",
                 // "id": "dbee2404-e11d-421f-8399-57cee518e0c7",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
                         // "value": "00001",
                         "assigner": {
                             // "reference": "Organization/{{Org_id}}"
@@ -110,7 +110,7 @@ class Specimen extends Controller {
                 "type": {
                     "coding": [
                         {
-                            // "system": "http://snomed.info/sct",
+                            "system": "http://snomed.info/sct",
                             // "code": "119294007",
                             // "display": "Dried blood specimen"
                         }

@@ -5,14 +5,10 @@ POST http://localhost:3000/api/satusehat/Condition
 Content-type: application/json
 
 {
-    "resourceType": "Condition",
-    "clinicalStatus.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
     "clinicalStatus.coding.0.code": "active",
     "clinicalStatus.coding.0.display": "Active",
-    "category.0.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-category",
     "category.0.coding.0.code": "encounter-diagnosis",
     "category.0.coding.0.display": "Encounter Diagnosis",
-    "code.coding.0.system": "http://hl7.org/fhir/sid/icd-10",
     "code.coding.0.code": "K35.8",
     "code.coding.0.display": "Acute appendicitis, other and unspecified",
     "subject.reference": "Patient/100000030009",
@@ -26,14 +22,10 @@ POST http://localhost:3000/api/satusehat/Condition
 Content-type: application/json
 
 {
-    "resourceType": "Condition",
-    "clinicalStatus.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
     "clinicalStatus.coding.0.code": "active",
     "clinicalStatus.coding.0.display": "Active",
-    "category.0.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-category",
     "category.0.coding.0.code": "encounter-diagnosis",
     "category.0.coding.0.display": "Encounter Diagnosis",
-    "code.coding.0.system": "http://snomed.info/sct",
     "code.coding.0.code": "359746009",
     "code.coding.0.display": "Patient's condition stable",
     "subject.reference": "Patient/100000030009",
@@ -59,15 +51,11 @@ PUT http://localhost:3000/api/satusehat/Condition/:id
 Content-type: application/json
 
 {
-    "resourceType": "Condition",
     "id": "f1369adf-26f6-47a5-90f2-ce08442639aa",
-    "clinicalStatus.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
     "clinicalStatus.coding.0.code": "remission",
     "clinicalStatus.coding.0.display": "Remission",
-    "category.0.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-category",
     "category.0.coding.0.code": "encounter-diagnosis",
     "category.0.coding.0.display": "Encounter Diagnosis",
-    "code.coding.0.system": "http://hl7.org/fhir/sid/icd-10",
     "code.coding.0.code": "K35.8",
     "code.coding.0.display": "Acute appendicitis, other and unspecified",
     "subject.reference": "Patient/100000030009",

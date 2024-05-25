@@ -26,7 +26,7 @@ class AppointmentResponse extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "AppointmentResponse",
+                "resourceType": "AppointmentResponse",
                 "appointment": {
                     // "reference": "Appointment/0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a"
                 },
@@ -94,7 +94,7 @@ class AppointmentResponse extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "AppointmentResponse",
+                "resourceType": "AppointmentResponse",
                 // "id": "96bbe117-1738-4e93-abd7-23178dad38d3",
                 "appointment": {
                     // "reference": "Appointment/0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a"

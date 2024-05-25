@@ -176,7 +176,10 @@ function parseItem3(item3, names) {
             if (mode == "urlencoded") {
                 group[fileName] += `${new URLSearchParams(rawBody).toString()}\r\n`;
             } else if (mode == "raw") {
-                group[fileName] += `${JSON.stringify(flatten(rawBody),null,4)}\r\n`;
+                group[fileName] += `${JSON.stringify(flatten(rawBody),null,4)
+                    .replace(/"(resourceType|telecom.*?|address.*?|.*?system)": .*?\n/gm,'')
+                    .replace(/ {4,}"/gm,'    "')
+                }\r\n`;
             }
         }
         group[fileName] += `\r\n`;

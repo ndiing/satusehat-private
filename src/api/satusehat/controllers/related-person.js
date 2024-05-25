@@ -26,7 +26,7 @@ class RelatedPerson extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "RelatedPerson",
+                "resourceType": "RelatedPerson",
                 "meta": {
                     "profile": [
                         // "https://fhir.kemkes.go.id/r4/StructureDefinition/RelatedPerson"
@@ -35,7 +35,7 @@ class RelatedPerson extends Controller {
                 "identifier": [
                     {
                         // "use": "official",
-                        // "system": "https://fhir.kemkes.go.id/id/nik",
+                        "system": "https://fhir.kemkes.go.id/id/nik",
                         // "value": "367400001111222"
                     }
                 ],
@@ -44,7 +44,7 @@ class RelatedPerson extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
                                 // "code": "NMTH",
                                 // "display": "natural mother"
                             }
@@ -63,17 +63,17 @@ class RelatedPerson extends Controller {
                 ],
                 "telecom": [
                     {
-                        // "system": "phone",
+                        "system": "phone",
                         // "value": "08123456789",
                         // "use": "mobile"
                     },
                     {
-                        // "system": "phone",
+                        "system": "phone",
                         // "value": "+622123456789",
                         // "use": "home"
                     },
                     {
-                        // "system": "email",
+                        "system": "email",
                         // "value": "john.smith@xyz.com",
                         // "use": "home"
                     }
@@ -96,7 +96,7 @@ class RelatedPerson extends Controller {
                         "language": {
                             "coding": [
                                 {
-                                    // "system": "urn:ietf:bcp:47",
+                                    "system": "urn:ietf:bcp:47",
                                     // "code": "id-ID",
                                     // "display": "Indonesian"
                                 }
@@ -128,7 +128,7 @@ class RelatedPerson extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "RelatedPerson",
+                "resourceType": "RelatedPerson",
                 // "id": "c093eab9-a0e5-41b9-a543-51096653cd92",
                 "meta": {
                     "profile": [
@@ -138,7 +138,7 @@ class RelatedPerson extends Controller {
                 "identifier": [
                     {
                         // "use": "official",
-                        // "system": "https://fhir.kemkes.go.id/id/nik",
+                        "system": "https://fhir.kemkes.go.id/id/nik",
                         // "value": "367400001111222"
                     }
                 ],
@@ -147,7 +147,7 @@ class RelatedPerson extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
+                                "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
                                 // "code": "NMTH",
                                 // "display": "natural mother"
                             }
@@ -166,17 +166,17 @@ class RelatedPerson extends Controller {
                 ],
                 "telecom": [
                     {
-                        // "system": "phone",
+                        "system": "phone",
                         // "value": "08123456789",
                         // "use": "mobile"
                     },
                     {
-                        // "system": "phone",
+                        "system": "phone",
                         // "value": "+622123456789",
                         // "use": "home"
                     },
                     {
-                        // "system": "email",
+                        "system": "email",
                         // "value": "john.smith@xyz.com",
                         // "use": "home"
                     }
@@ -199,7 +199,7 @@ class RelatedPerson extends Controller {
                         "language": {
                             "coding": [
                                 {
-                                    // "system": "urn:ietf:bcp:47",
+                                    "system": "urn:ietf:bcp:47",
                                     // "code": "id-ID",
                                     // "display": "Indonesian"
                                 }

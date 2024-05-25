@@ -26,15 +26,15 @@ class MedicationDispense extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "MedicationDispense",
+                "resourceType": "MedicationDispense",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
                         // "use": "official",
                         // "value": "123456788"
                     },
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
                         // "use": "official",
                         // "value": "123456788-1"
                     }
@@ -43,7 +43,7 @@ class MedicationDispense extends Controller {
                 "category": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
+                            "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
                             // "code": "outpatient",
                             // "display": "Outpatient"
                         }
@@ -78,14 +78,14 @@ class MedicationDispense extends Controller {
                     }
                 ],
                 "quantity": {
-                    // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                     // "code": "TAB",
                     // "value": 120
                 },
                 "daysSupply": {
                     // "value": 30,
                     // "unit": "Day",
-                    // "system": "http://unitsofmeasure.org",
+                    "system": "http://unitsofmeasure.org",
                     // "code": "d"
                 },
                 // "whenPrepared": "2022-01-15T10:20:00Z",
@@ -106,7 +106,7 @@ class MedicationDispense extends Controller {
                                 "type": {
                                     "coding": [
                                         {
-                                            // "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                                            "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
                                             // "code": "ordered",
                                             // "display": "Ordered"
                                         }
@@ -115,7 +115,7 @@ class MedicationDispense extends Controller {
                                 "doseQuantity": {
                                     // "value": 4,
                                     // "unit": "TAB",
-                                    // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                     // "code": "TAB"
                                 }
                             }
@@ -180,16 +180,16 @@ class MedicationDispense extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "MedicationDispense",
+                "resourceType": "MedicationDispense",
                 // "id": "71e27aa4-89d1-49a0-80ab-20e970a939cc",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
                         // "use": "official",
                         // "value": "123456788"
                     },
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
                         // "use": "official",
                         // "value": "123456788-1"
                     }
@@ -198,7 +198,7 @@ class MedicationDispense extends Controller {
                 "category": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
+                            "system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
                             // "code": "outpatient",
                             // "display": "Outpatient"
                         }
@@ -233,14 +233,14 @@ class MedicationDispense extends Controller {
                     }
                 ],
                 "quantity": {
-                    // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                    "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                     // "code": "TAB",
                     // "value": 120
                 },
                 "daysSupply": {
                     // "value": 30,
                     // "unit": "Day",
-                    // "system": "http://unitsofmeasure.org",
+                    "system": "http://unitsofmeasure.org",
                     // "code": "d"
                 },
                 // "whenPrepared": "2022-01-15T10:20:00Z",
@@ -261,7 +261,7 @@ class MedicationDispense extends Controller {
                                 "type": {
                                     "coding": [
                                         {
-                                            // "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                                            "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
                                             // "code": "ordered",
                                             // "display": "Ordered"
                                         }
@@ -270,7 +270,7 @@ class MedicationDispense extends Controller {
                                 "doseQuantity": {
                                     // "value": 4,
                                     // "unit": "TAB",
-                                    // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                     // "code": "TAB"
                                 }
                             }

@@ -26,10 +26,10 @@ class HealthcareService extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "HealthcareService",
+                "resourceType": "HealthcareService",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/healthcareservice/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/healthcareservice/{{Org_id}}",
                         // "value": "HS-19920029"
                     }
                 ],
@@ -41,7 +41,7 @@ class HealthcareService extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://sys-ids.kemkes.go.id/bpjs-poli",
+                                "system": "http://sys-ids.kemkes.go.id/bpjs-poli",
                                 // "code": "JAN",
                                 // "display": "Poli Jantung"
                             }
@@ -50,7 +50,7 @@ class HealthcareService extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                                "system": "http://terminology.hl7.org/CodeSystem/service-type",
                                 // "code": "305",
                                 // "display": "Counselling"
                             }
@@ -59,7 +59,7 @@ class HealthcareService extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                                "system": "http://terminology.hl7.org/CodeSystem/service-type",
                                 // "code": "221",
                                 // "display": "Surgery - General"
                             }
@@ -70,7 +70,7 @@ class HealthcareService extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
                                 // "code": "S001.09",
                                 // "display": "Penyakit dalam kardiovaskular "
                             }
@@ -88,7 +88,7 @@ class HealthcareService extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.kemkes.go.id/CodeSystem/program",
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/program",
                                 // "code": "1000200",
                                 // "display": "Program JKN"
                             }
@@ -153,11 +153,11 @@ class HealthcareService extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "HealthcareService",
+                "resourceType": "HealthcareService",
                 // "id": "8cfb2d6f-dc20-4068-9113-805d426a6f17",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/healthcareservice/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/healthcareservice/{{Org_id}}",
                         // "value": "HS-19920029_123"
                     }
                 ],
@@ -169,7 +169,7 @@ class HealthcareService extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://sys-ids.kemkes.go.id/bpjs-poli",
+                                "system": "http://sys-ids.kemkes.go.id/bpjs-poli",
                                 // "code": "JAN",
                                 // "display": "Poli Jantung"
                             }
@@ -178,7 +178,7 @@ class HealthcareService extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                                "system": "http://terminology.hl7.org/CodeSystem/service-type",
                                 // "code": "305",
                                 // "display": "Counselling"
                             }
@@ -187,7 +187,7 @@ class HealthcareService extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/service-type",
+                                "system": "http://terminology.hl7.org/CodeSystem/service-type",
                                 // "code": "221",
                                 // "display": "Surgery - General"
                             }
@@ -198,7 +198,7 @@ class HealthcareService extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
                                 // "code": "S001.09",
                                 // "display": "Penyakit dalam kardiovaskular "
                             }
@@ -216,7 +216,7 @@ class HealthcareService extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.kemkes.go.id/CodeSystem/program",
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/program",
                                 // "code": "1000200",
                                 // "display": "Program JKN"
                             }

@@ -26,11 +26,11 @@ class Slot extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Slot",
+                "resourceType": "Slot",
                 "appointmentType": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
                             // "code": "ROUTINE",
                             // "display": "Routine appointment"
                         }
@@ -83,12 +83,12 @@ class Slot extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Slot",
+                "resourceType": "Slot",
                 // "id": "6ced63df-93c3-4148-bbfd-af741b373993",
                 "appointmentType": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
                             // "code": "ROUTINE",
                             // "display": "Routine appointment"
                         }

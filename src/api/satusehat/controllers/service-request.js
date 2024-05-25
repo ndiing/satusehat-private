@@ -26,10 +26,10 @@ class ServiceRequest extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "ServiceRequest",
+                "resourceType": "ServiceRequest",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
                         // "value": "00001"
                     }
                 ],
@@ -40,7 +40,7 @@ class ServiceRequest extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://snomed.info/sct",
+                                "system": "http://snomed.info/sct",
                                 // "code": "108252007",
                                 // "display": "Laboratory procedure"
                             }
@@ -50,7 +50,7 @@ class ServiceRequest extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://loinc.org",
+                            "system": "http://loinc.org",
                             // "code": "11477-7",
                             // "display": "Microscopic observation [Identifier] in Sputum by Acid fast stain"
                         }
@@ -139,11 +139,11 @@ class ServiceRequest extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "ServiceRequest",
+                "resourceType": "ServiceRequest",
                 // "id": "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/servicerequest/{{Org_id}}",
                         // "value": "00001"
                     }
                 ],
@@ -154,7 +154,7 @@ class ServiceRequest extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://snomed.info/sct",
+                                "system": "http://snomed.info/sct",
                                 // "code": "108252007",
                                 // "display": "Laboratory procedure"
                             }
@@ -164,7 +164,7 @@ class ServiceRequest extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://loinc.org",
+                            "system": "http://loinc.org",
                             // "code": "11477-7",
                             // "display": "Microscopic observation [Identifier] in Sputum by Acid fast stain"
                         }

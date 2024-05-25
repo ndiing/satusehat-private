@@ -26,12 +26,12 @@ class Procedure extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Procedure",
+                "resourceType": "Procedure",
                 // "status": "completed",
                 "category": {
                     "coding": [
                         {
-                            // "system": "http://snomed.info/sct",
+                            "system": "http://snomed.info/sct",
                             // "code": "103693007",
                             // "display": "Diagnostic procedure"
                         }
@@ -41,7 +41,7 @@ class Procedure extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                            "system": "http://hl7.org/fhir/sid/icd-9-cm",
                             // "code": "87.44",
                             // "display": "Routine chest x-ray, so described"
                         }
@@ -71,7 +71,7 @@ class Procedure extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://hl7.org/fhir/sid/icd-10",
+                                "system": "http://hl7.org/fhir/sid/icd-10",
                                 // "code": "A15.0",
                                 // "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
                             }
@@ -82,7 +82,7 @@ class Procedure extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://snomed.info/sct",
+                                "system": "http://snomed.info/sct",
                                 // "code": "302551006",
                                 // "display": "Entire Thorax"
                             }
@@ -152,13 +152,13 @@ class Procedure extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Procedure",
+                "resourceType": "Procedure",
                 // "id": "87859868-c35b-4f7b-86dd-da9830ae58c5",
                 // "status": "completed",
                 "category": {
                     "coding": [
                         {
-                            // "system": "http://snomed.info/sct",
+                            "system": "http://snomed.info/sct",
                             // "code": "103693007",
                             // "display": "Diagnostic procedure"
                         }
@@ -168,7 +168,7 @@ class Procedure extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://hl7.org/fhir/sid/icd-9-cm",
+                            "system": "http://hl7.org/fhir/sid/icd-9-cm",
                             // "code": "87.44",
                             // "display": "Routine chest x-ray, so described"
                         }
@@ -198,7 +198,7 @@ class Procedure extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://hl7.org/fhir/sid/icd-10",
+                                "system": "http://hl7.org/fhir/sid/icd-10",
                                 // "code": "A15.0",
                                 // "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
                             }
@@ -209,7 +209,7 @@ class Procedure extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://snomed.info/sct",
+                                "system": "http://snomed.info/sct",
                                 // "code": "302551006",
                                 // "display": "Entire Thorax"
                             }

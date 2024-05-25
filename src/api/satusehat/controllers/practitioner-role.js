@@ -26,7 +26,7 @@ class PractitionerRole extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "PractitionerRole",
+                "resourceType": "PractitionerRole",
                 "active": true,
                 "practitioner": {
                     // "reference": "Practitioner/N10000001",
@@ -39,7 +39,7 @@ class PractitionerRole extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+                                "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
                                 // "code": "doctor",
                                 // "display": "Doctor"
                             }
@@ -50,7 +50,7 @@ class PractitionerRole extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
                                 // "code": "S001.09",
                                 // "display": "Penyakit dalam kardiovaskular "
                             }
@@ -64,12 +64,12 @@ class PractitionerRole extends Controller {
                 ],
                 "telecom": [
                     {
-                        // "system": "phone",
+                        "system": "phone",
                         // "value": "(021) 14045",
                         // "use": "work"
                     },
                     {
-                        // "system": "email",
+                        "system": "email",
                         // "value": "doctor.bronsig@dto.kemkes.go.id",
                         // "use": "work"
                     }
@@ -132,7 +132,7 @@ class PractitionerRole extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "PractitionerRole",
+                "resourceType": "PractitionerRole",
                 // "id": "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
                 "active": true,
                 "practitioner": {
@@ -146,7 +146,7 @@ class PractitionerRole extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+                                "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
                                 // "code": "doctor",
                                 // "display": "Doctor"
                             }
@@ -157,7 +157,7 @@ class PractitionerRole extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
                                 // "code": "S001.09",
                                 // "display": "Penyakit dalam kardiovaskular "
                             }
@@ -171,12 +171,12 @@ class PractitionerRole extends Controller {
                 ],
                 "telecom": [
                     {
-                        // "system": "phone",
+                        "system": "phone",
                         // "value": "(021) 14045 I'm Lovin It",
                         // "use": "work"
                     },
                     {
-                        // "system": "email",
+                        "system": "email",
                         // "value": "doctor.bronsig@dto.kemkes.go.id",
                         // "use": "work"
                     }

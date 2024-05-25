@@ -26,16 +26,16 @@ class Composition extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Composition",
+                "resourceType": "Composition",
                 "identifier": {
-                    // "system": "http://sys-ids.kemkes.go.id/composition/{{Org_id}}",
+                    "system": "http://sys-ids.kemkes.go.id/composition/{{Org_id}}",
                     // "value": "P20240001"
                 },
                 // "status": "final",
                 "type": {
                     "coding": [
                         {
-                            // "system": "http://loinc.org",
+                            "system": "http://loinc.org",
                             // "code": "18842-5",
                             // "display": "Discharge summary"
                         }
@@ -45,7 +45,7 @@ class Composition extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://loinc.org",
+                                "system": "http://loinc.org",
                                 // "code": "LP173421-1",
                                 // "display": "Report"
                             }
@@ -76,7 +76,7 @@ class Composition extends Controller {
                         "code": {
                             "coding": [
                                 {
-                                    // "system": "http://loinc.org",
+                                    "system": "http://loinc.org",
                                     // "code": "42344-2",
                                     // "display": "Discharge diet (narrative)"
                                 }
@@ -146,17 +146,17 @@ class Composition extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Composition",
+                "resourceType": "Composition",
                 // "id": "e511fb00-3641-4816-a9fd-db2a55d1897d",
                 "identifier": {
-                    // "system": "http://sys-ids.kemkes.go.id/composition/{{Org_id}}",
+                    "system": "http://sys-ids.kemkes.go.id/composition/{{Org_id}}",
                     // "value": "P20240001"
                 },
                 // "status": "final",
                 "type": {
                     "coding": [
                         {
-                            // "system": "http://loinc.org",
+                            "system": "http://loinc.org",
                             // "code": "18842-5",
                             // "display": "Discharge summary"
                         }
@@ -166,7 +166,7 @@ class Composition extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://loinc.org",
+                                "system": "http://loinc.org",
                                 // "code": "LP173421-1",
                                 // "display": "Report"
                             }
@@ -197,7 +197,7 @@ class Composition extends Controller {
                         "code": {
                             "coding": [
                                 {
-                                    // "system": "http://loinc.org",
+                                    "system": "http://loinc.org",
                                     // "code": "42344-2",
                                     // "display": "Discharge diet (narrative)"
                                 }

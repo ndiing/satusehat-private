@@ -26,15 +26,15 @@ class MedicationRequest extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "MedicationRequest",
+                "resourceType": "MedicationRequest",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
                         // "use": "official",
                         // "value": "123456788"
                     },
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
                         // "use": "official",
                         // "value": "123456788-1"
                     }
@@ -45,7 +45,7 @@ class MedicationRequest extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
                                 // "code": "outpatient",
                                 // "display": "Outpatient"
                             }
@@ -73,7 +73,7 @@ class MedicationRequest extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://hl7.org/fhir/sid/icd-10",
+                                "system": "http://hl7.org/fhir/sid/icd-10",
                                 // "code": "A15.0",
                                 // "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
                             }
@@ -83,7 +83,7 @@ class MedicationRequest extends Controller {
                 "courseOfTherapyType": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+                            "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
                             // "code": "continuous",
                             // "display": "Continuing long term therapy"
                         }
@@ -109,7 +109,7 @@ class MedicationRequest extends Controller {
                         "route": {
                             "coding": [
                                 {
-                                    // "system": "http://www.whocc.no/atc",
+                                    "system": "http://www.whocc.no/atc",
                                     // "code": "O",
                                     // "display": "Oral"
                                 }
@@ -120,7 +120,7 @@ class MedicationRequest extends Controller {
                                 "type": {
                                     "coding": [
                                         {
-                                            // "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                                            "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
                                             // "code": "ordered",
                                             // "display": "Ordered"
                                         }
@@ -129,7 +129,7 @@ class MedicationRequest extends Controller {
                                 "doseQuantity": {
                                     // "value": 4,
                                     // "unit": "TAB",
-                                    // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                     // "code": "TAB"
                                 }
                             }
@@ -140,7 +140,7 @@ class MedicationRequest extends Controller {
                     "dispenseInterval": {
                         // "value": 1,
                         // "unit": "days",
-                        // "system": "http://unitsofmeasure.org",
+                        "system": "http://unitsofmeasure.org",
                         // "code": "d"
                     },
                     "validityPeriod": {
@@ -151,13 +151,13 @@ class MedicationRequest extends Controller {
                     "quantity": {
                         // "value": 120,
                         // "unit": "TAB",
-                        // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                        "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                         // "code": "TAB"
                     },
                     "expectedSupplyDuration": {
                         // "value": 30,
                         // "unit": "days",
-                        // "system": "http://unitsofmeasure.org",
+                        "system": "http://unitsofmeasure.org",
                         // "code": "d"
                     },
                     "performer": {
@@ -222,16 +222,16 @@ class MedicationRequest extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "MedicationRequest",
+                "resourceType": "MedicationRequest",
                 // "id": "b5293e6d-31c6-4111-8214-609ae5890838",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
                         // "use": "official",
                         // "value": "123456788"
                     },
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
                         // "use": "official",
                         // "value": "123456788-1"
                     }
@@ -242,7 +242,7 @@ class MedicationRequest extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+                                "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
                                 // "code": "outpatient",
                                 // "display": "Outpatient"
                             }
@@ -270,7 +270,7 @@ class MedicationRequest extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://hl7.org/fhir/sid/icd-10",
+                                "system": "http://hl7.org/fhir/sid/icd-10",
                                 // "code": "A15.0",
                                 // "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
                             }
@@ -280,7 +280,7 @@ class MedicationRequest extends Controller {
                 "courseOfTherapyType": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+                            "system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
                             // "code": "continuous",
                             // "display": "Continuing long term therapy"
                         }
@@ -306,7 +306,7 @@ class MedicationRequest extends Controller {
                         "route": {
                             "coding": [
                                 {
-                                    // "system": "http://www.whocc.no/atc",
+                                    "system": "http://www.whocc.no/atc",
                                     // "code": "O",
                                     // "display": "Oral"
                                 }
@@ -317,7 +317,7 @@ class MedicationRequest extends Controller {
                                 "type": {
                                     "coding": [
                                         {
-                                            // "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+                                            "system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
                                             // "code": "ordered",
                                             // "display": "Ordered"
                                         }
@@ -326,7 +326,7 @@ class MedicationRequest extends Controller {
                                 "doseQuantity": {
                                     // "value": 4,
                                     // "unit": "TAB",
-                                    // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                                    "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                     // "code": "TAB"
                                 }
                             }
@@ -337,7 +337,7 @@ class MedicationRequest extends Controller {
                     "dispenseInterval": {
                         // "value": 1,
                         // "unit": "days",
-                        // "system": "http://unitsofmeasure.org",
+                        "system": "http://unitsofmeasure.org",
                         // "code": "d"
                     },
                     "validityPeriod": {
@@ -348,13 +348,13 @@ class MedicationRequest extends Controller {
                     "quantity": {
                         // "value": 120,
                         // "unit": "TAB",
-                        // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                        "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                         // "code": "TAB"
                     },
                     "expectedSupplyDuration": {
                         // "value": 30,
                         // "unit": "days",
-                        // "system": "http://unitsofmeasure.org",
+                        "system": "http://unitsofmeasure.org",
                         // "code": "d"
                     },
                     "performer": {

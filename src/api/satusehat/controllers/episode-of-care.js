@@ -26,10 +26,10 @@ class EpisodeOfCare extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "EpisodeOfCare",
+                "resourceType": "EpisodeOfCare",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/episode-of-care/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/episode-of-care/{{Org_id}}",
                         // "value": "EOC12345"
                     }
                 ],
@@ -54,7 +54,7 @@ class EpisodeOfCare extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type",
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type",
                                 // "code": "TB-SO",
                                 // "display": "Tuberkulosis Sensitif Obat"
                             }
@@ -70,7 +70,7 @@ class EpisodeOfCare extends Controller {
                         "role": {
                             "coding": [
                                 {
-                                    // "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                                    "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
                                     // "code": "DD",
                                     // "display": "Discharged Diagnosis"
                                 }
@@ -152,11 +152,11 @@ class EpisodeOfCare extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "EpisodeOfCare",
+                "resourceType": "EpisodeOfCare",
                 // "id": "61c138e4-445a-447d-879c-fe3d5f8fb281",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/episode-of-care/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/episode-of-care/{{Org_id}}",
                         // "value": "EOC12345"
                     }
                 ],
@@ -181,7 +181,7 @@ class EpisodeOfCare extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type",
+                                "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type",
                                 // "code": "TB-SO",
                                 // "display": "Tuberkulosis Sensitif Obat"
                             }
@@ -197,7 +197,7 @@ class EpisodeOfCare extends Controller {
                         "role": {
                             "coding": [
                                 {
-                                    // "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
+                                    "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
                                     // "code": "DD",
                                     // "display": "Discharged Diagnosis"
                                 }

@@ -26,11 +26,11 @@ class Condition extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Condition",
+                "resourceType": "Condition",
                 "clinicalStatus": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
                             // "code": "active",
                             // "display": "Active"
                         }
@@ -40,7 +40,7 @@ class Condition extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
                                 // "code": "encounter-diagnosis",
                                 // "display": "Encounter Diagnosis"
                             }
@@ -50,7 +50,7 @@ class Condition extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://hl7.org/fhir/sid/icd-10",
+                            "system": "http://hl7.org/fhir/sid/icd-10",
                             // "code": "K35.8",
                             // "display": "Acute appendicitis, other and unspecified"
                         }
@@ -122,12 +122,12 @@ class Condition extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "Condition",
+                "resourceType": "Condition",
                 // "id": "f1369adf-26f6-47a5-90f2-ce08442639aa",
                 "clinicalStatus": {
                     "coding": [
                         {
-                            // "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+                            "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
                             // "code": "remission",
                             // "display": "Remission"
                         }
@@ -137,7 +137,7 @@ class Condition extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
                                 // "code": "encounter-diagnosis",
                                 // "display": "Encounter Diagnosis"
                             }
@@ -147,7 +147,7 @@ class Condition extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://hl7.org/fhir/sid/icd-10",
+                            "system": "http://hl7.org/fhir/sid/icd-10",
                             // "code": "K35.8",
                             // "display": "Acute appendicitis, other and unspecified"
                         }

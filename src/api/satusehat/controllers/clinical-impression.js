@@ -26,10 +26,10 @@ class ClinicalImpression extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "ClinicalImpression",
+                "resourceType": "ClinicalImpression",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/clinicalimpression/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/clinicalimpression/{{Org_id}}",
                         // "use": "official",
                         // "value": "Prognosis_000123"
                     }
@@ -75,7 +75,7 @@ class ClinicalImpression extends Controller {
                         "itemCodeableConcept": {
                             "coding": [
                                 {
-                                    // "system": "http://hl7.org/fhir/sid/icd-10",
+                                    "system": "http://hl7.org/fhir/sid/icd-10",
                                     // "code": "A15.0",
                                     // "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
                                 }
@@ -90,7 +90,7 @@ class ClinicalImpression extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://snomed.info/sct",
+                                "system": "http://snomed.info/sct",
                                 // "code": "170968001",
                                 // "display": "Prognosis good"
                             }
@@ -156,11 +156,11 @@ class ClinicalImpression extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "ClinicalImpression",
+                "resourceType": "ClinicalImpression",
                 // "id": "8163695a-6224-401e-9a78-7dbc9bed69af",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/clinicalimpression/{{Org_id}}",
+                        "system": "http://sys-ids.kemkes.go.id/clinicalimpression/{{Org_id}}",
                         // "use": "official",
                         // "value": "Prognosis_000123"
                     }
@@ -206,7 +206,7 @@ class ClinicalImpression extends Controller {
                         "itemCodeableConcept": {
                             "coding": [
                                 {
-                                    // "system": "http://hl7.org/fhir/sid/icd-10",
+                                    "system": "http://hl7.org/fhir/sid/icd-10",
                                     // "code": "A15.0",
                                     // "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
                                 }
@@ -221,7 +221,7 @@ class ClinicalImpression extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://snomed.info/sct",
+                                "system": "http://snomed.info/sct",
                                 // "code": "65872000",
                                 // "display": "Fair prognosis"
                             }

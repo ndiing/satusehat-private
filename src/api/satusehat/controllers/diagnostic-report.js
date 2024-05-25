@@ -26,10 +26,10 @@ class DiagnosticReport extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "DiagnosticReport",
+                "resourceType": "DiagnosticReport",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
+                        "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
                         // "use": "official",
                         // "value": "5234342"
                     }
@@ -39,7 +39,7 @@ class DiagnosticReport extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
                                 // "code": "MB",
                                 // "display": "Microbiology"
                             }
@@ -49,7 +49,7 @@ class DiagnosticReport extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://loinc.org",
+                            "system": "http://loinc.org",
                             // "code": "11477-7",
                             // "display": "Microscopic observation [Identifier] in Sputum by Acid fast stain"
                         }
@@ -85,7 +85,7 @@ class DiagnosticReport extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://snomed.info/sct",
+                                "system": "http://snomed.info/sct",
                                 // "code": "260347006",
                                 // "display": "+"
                             }
@@ -150,11 +150,11 @@ class DiagnosticReport extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                // "resourceType": "DiagnosticReport",
+                "resourceType": "DiagnosticReport",
                 // "id": "ec63dc9a-738d-4f7b-8a4d-86ca9e621ef6",
                 "identifier": [
                     {
-                        // "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
+                        "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
                         // "use": "official",
                         // "value": "5234342"
                     }
@@ -164,7 +164,7 @@ class DiagnosticReport extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
                                 // "code": "MB",
                                 // "display": "Microbiology"
                             }
@@ -174,7 +174,7 @@ class DiagnosticReport extends Controller {
                 "code": {
                     "coding": [
                         {
-                            // "system": "http://loinc.org",
+                            "system": "http://loinc.org",
                             // "code": "11477-7",
                             // "display": "Microscopic observation [Identifier] in Sputum by Acid fast stain"
                         }
@@ -210,7 +210,7 @@ class DiagnosticReport extends Controller {
                     {
                         "coding": [
                             {
-                                // "system": "http://snomed.info/sct",
+                                "system": "http://snomed.info/sct",
                                 // "code": "2667000",
                                 // "display": "Absent"
                             }
