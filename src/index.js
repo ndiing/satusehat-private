@@ -108,6 +108,8 @@ app.use((err, req, res, next) => {
         res.status(500);
     }
 
+    console.log(err)
+
     const {message} = err
 
     res.json({message});

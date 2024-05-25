@@ -23,12 +23,12 @@ class Service {
         let { credentials = "include", params = {}, query = {}, headers = {}, body } = init;
 
         // Replacing dynamic placeholders in input URL with corresponding environment variables or storage values
-        input = input.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
+        input = input?.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
             return process.env?.[$1] || this.storage?.[$1];
         });
 
         // Replacing dynamic placeholders in input URL params with corresponding values
-        input = input.replace(/\:(\w+)/g, ($, $1) => {
+        input = input?.replace(/\:(\w+)/g, ($, $1) => {
             return params[$1];
         });
 
@@ -36,7 +36,7 @@ class Service {
 
         // Appending query parameters to URL
         for (const name in query) {
-            const value = query[name].replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
+            const value = query[name]?.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
                 return process.env?.[$1] || this.storage?.[$1];
             });
             url.searchParams.set(name, value);
@@ -47,14 +47,14 @@ class Service {
         // Replacing dynamic placeholders in headers with corresponding environment variables or storage values
         for (const name in headers) {
             const value = headers[name];
-            headers[name] = value.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
+            headers[name] = value?.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
                 return process.env?.[$1] || this.storage?.[$1];
             });
         }
 
         // Replacing dynamic placeholders in request body with corresponding environment variables or storage values
         if (body) {
-            body = body.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
+            body = body?.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
                 return process.env?.[$1] || this.storage?.[$1];
             });
         }
