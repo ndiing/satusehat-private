@@ -17,13 +17,7 @@ Content-type: application/json
     "specialty.0.coding.0.code": "S001.09",
     "specialty.0.coding.0.display": "Penyakit dalam kardiovaskular ",
     "healthcareService.0.reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17",
-    "telecom.0.system": "phone",
-    "telecom.0.value": "(021) 14045",
-    "telecom.0.use": "work",
-    "telecom.1.system": "email",
-    "telecom.1.value": "doctor.bronsig@dto.kemkes.go.id",
-    "telecom.1.use": "work"
-}
+                        }
 
 ### PractitionerRole - Get by ID
 GET http://localhost:3000/api/satusehat/PractitionerRole/:id
@@ -52,13 +46,7 @@ Content-type: application/json
     "specialty.0.coding.0.code": "S001.09",
     "specialty.0.coding.0.display": "Penyakit dalam kardiovaskular ",
     "healthcareService.0.reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17",
-    "telecom.0.system": "phone",
-    "telecom.0.value": "(021) 14045 I'm Lovin It",
-    "telecom.0.use": "work",
-    "telecom.1.system": "email",
-    "telecom.1.value": "doctor.bronsig@dto.kemkes.go.id",
-    "telecom.1.use": "work"
-}
+                        }
 
 ### PractitionerRole - PATCH
 PATCH http://localhost:3000/api/satusehat/PractitionerRole/:id
