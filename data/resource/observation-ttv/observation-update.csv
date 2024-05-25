@@ -1,0 +1,2 @@
+"status","id","category.0.coding.0.code","category.0.coding.0.display","code.coding.0.code","code.coding.0.display","subject.reference","encounter.reference","encounter.display","effectiveDateTime","issued","valueQuantity.value","valueQuantity.unit","valueQuantity.code"
+"final","40a8c3c0-89fb-4ed3-b646-399c6a909d8a","vital-signs","Vital Signs","9279-1","Respiratory rate","Patient/100000030009","Encounter/{{Encounter_uuid}}","Pemeriksaan Fisik Pernafasan Budi Santoso di hari Selasa, 14 Juni 2022","2022-07-14","2022-07-14T14:27:00+07:00","22","breaths/minute","/min"

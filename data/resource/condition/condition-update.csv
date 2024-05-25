@@ -1,0 +1,2 @@
+"id","clinicalStatus.coding.0.code","clinicalStatus.coding.0.display","category.0.coding.0.code","category.0.coding.0.display","code.coding.0.code","code.coding.0.display","subject.reference","subject.display","encounter.reference","encounter.display"
+"f1369adf-26f6-47a5-90f2-ce08442639aa","remission","Remission","encounter-diagnosis","Encounter Diagnosis","K35.8","Acute appendicitis, other and unspecified","Patient/100000030009","Budi Santoso","Encounter/{{Encounter_uuid}}","Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
