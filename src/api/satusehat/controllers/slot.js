@@ -31,18 +31,18 @@ class Slot extends Controller {
                     "coding": [
                         {
                             "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
-                            // "code": "ROUTINE",
-                            // "display": "Routine appointment"
+                            "code": "ROUTINE",
+                            "display": "Routine appointment"
                         }
                     ]
                 },
                 "schedule": {
-                    // "reference": "Schedule/683a85cf-27fe-416d-a830-3d21d031e58a"
+                    "reference": "Schedule/683a85cf-27fe-416d-a830-3d21d031e58a"
                 },
-                // "status": "free",
-                // "start": "2022-10-05T08:00:00+07:00",
-                // "end": "2022-10-05T08:15:00+07:00",
-                // "comment": "Slot untuk appointment pelayanan pada jam 8.00 WIB s/d 8.15 WIB"
+                "status": "free",
+                "start": "2022-10-05T08:00:00+07:00",
+                "end": "2022-10-05T08:15:00+07:00",
+                "comment": "Slot untuk appointment pelayanan pada jam 8.00 WIB s/d 8.15 WIB"
             }
             const source = unflatten(body)
             const payload = merge(target,source)
@@ -84,23 +84,23 @@ class Slot extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "Slot",
-                // "id": "6ced63df-93c3-4148-bbfd-af741b373993",
+                "id": "6ced63df-93c3-4148-bbfd-af741b373993",
                 "appointmentType": {
                     "coding": [
                         {
                             "system": "http://terminology.hl7.org/CodeSystem/v2-0276",
-                            // "code": "ROUTINE",
-                            // "display": "Routine appointment"
+                            "code": "ROUTINE",
+                            "display": "Routine appointment"
                         }
                     ]
                 },
                 "schedule": {
-                    // "reference": "Schedule/683a85cf-27fe-416d-a830-3d21d031e58a"
+                    "reference": "Schedule/683a85cf-27fe-416d-a830-3d21d031e58a"
                 },
-                // "status": "busy",
-                // "start": "2022-10-05T08:00:00+07:00",
-                // "end": "2022-10-05T08:15:00+07:00",
-                // "comment": "Slot untuk appointment pelayanan pada jam 8.00 WIB s/d 8.15 WIB"
+                "status": "busy",
+                "start": "2022-10-05T08:00:00+07:00",
+                "end": "2022-10-05T08:15:00+07:00",
+                "comment": "Slot untuk appointment pelayanan pada jam 8.00 WIB s/d 8.15 WIB"
             }
             const source = unflatten(body)
             const payload = merge(target,source)
@@ -125,9 +125,9 @@ class Slot extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    // "op": "replace",
-                    // "path": "/status",
-                    // "value": "free"
+                    "op": "replace",
+                    "path": "/status",
+                    "value": "free"
                 }
             ]
             const source = unflatten(body)

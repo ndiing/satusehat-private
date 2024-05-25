@@ -29,19 +29,19 @@ class PractitionerRole extends Controller {
                 "resourceType": "PractitionerRole",
                 "active": true,
                 "practitioner": {
-                    // "reference": "Practitioner/N10000001",
-                    // "display": "Dokter Bronsig"
+                    "reference": "Practitioner/N10000001",
+                    "display": "Dokter Bronsig"
                 },
                 "organization": {
-                    // "reference": "Organization/{{Org_id}}"
+                    "reference": "Organization/{{Org_id}}"
                 },
                 "code": [
                     {
                         "coding": [
                             {
                                 "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
-                                // "code": "doctor",
-                                // "display": "Doctor"
+                                "code": "doctor",
+                                "display": "Doctor"
                             }
                         ]
                     }
@@ -51,27 +51,27 @@ class PractitionerRole extends Controller {
                         "coding": [
                             {
                                 "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
-                                // "code": "S001.09",
-                                // "display": "Penyakit dalam kardiovaskular "
+                                "code": "S001.09",
+                                "display": "Penyakit dalam kardiovaskular "
                             }
                         ]
                     }
                 ],
                 "healthcareService": [
                     {
-                        // "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17"
+                        "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17"
                     }
                 ],
                 "telecom": [
                     {
                         "system": "phone",
-                        // "value": "(021) 14045",
-                        // "use": "work"
+                        "value": "(021) 14045",
+                        "use": "work"
                     },
                     {
                         "system": "email",
-                        // "value": "doctor.bronsig@dto.kemkes.go.id",
-                        // "use": "work"
+                        "value": "doctor.bronsig@dto.kemkes.go.id",
+                        "use": "work"
                     }
                 ]
             }
@@ -133,22 +133,22 @@ class PractitionerRole extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "PractitionerRole",
-                // "id": "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
+                "id": "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
                 "active": true,
                 "practitioner": {
-                    // "reference": "Practitioner/N10000001",
-                    // "display": "Dokter Bronsig"
+                    "reference": "Practitioner/N10000001",
+                    "display": "Dokter Bronsig"
                 },
                 "organization": {
-                    // "reference": "Organization/{{Org_id}}"
+                    "reference": "Organization/{{Org_id}}"
                 },
                 "code": [
                     {
                         "coding": [
                             {
                                 "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
-                                // "code": "doctor",
-                                // "display": "Doctor"
+                                "code": "doctor",
+                                "display": "Doctor"
                             }
                         ]
                     }
@@ -158,27 +158,27 @@ class PractitionerRole extends Controller {
                         "coding": [
                             {
                                 "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
-                                // "code": "S001.09",
-                                // "display": "Penyakit dalam kardiovaskular "
+                                "code": "S001.09",
+                                "display": "Penyakit dalam kardiovaskular "
                             }
                         ]
                     }
                 ],
                 "healthcareService": [
                     {
-                        // "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17"
+                        "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17"
                     }
                 ],
                 "telecom": [
                     {
                         "system": "phone",
-                        // "value": "(021) 14045 I'm Lovin It",
-                        // "use": "work"
+                        "value": "(021) 14045 I'm Lovin It",
+                        "use": "work"
                     },
                     {
                         "system": "email",
-                        // "value": "doctor.bronsig@dto.kemkes.go.id",
-                        // "use": "work"
+                        "value": "doctor.bronsig@dto.kemkes.go.id",
+                        "use": "work"
                     }
                 ]
             }
@@ -205,8 +205,8 @@ class PractitionerRole extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    // "op": "replace",
-                    // "path": "/active",
+                    "op": "replace",
+                    "path": "/active",
                     "value": false
                 }
             ]

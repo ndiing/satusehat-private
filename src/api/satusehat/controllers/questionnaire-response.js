@@ -27,32 +27,32 @@ class QuestionnaireResponse extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "QuestionnaireResponse",
-                // "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
-                // "status": "completed",
+                "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
+                "status": "completed",
                 "subject": {
-                    // "reference": "Patient/P02280547535",
-                    // "display": "patient 6"
+                    "reference": "Patient/P02280547535",
+                    "display": "patient 6"
                 },
                 "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}"
+                    "reference": "Encounter/{{Encounter_uuid}}"
                 },
-                // "authored": "2022-07-26T10:00:00+07:00",
+                "authored": "2022-07-26T10:00:00+07:00",
                 "author": {
-                    // "reference": "Practitioner/N10000001"
+                    "reference": "Practitioner/N10000001"
                 },
                 "source": {
-                    // "reference": "Patient/P02280547535"
+                    "reference": "Patient/P02280547535"
                 },
                 "item": [
                     {
-                        // "linkId": "1",
-                        // "text": "Status Kesejahteraan",
+                        "linkId": "1",
+                        "text": "Status Kesejahteraan",
                         "answer": [
                             {
                                 "valueCoding": {
                                     "system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
-                                    // "code": "KPS",
-                                    // "display": "Keluarga Pra Sejahtera (KPS)"
+                                    "code": "KPS",
+                                    "display": "Keluarga Pra Sejahtera (KPS)"
                                 }
                             }
                         ]
@@ -81,33 +81,33 @@ class QuestionnaireResponse extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "QuestionnaireResponse",
-                // "id": "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
-                // "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
-                // "status": "completed",
+                "id": "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
+                "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
+                "status": "completed",
                 "subject": {
-                    // "reference": "Patient/P02280547535",
-                    // "display": "patient 6"
+                    "reference": "Patient/P02280547535",
+                    "display": "patient 6"
                 },
                 "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}"
+                    "reference": "Encounter/{{Encounter_uuid}}"
                 },
-                // "authored": "2022-07-26T10:00:00+07:00",
+                "authored": "2022-07-26T10:00:00+07:00",
                 "author": {
-                    // "reference": "Practitioner/N10000001"
+                    "reference": "Practitioner/N10000001"
                 },
                 "source": {
-                    // "reference": "Patient/P02280547535"
+                    "reference": "Patient/P02280547535"
                 },
                 "item": [
                     {
-                        // "linkId": "1",
-                        // "text": "Status Kesejahteraan",
+                        "linkId": "1",
+                        "text": "Status Kesejahteraan",
                         "answer": [
                             {
                                 "valueCoding": {
                                     "system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
-                                    // "code": "KPS",
-                                    // "display": "Keluarga Pra Sejahtera (KPS)"
+                                    "code": "KPS",
+                                    "display": "Keluarga Pra Sejahtera (KPS)"
                                 }
                             }
                         ]

@@ -178,8 +178,8 @@ function parseItem3(item3, names) {
                 group[fileName] += `${new URLSearchParams(rawBody).toString()}\r\n`;
             } else if (mode == "raw") {
                 let body=JSON.stringify(flatten(rawBody),null,4)
-                .replace(/"(resourceType|.*?system)": .*?\n/gm,'')
-                .replace(/ {4,}"/gm,'    "')
+                // .replace(/"(resourceType|.*?system)": .*?\n/gm,'')
+                // .replace(/ {4,}"/gm,'    "')
             
                 group[fileName] += `${body}\r\n`;
 

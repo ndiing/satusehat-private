@@ -65,89 +65,89 @@ class Patient extends Controller {
                 "resourceType": "Patient",
                 "meta": {
                     "profile": [
-                        // "https://fhir.kemkes.go.id/r4/StructureDefinition/Patient"
+                        "https://fhir.kemkes.go.id/r4/StructureDefinition/Patient"
                     ]
                 },
                 "identifier": [
                     {
-                        // "use": "official",
+                        "use": "official",
                         "system": "https://fhir.kemkes.go.id/id/nik",
-                        // "value": "3174031002890009"
+                        "value": "3174031002890009"
                     },
                     {
-                        // "use": "official",
+                        "use": "official",
                         "system": "https://fhir.kemkes.go.id/id/paspor",
-                        // "value": "A01111222"
+                        "value": "A01111222"
                     },
                     {
-                        // "use": "official",
+                        "use": "official",
                         "system": "https://fhir.kemkes.go.id/id/kk",
-                        // "value": "367400001111111"
+                        "value": "367400001111111"
                     }
                 ],
                 "active": true,
                 "name": [
                     {
-                        // "use": "official",
-                        // "text": "John Smith"
+                        "use": "official",
+                        "text": "John Smith"
                     }
                 ],
                 "telecom": [
                     {
                         "system": "phone",
-                        // "value": "08123456789",
-                        // "use": "mobile"
+                        "value": "08123456789",
+                        "use": "mobile"
                     },
                     {
                         "system": "phone",
-                        // "value": "+622123456789",
-                        // "use": "home"
+                        "value": "+622123456789",
+                        "use": "home"
                     },
                     {
                         "system": "email",
-                        // "value": "john.smith@xyz.com",
-                        // "use": "home"
+                        "value": "john.smith@xyz.com",
+                        "use": "home"
                     }
                 ],
-                // "gender": "female",
-                // "birthDate": "1945-11-17",
+                "gender": "female",
+                "birthDate": "1945-11-17",
                 "deceasedBoolean": false,
                 "address": [
                     {
-                        // "use": "home",
+                        "use": "home",
                         "line": [
-                            // "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+                            "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
                         ],
-                        // "city": "Jakarta",
-                        // "postalCode": "12950",
-                        // "country": "ID",
+                        "city": "Jakarta",
+                        "postalCode": "12950",
+                        "country": "ID",
                         "extension": [
                             {
-                                // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
+                                "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
                                 "extension": [
                                     {
-                                        // "url": "province",
-                                        // "valueCode": "10"
+                                        "url": "province",
+                                        "valueCode": "10"
                                     },
                                     {
-                                        // "url": "city",
-                                        // "valueCode": "1010"
+                                        "url": "city",
+                                        "valueCode": "1010"
                                     },
                                     {
-                                        // "url": "district",
-                                        // "valueCode": "1010101"
+                                        "url": "district",
+                                        "valueCode": "1010101"
                                     },
                                     {
-                                        // "url": "village",
-                                        // "valueCode": "1010101101"
+                                        "url": "village",
+                                        "valueCode": "1010101101"
                                     },
                                     {
-                                        // "url": "rt",
-                                        // "valueCode": "2"
+                                        "url": "rt",
+                                        "valueCode": "2"
                                     },
                                     {
-                                        // "url": "rw",
-                                        // "valueCode": "2"
+                                        "url": "rw",
+                                        "valueCode": "2"
                                     }
                                 ]
                             }
@@ -158,13 +158,13 @@ class Patient extends Controller {
                     "coding": [
                         {
                             "system": "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus",
-                            // "code": "M",
-                            // "display": "Married"
+                            "code": "M",
+                            "display": "Married"
                         }
                     ],
-                    // "text": "Married"
+                    "text": "Married"
                 },
-                // "multipleBirthInteger": 0,
+                "multipleBirthInteger": 0,
                 "contact": [
                     {
                         "relationship": [
@@ -172,20 +172,20 @@ class Patient extends Controller {
                                 "coding": [
                                     {
                                         "system": "http://terminology.hl7.org/CodeSystem/v2-0131",
-                                        // "code": "C"
+                                        "code": "C"
                                     }
                                 ]
                             }
                         ],
                         "name": {
-                            // "use": "official",
-                            // "text": "Jane Smith"
+                            "use": "official",
+                            "text": "Jane Smith"
                         },
                         "telecom": [
                             {
                                 "system": "phone",
-                                // "value": "0690383372",
-                                // "use": "mobile"
+                                "value": "0690383372",
+                                "use": "mobile"
                             }
                         ]
                     }
@@ -196,26 +196,26 @@ class Patient extends Controller {
                             "coding": [
                                 {
                                     "system": "urn:ietf:bcp:47",
-                                    // "code": "id-ID",
-                                    // "display": "Indonesian"
+                                    "code": "id-ID",
+                                    "display": "Indonesian"
                                 }
                             ],
-                            // "text": "Indonesian"
+                            "text": "Indonesian"
                         },
                         "preferred": true
                     }
                 ],
                 "extension": [
                     {
-                        // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/birthPlace",
+                        "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/birthPlace",
                         "valueAddress": {
-                            // "city": "Bandung",
-                            // "country": "ID"
+                            "city": "Bandung",
+                            "country": "ID"
                         }
                     },
                     {
-                        // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/citizenshipStatus",
-                        // "valueCode": "WNI"
+                        "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/citizenshipStatus",
+                        "valueCode": "WNI"
                     }
                 ]
             }

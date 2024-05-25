@@ -5,6 +5,7 @@ POST http://localhost:3000/api/satusehat/CarePlan
 Content-type: application/json
 
 {
+    "resourceType": "CarePlan",
     "status": "active",
     "intent": "plan",
     "description": "Rujuk ke RS Rujukan Tumbuh Kembang level 1",
@@ -26,6 +27,7 @@ PUT http://localhost:3000/api/satusehat/CarePlan/:id
 Content-type: application/json
 
 {
+    "resourceType": "CarePlan",
     "id": "d16e2819-be08-40f7-888b-3f81a3a3518d",
     "status": "active",
     "intent": "plan",

@@ -29,15 +29,15 @@ class Composition extends Controller {
                 "resourceType": "Composition",
                 "identifier": {
                     "system": "http://sys-ids.kemkes.go.id/composition/{{Org_id}}",
-                    // "value": "P20240001"
+                    "value": "P20240001"
                 },
-                // "status": "final",
+                "status": "final",
                 "type": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            // "code": "18842-5",
-                            // "display": "Discharge summary"
+                            "code": "18842-5",
+                            "display": "Discharge summary"
                         }
                     ]
                 },
@@ -46,30 +46,30 @@ class Composition extends Controller {
                         "coding": [
                             {
                                 "system": "http://loinc.org",
-                                // "code": "LP173421-1",
-                                // "display": "Report"
+                                "code": "LP173421-1",
+                                "display": "Report"
                             }
                         ]
                     }
                 ],
                 "subject": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
+                    "reference": "Patient/100000030009",
+                    "display": "Budi Santoso"
                 },
                 "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}",
-                    // "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+                    "reference": "Encounter/{{Encounter_uuid}}",
+                    "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
                 },
-                // "date": "2022-06-14",
+                "date": "2022-06-14",
                 "author": [
                     {
-                        // "reference": "Practitioner/N10000001",
-                        // "display": "Dokter Bronsig"
+                        "reference": "Practitioner/N10000001",
+                        "display": "Dokter Bronsig"
                     }
                 ],
-                // "title": "Resume Medis Rawat Jalan",
+                "title": "Resume Medis Rawat Jalan",
                 "custodian": {
-                    // "reference": "Organization/{{Org_id}}"
+                    "reference": "Organization/{{Org_id}}"
                 },
                 "section": [
                     {
@@ -77,14 +77,14 @@ class Composition extends Controller {
                             "coding": [
                                 {
                                     "system": "http://loinc.org",
-                                    // "code": "42344-2",
-                                    // "display": "Discharge diet (narrative)"
+                                    "code": "42344-2",
+                                    "display": "Discharge diet (narrative)"
                                 }
                             ]
                         },
                         "text": {
-                            // "status": "additional",
-                            // "div": "Rekomendasi diet rendah lemak, rendah kalori"
+                            "status": "additional",
+                            "div": "Rekomendasi diet rendah lemak, rendah kalori"
                         }
                     }
                 ]
@@ -147,18 +147,18 @@ class Composition extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "Composition",
-                // "id": "e511fb00-3641-4816-a9fd-db2a55d1897d",
+                "id": "e511fb00-3641-4816-a9fd-db2a55d1897d",
                 "identifier": {
                     "system": "http://sys-ids.kemkes.go.id/composition/{{Org_id}}",
-                    // "value": "P20240001"
+                    "value": "P20240001"
                 },
-                // "status": "final",
+                "status": "final",
                 "type": {
                     "coding": [
                         {
                             "system": "http://loinc.org",
-                            // "code": "18842-5",
-                            // "display": "Discharge summary"
+                            "code": "18842-5",
+                            "display": "Discharge summary"
                         }
                     ]
                 },
@@ -167,30 +167,30 @@ class Composition extends Controller {
                         "coding": [
                             {
                                 "system": "http://loinc.org",
-                                // "code": "LP173421-1",
-                                // "display": "Report"
+                                "code": "LP173421-1",
+                                "display": "Report"
                             }
                         ]
                     }
                 ],
                 "subject": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
+                    "reference": "Patient/100000030009",
+                    "display": "Budi Santoso"
                 },
                 "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}",
-                    // "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+                    "reference": "Encounter/{{Encounter_uuid}}",
+                    "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
                 },
-                // "date": "2022-06-14",
+                "date": "2022-06-14",
                 "author": [
                     {
-                        // "reference": "Practitioner/N10000001",
-                        // "display": "Dokter Bronsig"
+                        "reference": "Practitioner/N10000001",
+                        "display": "Dokter Bronsig"
                     }
                 ],
-                // "title": "Resume Medis Rawat Jalan",
+                "title": "Resume Medis Rawat Jalan",
                 "custodian": {
-                    // "reference": "Organization/{{Org_id}}"
+                    "reference": "Organization/{{Org_id}}"
                 },
                 "section": [
                     {
@@ -198,14 +198,14 @@ class Composition extends Controller {
                             "coding": [
                                 {
                                     "system": "http://loinc.org",
-                                    // "code": "42344-2",
-                                    // "display": "Discharge diet (narrative)"
+                                    "code": "42344-2",
+                                    "display": "Discharge diet (narrative)"
                                 }
                             ]
                         },
                         "text": {
-                            // "status": "additional",
-                            // "div": "Rekomendasi diet rendah karbohidrat"
+                            "status": "additional",
+                            "div": "Rekomendasi diet rendah karbohidrat"
                         }
                     }
                 ]
@@ -233,9 +233,9 @@ class Composition extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    // "op": "replace",
-                    // "path": "/status",
-                    // "value": "amended"
+                    "op": "replace",
+                    "path": "/status",
+                    "value": "amended"
                 }
             ]
             const source = unflatten(body)

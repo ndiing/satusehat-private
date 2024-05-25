@@ -185,9 +185,9 @@ function parseItem3(item3, names) {
             group[fileName] += `            const target = ${JSON.stringify(rawBody,null,4)
                 .replace(/^/gm,'            ')
                 .replace(/^\s+/,'')
-                .replace(/"(.*?)"(\n|: (["\d-]))/gm,'// "$1"$2')
-                .replace(/\/\/ "(resourceType)"/gm,'"$1"')
-                .replace(/\/\/ "(system)"/gm,'"$1"')
+                // .replace(/"(.*?)"(\n|: (["\d-]))/gm,'// "$1"$2')
+                // .replace(/\/\/ "(resourceType)"/gm,'"$1"')
+                // .replace(/\/\/ "(system)"/gm,'"$1"')
             }\r\n`
             group[fileName] += `            const source = unflatten(body)\r\n`
             group[fileName] += `            const payload = merge(target,source)\r\n`

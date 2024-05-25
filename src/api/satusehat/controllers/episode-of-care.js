@@ -30,23 +30,23 @@ class EpisodeOfCare extends Controller {
                 "identifier": [
                     {
                         "system": "http://sys-ids.kemkes.go.id/episode-of-care/{{Org_id}}",
-                        // "value": "EOC12345"
+                        "value": "EOC12345"
                     }
                 ],
-                // "status": "finished",
+                "status": "finished",
                 "statusHistory": [
                     {
-                        // "status": "active",
+                        "status": "active",
                         "period": {
-                            // "start": "2022-01-01",
-                            // "end": "2022-06-30"
+                            "start": "2022-01-01",
+                            "end": "2022-06-30"
                         }
                     },
                     {
-                        // "status": "finished",
+                        "status": "finished",
                         "period": {
-                            // "start": "2022-06-30",
-                            // "end": "2022-06-30"
+                            "start": "2022-06-30",
+                            "end": "2022-06-30"
                         }
                     }
                 ],
@@ -55,8 +55,8 @@ class EpisodeOfCare extends Controller {
                         "coding": [
                             {
                                 "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type",
-                                // "code": "TB-SO",
-                                // "display": "Tuberkulosis Sensitif Obat"
+                                "code": "TB-SO",
+                                "display": "Tuberkulosis Sensitif Obat"
                             }
                         ]
                     }
@@ -64,35 +64,35 @@ class EpisodeOfCare extends Controller {
                 "diagnosis": [
                     {
                         "condition": {
-                            // "reference": "Condition/f51d6f8b-0508-4286-9942-0dc196cca59a",
-                            // "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
+                            "reference": "Condition/f51d6f8b-0508-4286-9942-0dc196cca59a",
+                            "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
                         },
                         "role": {
                             "coding": [
                                 {
                                     "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
-                                    // "code": "DD",
-                                    // "display": "Discharged Diagnosis"
+                                    "code": "DD",
+                                    "display": "Discharged Diagnosis"
                                 }
                             ]
                         },
-                        // "rank": 1
+                        "rank": 1
                     }
                 ],
                 "patient": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
+                    "reference": "Patient/100000030009",
+                    "display": "Budi Santoso"
                 },
                 "managingOrganization": {
-                    // "reference": "Organization/{{Org_id}}"
+                    "reference": "Organization/{{Org_id}}"
                 },
                 "period": {
-                    // "start": "2012-01-01",
-                    // "end": "2012-06-30"
+                    "start": "2012-01-01",
+                    "end": "2012-06-30"
                 },
                 "careManager": {
-                    // "reference": "Practitioner/N10000001",
-                    // "display": "Dokter Bronsig"
+                    "reference": "Practitioner/N10000001",
+                    "display": "Dokter Bronsig"
                 }
             }
             const source = unflatten(body)
@@ -153,27 +153,27 @@ class EpisodeOfCare extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "EpisodeOfCare",
-                // "id": "61c138e4-445a-447d-879c-fe3d5f8fb281",
+                "id": "61c138e4-445a-447d-879c-fe3d5f8fb281",
                 "identifier": [
                     {
                         "system": "http://sys-ids.kemkes.go.id/episode-of-care/{{Org_id}}",
-                        // "value": "EOC12345"
+                        "value": "EOC12345"
                     }
                 ],
-                // "status": "waitlist",
+                "status": "waitlist",
                 "statusHistory": [
                     {
-                        // "status": "active",
+                        "status": "active",
                         "period": {
-                            // "start": "2022-01-01",
-                            // "end": "2022-06-30"
+                            "start": "2022-01-01",
+                            "end": "2022-06-30"
                         }
                     },
                     {
-                        // "status": "finished",
+                        "status": "finished",
                         "period": {
-                            // "start": "2022-06-30",
-                            // "end": "2022-06-30"
+                            "start": "2022-06-30",
+                            "end": "2022-06-30"
                         }
                     }
                 ],
@@ -182,8 +182,8 @@ class EpisodeOfCare extends Controller {
                         "coding": [
                             {
                                 "system": "http://terminology.kemkes.go.id/CodeSystem/episodeofcare-type",
-                                // "code": "TB-SO",
-                                // "display": "Tuberkulosis Sensitif Obat"
+                                "code": "TB-SO",
+                                "display": "Tuberkulosis Sensitif Obat"
                             }
                         ]
                     }
@@ -191,35 +191,35 @@ class EpisodeOfCare extends Controller {
                 "diagnosis": [
                     {
                         "condition": {
-                            // "reference": "Condition/f51d6f8b-0508-4286-9942-0dc196cca59a",
-                            // "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
+                            "reference": "Condition/f51d6f8b-0508-4286-9942-0dc196cca59a",
+                            "display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture"
                         },
                         "role": {
                             "coding": [
                                 {
                                     "system": "http://terminology.hl7.org/CodeSystem/diagnosis-role",
-                                    // "code": "DD",
-                                    // "display": "Discharged Diagnosis"
+                                    "code": "DD",
+                                    "display": "Discharged Diagnosis"
                                 }
                             ]
                         },
-                        // "rank": 1
+                        "rank": 1
                     }
                 ],
                 "patient": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
+                    "reference": "Patient/100000030009",
+                    "display": "Budi Santoso"
                 },
                 "managingOrganization": {
-                    // "reference": "Organization/{{Org_id}}"
+                    "reference": "Organization/{{Org_id}}"
                 },
                 "period": {
-                    // "start": "2012-01-01",
-                    // "end": "2012-06-30"
+                    "start": "2012-01-01",
+                    "end": "2012-06-30"
                 },
                 "careManager": {
-                    // "reference": "Practitioner/N{{Org_id}}",
-                    // "display": "Dokter Budiyana Santosa"
+                    "reference": "Practitioner/N{{Org_id}}",
+                    "display": "Dokter Budiyana Santosa"
                 }
             }
             const source = unflatten(body)
@@ -245,9 +245,9 @@ class EpisodeOfCare extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    // "op": "replace",
-                    // "path": "/status",
-                    // "value": "cancelled"
+                    "op": "replace",
+                    "path": "/status",
+                    "value": "cancelled"
                 }
             ]
             const source = unflatten(body)

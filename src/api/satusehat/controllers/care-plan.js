@@ -27,19 +27,19 @@ class CarePlan extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "CarePlan",
-                // "status": "active",
-                // "intent": "plan",
-                // "description": "Rujuk ke RS Rujukan Tumbuh Kembang level 1",
+                "status": "active",
+                "intent": "plan",
+                "description": "Rujuk ke RS Rujukan Tumbuh Kembang level 1",
                 "subject": {
-                    // "reference": "Patient/100000030004",
-                    // "display": "Anak Smith"
+                    "reference": "Patient/100000030004",
+                    "display": "Anak Smith"
                 },
                 "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}"
+                    "reference": "Encounter/{{Encounter_uuid}}"
                 },
-                // "created": "2022-07-26",
+                "created": "2022-07-26",
                 "author": {
-                    // "reference": "Practitioner/N10000001"
+                    "reference": "Practitioner/N10000001"
                 }
             }
             const source = unflatten(body)
@@ -101,20 +101,20 @@ class CarePlan extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "CarePlan",
-                // "id": "d16e2819-be08-40f7-888b-3f81a3a3518d",
-                // "status": "active",
-                // "intent": "plan",
-                // "description": "Rujuk ke RS Rujukan Tumbuh Kembang ABCDEFG level 1",
+                "id": "d16e2819-be08-40f7-888b-3f81a3a3518d",
+                "status": "active",
+                "intent": "plan",
+                "description": "Rujuk ke RS Rujukan Tumbuh Kembang ABCDEFG level 1",
                 "subject": {
-                    // "reference": "Patient/100000030004",
-                    // "display": "Anak Smith"
+                    "reference": "Patient/100000030004",
+                    "display": "Anak Smith"
                 },
                 "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}"
+                    "reference": "Encounter/{{Encounter_uuid}}"
                 },
-                // "created": "2022-07-26",
+                "created": "2022-07-26",
                 "author": {
-                    // "reference": "Practitioner/N10000001"
+                    "reference": "Practitioner/N10000001"
                 }
             }
             const source = unflatten(body)
@@ -140,9 +140,9 @@ class CarePlan extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    // "op": "replace",
-                    // "path": "/description",
-                    // "value": "Rujuk ke PAUD terdekat untuk stimulasi tumbuh kembang"
+                    "op": "replace",
+                    "path": "/description",
+                    "value": "Rujuk ke PAUD terdekat untuk stimulasi tumbuh kembang"
                 }
             ]
             const source = unflatten(body)

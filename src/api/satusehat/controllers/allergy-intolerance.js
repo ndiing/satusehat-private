@@ -30,16 +30,16 @@ class AllergyIntolerance extends Controller {
                 "identifier": [
                     {
                         "system": "http://sys-ids.kemkes.go.id/allergy/{{Org_id}}",
-                        // "use": "official",
-                        // "value": "98457729"
+                        "use": "official",
+                        "value": "98457729"
                     }
                 ],
                 "clinicalStatus": {
                     "coding": [
                         {
                             "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
-                            // "code": "active",
-                            // "display": "Active"
+                            "code": "active",
+                            "display": "Active"
                         }
                     ]
                 },
@@ -47,35 +47,35 @@ class AllergyIntolerance extends Controller {
                     "coding": [
                         {
                             "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
-                            // "code": "confirmed",
-                            // "display": "Confirmed"
+                            "code": "confirmed",
+                            "display": "Confirmed"
                         }
                     ]
                 },
                 "category": [
-                    // "food"
+                    "food"
                 ],
                 "code": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            // "code": "89811004",
-                            // "display": "Gluten"
+                            "code": "89811004",
+                            "display": "Gluten"
                         }
                     ],
-                    // "text": "Alergi bahan gluten, khususnya ketika makan roti gandum"
+                    "text": "Alergi bahan gluten, khususnya ketika makan roti gandum"
                 },
                 "patient": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
+                    "reference": "Patient/100000030009",
+                    "display": "Budi Santoso"
                 },
                 "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}",
-                    // "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+                    "reference": "Encounter/{{Encounter_uuid}}",
+                    "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
                 },
-                // "recordedDate": "2022-06-14T15:37:31+07:00",
+                "recordedDate": "2022-06-14T15:37:31+07:00",
                 "recorder": {
-                    // "reference": "Practitioner/N10000001"
+                    "reference": "Practitioner/N10000001"
                 }
             }
             const source = unflatten(body)
@@ -137,20 +137,20 @@ class AllergyIntolerance extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "AllergyIntolerance",
-                // "id": "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
+                "id": "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
                 "identifier": [
                     {
                         "system": "http://sys-ids.kemkes.go.id/allergy/{{Org_id}}",
-                        // "use": "official",
-                        // "value": "98457729"
+                        "use": "official",
+                        "value": "98457729"
                     }
                 ],
                 "clinicalStatus": {
                     "coding": [
                         {
                             "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
-                            // "code": "resolved",
-                            // "display": "resolved"
+                            "code": "resolved",
+                            "display": "resolved"
                         }
                     ]
                 },
@@ -158,35 +158,35 @@ class AllergyIntolerance extends Controller {
                     "coding": [
                         {
                             "system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
-                            // "code": "confirmed",
-                            // "display": "Confirmed"
+                            "code": "confirmed",
+                            "display": "Confirmed"
                         }
                     ]
                 },
                 "category": [
-                    // "food"
+                    "food"
                 ],
                 "code": {
                     "coding": [
                         {
                             "system": "http://snomed.info/sct",
-                            // "code": "89811004",
-                            // "display": "Gluten"
+                            "code": "89811004",
+                            "display": "Gluten"
                         }
                     ],
-                    // "text": "Alergi bahan gluten, khususnya ketika makan roti gandum"
+                    "text": "Alergi bahan gluten, khususnya ketika makan roti gandum"
                 },
                 "patient": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
+                    "reference": "Patient/100000030009",
+                    "display": "Budi Santoso"
                 },
                 "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}",
-                    // "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+                    "reference": "Encounter/{{Encounter_uuid}}",
+                    "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
                 },
-                // "recordedDate": "2022-06-14T15:37:31+07:00",
+                "recordedDate": "2022-06-14T15:37:31+07:00",
                 "recorder": {
-                    // "reference": "Practitioner/N10000001"
+                    "reference": "Practitioner/N10000001"
                 }
             }
             const source = unflatten(body)
@@ -212,9 +212,9 @@ class AllergyIntolerance extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    // "op": "replace",
-                    // "path": "/category/0",
-                    // "value": "medication"
+                    "op": "replace",
+                    "path": "/category/0",
+                    "value": "medication"
                 }
             ]
             const source = unflatten(body)

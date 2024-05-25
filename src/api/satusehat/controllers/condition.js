@@ -31,8 +31,8 @@ class Condition extends Controller {
                     "coding": [
                         {
                             "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-                            // "code": "active",
-                            // "display": "Active"
+                            "code": "active",
+                            "display": "Active"
                         }
                     ]
                 },
@@ -41,8 +41,8 @@ class Condition extends Controller {
                         "coding": [
                             {
                                 "system": "http://terminology.hl7.org/CodeSystem/condition-category",
-                                // "code": "encounter-diagnosis",
-                                // "display": "Encounter Diagnosis"
+                                "code": "encounter-diagnosis",
+                                "display": "Encounter Diagnosis"
                             }
                         ]
                     }
@@ -51,18 +51,18 @@ class Condition extends Controller {
                     "coding": [
                         {
                             "system": "http://hl7.org/fhir/sid/icd-10",
-                            // "code": "K35.8",
-                            // "display": "Acute appendicitis, other and unspecified"
+                            "code": "K35.8",
+                            "display": "Acute appendicitis, other and unspecified"
                         }
                     ]
                 },
                 "subject": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
+                    "reference": "Patient/100000030009",
+                    "display": "Budi Santoso"
                 },
                 "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}",
-                    // "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+                    "reference": "Encounter/{{Encounter_uuid}}",
+                    "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
                 }
             }
             const source = unflatten(body)
@@ -123,13 +123,13 @@ class Condition extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "Condition",
-                // "id": "f1369adf-26f6-47a5-90f2-ce08442639aa",
+                "id": "f1369adf-26f6-47a5-90f2-ce08442639aa",
                 "clinicalStatus": {
                     "coding": [
                         {
                             "system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
-                            // "code": "remission",
-                            // "display": "Remission"
+                            "code": "remission",
+                            "display": "Remission"
                         }
                     ]
                 },
@@ -138,8 +138,8 @@ class Condition extends Controller {
                         "coding": [
                             {
                                 "system": "http://terminology.hl7.org/CodeSystem/condition-category",
-                                // "code": "encounter-diagnosis",
-                                // "display": "Encounter Diagnosis"
+                                "code": "encounter-diagnosis",
+                                "display": "Encounter Diagnosis"
                             }
                         ]
                     }
@@ -148,18 +148,18 @@ class Condition extends Controller {
                     "coding": [
                         {
                             "system": "http://hl7.org/fhir/sid/icd-10",
-                            // "code": "K35.8",
-                            // "display": "Acute appendicitis, other and unspecified"
+                            "code": "K35.8",
+                            "display": "Acute appendicitis, other and unspecified"
                         }
                     ]
                 },
                 "subject": {
-                    // "reference": "Patient/100000030009",
-                    // "display": "Budi Santoso"
+                    "reference": "Patient/100000030009",
+                    "display": "Budi Santoso"
                 },
                 "encounter": {
-                    // "reference": "Encounter/{{Encounter_uuid}}",
-                    // "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+                    "reference": "Encounter/{{Encounter_uuid}}",
+                    "display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
                 }
             }
             const source = unflatten(body)
@@ -185,9 +185,9 @@ class Condition extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    // "op": "replace",
-                    // "path": "/clinicalStatus/coding/0/code",
-                    // "value": "remission"
+                    "op": "replace",
+                    "path": "/clinicalStatus/coding/0/code",
+                    "value": "remission"
                 }
             ]
             const source = unflatten(body)

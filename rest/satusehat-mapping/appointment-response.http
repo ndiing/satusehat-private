@@ -4,6 +4,7 @@ POST http://localhost:3000/api/satusehat/AppointmentResponse
 Content-type: application/json
 
 {
+    "resourceType": "AppointmentResponse",
     "appointment.reference": "Appointment/0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
     "actor.reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17",
     "actor.display": "Poliklinik Bedah Rawat Jalan Terpadu",
@@ -22,6 +23,7 @@ PUT http://localhost:3000/api/satusehat/AppointmentResponse/:id
 Content-type: application/json
 
 {
+    "resourceType": "AppointmentResponse",
     "id": "96bbe117-1738-4e93-abd7-23178dad38d3",
     "appointment.reference": "Appointment/0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
     "actor.reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17",

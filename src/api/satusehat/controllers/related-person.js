@@ -29,14 +29,14 @@ class RelatedPerson extends Controller {
                 "resourceType": "RelatedPerson",
                 "meta": {
                     "profile": [
-                        // "https://fhir.kemkes.go.id/r4/StructureDefinition/RelatedPerson"
+                        "https://fhir.kemkes.go.id/r4/StructureDefinition/RelatedPerson"
                     ]
                 },
                 "identifier": [
                     {
-                        // "use": "official",
+                        "use": "official",
                         "system": "https://fhir.kemkes.go.id/id/nik",
-                        // "value": "367400001111222"
+                        "value": "367400001111222"
                     }
                 ],
                 "active": true,
@@ -45,50 +45,50 @@ class RelatedPerson extends Controller {
                         "coding": [
                             {
                                 "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-                                // "code": "NMTH",
-                                // "display": "natural mother"
+                                "code": "NMTH",
+                                "display": "natural mother"
                             }
                         ],
-                        // "text": "Natural Mother"
+                        "text": "Natural Mother"
                     }
                 ],
                 "patient": {
-                    // "reference": "Patient/P02029102701"
+                    "reference": "Patient/P02029102701"
                 },
                 "name": [
                     {
-                        // "use": "official",
-                        // "text": "Jane Smith"
+                        "use": "official",
+                        "text": "Jane Smith"
                     }
                 ],
                 "telecom": [
                     {
                         "system": "phone",
-                        // "value": "08123456789",
-                        // "use": "mobile"
+                        "value": "08123456789",
+                        "use": "mobile"
                     },
                     {
                         "system": "phone",
-                        // "value": "+622123456789",
-                        // "use": "home"
+                        "value": "+622123456789",
+                        "use": "home"
                     },
                     {
                         "system": "email",
-                        // "value": "john.smith@xyz.com",
-                        // "use": "home"
+                        "value": "john.smith@xyz.com",
+                        "use": "home"
                     }
                 ],
-                // "gender": "female",
-                // "birthDate": "2023-03-08",
+                "gender": "female",
+                "birthDate": "2023-03-08",
                 "address": [
                     {
-                        // "use": "home",
+                        "use": "home",
                         "line": [
-                            // "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+                            "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
                         ],
-                        // "city": "Jakarta",
-                        // "postalCode": "12950",
-                        // "country": "ID"
+                        "city": "Jakarta",
+                        "postalCode": "12950",
+                        "country": "ID"
                     }
                 ],
                 "communication": [
@@ -97,11 +97,11 @@ class RelatedPerson extends Controller {
                             "coding": [
                                 {
                                     "system": "urn:ietf:bcp:47",
-                                    // "code": "id-ID",
-                                    // "display": "Indonesian"
+                                    "code": "id-ID",
+                                    "display": "Indonesian"
                                 }
                             ],
-                            // "text": "Indonesian"
+                            "text": "Indonesian"
                         },
                         "preferred": true
                     }
@@ -129,17 +129,17 @@ class RelatedPerson extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "RelatedPerson",
-                // "id": "c093eab9-a0e5-41b9-a543-51096653cd92",
+                "id": "c093eab9-a0e5-41b9-a543-51096653cd92",
                 "meta": {
                     "profile": [
-                        // "https://fhir.kemkes.go.id/r4/StructureDefinition/RelatedPerson"
+                        "https://fhir.kemkes.go.id/r4/StructureDefinition/RelatedPerson"
                     ]
                 },
                 "identifier": [
                     {
-                        // "use": "official",
+                        "use": "official",
                         "system": "https://fhir.kemkes.go.id/id/nik",
-                        // "value": "367400001111222"
+                        "value": "367400001111222"
                     }
                 ],
                 "active": true,
@@ -148,50 +148,50 @@ class RelatedPerson extends Controller {
                         "coding": [
                             {
                                 "system": "http://terminology.hl7.org/CodeSystem/v3-RoleCode",
-                                // "code": "NMTH",
-                                // "display": "natural mother"
+                                "code": "NMTH",
+                                "display": "natural mother"
                             }
                         ],
-                        // "text": "Natural Mother"
+                        "text": "Natural Mother"
                     }
                 ],
                 "patient": {
-                    // "reference": "Patient/P02029102701"
+                    "reference": "Patient/P02029102701"
                 },
                 "name": [
                     {
-                        // "use": "official",
-                        // "text": "Jane Smith"
+                        "use": "official",
+                        "text": "Jane Smith"
                     }
                 ],
                 "telecom": [
                     {
                         "system": "phone",
-                        // "value": "08123456789",
-                        // "use": "mobile"
+                        "value": "08123456789",
+                        "use": "mobile"
                     },
                     {
                         "system": "phone",
-                        // "value": "+622123456789",
-                        // "use": "home"
+                        "value": "+622123456789",
+                        "use": "home"
                     },
                     {
                         "system": "email",
-                        // "value": "john.smith@xyz.com",
-                        // "use": "home"
+                        "value": "john.smith@xyz.com",
+                        "use": "home"
                     }
                 ],
-                // "gender": "female",
-                // "birthDate": "2023-03-08",
+                "gender": "female",
+                "birthDate": "2023-03-08",
                 "address": [
                     {
-                        // "use": "home",
+                        "use": "home",
                         "line": [
-                            // "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+                            "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
                         ],
-                        // "city": "Jakarta",
-                        // "postalCode": "12950",
-                        // "country": "ID"
+                        "city": "Jakarta",
+                        "postalCode": "12950",
+                        "country": "ID"
                     }
                 ],
                 "communication": [
@@ -200,11 +200,11 @@ class RelatedPerson extends Controller {
                             "coding": [
                                 {
                                     "system": "urn:ietf:bcp:47",
-                                    // "code": "id-ID",
-                                    // "display": "Indonesian"
+                                    "code": "id-ID",
+                                    "display": "Indonesian"
                                 }
                             ],
-                            // "text": "Indonesian"
+                            "text": "Indonesian"
                         },
                         "preferred": true
                     }
@@ -251,8 +251,8 @@ class RelatedPerson extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    // "op": "replace",
-                    // "path": "/active",
+                    "op": "replace",
+                    "path": "/active",
                     "value": true
                 }
             ]

@@ -5,9 +5,12 @@ POST http://localhost:3000/api/satusehat/Specimen
 Content-type: application/json
 
 {
+    "resourceType": "Specimen",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
     "identifier.0.value": "00001",
     "identifier.0.assigner.reference": "Organization/{{Org_id}}",
     "status": "available",
+    "type.coding.0.system": "http://snomed.info/sct",
     "type.coding.0.code": "119294007",
     "type.coding.0.display": "Dried blood specimen",
     "collection.collectedDateTime": "2022-06-14T08:15:00+07:00",
@@ -26,10 +29,13 @@ PUT http://localhost:3000/api/satusehat/Specimen/:id
 Content-type: application/json
 
 {
+    "resourceType": "Specimen",
     "id": "dbee2404-e11d-421f-8399-57cee518e0c7",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
     "identifier.0.value": "00001",
     "identifier.0.assigner.reference": "Organization/{{Org_id}}",
     "status": "available",
+    "type.coding.0.system": "http://snomed.info/sct",
     "type.coding.0.code": "119294007",
     "type.coding.0.display": "Dried blood specimen",
     "collection.collectedDateTime": "2022-06-14T08:15:00+07:00",
@@ -66,12 +72,16 @@ PUT http://localhost:3000/api/satusehat/Specimen/:id
 Content-type: application/json
 
 {
+    "resourceType": "Specimen",
     "id": "cb2adef7-3971-4239-9cc2-6ae9981fe57d",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
     "identifier.0.value": "00001",
     "identifier.0.assigner.reference": "Organization/{{Org_id}}",
     "status": "unsatisfactory",
+    "type.coding.0.system": "http://snomed.info/sct",
     "type.coding.0.code": "119297000",
     "type.coding.0.display": "Blood specimen",
+    "collection.method.coding.0.system": "http://snomed.info/sct",
     "collection.method.coding.0.code": "82078001",
     "collection.method.coding.0.display": "Collection of blood specimen for laboratory",
     "collection.collectedDateTime": "2022-06-14T08:15:00+07:00",

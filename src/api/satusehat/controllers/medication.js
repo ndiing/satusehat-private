@@ -29,35 +29,35 @@ class Medication extends Controller {
                 "resourceType": "Medication",
                 "meta": {
                     "profile": [
-                        // "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+                        "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
                     ]
                 },
                 "identifier": [
                     {
                         "system": "http://sys-ids.kemkes.go.id/medication/{{Org_id}}",
-                        // "use": "official",
-                        // "value": "123456789"
+                        "use": "official",
+                        "value": "123456789"
                     }
                 ],
                 "code": {
                     "coding": [
                         {
                             "system": "http://sys-ids.kemkes.go.id/kfa",
-                            // "code": "93001019",
-                            // "display": "Obat Anti Tuberculosis / Rifampicin 150 mg / Isoniazid 75 mg / Pyrazinamide 400 mg / Ethambutol 275 mg Kaplet Salut Selaput (KIMIA FARMA)"
+                            "code": "93001019",
+                            "display": "Obat Anti Tuberculosis / Rifampicin 150 mg / Isoniazid 75 mg / Pyrazinamide 400 mg / Ethambutol 275 mg Kaplet Salut Selaput (KIMIA FARMA)"
                         }
                     ]
                 },
-                // "status": "active",
+                "status": "active",
                 "manufacturer": {
-                    // "reference": "Organization/900001"
+                    "reference": "Organization/900001"
                 },
                 "form": {
                     "coding": [
                         {
                             "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
-                            // "code": "BS023",
-                            // "display": "Kaplet Salut Selaput"
+                            "code": "BS023",
+                            "display": "Kaplet Salut Selaput"
                         }
                     ]
                 },
@@ -67,22 +67,22 @@ class Medication extends Controller {
                             "coding": [
                                 {
                                     "system": "http://sys-ids.kemkes.go.id/kfa",
-                                    // "code": "91000330",
-                                    // "display": "Rifampin"
+                                    "code": "91000330",
+                                    "display": "Rifampin"
                                 }
                             ]
                         },
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                // "value": 150,
+                                "value": 150,
                                 "system": "http://unitsofmeasure.org",
-                                // "code": "mg"
+                                "code": "mg"
                             },
                             "denominator": {
-                                // "value": 1,
+                                "value": 1,
                                 "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                                // "code": "TAB"
+                                "code": "TAB"
                             }
                         }
                     },
@@ -91,22 +91,22 @@ class Medication extends Controller {
                             "coding": [
                                 {
                                     "system": "http://sys-ids.kemkes.go.id/kfa",
-                                    // "code": "91000328",
-                                    // "display": "Isoniazid"
+                                    "code": "91000328",
+                                    "display": "Isoniazid"
                                 }
                             ]
                         },
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                // "value": 75,
+                                "value": 75,
                                 "system": "http://unitsofmeasure.org",
-                                // "code": "mg"
+                                "code": "mg"
                             },
                             "denominator": {
-                                // "value": 1,
+                                "value": 1,
                                 "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                                // "code": "TAB"
+                                "code": "TAB"
                             }
                         }
                     },
@@ -115,22 +115,22 @@ class Medication extends Controller {
                             "coding": [
                                 {
                                     "system": "http://sys-ids.kemkes.go.id/kfa",
-                                    // "code": "91000329",
-                                    // "display": "Pyrazinamide"
+                                    "code": "91000329",
+                                    "display": "Pyrazinamide"
                                 }
                             ]
                         },
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                // "value": 400,
+                                "value": 400,
                                 "system": "http://unitsofmeasure.org",
-                                // "code": "mg"
+                                "code": "mg"
                             },
                             "denominator": {
-                                // "value": 1,
+                                "value": 1,
                                 "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                                // "code": "TAB"
+                                "code": "TAB"
                             }
                         }
                     },
@@ -139,35 +139,35 @@ class Medication extends Controller {
                             "coding": [
                                 {
                                     "system": "http://sys-ids.kemkes.go.id/kfa",
-                                    // "code": "91000288",
-                                    // "display": "Ethambutol"
+                                    "code": "91000288",
+                                    "display": "Ethambutol"
                                 }
                             ]
                         },
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                // "value": 275,
+                                "value": 275,
                                 "system": "http://unitsofmeasure.org",
-                                // "code": "mg"
+                                "code": "mg"
                             },
                             "denominator": {
-                                // "value": 1,
+                                "value": 1,
                                 "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                                // "code": "TAB"
+                                "code": "TAB"
                             }
                         }
                     }
                 ],
                 "extension": [
                     {
-                        // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                        "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
                         "valueCodeableConcept": {
                             "coding": [
                                 {
                                     "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type",
-                                    // "code": "NC",
-                                    // "display": "Non-compound"
+                                    "code": "NC",
+                                    "display": "Non-compound"
                                 }
                             ]
                         }
@@ -214,37 +214,37 @@ class Medication extends Controller {
             const {params,query,body} = req
             const target = {
                 "resourceType": "Medication",
-                // "id": "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
+                "id": "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
                 "meta": {
                     "profile": [
-                        // "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+                        "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
                     ]
                 },
                 "identifier": [
                     {
                         "system": "http://sys-ids.kemkes.go.id/medication/{{Org_id}}",
-                        // "use": "official",
-                        // "value": "123456789"
+                        "use": "official",
+                        "value": "123456789"
                     }
                 ],
                 "code": {
                     "coding": [
                         {
                             "system": "http://sys-ids.kemkes.go.id/kfa",
-                            // "display": "Obat Kapsul TB Bintang Toedjoe"
+                            "display": "Obat Kapsul TB Bintang Toedjoe"
                         }
                     ]
                 },
-                // "status": "active",
+                "status": "active",
                 "manufacturer": {
-                    // "reference": "Organization/900001"
+                    "reference": "Organization/900001"
                 },
                 "form": {
                     "coding": [
                         {
                             "system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
-                            // "code": "BS019",
-                            // "display": "Kapsul"
+                            "code": "BS019",
+                            "display": "Kapsul"
                         }
                     ]
                 },
@@ -254,22 +254,22 @@ class Medication extends Controller {
                             "coding": [
                                 {
                                     "system": "http://sys-ids.kemkes.go.id/kfa",
-                                    // "code": "91000330",
-                                    // "display": "Rifampin"
+                                    "code": "91000330",
+                                    "display": "Rifampin"
                                 }
                             ]
                         },
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                // "value": 150,
+                                "value": 150,
                                 "system": "http://unitsofmeasure.org",
-                                // "code": "mg"
+                                "code": "mg"
                             },
                             "denominator": {
-                                // "value": 1,
+                                "value": 1,
                                 "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                                // "code": "TAB"
+                                "code": "TAB"
                             }
                         }
                     },
@@ -278,22 +278,22 @@ class Medication extends Controller {
                             "coding": [
                                 {
                                     "system": "http://sys-ids.kemkes.go.id/kfa",
-                                    // "code": "91000328",
-                                    // "display": "Isoniazid"
+                                    "code": "91000328",
+                                    "display": "Isoniazid"
                                 }
                             ]
                         },
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                // "value": 75,
+                                "value": 75,
                                 "system": "http://unitsofmeasure.org",
-                                // "code": "mg"
+                                "code": "mg"
                             },
                             "denominator": {
-                                // "value": 1,
+                                "value": 1,
                                 "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                                // "code": "TAB"
+                                "code": "TAB"
                             }
                         }
                     },
@@ -302,22 +302,22 @@ class Medication extends Controller {
                             "coding": [
                                 {
                                     "system": "http://sys-ids.kemkes.go.id/kfa",
-                                    // "code": "91000329",
-                                    // "display": "Pyrazinamide"
+                                    "code": "91000329",
+                                    "display": "Pyrazinamide"
                                 }
                             ]
                         },
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                // "value": 400,
+                                "value": 400,
                                 "system": "http://unitsofmeasure.org",
-                                // "code": "mg"
+                                "code": "mg"
                             },
                             "denominator": {
-                                // "value": 1,
+                                "value": 1,
                                 "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                                // "code": "TAB"
+                                "code": "TAB"
                             }
                         }
                     },
@@ -326,35 +326,35 @@ class Medication extends Controller {
                             "coding": [
                                 {
                                     "system": "http://sys-ids.kemkes.go.id/kfa",
-                                    // "code": "91000288",
-                                    // "display": "Ethambutol"
+                                    "code": "91000288",
+                                    "display": "Ethambutol"
                                 }
                             ]
                         },
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                // "value": 275,
+                                "value": 275,
                                 "system": "http://unitsofmeasure.org",
-                                // "code": "mg"
+                                "code": "mg"
                             },
                             "denominator": {
-                                // "value": 1,
+                                "value": 1,
                                 "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
-                                // "code": "TAB"
+                                "code": "TAB"
                             }
                         }
                     }
                 ],
                 "extension": [
                     {
-                        // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+                        "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
                         "valueCodeableConcept": {
                             "coding": [
                                 {
                                     "system": "http://terminology.kemkes.go.id/CodeSystem/medication-type",
-                                    // "code": "NC",
-                                    // "display": "Non-compound"
+                                    "code": "NC",
+                                    "display": "Non-compound"
                                 }
                             ]
                         }
@@ -384,9 +384,9 @@ class Medication extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    // "op": "replace",
-                    // "path": "/status",
-                    // "value": "inactive"
+                    "op": "replace",
+                    "path": "/status",
+                    "value": "inactive"
                 }
             ]
             const source = unflatten(body)
