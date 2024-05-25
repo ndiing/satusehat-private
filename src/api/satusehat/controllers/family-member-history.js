@@ -26,39 +26,39 @@ class FamilyMemberHistory extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                "resourceType": "FamilyMemberHistory",
-                "status": "completed",
+                // "resourceType": "FamilyMemberHistory",
+                // "status": "completed",
                 "relationship": {
                     "coding": [
                         {
-                            "system": "http://snomed.info/sct",
-                            "code": "38048003",
-                            "display": "Uncle"
+                            // "system": "http://snomed.info/sct",
+                            // "code": "38048003",
+                            // "display": "Uncle"
                         }
                     ]
                 },
                 "deceasedBoolean": true,
                 "patient": {
-                    "reference": "Patient/P02280547535",
-                    "display": "patient 6"
+                    // "reference": "Patient/P02280547535",
+                    // "display": "patient 6"
                 },
                 "condition": [
                     {
                         "code": {
                             "coding": [
                                 {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "115665000",
-                                    "display": "Atopy"
+                                    // "system": "http://snomed.info/sct",
+                                    // "code": "115665000",
+                                    // "display": "Atopy"
                                 }
                             ]
                         },
                         "outcome": {
                             "coding": [
                                 {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "419099009",
-                                    "display": "Died"
+                                    // "system": "http://snomed.info/sct",
+                                    // "code": "419099009",
+                                    // "display": "Died"
                                 }
                             ]
                         }
@@ -123,40 +123,40 @@ class FamilyMemberHistory extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                "resourceType": "FamilyMemberHistory",
-                "id": "0735510d-ad0b-44ca-92be-b695a9b127d1",
-                "status": "completed",
+                // "resourceType": "FamilyMemberHistory",
+                // "id": "0735510d-ad0b-44ca-92be-b695a9b127d1",
+                // "status": "completed",
                 "relationship": {
                     "coding": [
                         {
-                            "system": "http://snomed.info/sct",
-                            "code": "72705000",
-                            "display": "Mother"
+                            // "system": "http://snomed.info/sct",
+                            // "code": "72705000",
+                            // "display": "Mother"
                         }
                     ]
                 },
                 "deceasedBoolean": true,
                 "patient": {
-                    "reference": "Patient/P02280547535",
-                    "display": "patient 6"
+                    // "reference": "Patient/P02280547535",
+                    // "display": "patient 6"
                 },
                 "condition": [
                     {
                         "code": {
                             "coding": [
                                 {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "115665000",
-                                    "display": "Atopy"
+                                    // "system": "http://snomed.info/sct",
+                                    // "code": "115665000",
+                                    // "display": "Atopy"
                                 }
                             ]
                         },
                         "outcome": {
                             "coding": [
                                 {
-                                    "system": "http://snomed.info/sct",
-                                    "code": "419099009",
-                                    "display": "Died"
+                                    // "system": "http://snomed.info/sct",
+                                    // "code": "419099009",
+                                    // "display": "Died"
                                 }
                             ]
                         }
@@ -186,8 +186,8 @@ class FamilyMemberHistory extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    "op": "replace",
-                    "path": "/deceasedBoolean",
+                    // "op": "replace",
+                    // "path": "/deceasedBoolean",
                     "value": true
                 }
             ]

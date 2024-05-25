@@ -26,51 +26,51 @@ class Specimen extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                "resourceType": "Specimen",
+                // "resourceType": "Specimen",
                 "identifier": [
                     {
-                        "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
-                        "value": "00001",
+                        // "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+                        // "value": "00001",
                         "assigner": {
-                            "reference": "Organization/{{Org_id}}"
+                            // "reference": "Organization/{{Org_id}}"
                         }
                     }
                 ],
-                "status": "available",
+                // "status": "available",
                 "type": {
                     "coding": [
                         {
-                            "system": "http://snomed.info/sct",
-                            "code": "119294007",
-                            "display": "Dried blood specimen"
+                            // "system": "http://snomed.info/sct",
+                            // "code": "119294007",
+                            // "display": "Dried blood specimen"
                         }
                     ]
                 },
                 "collection": {
-                    "collectedDateTime": "2022-06-14T08:15:00+07:00",
+                    // "collectedDateTime": "2022-06-14T08:15:00+07:00",
                     "extension": [
                         {
-                            "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
+                            // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
                             "valueReference": {
-                                "reference": "Organization/{{Org_id}}"
+                                // "reference": "Organization/{{Org_id}}"
                             }
                         }
                     ]
                 },
                 "subject": {
-                    "reference": "Patient/100000030009",
-                    "display": "Budi Santoso"
+                    // "reference": "Patient/100000030009",
+                    // "display": "Budi Santoso"
                 },
                 "request": [
                     {
-                        "reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab"
+                        // "reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab"
                     }
                 ],
-                "receivedTime": "2022-06-14T08:25:00+07:00",
+                // "receivedTime": "2022-06-14T08:25:00+07:00",
                 "extension": [
                     {
-                        "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
-                        "valueDateTime": "2022-06-14T08:23:00+07:00"
+                        // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
+                        // "valueDateTime": "2022-06-14T08:23:00+07:00"
                     }
                 ]
             }
@@ -95,52 +95,52 @@ class Specimen extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                "resourceType": "Specimen",
-                "id": "dbee2404-e11d-421f-8399-57cee518e0c7",
+                // "resourceType": "Specimen",
+                // "id": "dbee2404-e11d-421f-8399-57cee518e0c7",
                 "identifier": [
                     {
-                        "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
-                        "value": "00001",
+                        // "system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+                        // "value": "00001",
                         "assigner": {
-                            "reference": "Organization/{{Org_id}}"
+                            // "reference": "Organization/{{Org_id}}"
                         }
                     }
                 ],
-                "status": "available",
+                // "status": "available",
                 "type": {
                     "coding": [
                         {
-                            "system": "http://snomed.info/sct",
-                            "code": "119294007",
-                            "display": "Dried blood specimen"
+                            // "system": "http://snomed.info/sct",
+                            // "code": "119294007",
+                            // "display": "Dried blood specimen"
                         }
                     ]
                 },
                 "collection": {
-                    "collectedDateTime": "2022-06-14T08:15:00+07:00",
+                    // "collectedDateTime": "2022-06-14T08:15:00+07:00",
                     "extension": [
                         {
-                            "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
+                            // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
                             "valueReference": {
-                                "reference": "Organization/{{Org_id}}"
+                                // "reference": "Organization/{{Org_id}}"
                             }
                         }
                     ]
                 },
                 "subject": {
-                    "reference": "Patient/100000030004",
-                    "display": "Budi Santoso"
+                    // "reference": "Patient/100000030004",
+                    // "display": "Budi Santoso"
                 },
                 "request": [
                     {
-                        "reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab"
+                        // "reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab"
                     }
                 ],
-                "receivedTime": "2022-06-14T08:25:00+07:00",
+                // "receivedTime": "2022-06-14T08:25:00+07:00",
                 "extension": [
                     {
-                        "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
-                        "valueDateTime": "2022-06-14T08:23:00+07:00"
+                        // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
+                        // "valueDateTime": "2022-06-14T08:23:00+07:00"
                     }
                 ]
             }
@@ -203,9 +203,9 @@ class Specimen extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    "op": "replace",
-                    "path": "/status",
-                    "value": "unavailable"
+                    // "op": "replace",
+                    // "path": "/status",
+                    // "value": "unavailable"
                 }
             ]
             const source = unflatten(body)

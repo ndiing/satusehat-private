@@ -26,73 +26,73 @@ class Organization extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                "resourceType": "Organization",
+                // "resourceType": "Organization",
                 "active": true,
                 "identifier": [
                     {
-                        "use": "official",
-                        "system": "http://sys-ids.kemkes.go.id/organization/1000079374",
-                        "value": "Pos Imunisasi LUBUK BATANG"
+                        // "use": "official",
+                        // "system": "http://sys-ids.kemkes.go.id/organization/1000079374",
+                        // "value": "Pos Imunisasi LUBUK BATANG"
                     }
                 ],
                 "type": [
                     {
                         "coding": [
                             {
-                                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
-                                "code": "dept",
-                                "display": "Hospital Department"
+                                // "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                                // "code": "dept",
+                                // "display": "Hospital Department"
                             }
                         ]
                     }
                 ],
-                "name": "Pos Imunisasi",
+                // "name": "Pos Imunisasi",
                 "telecom": [
                     {
-                        "system": "phone",
-                        "value": "+6221-783042654",
-                        "use": "work"
+                        // "system": "phone",
+                        // "value": "+6221-783042654",
+                        // "use": "work"
                     },
                     {
-                        "system": "email",
-                        "value": "rs-satusehat@gmail.com",
-                        "use": "work"
+                        // "system": "email",
+                        // "value": "rs-satusehat@gmail.com",
+                        // "use": "work"
                     },
                     {
-                        "system": "url",
-                        "value": "www.rs-satusehat@gmail.com",
-                        "use": "work"
+                        // "system": "url",
+                        // "value": "www.rs-satusehat@gmail.com",
+                        // "use": "work"
                     }
                 ],
                 "address": [
                     {
-                        "use": "work",
-                        "type": "both",
+                        // "use": "work",
+                        // "type": "both",
                         "line": [
-                            "Jalan Jati Asih"
+                            // "Jalan Jati Asih"
                         ],
-                        "city": "Jakarta",
-                        "postalCode": "55292",
-                        "country": "ID",
+                        // "city": "Jakarta",
+                        // "postalCode": "55292",
+                        // "country": "ID",
                         "extension": [
                             {
-                                "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
+                                // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
                                 "extension": [
                                     {
-                                        "url": "province",
-                                        "valueCode": "31"
+                                        // "url": "province",
+                                        // "valueCode": "31"
                                     },
                                     {
-                                        "url": "city",
-                                        "valueCode": "3171"
+                                        // "url": "city",
+                                        // "valueCode": "3171"
                                     },
                                     {
-                                        "url": "district",
-                                        "valueCode": "317101"
+                                        // "url": "district",
+                                        // "valueCode": "317101"
                                     },
                                     {
-                                        "url": "village",
-                                        "valueCode": "31710101"
+                                        // "url": "village",
+                                        // "valueCode": "31710101"
                                     }
                                 ]
                             }
@@ -100,7 +100,7 @@ class Organization extends Controller {
                     }
                 ],
                 "partOf": {
-                    "reference": "Organization/{{Org_id}}"
+                    // "reference": "Organization/{{Org_id}}"
                 }
             }
             const source = unflatten(body)
@@ -160,74 +160,74 @@ class Organization extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                "resourceType": "Organization",
-                "id": "abddd50b-b22f-4d68-a1c3-d2c29a27698b",
+                // "resourceType": "Organization",
+                // "id": "abddd50b-b22f-4d68-a1c3-d2c29a27698b",
                 "active": false,
                 "identifier": [
                     {
-                        "use": "official",
-                        "system": "http://sys-ids.kemkes.go.id/organization/{{Org_id}}",
-                        "value": "R220001"
+                        // "use": "official",
+                        // "system": "http://sys-ids.kemkes.go.id/organization/{{Org_id}}",
+                        // "value": "R220001"
                     }
                 ],
                 "type": [
                     {
                         "coding": [
                             {
-                                "system": "http://terminology.hl7.org/CodeSystem/organization-type",
-                                "code": "dept",
-                                "display": "Hospital Department"
+                                // "system": "http://terminology.hl7.org/CodeSystem/organization-type",
+                                // "code": "dept",
+                                // "display": "Hospital Department"
                             }
                         ]
                     }
                 ],
-                "name": "Rawat Jalan Terpadu",
+                // "name": "Rawat Jalan Terpadu",
                 "telecom": [
                     {
-                        "system": "phone",
-                        "value": "+6221-783042654",
-                        "use": "work"
+                        // "system": "phone",
+                        // "value": "+6221-783042654",
+                        // "use": "work"
                     },
                     {
-                        "system": "email",
-                        "value": "rs-satusehat@gmail.com",
-                        "use": "work"
+                        // "system": "email",
+                        // "value": "rs-satusehat@gmail.com",
+                        // "use": "work"
                     },
                     {
-                        "system": "url",
-                        "value": "www.rs-satusehat@gmail.com",
-                        "use": "work"
+                        // "system": "url",
+                        // "value": "www.rs-satusehat@gmail.com",
+                        // "use": "work"
                     }
                 ],
                 "address": [
                     {
-                        "use": "work",
-                        "type": "both",
+                        // "use": "work",
+                        // "type": "both",
                         "line": [
-                            "Jalan Jati Asih"
+                            // "Jalan Jati Asih"
                         ],
-                        "city": "Jakarta",
-                        "postalCode": "55292",
-                        "country": "ID",
+                        // "city": "Jakarta",
+                        // "postalCode": "55292",
+                        // "country": "ID",
                         "extension": [
                             {
-                                "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
+                                // "url": "https://fhir.kemkes.go.id/r4/StructureDefinition/administrativeCode",
                                 "extension": [
                                     {
-                                        "url": "province",
-                                        "valueCode": "31"
+                                        // "url": "province",
+                                        // "valueCode": "31"
                                     },
                                     {
-                                        "url": "city",
-                                        "valueCode": "3171"
+                                        // "url": "city",
+                                        // "valueCode": "3171"
                                     },
                                     {
-                                        "url": "district",
-                                        "valueCode": "317101"
+                                        // "url": "district",
+                                        // "valueCode": "317101"
                                     },
                                     {
-                                        "url": "village",
-                                        "valueCode": "31710101"
+                                        // "url": "village",
+                                        // "valueCode": "31710101"
                                     }
                                 ]
                             }
@@ -235,7 +235,7 @@ class Organization extends Controller {
                     }
                 ],
                 "partOf": {
-                    "reference": "Organization/{{Org_id}}"
+                    // "reference": "Organization/{{Org_id}}"
                 }
             }
             const source = unflatten(body)
@@ -261,9 +261,9 @@ class Organization extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    "op": "replace",
-                    "path": "/name",
-                    "value": "RAJAL TERPADU"
+                    // "op": "replace",
+                    // "path": "/name",
+                    // "value": "RAJAL TERPADU"
                 }
             ]
             const source = unflatten(body)

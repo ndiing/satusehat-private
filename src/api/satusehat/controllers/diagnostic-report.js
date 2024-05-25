@@ -26,22 +26,22 @@ class DiagnosticReport extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                "resourceType": "DiagnosticReport",
+                // "resourceType": "DiagnosticReport",
                 "identifier": [
                     {
-                        "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
-                        "use": "official",
-                        "value": "5234342"
+                        // "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
+                        // "use": "official",
+                        // "value": "5234342"
                     }
                 ],
-                "status": "final",
+                // "status": "final",
                 "category": [
                     {
                         "coding": [
                             {
-                                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
-                                "code": "MB",
-                                "display": "Microbiology"
+                                // "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                                // "code": "MB",
+                                // "display": "Microbiology"
                             }
                         ]
                     }
@@ -49,45 +49,45 @@ class DiagnosticReport extends Controller {
                 "code": {
                     "coding": [
                         {
-                            "system": "http://loinc.org",
-                            "code": "11477-7",
-                            "display": "Microscopic observation [Identifier] in Sputum by Acid fast stain"
+                            // "system": "http://loinc.org",
+                            // "code": "11477-7",
+                            // "display": "Microscopic observation [Identifier] in Sputum by Acid fast stain"
                         }
                     ]
                 },
                 "subject": {
-                    "reference": "Patient/100000030009"
+                    // "reference": "Patient/100000030009"
                 },
                 "encounter": {
-                    "reference": "Encounter/{{Encounter_uuid}}"
+                    // "reference": "Encounter/{{Encounter_uuid}}"
                 },
-                "effectiveDateTime": "2012-12-01T12:00:00+01:00",
-                "issued": "2012-12-01T12:00:00+01:00",
+                // "effectiveDateTime": "2012-12-01T12:00:00+01:00",
+                // "issued": "2012-12-01T12:00:00+01:00",
                 "performer": [
                     {
-                        "reference": "Practitioner/N10000001"
+                        // "reference": "Practitioner/N10000001"
                     },
                     {
-                        "reference": "Organization/{{Org_id}}"
+                        // "reference": "Organization/{{Org_id}}"
                     }
                 ],
                 "result": [
                     {
-                        "reference": "Observation/dc0b1b9c-d2c8-4830-b8bb-d73c68174f02"
+                        // "reference": "Observation/dc0b1b9c-d2c8-4830-b8bb-d73c68174f02"
                     }
                 ],
                 "specimen": [
                     {
-                        "reference": "Specimen/3095e36e-1624-487e-9ee4-737387e7b55f"
+                        // "reference": "Specimen/3095e36e-1624-487e-9ee4-737387e7b55f"
                     }
                 ],
                 "conclusionCode": [
                     {
                         "coding": [
                             {
-                                "system": "http://snomed.info/sct",
-                                "code": "260347006",
-                                "display": "+"
+                                // "system": "http://snomed.info/sct",
+                                // "code": "260347006",
+                                // "display": "+"
                             }
                         ]
                     }
@@ -150,23 +150,23 @@ class DiagnosticReport extends Controller {
         try {
             const {params,query,body} = req
             const target = {
-                "resourceType": "DiagnosticReport",
-                "id": "ec63dc9a-738d-4f7b-8a4d-86ca9e621ef6",
+                // "resourceType": "DiagnosticReport",
+                // "id": "ec63dc9a-738d-4f7b-8a4d-86ca9e621ef6",
                 "identifier": [
                     {
-                        "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
-                        "use": "official",
-                        "value": "5234342"
+                        // "system": "http://sys-ids.kemkes.go.id/diagnostic/{{Org_id}}/lab",
+                        // "use": "official",
+                        // "value": "5234342"
                     }
                 ],
-                "status": "final",
+                // "status": "final",
                 "category": [
                     {
                         "coding": [
                             {
-                                "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
-                                "code": "MB",
-                                "display": "Microbiology"
+                                // "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+                                // "code": "MB",
+                                // "display": "Microbiology"
                             }
                         ]
                     }
@@ -174,45 +174,45 @@ class DiagnosticReport extends Controller {
                 "code": {
                     "coding": [
                         {
-                            "system": "http://loinc.org",
-                            "code": "11477-7",
-                            "display": "Microscopic observation [Identifier] in Sputum by Acid fast stain"
+                            // "system": "http://loinc.org",
+                            // "code": "11477-7",
+                            // "display": "Microscopic observation [Identifier] in Sputum by Acid fast stain"
                         }
                     ]
                 },
                 "subject": {
-                    "reference": "Patient/100000030009"
+                    // "reference": "Patient/100000030009"
                 },
                 "encounter": {
-                    "reference": "Encounter/{{Encounter_uuid}}"
+                    // "reference": "Encounter/{{Encounter_uuid}}"
                 },
-                "effectiveDateTime": "2012-12-01T12:00:00+01:00",
-                "issued": "2012-12-01T12:00:00+01:00",
+                // "effectiveDateTime": "2012-12-01T12:00:00+01:00",
+                // "issued": "2012-12-01T12:00:00+01:00",
                 "performer": [
                     {
-                        "reference": "Practitioner/N10000001"
+                        // "reference": "Practitioner/N10000001"
                     },
                     {
-                        "reference": "Organization/{{Org_id}}"
+                        // "reference": "Organization/{{Org_id}}"
                     }
                 ],
                 "result": [
                     {
-                        "reference": "Observation/dc0b1b9c-d2c8-4830-b8bb-d73c68174f02"
+                        // "reference": "Observation/dc0b1b9c-d2c8-4830-b8bb-d73c68174f02"
                     }
                 ],
                 "specimen": [
                     {
-                        "reference": "Specimen/3095e36e-1624-487e-9ee4-737387e7b55f"
+                        // "reference": "Specimen/3095e36e-1624-487e-9ee4-737387e7b55f"
                     }
                 ],
                 "conclusionCode": [
                     {
                         "coding": [
                             {
-                                "system": "http://snomed.info/sct",
-                                "code": "2667000",
-                                "display": "Absent"
+                                // "system": "http://snomed.info/sct",
+                                // "code": "2667000",
+                                // "display": "Absent"
                             }
                         ]
                     }
@@ -241,9 +241,9 @@ class DiagnosticReport extends Controller {
             const {params,query,body} = req
             const target = [
                 {
-                    "op": "replace",
-                    "path": "/status",
-                    "value": "preliminary"
+                    // "op": "replace",
+                    // "path": "/status",
+                    // "value": "preliminary"
                 }
             ]
             const source = unflatten(body)
