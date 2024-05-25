@@ -1,71 +1,71 @@
-### CodeSystem-allergyintolerance-clinical
+### name:AllergyIntoleranceClinicalStatusCodes
 GET http://localhost:3000/api/hl7/CodeSystem-allergyintolerance-clinical
 
-### CodeSystem-allergyintolerance-verification
+### name:AllergyIntoleranceVerificationStatus
 GET http://localhost:3000/api/hl7/CodeSystem-allergyintolerance-verification
 
-### CodeSystem-condition-category
+### name:ConditionCategoryCodes
 GET http://localhost:3000/api/hl7/CodeSystem-condition-category
 
-### CodeSystem-condition-clinical
+### name:ConditionClinicalStatusCodes
 GET http://localhost:3000/api/hl7/CodeSystem-condition-clinical
 
-### CodeSystem-diagnosis-role
+### name:DiagnosisRole
 GET http://localhost:3000/api/hl7/CodeSystem-diagnosis-role
 
-### CodeSystem-discharge-disposition
+### name:DischargeDisposition
 GET http://localhost:3000/api/hl7/CodeSystem-discharge-disposition
 
-### CodeSystem-dose-rate-type
+### name:DoseAndRateType
 GET http://localhost:3000/api/hl7/CodeSystem-dose-rate-type
 
-### CodeSystem-location-physical-type
+### name:LocationType
 GET http://localhost:3000/api/hl7/CodeSystem-location-physical-type
 
-### CodeSystem-medicationrequest-category
+### name:MedicationRequestCategoryCodes
 GET http://localhost:3000/api/hl7/CodeSystem-medicationrequest-category
 
-### CodeSystem-medicationrequest-course-of-therapy
+### name:MedicationRequestCourseOfTherapyCodes
 GET http://localhost:3000/api/hl7/CodeSystem-medicationrequest-course-of-therapy
 
-### CodeSystem-observation-category
+### name:ObservationCategoryCodes
 GET http://localhost:3000/api/hl7/CodeSystem-observation-category
 
-### CodeSystem-organization-type
+### name:OrganizationType
 GET http://localhost:3000/api/hl7/CodeSystem-organization-type
 
-### CodeSystem-practitioner-role
+### name:PractitionerRole
 GET http://localhost:3000/api/hl7/CodeSystem-practitioner-role
 
-### CodeSystem-service-type
+### name:ServiceType
 GET http://localhost:3000/api/hl7/CodeSystem-service-type
 
-### CodeSystem-v2-0074
+### name:DiagnosticServiceSectionId
 GET http://localhost:3000/api/hl7/CodeSystem-v2-0074
 
-### CodeSystem-v2-0131
+### name:ContactRole2
 GET http://localhost:3000/api/hl7/CodeSystem-v2-0131
 
-### CodeSystem-v2-0203
+### name:IdentifierType
 GET http://localhost:3000/api/hl7/CodeSystem-v2-0203
 
-### CodeSystem-v2-0276
+### name:AppointmentReason
 GET http://localhost:3000/api/hl7/CodeSystem-v2-0276
 
-### CodeSystem-v2-0443
+### name:ProviderRole
 GET http://localhost:3000/api/hl7/CodeSystem-v2-0443
 
-### CodeSystem-v3-ActCode
+### name:ActCode
 GET http://localhost:3000/api/hl7/CodeSystem-v3-ActCode
 
-### CodeSystem-v3-MaritalStatus
+### name:MaritalStatus
 GET http://localhost:3000/api/hl7/CodeSystem-v3-MaritalStatus
 
-### CodeSystem-v3-ParticipationType
+### name:ParticipationType
 GET http://localhost:3000/api/hl7/CodeSystem-v3-ParticipationType
 
-### CodeSystem-v3-RoleCode
+### name:RoleCode
 GET http://localhost:3000/api/hl7/CodeSystem-v3-RoleCode
 
-### CodeSystem-v3-orderableDrugForm
+### name:OrderableDrugForm
 GET http://localhost:3000/api/hl7/CodeSystem-v3-orderableDrugForm
