@@ -1,5 +1,9 @@
 {
-    "ignore": [".git", "node_modules/**"],
+    "ignore": [
+        ".git",
+        "node_modules/**",
+        "src/api/hl7/models/**"
+    ],
     "env": {
         "NODE_ENV": "development"
     },
