@@ -46,10 +46,30 @@ API Master
 
 API HL7
 
--   **<code>get</code> [/hl7/CodeSystem-location-physical-type](./rest/hl7/hl7.http)**
--   **<code>get</code> [/hl7/CodeSystem-organization-type](./rest/hl7/hl7.http)**
--   **<code>get</code> [/hl7/CodeSystem-v3-ActCode](./rest/hl7/hl7.http)**
--   **<code>get</code> [/hl7/CodeSystem-v3-ParticipationType](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-allergyintolerance-clinical](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-allergyintolerance-verification](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-condition-category](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-condition-clinical](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-diagnosis-role](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-discharge-disposition](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-dose-rate-type](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-location-physical-type](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-medicationrequest-category](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-medicationrequest-course-of-therapy](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-observation-category](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-organization-type](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-practitioner-role](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-service-type](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0074](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0131](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0203](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0276](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0443](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-v3-ActCode](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-v3-MaritalStatus](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-v3-ParticipationType](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-v3-RoleCode](./rest/hl7/hl7.http)
+-   **<code>GET</code> [/hl7/CodeSystem-v3-orderableDrugForm](./rest/hl7/hl7.http)
 
 ### **[Satusehat Private]()**
 
