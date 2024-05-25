@@ -14,7 +14,7 @@ Content-type: application/json
     "type.0.coding.0.code": "dept",
     "type.0.coding.0.display": "Hospital Department",
     "name": "Pos Imunisasi",
-                                                                                                    "partOf.reference": "Organization/{{Org_id}}"
+    "partOf.reference": "Organization/{{Org_id}}"
 }
 
 ### Organization - By ID
@@ -44,7 +44,7 @@ Content-type: application/json
     "type.0.coding.0.code": "dept",
     "type.0.coding.0.display": "Hospital Department",
     "name": "Rawat Jalan Terpadu",
-                                                                                                    "partOf.reference": "Organization/{{Org_id}}"
+    "partOf.reference": "Organization/{{Org_id}}"
 }
 
 ### Organization - Patch
