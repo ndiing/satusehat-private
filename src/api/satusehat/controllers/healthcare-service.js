@@ -100,8 +100,10 @@ class HealthcareService extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -116,9 +118,11 @@ class HealthcareService extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -132,8 +136,10 @@ class HealthcareService extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "specialty": query["specialty"], // "S001.09",
                 },
             });
@@ -222,9 +228,11 @@ class HealthcareService extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -248,9 +256,11 @@ class HealthcareService extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

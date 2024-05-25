@@ -80,10 +80,10 @@ class MedicationDispense extends Controller {
                 "quantity": {
                     // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                     // "code": "TAB",
-                    "value": 120
+                    // "value": 120
                 },
                 "daysSupply": {
-                    "value": 30,
+                    // "value": 30,
                     // "unit": "Day",
                     // "system": "http://unitsofmeasure.org",
                     // "code": "d"
@@ -92,12 +92,12 @@ class MedicationDispense extends Controller {
                 // "whenHandedOver": "2022-01-15T16:20:00Z",
                 "dosageInstruction": [
                     {
-                        "sequence": 1,
+                        // "sequence": 1,
                         // "text": "Diminum 4 tablet sekali dalam sehari",
                         "timing": {
                             "repeat": {
-                                "frequency": 1,
-                                "period": 1,
+                                // "frequency": 1,
+                                // "period": 1,
                                 // "periodUnit": "d"
                             }
                         },
@@ -113,7 +113,7 @@ class MedicationDispense extends Controller {
                                     ]
                                 },
                                 "doseQuantity": {
-                                    "value": 4,
+                                    // "value": 4,
                                     // "unit": "TAB",
                                     // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                     // "code": "TAB"
@@ -127,8 +127,10 @@ class MedicationDispense extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -143,8 +145,10 @@ class MedicationDispense extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "subject": query["subject"], // "100000030009",
                 },
             });
@@ -159,9 +163,11 @@ class MedicationDispense extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "71e27aa4-89d1-49a0-80ab-20e970a939cc",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -229,10 +235,10 @@ class MedicationDispense extends Controller {
                 "quantity": {
                     // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                     // "code": "TAB",
-                    "value": 120
+                    // "value": 120
                 },
                 "daysSupply": {
-                    "value": 30,
+                    // "value": 30,
                     // "unit": "Day",
                     // "system": "http://unitsofmeasure.org",
                     // "code": "d"
@@ -241,12 +247,12 @@ class MedicationDispense extends Controller {
                 // "whenHandedOver": "2022-01-15T16:20:00Z",
                 "dosageInstruction": [
                     {
-                        "sequence": 1,
+                        // "sequence": 1,
                         // "text": "Diminum 4 tablet sekali dalam sehari",
                         "timing": {
                             "repeat": {
-                                "frequency": 1,
-                                "period": 1,
+                                // "frequency": 1,
+                                // "period": 1,
                                 // "periodUnit": "d"
                             }
                         },
@@ -262,7 +268,7 @@ class MedicationDispense extends Controller {
                                     ]
                                 },
                                 "doseQuantity": {
-                                    "value": 4,
+                                    // "value": 4,
                                     // "unit": "TAB",
                                     // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                     // "code": "TAB"
@@ -276,9 +282,11 @@ class MedicationDispense extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "71e27aa4-89d1-49a0-80ab-20e970a939cc",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -302,9 +310,11 @@ class MedicationDispense extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "71e27aa4-89d1-49a0-80ab-20e970a939cc",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

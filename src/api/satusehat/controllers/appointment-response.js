@@ -41,8 +41,10 @@ class AppointmentResponse extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -57,9 +59,11 @@ class AppointmentResponse extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "96bbe117-1738-4e93-abd7-23178dad38d3",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -73,8 +77,10 @@ class AppointmentResponse extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "appointment": query["appointment"], // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
                 },
             });
@@ -104,9 +110,11 @@ class AppointmentResponse extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "96bbe117-1738-4e93-abd7-23178dad38d3",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -130,9 +138,11 @@ class AppointmentResponse extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "96bbe117-1738-4e93-abd7-23178dad38d3",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

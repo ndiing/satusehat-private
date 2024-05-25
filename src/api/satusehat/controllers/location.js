@@ -61,7 +61,7 @@ class Location extends Controller {
                 "address": {
                     // "use": "work",
                     "line": [
-                        "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+                        // "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
                     ],
                     // "city": "Jakarta",
                     // "postalCode": "12950",
@@ -108,9 +108,9 @@ class Location extends Controller {
                     ]
                 },
                 "position": {
-                    "longitude": -6.23115426275766,
-                    "latitude": 106.83239885393944,
-                    "altitude": 0
+                    // "longitude": -6.23115426275766,
+                    // "latitude": 106.83239885393944,
+                    // "altitude": 0
                 },
                 "managingOrganization": {
                     // "reference": "Organization/{{Org_id}}"
@@ -120,8 +120,10 @@ class Location extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -136,8 +138,10 @@ class Location extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "identifier": query["identifier"], // "http://sys-ids.kemkes.go.id/location/1000001|G-2-R-1A",
                 },
             });
@@ -152,9 +156,11 @@ class Location extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "dc01c797-547a-4e4d-97cd-4ece0630e380",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -203,7 +209,7 @@ class Location extends Controller {
                 "address": {
                     // "use": "work",
                     "line": [
-                        "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+                        // "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
                     ],
                     // "city": "Jakarta",
                     // "postalCode": "12950",
@@ -250,9 +256,9 @@ class Location extends Controller {
                     ]
                 },
                 "position": {
-                    "longitude": -6.23115426275766,
-                    "latitude": 106.83239885393944,
-                    "altitude": 0
+                    // "longitude": -6.23115426275766,
+                    // "latitude": 106.83239885393944,
+                    // "altitude": 0
                 },
                 "managingOrganization": {
                     // "reference": "Organization/{{Org_id}}"
@@ -262,9 +268,11 @@ class Location extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "dc01c797-547a-4e4d-97cd-4ece0630e380",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -288,9 +296,11 @@ class Location extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "dc01c797-547a-4e4d-97cd-4ece0630e380",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

@@ -69,8 +69,10 @@ class FamilyMemberHistory extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -85,9 +87,11 @@ class FamilyMemberHistory extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "0735510d-ad0b-44ca-92be-b695a9b127d1",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -101,8 +105,10 @@ class FamilyMemberHistory extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "relationship": query["relationship"], // "72705000",
                    "patient": query["patient"], // "P02280547535",
                 },
@@ -161,9 +167,11 @@ class FamilyMemberHistory extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "0735510d-ad0b-44ca-92be-b695a9b127d1",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -187,9 +195,11 @@ class FamilyMemberHistory extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "0735510d-ad0b-44ca-92be-b695a9b127d1",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

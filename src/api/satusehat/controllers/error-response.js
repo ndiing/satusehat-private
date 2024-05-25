@@ -27,8 +27,10 @@ class ErrorResponse extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);

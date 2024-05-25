@@ -63,7 +63,7 @@ class ObservationTTV extends Controller {
                 // "effectiveDateTime": "2022-07-14",
                 // "issued": "2022-07-14T14:27:00+07:00",
                 "valueQuantity": {
-                    "value": 80,
+                    // "value": 80,
                     // "unit": "beats/minute",
                     // "system": "http://unitsofmeasure.org",
                     // "code": "/min"
@@ -73,8 +73,10 @@ class ObservationTTV extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -89,8 +91,10 @@ class ObservationTTV extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "subject": query["subject"], // "100000030009",
                 },
             });
@@ -105,9 +109,11 @@ class ObservationTTV extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "6d6186d9-9f29-4837-98f1-b61ac593ce15",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -153,7 +159,7 @@ class ObservationTTV extends Controller {
                 // "effectiveDateTime": "2022-07-14",
                 // "issued": "2022-07-14T14:27:00+07:00",
                 "valueQuantity": {
-                    "value": 22,
+                    // "value": 22,
                     // "unit": "breaths/minute",
                     // "system": "http://unitsofmeasure.org",
                     // "code": "/min"
@@ -163,9 +169,11 @@ class ObservationTTV extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "40a8c3c0-89fb-4ed3-b646-399c6a909d8a",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -182,16 +190,18 @@ class ObservationTTV extends Controller {
                 {
                     // "op": "replace",
                     // "path": "/valueQuantity/value",
-                    "value": 15
+                    // "value": 15
                 }
             ]
             const source = unflatten(body)
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "6d6186d9-9f29-4837-98f1-b61ac593ce15",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

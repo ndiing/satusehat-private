@@ -29,7 +29,7 @@ class RelatedPerson extends Controller {
                 // "resourceType": "RelatedPerson",
                 "meta": {
                     "profile": [
-                        "https://fhir.kemkes.go.id/r4/StructureDefinition/RelatedPerson"
+                        // "https://fhir.kemkes.go.id/r4/StructureDefinition/RelatedPerson"
                     ]
                 },
                 "identifier": [
@@ -84,7 +84,7 @@ class RelatedPerson extends Controller {
                     {
                         // "use": "home",
                         "line": [
-                            "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+                            // "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
                         ],
                         // "city": "Jakarta",
                         // "postalCode": "12950",
@@ -111,8 +111,10 @@ class RelatedPerson extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -130,7 +132,7 @@ class RelatedPerson extends Controller {
                 // "id": "c093eab9-a0e5-41b9-a543-51096653cd92",
                 "meta": {
                     "profile": [
-                        "https://fhir.kemkes.go.id/r4/StructureDefinition/RelatedPerson"
+                        // "https://fhir.kemkes.go.id/r4/StructureDefinition/RelatedPerson"
                     ]
                 },
                 "identifier": [
@@ -185,7 +187,7 @@ class RelatedPerson extends Controller {
                     {
                         // "use": "home",
                         "line": [
-                            "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+                            // "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
                         ],
                         // "city": "Jakarta",
                         // "postalCode": "12950",
@@ -212,9 +214,11 @@ class RelatedPerson extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "c093eab9-a0e5-41b9-a543-51096653cd92",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -229,8 +233,10 @@ class RelatedPerson extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "identifier": query["identifier"], // "https://fhir.kemkes.go.id/id/nik|367400001111222",
                 },
             });
@@ -254,9 +260,11 @@ class RelatedPerson extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "c093eab9-a0e5-41b9-a543-51096653cd92",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

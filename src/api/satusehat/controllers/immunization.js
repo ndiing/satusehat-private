@@ -27,8 +27,10 @@ class Immunization extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "date": query["date"], // "2022-01-11",
                    "patient": query["patient"], // "100000030009",
                 },
@@ -44,9 +46,11 @@ class Immunization extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "cbda5884-f180-4118-911e-9bd35e09651a",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -106,7 +110,7 @@ class Immunization extends Controller {
                     ]
                 },
                 "doseQuantity": {
-                    "value": 1,
+                    // "value": 1,
                     // "unit": "mL",
                     // "system": "http://unitsofmeasure.org",
                     // "code": "ml"
@@ -145,7 +149,7 @@ class Immunization extends Controller {
                 ],
                 "protocolApplied": [
                     {
-                        "doseNumberPositiveInt": 1
+                        // "doseNumberPositiveInt": 1
                     }
                 ]
             }
@@ -153,9 +157,11 @@ class Immunization extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "cbda5884-f180-4118-911e-9bd35e09651a",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -179,9 +185,11 @@ class Immunization extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "cbda5884-f180-4118-911e-9bd35e09651a",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

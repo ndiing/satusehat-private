@@ -62,17 +62,17 @@ class ImagingStudy extends Controller {
                         // "reference": "ServiceRequest/83218f28-0027-4d3d-9981-94517f14223e"
                     }
                 ],
-                "numberOfSeries": 1,
-                "numberOfInstances": 1,
+                // "numberOfSeries": 1,
+                // "numberOfInstances": 1,
                 "series": [
                     {
                         // "uid": "2.16.380.31256.1.2449191199178232.20210610114926922.1",
-                        "number": 1,
+                        // "number": 1,
                         "modality": {
                             // "system": "http://dicom.nema.org/resources/ontology/DCM",
                             // "code": "OP"
                         },
-                        "numberOfInstances": 1,
+                        // "numberOfInstances": 1,
                         // "started": "2021-06-10T11:45:01+07:00",
                         "instance": [
                             {
@@ -81,7 +81,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.77.1.5.1"
                                 },
-                                "number": 7,
+                                // "number": 7,
                                 // "title": "ORIGINAL\\PRIMARY"
                             }
                         ]
@@ -92,8 +92,10 @@ class ImagingStudy extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -108,8 +110,10 @@ class ImagingStudy extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "identifier": query["identifier"], // "http://sys-ids.kemkes.go.id/acsn/10000004|MR.221102.062",
                 },
             });
@@ -160,19 +164,19 @@ class ImagingStudy extends Controller {
                         // "reference": "ServiceRequest/cf498c0e-86e1-457e-b464-fe0ed8948da2"
                     }
                 ],
-                "numberOfSeries": 6,
-                "numberOfInstances": 73,
+                // "numberOfSeries": 6,
+                // "numberOfInstances": 73,
                 // "description": "E018 - MRI Lumbosacral",
                 "series": [
                     {
                         // "uid": "1.2.840.113619.2.388.14436926.9266122.15378.1667174756.530",
-                        "number": 7,
+                        // "number": 7,
                         "modality": {
                             // "system": "http://dicom.nema.org/resources/ontology/DCM",
                             // "code": "MR"
                         },
                         // "description": "Sag T1",
-                        "numberOfInstances": 12,
+                        // "numberOfInstances": 12,
                         // "started": "2022-11-02T13:52:06+07:00",
                         "instance": [
                             {
@@ -181,7 +185,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 4,
+                                // "number": 4,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -190,7 +194,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 3,
+                                // "number": 3,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -199,7 +203,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 10,
+                                // "number": 10,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -208,7 +212,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 9,
+                                // "number": 9,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -217,7 +221,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 11,
+                                // "number": 11,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -226,7 +230,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 12,
+                                // "number": 12,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -235,7 +239,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 8,
+                                // "number": 8,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -244,7 +248,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 7,
+                                // "number": 7,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -253,7 +257,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 5,
+                                // "number": 5,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -262,7 +266,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 6,
+                                // "number": 6,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -271,7 +275,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 1,
+                                // "number": 1,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -280,20 +284,20 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 2,
+                                // "number": 2,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             }
                         ]
                     },
                     {
                         // "uid": "1.2.840.113619.2.388.14436926.9266122.15378.1667174756.531",
-                        "number": 8,
+                        // "number": 8,
                         "modality": {
                             // "system": "http://dicom.nema.org/resources/ontology/DCM",
                             // "code": "MR"
                         },
                         // "description": "Ax T2",
-                        "numberOfInstances": 15,
+                        // "numberOfInstances": 15,
                         // "started": "2022-11-02T13:55:31+07:00",
                         "instance": [
                             {
@@ -302,7 +306,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 6,
+                                // "number": 6,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -311,7 +315,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 5,
+                                // "number": 5,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -320,7 +324,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 7,
+                                // "number": 7,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -329,7 +333,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 8,
+                                // "number": 8,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -338,7 +342,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 4,
+                                // "number": 4,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -347,7 +351,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 3,
+                                // "number": 3,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -356,7 +360,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 1,
+                                // "number": 1,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -365,7 +369,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 2,
+                                // "number": 2,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -374,7 +378,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 11,
+                                // "number": 11,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -383,7 +387,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 12,
+                                // "number": 12,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -392,7 +396,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 14,
+                                // "number": 14,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -401,7 +405,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 13,
+                                // "number": 13,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -410,7 +414,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 10,
+                                // "number": 10,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -419,7 +423,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 15,
+                                // "number": 15,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -428,20 +432,20 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 9,
+                                // "number": 9,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             }
                         ]
                     },
                     {
                         // "uid": "1.2.840.113619.2.388.14436926.9266122.15378.1667174756.529",
-                        "number": 6,
+                        // "number": 6,
                         "modality": {
                             // "system": "http://dicom.nema.org/resources/ontology/DCM",
                             // "code": "MR"
                         },
                         // "description": "Sag T2",
-                        "numberOfInstances": 12,
+                        // "numberOfInstances": 12,
                         // "started": "2022-11-02T13:47:41+07:00",
                         "instance": [
                             {
@@ -450,7 +454,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 7,
+                                // "number": 7,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -459,7 +463,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 8,
+                                // "number": 8,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -468,7 +472,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 6,
+                                // "number": 6,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -477,7 +481,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 12,
+                                // "number": 12,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -486,7 +490,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 11,
+                                // "number": 11,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -495,7 +499,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 5,
+                                // "number": 5,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -504,7 +508,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 9,
+                                // "number": 9,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -513,7 +517,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 3,
+                                // "number": 3,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -522,7 +526,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 4,
+                                // "number": 4,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -531,7 +535,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 10,
+                                // "number": 10,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -540,7 +544,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 1,
+                                // "number": 1,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -549,20 +553,20 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 2,
+                                // "number": 2,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             }
                         ]
                     },
                     {
                         // "uid": "1.2.840.113619.2.388.14436926.9266122.15378.1667174756.533",
-                        "number": 10,
+                        // "number": 10,
                         "modality": {
                             // "system": "http://dicom.nema.org/resources/ontology/DCM",
                             // "code": "MR"
                         },
                         // "description": "Myelo 2D",
-                        "numberOfInstances": 4,
+                        // "numberOfInstances": 4,
                         // "started": "2022-11-02T14:01:54+07:00",
                         "instance": [
                             {
@@ -571,7 +575,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 3,
+                                // "number": 3,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -580,7 +584,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 4,
+                                // "number": 4,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -589,7 +593,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 2,
+                                // "number": 2,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -598,20 +602,20 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 1,
+                                // "number": 1,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             }
                         ]
                     },
                     {
                         // "uid": "1.2.840.113619.2.388.14436926.9266122.15378.1667174756.532",
-                        "number": 9,
+                        // "number": 9,
                         "modality": {
                             // "system": "http://dicom.nema.org/resources/ontology/DCM",
                             // "code": "MR"
                         },
                         // "description": "Ax T1",
-                        "numberOfInstances": 15,
+                        // "numberOfInstances": 15,
                         // "started": "2022-11-02T13:58:46+07:00",
                         "instance": [
                             {
@@ -620,7 +624,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 1,
+                                // "number": 1,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -629,7 +633,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 8,
+                                // "number": 8,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -638,7 +642,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 10,
+                                // "number": 10,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -647,7 +651,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 9,
+                                // "number": 9,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -656,7 +660,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 7,
+                                // "number": 7,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -665,7 +669,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 11,
+                                // "number": 11,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -674,7 +678,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 13,
+                                // "number": 13,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -683,7 +687,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 3,
+                                // "number": 3,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -692,7 +696,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 6,
+                                // "number": 6,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -701,7 +705,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 4,
+                                // "number": 4,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -710,7 +714,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 5,
+                                // "number": 5,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -719,7 +723,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 12,
+                                // "number": 12,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -728,7 +732,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 15,
+                                // "number": 15,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -737,7 +741,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 2,
+                                // "number": 2,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             },
                             {
@@ -746,20 +750,20 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 14,
+                                // "number": 14,
                                 // "title": "ORIGINAL\\PRIMARY\\OTHER"
                             }
                         ]
                     },
                     {
                         // "uid": "1.2.840.113619.2.233.242211435144138.452.1667372646300.1",
-                        "number": 400,
+                        // "number": 400,
                         "modality": {
                             // "system": "http://dicom.nema.org/resources/ontology/DCM",
                             // "code": "MR"
                         },
                         // "description": "Sag T2 Pasting",
-                        "numberOfInstances": 15,
+                        // "numberOfInstances": 15,
                         // "started": "2022-11-02T14:04:06+07:00",
                         "instance": [
                             {
@@ -768,7 +772,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 1,
+                                // "number": 1,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -777,7 +781,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 6,
+                                // "number": 6,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -786,7 +790,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 5,
+                                // "number": 5,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -795,7 +799,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 4,
+                                // "number": 4,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -804,7 +808,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 11,
+                                // "number": 11,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -813,7 +817,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 2,
+                                // "number": 2,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -822,7 +826,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 3,
+                                // "number": 3,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -831,7 +835,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 10,
+                                // "number": 10,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -840,7 +844,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 12,
+                                // "number": 12,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -849,7 +853,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 13,
+                                // "number": 13,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -858,7 +862,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 15,
+                                // "number": 15,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -867,7 +871,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 9,
+                                // "number": 9,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -876,7 +880,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 14,
+                                // "number": 14,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -885,7 +889,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 7,
+                                // "number": 7,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             },
                             {
@@ -894,7 +898,7 @@ class ImagingStudy extends Controller {
                                     // "system": "urn:ietf:rfc:3986",
                                     // "code": "urn:oid:1.2.840.10008.5.1.4.1.1.4"
                                 },
-                                "number": 8,
+                                // "number": 8,
                                 // "title": "DERIVED\\SECONDARY\\PASTED"
                             }
                         ]
@@ -905,9 +909,11 @@ class ImagingStudy extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "c4f3bfe3-91cd-40c4-b986-000c2150f051",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

@@ -46,8 +46,10 @@ class CarePlan extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -62,9 +64,11 @@ class CarePlan extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "d16e2819-be08-40f7-888b-3f81a3a3518d",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -78,8 +82,10 @@ class CarePlan extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "subject": query["subject"], // "100000030004",
                    "encounter": query["encounter"], // "{{Encounter_uuid}}",
                 },
@@ -115,9 +121,11 @@ class CarePlan extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "d16e2819-be08-40f7-888b-3f81a3a3518d",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -141,9 +149,11 @@ class CarePlan extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "d16e2819-be08-40f7-888b-3f81a3a3518d",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

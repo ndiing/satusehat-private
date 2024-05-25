@@ -48,8 +48,10 @@ class Slot extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -64,9 +66,11 @@ class Slot extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "6ced63df-93c3-4148-bbfd-af741b373993",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -102,9 +106,11 @@ class Slot extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "6ced63df-93c3-4148-bbfd-af741b373993",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -128,9 +134,11 @@ class Slot extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "6ced63df-93c3-4148-bbfd-af741b373993",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

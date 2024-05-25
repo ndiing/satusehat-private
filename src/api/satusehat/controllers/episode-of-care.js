@@ -76,7 +76,7 @@ class EpisodeOfCare extends Controller {
                                 }
                             ]
                         },
-                        "rank": 1
+                        // "rank": 1
                     }
                 ],
                 "patient": {
@@ -99,8 +99,10 @@ class EpisodeOfCare extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -115,8 +117,10 @@ class EpisodeOfCare extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "subject": query["subject"], // "100000030009",
                 },
             });
@@ -131,9 +135,11 @@ class EpisodeOfCare extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "260aa42f-d8d6-49a9-9d40-bb47c95effff",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -197,7 +203,7 @@ class EpisodeOfCare extends Controller {
                                 }
                             ]
                         },
-                        "rank": 1
+                        // "rank": 1
                     }
                 ],
                 "patient": {
@@ -220,9 +226,11 @@ class EpisodeOfCare extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "61c138e4-445a-447d-879c-fe3d5f8fb281",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -246,9 +254,11 @@ class EpisodeOfCare extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "61c138e4-445a-447d-879c-fe3d5f8fb281",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

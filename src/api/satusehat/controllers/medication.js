@@ -29,7 +29,7 @@ class Medication extends Controller {
                 // "resourceType": "Medication",
                 "meta": {
                     "profile": [
-                        "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+                        // "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
                     ]
                 },
                 "identifier": [
@@ -75,12 +75,12 @@ class Medication extends Controller {
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                "value": 150,
+                                // "value": 150,
                                 // "system": "http://unitsofmeasure.org",
                                 // "code": "mg"
                             },
                             "denominator": {
-                                "value": 1,
+                                // "value": 1,
                                 // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                 // "code": "TAB"
                             }
@@ -99,12 +99,12 @@ class Medication extends Controller {
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                "value": 75,
+                                // "value": 75,
                                 // "system": "http://unitsofmeasure.org",
                                 // "code": "mg"
                             },
                             "denominator": {
-                                "value": 1,
+                                // "value": 1,
                                 // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                 // "code": "TAB"
                             }
@@ -123,12 +123,12 @@ class Medication extends Controller {
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                "value": 400,
+                                // "value": 400,
                                 // "system": "http://unitsofmeasure.org",
                                 // "code": "mg"
                             },
                             "denominator": {
-                                "value": 1,
+                                // "value": 1,
                                 // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                 // "code": "TAB"
                             }
@@ -147,12 +147,12 @@ class Medication extends Controller {
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                "value": 275,
+                                // "value": 275,
                                 // "system": "http://unitsofmeasure.org",
                                 // "code": "mg"
                             },
                             "denominator": {
-                                "value": 1,
+                                // "value": 1,
                                 // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                 // "code": "TAB"
                             }
@@ -178,8 +178,10 @@ class Medication extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -194,9 +196,11 @@ class Medication extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -213,7 +217,7 @@ class Medication extends Controller {
                 // "id": "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
                 "meta": {
                     "profile": [
-                        "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
+                        // "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication"
                     ]
                 },
                 "identifier": [
@@ -258,12 +262,12 @@ class Medication extends Controller {
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                "value": 150,
+                                // "value": 150,
                                 // "system": "http://unitsofmeasure.org",
                                 // "code": "mg"
                             },
                             "denominator": {
-                                "value": 1,
+                                // "value": 1,
                                 // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                 // "code": "TAB"
                             }
@@ -282,12 +286,12 @@ class Medication extends Controller {
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                "value": 75,
+                                // "value": 75,
                                 // "system": "http://unitsofmeasure.org",
                                 // "code": "mg"
                             },
                             "denominator": {
-                                "value": 1,
+                                // "value": 1,
                                 // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                 // "code": "TAB"
                             }
@@ -306,12 +310,12 @@ class Medication extends Controller {
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                "value": 400,
+                                // "value": 400,
                                 // "system": "http://unitsofmeasure.org",
                                 // "code": "mg"
                             },
                             "denominator": {
-                                "value": 1,
+                                // "value": 1,
                                 // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                 // "code": "TAB"
                             }
@@ -330,12 +334,12 @@ class Medication extends Controller {
                         "isActive": true,
                         "strength": {
                             "numerator": {
-                                "value": 275,
+                                // "value": 275,
                                 // "system": "http://unitsofmeasure.org",
                                 // "code": "mg"
                             },
                             "denominator": {
-                                "value": 1,
+                                // "value": 1,
                                 // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                 // "code": "TAB"
                             }
@@ -361,9 +365,11 @@ class Medication extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -387,9 +393,11 @@ class Medication extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

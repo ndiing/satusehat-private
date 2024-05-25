@@ -93,8 +93,10 @@ class Composition extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -109,8 +111,10 @@ class Composition extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "subject": query["subject"], // "100000030009",
                 },
             });
@@ -125,9 +129,11 @@ class Composition extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "e511fb00-3641-4816-a9fd-db2a55d1897d",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -208,9 +214,11 @@ class Composition extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "e511fb00-3641-4816-a9fd-db2a55d1897d",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -234,9 +242,11 @@ class Composition extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "e511fb00-3641-4816-a9fd-db2a55d1897d",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

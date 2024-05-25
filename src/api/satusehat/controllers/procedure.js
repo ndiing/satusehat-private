@@ -99,8 +99,10 @@ class Procedure extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -115,8 +117,10 @@ class Procedure extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "subject": query["subject"], // "100000030009",
                 },
             });
@@ -131,9 +135,11 @@ class Procedure extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "87859868-c35b-4f7b-86dd-da9830ae58c5",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -220,9 +226,11 @@ class Procedure extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "87859868-c35b-4f7b-86dd-da9830ae58c5",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -246,9 +254,11 @@ class Procedure extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "87859868-c35b-4f7b-86dd-da9830ae58c5",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

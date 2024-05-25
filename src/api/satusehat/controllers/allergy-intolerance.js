@@ -53,7 +53,7 @@ class AllergyIntolerance extends Controller {
                     ]
                 },
                 "category": [
-                    "food"
+                    // "food"
                 ],
                 "code": {
                     "coding": [
@@ -82,8 +82,10 @@ class AllergyIntolerance extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -98,8 +100,10 @@ class AllergyIntolerance extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "patient": query["patient"], // "100000030009",
                    "code": query["code"], // "89811004",
                 },
@@ -115,9 +119,11 @@ class AllergyIntolerance extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -158,7 +164,7 @@ class AllergyIntolerance extends Controller {
                     ]
                 },
                 "category": [
-                    "food"
+                    // "food"
                 ],
                 "code": {
                     "coding": [
@@ -187,9 +193,11 @@ class AllergyIntolerance extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -213,9 +221,11 @@ class AllergyIntolerance extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

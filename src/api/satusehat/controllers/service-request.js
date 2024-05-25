@@ -86,8 +86,10 @@ class ServiceRequest extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -102,8 +104,10 @@ class ServiceRequest extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "identifier": query["identifier"], // "http://sys-ids.kemkes.go.id/acsn/{{Org_id}}|21120054",
                 },
             });
@@ -118,9 +122,11 @@ class ServiceRequest extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -194,9 +200,11 @@ class ServiceRequest extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -220,9 +228,11 @@ class ServiceRequest extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

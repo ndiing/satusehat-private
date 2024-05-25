@@ -75,8 +75,10 @@ class Appointment extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -91,8 +93,10 @@ class Appointment extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "actor": query["actor"], // "8cfb2d6f-dc20-4068-9113-805d426a6f17",
                 },
             });
@@ -107,9 +111,11 @@ class Appointment extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -172,9 +178,11 @@ class Appointment extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -198,9 +206,11 @@ class Appointment extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

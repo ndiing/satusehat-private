@@ -63,8 +63,10 @@ class QuestionnaireResponse extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -116,9 +118,11 @@ class QuestionnaireResponse extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -133,8 +137,10 @@ class QuestionnaireResponse extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "encounter": query["encounter"], // "66533eb2-723d-4e7c-b7aa-500cd67dd4c8",
                    "patient": query["patient"], // "P02280547535",
                 },
@@ -150,9 +156,11 @@ class QuestionnaireResponse extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);

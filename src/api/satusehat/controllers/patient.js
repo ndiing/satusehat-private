@@ -27,8 +27,10 @@ class Patient extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "identifier": query["identifier"], // "https://fhir.kemkes.go.id/id/nik|9271060312000001",
                 },
             });
@@ -43,9 +45,11 @@ class Patient extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "P02478375538",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -61,7 +65,7 @@ class Patient extends Controller {
                 // "resourceType": "Patient",
                 "meta": {
                     "profile": [
-                        "https://fhir.kemkes.go.id/r4/StructureDefinition/Patient"
+                        // "https://fhir.kemkes.go.id/r4/StructureDefinition/Patient"
                     ]
                 },
                 "identifier": [
@@ -112,7 +116,7 @@ class Patient extends Controller {
                     {
                         // "use": "home",
                         "line": [
-                            "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
+                            // "Gd. Prof. Dr. Sujudi Lt.5, Jl. H.R. Rasuna Said Blok X5 Kav. 4-9 Kuningan"
                         ],
                         // "city": "Jakarta",
                         // "postalCode": "12950",
@@ -160,7 +164,7 @@ class Patient extends Controller {
                     ],
                     // "text": "Married"
                 },
-                "multipleBirthInteger": 0,
+                // "multipleBirthInteger": 0,
                 "contact": [
                     {
                         "relationship": [
@@ -219,8 +223,10 @@ class Patient extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

@@ -91,7 +91,7 @@ class MedicationRequest extends Controller {
                 },
                 "dosageInstruction": [
                     {
-                        "sequence": 1,
+                        // "sequence": 1,
                         // "text": "4 tablet per hari",
                         "additionalInstruction": [
                             {
@@ -101,8 +101,8 @@ class MedicationRequest extends Controller {
                         // "patientInstruction": "4 tablet perhari, diminum setiap hari tanpa jeda sampai prose pengobatan berakhir",
                         "timing": {
                             "repeat": {
-                                "frequency": 1,
-                                "period": 1,
+                                // "frequency": 1,
+                                // "period": 1,
                                 // "periodUnit": "d"
                             }
                         },
@@ -127,7 +127,7 @@ class MedicationRequest extends Controller {
                                     ]
                                 },
                                 "doseQuantity": {
-                                    "value": 4,
+                                    // "value": 4,
                                     // "unit": "TAB",
                                     // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                     // "code": "TAB"
@@ -138,7 +138,7 @@ class MedicationRequest extends Controller {
                 ],
                 "dispenseRequest": {
                     "dispenseInterval": {
-                        "value": 1,
+                        // "value": 1,
                         // "unit": "days",
                         // "system": "http://unitsofmeasure.org",
                         // "code": "d"
@@ -147,15 +147,15 @@ class MedicationRequest extends Controller {
                         // "start": "2022-01-01",
                         // "end": "2022-01-30"
                     },
-                    "numberOfRepeatsAllowed": 0,
+                    // "numberOfRepeatsAllowed": 0,
                     "quantity": {
-                        "value": 120,
+                        // "value": 120,
                         // "unit": "TAB",
                         // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                         // "code": "TAB"
                     },
                     "expectedSupplyDuration": {
-                        "value": 30,
+                        // "value": 30,
                         // "unit": "days",
                         // "system": "http://unitsofmeasure.org",
                         // "code": "d"
@@ -169,8 +169,10 @@ class MedicationRequest extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -185,8 +187,10 @@ class MedicationRequest extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "subject": query["subject"], // "100000030009",
                 },
             });
@@ -201,9 +205,11 @@ class MedicationRequest extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "b5293e6d-31c6-4111-8214-609ae5890838",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -282,7 +288,7 @@ class MedicationRequest extends Controller {
                 },
                 "dosageInstruction": [
                     {
-                        "sequence": 1,
+                        // "sequence": 1,
                         // "text": "4 tablet per hari",
                         "additionalInstruction": [
                             {
@@ -292,8 +298,8 @@ class MedicationRequest extends Controller {
                         // "patientInstruction": "4 tablet perhari, diminum setiap hari tanpa jeda sampai prose pengobatan berakhir",
                         "timing": {
                             "repeat": {
-                                "frequency": 1,
-                                "period": 1,
+                                // "frequency": 1,
+                                // "period": 1,
                                 // "periodUnit": "d"
                             }
                         },
@@ -318,7 +324,7 @@ class MedicationRequest extends Controller {
                                     ]
                                 },
                                 "doseQuantity": {
-                                    "value": 4,
+                                    // "value": 4,
                                     // "unit": "TAB",
                                     // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                                     // "code": "TAB"
@@ -329,7 +335,7 @@ class MedicationRequest extends Controller {
                 ],
                 "dispenseRequest": {
                     "dispenseInterval": {
-                        "value": 1,
+                        // "value": 1,
                         // "unit": "days",
                         // "system": "http://unitsofmeasure.org",
                         // "code": "d"
@@ -338,15 +344,15 @@ class MedicationRequest extends Controller {
                         // "start": "2022-01-01",
                         // "end": "2022-01-30"
                     },
-                    "numberOfRepeatsAllowed": 0,
+                    // "numberOfRepeatsAllowed": 0,
                     "quantity": {
-                        "value": 120,
+                        // "value": 120,
                         // "unit": "TAB",
                         // "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
                         // "code": "TAB"
                     },
                     "expectedSupplyDuration": {
-                        "value": 30,
+                        // "value": 30,
                         // "unit": "days",
                         // "system": "http://unitsofmeasure.org",
                         // "code": "d"
@@ -360,9 +366,11 @@ class MedicationRequest extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "b5293e6d-31c6-4111-8214-609ae5890838",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -386,9 +394,11 @@ class MedicationRequest extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "b5293e6d-31c6-4111-8214-609ae5890838",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

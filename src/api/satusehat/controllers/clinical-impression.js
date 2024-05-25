@@ -102,8 +102,10 @@ class ClinicalImpression extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -118,8 +120,10 @@ class ClinicalImpression extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "subject": query["subject"], // "100000030009",
                    "encounter": query["encounter"], // "{{Encounter_uuid}}",
                 },
@@ -135,9 +139,11 @@ class ClinicalImpression extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "8163695a-6224-401e-9a78-7dbc9bed69af",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -227,9 +233,11 @@ class ClinicalImpression extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "8163695a-6224-401e-9a78-7dbc9bed69af",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -253,9 +261,11 @@ class ClinicalImpression extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "8163695a-6224-401e-9a78-7dbc9bed69af",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

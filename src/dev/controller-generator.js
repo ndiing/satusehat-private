@@ -185,13 +185,15 @@ function parseItem3(item3, names) {
             group[fileName] += `            const target = ${JSON.stringify(rawBody,null,4)
                 .replace(/^/gm,'            ')
                 .replace(/^\s+/,'')
-            .replace(/"(\w+)": "/gm,'// "$1": "')}\r\n`
+                .replace(/"(.*?)"(\n|: (["\d-]))/gm,'// "$1"$2')
+            }\r\n`
             group[fileName] += `            const source = unflatten(body)\r\n`
             group[fileName] += `            const payload = merge(target,source)\r\n`
         }
         group[fileName] += `            const result = await res.locals.service.${methodName2}({\r\n`
         // group[fileName] += `                params,\r\n`
         group[fileName] += `                params: {\r\n`
+        group[fileName] += `                    ...params,\r\n`
         for(const name in variable){
             const value = variable[name]
             group[fileName] += `                   "${name}": params["${name}"], // "${value}",\r\n`
@@ -199,6 +201,7 @@ function parseItem3(item3, names) {
         group[fileName] += `                },\r\n`
         // group[fileName] += `                query,\r\n`
         group[fileName] += `                query: {\r\n`
+        group[fileName] += `                    ...query,\r\n`
         for(const name in query){
             const value = query[name]
             group[fileName] += `                   "${name}": query["${name}"], // "${value}",\r\n`

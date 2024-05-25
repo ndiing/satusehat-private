@@ -69,7 +69,7 @@ class Organization extends Controller {
                         // "use": "work",
                         // "type": "both",
                         "line": [
-                            "Jalan Jati Asih"
+                            // "Jalan Jati Asih"
                         ],
                         // "city": "Jakarta",
                         // "postalCode": "55292",
@@ -107,8 +107,10 @@ class Organization extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -123,9 +125,11 @@ class Organization extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "100025605",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -139,8 +143,10 @@ class Organization extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "name": query["name"], // "paramarta",
                 },
             });
@@ -198,7 +204,7 @@ class Organization extends Controller {
                         // "use": "work",
                         // "type": "both",
                         "line": [
-                            "Jalan Jati Asih"
+                            // "Jalan Jati Asih"
                         ],
                         // "city": "Jakarta",
                         // "postalCode": "55292",
@@ -236,9 +242,11 @@ class Organization extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "abddd50b-b22f-4d68-a1c3-d2c29a27698b",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -262,9 +270,11 @@ class Organization extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "abddd50b-b22f-4d68-a1c3-d2c29a27698b",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

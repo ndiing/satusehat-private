@@ -78,8 +78,10 @@ class Specimen extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -146,9 +148,11 @@ class Specimen extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
+                    ...params,
                    "id": params["id"], // "dbee2404-e11d-421f-8399-57cee518e0c7",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });
@@ -163,9 +167,11 @@ class Specimen extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "cb2adef7-3971-4239-9cc2-6ae9981fe57d",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
@@ -179,8 +185,10 @@ class Specimen extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "subject": query["subject"], // "100000030009",
                 },
             });
@@ -204,9 +212,11 @@ class Specimen extends Controller {
             const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
+                    ...params,
                    "id": params["id"], // "cb2adef7-3971-4239-9cc2-6ae9981fe57d",
                 },
                 query: {
+                    ...query,
                 },
                 body: payload,
             });

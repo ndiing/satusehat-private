@@ -27,8 +27,10 @@ class Practitioner extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({
                 params: {
+                    ...params,
                 },
                 query: {
+                    ...query,
                    "identifier": query["identifier"], // "https://fhir.kemkes.go.id/id/nik|367400001111222",
                 },
             });
@@ -43,9 +45,11 @@ class Practitioner extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.getId({
                 params: {
+                    ...params,
                    "id": params["id"], // "N10000001",
                 },
                 query: {
+                    ...query,
                 },
             });
             res.json(result);
