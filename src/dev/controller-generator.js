@@ -155,6 +155,7 @@ function parseItem3(item3, names) {
 
             group[fileName] += `const Controller = require("../controller");\r\n`
             group[fileName] += `const Service = require("../services/${fileName}");\r\n`
+            group[fileName] += `const { merge, unflatten } = require("../../../lib/helper");\r\n`
             group[fileName] += `\r\n`
             group[fileName] += `class ${className} extends Controller {\r\n`
             group[fileName] += `    static services = {};\r\n`
@@ -180,6 +181,14 @@ function parseItem3(item3, names) {
         group[fileName] += `    static async ${methodName2}(req, res, next) {\r\n`
         group[fileName] += `        try {\r\n`
         group[fileName] += `            const {params,query,body} = req\r\n`
+        if(rawBody){
+            group[fileName] += `            const target = ${JSON.stringify(rawBody,null,4)
+                .replace(/^/gm,'            ')
+                .replace(/^\s+/,'')
+            .replace(/"(\w+)": "/gm,'// "$1": "')}\r\n`
+            group[fileName] += `            const source = unflatten(body)\r\n`
+            group[fileName] += `            const payload = merge(target,source)\r\n`
+        }
         group[fileName] += `            const result = await res.locals.service.${methodName2}({\r\n`
         // group[fileName] += `                params,\r\n`
         group[fileName] += `                params: {\r\n`
@@ -196,12 +205,12 @@ function parseItem3(item3, names) {
         }
         group[fileName] += `                },\r\n`
         if(rawBody){
-            group[fileName] += `                body: ${JSON.stringify(rawBody,null,4)
-                .replace(/^/gm,'                ')
-                .replace(/^\s+/,'')
-            },\r\n`.replace(/^/gm,'// ')
-            group[fileName] += `\r\n`
-            group[fileName] += `                body,\r\n`
+            // group[fileName] += `                body: ${JSON.stringify(rawBody,null,4)
+            //     .replace(/^/gm,'                ')
+            //     .replace(/^\s+/,'')
+            // },\r\n`.replace(/^/gm,'// ')
+            // group[fileName] += `\r\n`
+            group[fileName] += `                body: payload,\r\n`
         }
         group[fileName] += `            });\r\n`
         group[fileName] += `            res.json(result);\r\n`

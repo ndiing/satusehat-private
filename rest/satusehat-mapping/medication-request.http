@@ -1,0 +1,160 @@
+@Org_id=
+@Encounter_uuid=
+
+### MedicationRequest - Create
+POST http://localhost:3000/api/satusehat/MedicationRequest
+Content-type: application/json
+
+{
+    "resourceType": "MedicationRequest",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+    "identifier.0.use": "official",
+    "identifier.0.value": "123456788",
+    "identifier.1.system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+    "identifier.1.use": "official",
+    "identifier.1.value": "123456788-1",
+    "status": "completed",
+    "intent": "order",
+    "category.0.coding.0.system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+    "category.0.coding.0.code": "outpatient",
+    "category.0.coding.0.display": "Outpatient",
+    "priority": "routine",
+    "medicationReference.reference": "Medication/8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
+    "medicationReference.display": "Obat Anti Tuberculosis / Rifampicin 150 mg / Isoniazid 75 mg / Pyrazinamide 400 mg / Ethambutol 275 mg Kaplet Salut Selaput (KIMIA FARMA)",
+    "subject.reference": "Patient/100000030009",
+    "subject.display": "Budi Santoso",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "authoredOn": "2022-08-04",
+    "requester.reference": "Practitioner/N10000001",
+    "requester.display": "Dokter Bronsig",
+    "reasonCode.0.coding.0.system": "http://hl7.org/fhir/sid/icd-10",
+    "reasonCode.0.coding.0.code": "A15.0",
+    "reasonCode.0.coding.0.display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture",
+    "courseOfTherapyType.coding.0.system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+    "courseOfTherapyType.coding.0.code": "continuous",
+    "courseOfTherapyType.coding.0.display": "Continuing long term therapy",
+    "dosageInstruction.0.sequence": 1,
+    "dosageInstruction.0.text": "4 tablet per hari",
+    "dosageInstruction.0.additionalInstruction.0.text": "Diminum setiap hari",
+    "dosageInstruction.0.patientInstruction": "4 tablet perhari, diminum setiap hari tanpa jeda sampai prose pengobatan berakhir",
+    "dosageInstruction.0.timing.repeat.frequency": 1,
+    "dosageInstruction.0.timing.repeat.period": 1,
+    "dosageInstruction.0.timing.repeat.periodUnit": "d",
+    "dosageInstruction.0.route.coding.0.system": "http://www.whocc.no/atc",
+    "dosageInstruction.0.route.coding.0.code": "O",
+    "dosageInstruction.0.route.coding.0.display": "Oral",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.code": "ordered",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.display": "Ordered",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.value": 4,
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.unit": "TAB",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.code": "TAB",
+    "dispenseRequest.dispenseInterval.value": 1,
+    "dispenseRequest.dispenseInterval.unit": "days",
+    "dispenseRequest.dispenseInterval.system": "http://unitsofmeasure.org",
+    "dispenseRequest.dispenseInterval.code": "d",
+    "dispenseRequest.validityPeriod.start": "2022-01-01",
+    "dispenseRequest.validityPeriod.end": "2022-01-30",
+    "dispenseRequest.numberOfRepeatsAllowed": 0,
+    "dispenseRequest.quantity.value": 120,
+    "dispenseRequest.quantity.unit": "TAB",
+    "dispenseRequest.quantity.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "dispenseRequest.quantity.code": "TAB",
+    "dispenseRequest.expectedSupplyDuration.value": 30,
+    "dispenseRequest.expectedSupplyDuration.unit": "days",
+    "dispenseRequest.expectedSupplyDuration.system": "http://unitsofmeasure.org",
+    "dispenseRequest.expectedSupplyDuration.code": "d",
+    "dispenseRequest.performer.reference": "Organization/{{Org_id}}"
+}
+
+### MedicationRequest - Search by Subject
+GET http://localhost:3000/api/satusehat/MedicationRequest?subject=100000030009
+
+### MedicationRequest - Search by Subject and Encounter
+GET http://localhost:3000/api/satusehat/MedicationRequest?subject=100000030009&encounter={{Encounter_uuid}}
+
+### MedicationRequest - Search by Encounter
+GET http://localhost:3000/api/satusehat/MedicationRequest?encounter={{Encounter_uuid}}
+
+### MedicationRequest - By ID
+GET http://localhost:3000/api/satusehat/MedicationRequest/:id
+
+### MedicationRequest - PUT
+PUT http://localhost:3000/api/satusehat/MedicationRequest/:id
+Content-type: application/json
+
+{
+    "resourceType": "MedicationRequest",
+    "id": "b5293e6d-31c6-4111-8214-609ae5890838",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+    "identifier.0.use": "official",
+    "identifier.0.value": "123456788",
+    "identifier.1.system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+    "identifier.1.use": "official",
+    "identifier.1.value": "123456788-1",
+    "status": "cancelled",
+    "intent": "order",
+    "category.0.coding.0.system": "http://terminology.hl7.org/CodeSystem/medicationrequest-category",
+    "category.0.coding.0.code": "outpatient",
+    "category.0.coding.0.display": "Outpatient",
+    "priority": "routine",
+    "medicationReference.reference": "Medication/8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
+    "medicationReference.display": "Obat Anti Tuberculosis / Rifampicin 150 mg / Isoniazid 75 mg / Pyrazinamide 400 mg / Ethambutol 275 mg Kaplet Salut Selaput (KIMIA FARMA)",
+    "subject.reference": "Patient/100000030009",
+    "subject.display": "Budi Santoso",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "authoredOn": "2022-08-04",
+    "requester.reference": "Practitioner/N10000001",
+    "requester.display": "Dokter Bronsig",
+    "reasonCode.0.coding.0.system": "http://hl7.org/fhir/sid/icd-10",
+    "reasonCode.0.coding.0.code": "A15.0",
+    "reasonCode.0.coding.0.display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture",
+    "courseOfTherapyType.coding.0.system": "http://terminology.hl7.org/CodeSystem/medicationrequest-course-of-therapy",
+    "courseOfTherapyType.coding.0.code": "continuous",
+    "courseOfTherapyType.coding.0.display": "Continuing long term therapy",
+    "dosageInstruction.0.sequence": 1,
+    "dosageInstruction.0.text": "4 tablet per hari",
+    "dosageInstruction.0.additionalInstruction.0.text": "Diminum setiap hari",
+    "dosageInstruction.0.patientInstruction": "4 tablet perhari, diminum setiap hari tanpa jeda sampai prose pengobatan berakhir",
+    "dosageInstruction.0.timing.repeat.frequency": 1,
+    "dosageInstruction.0.timing.repeat.period": 1,
+    "dosageInstruction.0.timing.repeat.periodUnit": "d",
+    "dosageInstruction.0.route.coding.0.system": "http://www.whocc.no/atc",
+    "dosageInstruction.0.route.coding.0.code": "O",
+    "dosageInstruction.0.route.coding.0.display": "Oral",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.code": "ordered",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.display": "Ordered",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.value": 4,
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.unit": "TAB",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.code": "TAB",
+    "dispenseRequest.dispenseInterval.value": 1,
+    "dispenseRequest.dispenseInterval.unit": "days",
+    "dispenseRequest.dispenseInterval.system": "http://unitsofmeasure.org",
+    "dispenseRequest.dispenseInterval.code": "d",
+    "dispenseRequest.validityPeriod.start": "2022-01-01",
+    "dispenseRequest.validityPeriod.end": "2022-01-30",
+    "dispenseRequest.numberOfRepeatsAllowed": 0,
+    "dispenseRequest.quantity.value": 120,
+    "dispenseRequest.quantity.unit": "TAB",
+    "dispenseRequest.quantity.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "dispenseRequest.quantity.code": "TAB",
+    "dispenseRequest.expectedSupplyDuration.value": 30,
+    "dispenseRequest.expectedSupplyDuration.unit": "days",
+    "dispenseRequest.expectedSupplyDuration.system": "http://unitsofmeasure.org",
+    "dispenseRequest.expectedSupplyDuration.code": "d",
+    "dispenseRequest.performer.reference": "Organization/{{Org_id}}"
+}
+
+### MedicationRequest - PATCH
+PATCH http://localhost:3000/api/satusehat/MedicationRequest/:id
+Content-Type: application/json-patch+json
+
+{
+    "0.op": "replace",
+    "0.path": "/status",
+    "0.value": "on-hold"
+}
+

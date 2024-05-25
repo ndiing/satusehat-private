@@ -1,0 +1,60 @@
+
+### FamilyMemberHistory - POST
+POST http://localhost:3000/api/satusehat/FamilyMemberHistory
+Content-type: application/json
+
+{
+    "resourceType": "FamilyMemberHistory",
+    "status": "completed",
+    "relationship.coding.0.system": "http://snomed.info/sct",
+    "relationship.coding.0.code": "38048003",
+    "relationship.coding.0.display": "Uncle",
+    "deceasedBoolean": true,
+    "patient.reference": "Patient/P02280547535",
+    "patient.display": "patient 6",
+    "condition.0.code.coding.0.system": "http://snomed.info/sct",
+    "condition.0.code.coding.0.code": "115665000",
+    "condition.0.code.coding.0.display": "Atopy",
+    "condition.0.outcome.coding.0.system": "http://snomed.info/sct",
+    "condition.0.outcome.coding.0.code": "419099009",
+    "condition.0.outcome.coding.0.display": "Died"
+}
+
+### FamilyMemberHistory - Search by ID
+GET http://localhost:3000/api/satusehat/FamilyMemberHistory/:id
+
+### FamilyMemberHistory - Search by Subject & Relationship
+GET http://localhost:3000/api/satusehat/FamilyMemberHistory?relationship=72705000&patient=P02280547535
+
+### FamilyMemberHistory - UPDATE
+PUT http://localhost:3000/api/satusehat/FamilyMemberHistory/:id
+Content-type: application/json
+
+{
+    "resourceType": "FamilyMemberHistory",
+    "id": "0735510d-ad0b-44ca-92be-b695a9b127d1",
+    "status": "completed",
+    "relationship.coding.0.system": "http://snomed.info/sct",
+    "relationship.coding.0.code": "72705000",
+    "relationship.coding.0.display": "Mother",
+    "deceasedBoolean": true,
+    "patient.reference": "Patient/P02280547535",
+    "patient.display": "patient 6",
+    "condition.0.code.coding.0.system": "http://snomed.info/sct",
+    "condition.0.code.coding.0.code": "115665000",
+    "condition.0.code.coding.0.display": "Atopy",
+    "condition.0.outcome.coding.0.system": "http://snomed.info/sct",
+    "condition.0.outcome.coding.0.code": "419099009",
+    "condition.0.outcome.coding.0.display": "Died"
+}
+
+### FamilyMemberHistory - PATCH
+PATCH http://localhost:3000/api/satusehat/FamilyMemberHistory/:id
+Content-Type: application/json-patch+json
+
+{
+    "0.op": "replace",
+    "0.path": "/deceasedBoolean",
+    "0.value": true
+}
+

@@ -1,0 +1,87 @@
+@Encounter_uuid=
+
+### Procedure - Create
+POST http://localhost:3000/api/satusehat/Procedure
+Content-type: application/json
+
+{
+    "resourceType": "Procedure",
+    "status": "completed",
+    "category.coding.0.system": "http://snomed.info/sct",
+    "category.coding.0.code": "103693007",
+    "category.coding.0.display": "Diagnostic procedure",
+    "category.text": "Diagnostic procedure",
+    "code.coding.0.system": "http://hl7.org/fhir/sid/icd-9-cm",
+    "code.coding.0.code": "87.44",
+    "code.coding.0.display": "Routine chest x-ray, so described",
+    "subject.reference": "Patient/100000030009",
+    "subject.display": "Budi Santoso",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "encounter.display": "Tindakan Rontgen Dada Budi Santoso pada Selasa tanggal 14 Juni 2022",
+    "performedPeriod.start": "2022-06-14T13:31:00+01:00",
+    "performedPeriod.end": "2022-06-14T14:27:00+01:00",
+    "performer.0.actor.reference": "Practitioner/N10000001",
+    "performer.0.actor.display": "Dokter Bronsig",
+    "reasonCode.0.coding.0.system": "http://hl7.org/fhir/sid/icd-10",
+    "reasonCode.0.coding.0.code": "A15.0",
+    "reasonCode.0.coding.0.display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture",
+    "bodySite.0.coding.0.system": "http://snomed.info/sct",
+    "bodySite.0.coding.0.code": "302551006",
+    "bodySite.0.coding.0.display": "Entire Thorax",
+    "note.0.text": "Rontgen thorax melihat perluasan infiltrat dan kavitas."
+}
+
+### Procedure - Search by Subject
+GET http://localhost:3000/api/satusehat/Procedure?subject=100000030009
+
+### Procedure - Search by Subject and Encounter
+GET http://localhost:3000/api/satusehat/Procedure?subject=100000030009&encounter={{Encounter_uuid}}
+
+### Procedure - Search by Encounter
+GET http://localhost:3000/api/satusehat/Procedure?encounter={{Encounter_uuid}}
+
+### Procedure - By ID
+GET http://localhost:3000/api/satusehat/Procedure/:id
+
+### Procedure - Update
+PUT http://localhost:3000/api/satusehat/Procedure/:id
+Content-type: application/json
+
+{
+    "resourceType": "Procedure",
+    "id": "87859868-c35b-4f7b-86dd-da9830ae58c5",
+    "status": "completed",
+    "category.coding.0.system": "http://snomed.info/sct",
+    "category.coding.0.code": "103693007",
+    "category.coding.0.display": "Diagnostic procedure",
+    "category.text": "Diagnostic procedure",
+    "code.coding.0.system": "http://hl7.org/fhir/sid/icd-9-cm",
+    "code.coding.0.code": "87.44",
+    "code.coding.0.display": "Routine chest x-ray, so described",
+    "subject.reference": "Patient/P00030004",
+    "subject.display": "Budi Santoso",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "encounter.display": "Tindakan Rontgen Dada Budi Santoso pada Selasa tanggal 14 Juni 2022",
+    "performedPeriod.start": "2022-06-14T13:31:00+01:00",
+    "performedPeriod.end": "2022-06-14T14:27:00+01:00",
+    "performer.0.actor.reference": "Practitioner/N10000001",
+    "performer.0.actor.display": "Dokter Bronsig",
+    "reasonCode.0.coding.0.system": "http://hl7.org/fhir/sid/icd-10",
+    "reasonCode.0.coding.0.code": "A15.0",
+    "reasonCode.0.coding.0.display": "Tuberculosis of lung, confirmed by sputum microscopy with or without culture",
+    "bodySite.0.coding.0.system": "http://snomed.info/sct",
+    "bodySite.0.coding.0.code": "302551006",
+    "bodySite.0.coding.0.display": "Entire Thorax",
+    "note.0.text": "Rontgen thorax melihat perluasan infiltrat dan kavitas."
+}
+
+### Procedure - PATCH
+PATCH http://localhost:3000/api/satusehat/Procedure/:id
+Content-Type: application/json-patch+json
+
+{
+    "0.op": "replace",
+    "0.path": "/category/text",
+    "0.value": "Surgical procedure"
+}
+

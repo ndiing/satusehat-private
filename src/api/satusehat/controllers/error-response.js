@@ -1,5 +1,6 @@
 const Controller = require("../controller");
 const Service = require("../services/error-response");
+const { merge, unflatten } = require("../../../lib/helper");
 
 class ErrorResponse extends Controller {
     static services = {};

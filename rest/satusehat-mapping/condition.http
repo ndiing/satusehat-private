@@ -1,0 +1,88 @@
+@Encounter_uuid=
+
+### Condition - Diagnosis
+POST http://localhost:3000/api/satusehat/Condition
+Content-type: application/json
+
+{
+    "resourceType": "Condition",
+    "clinicalStatus.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+    "clinicalStatus.coding.0.code": "active",
+    "clinicalStatus.coding.0.display": "Active",
+    "category.0.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-category",
+    "category.0.coding.0.code": "encounter-diagnosis",
+    "category.0.coding.0.display": "Encounter Diagnosis",
+    "code.coding.0.system": "http://hl7.org/fhir/sid/icd-10",
+    "code.coding.0.code": "K35.8",
+    "code.coding.0.display": "Acute appendicitis, other and unspecified",
+    "subject.reference": "Patient/100000030009",
+    "subject.display": "Budi Santoso",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "encounter.display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+}
+
+### Condition - Meninggalkan Faskes
+POST http://localhost:3000/api/satusehat/Condition
+Content-type: application/json
+
+{
+    "resourceType": "Condition",
+    "clinicalStatus.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+    "clinicalStatus.coding.0.code": "active",
+    "clinicalStatus.coding.0.display": "Active",
+    "category.0.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-category",
+    "category.0.coding.0.code": "encounter-diagnosis",
+    "category.0.coding.0.display": "Encounter Diagnosis",
+    "code.coding.0.system": "http://snomed.info/sct",
+    "code.coding.0.code": "359746009",
+    "code.coding.0.display": "Patient's condition stable",
+    "subject.reference": "Patient/100000030009",
+    "subject.display": "Budi Santoso",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "encounter.display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+}
+
+### Condition - Search by Subject
+GET http://localhost:3000/api/satusehat/Condition?subject=100000030009
+
+### Condition - Search by Subject and Encounter
+GET http://localhost:3000/api/satusehat/Condition?subject=100000030009&encounter={{Encounter_uuid}}
+
+### Condition - Search by Encounter
+GET http://localhost:3000/api/satusehat/Condition?encounter={{Encounter_uuid}}
+
+### Condition - By ID
+GET http://localhost:3000/api/satusehat/Condition/:id
+
+### Condition - Update
+PUT http://localhost:3000/api/satusehat/Condition/:id
+Content-type: application/json
+
+{
+    "resourceType": "Condition",
+    "id": "f1369adf-26f6-47a5-90f2-ce08442639aa",
+    "clinicalStatus.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-clinical",
+    "clinicalStatus.coding.0.code": "remission",
+    "clinicalStatus.coding.0.display": "Remission",
+    "category.0.coding.0.system": "http://terminology.hl7.org/CodeSystem/condition-category",
+    "category.0.coding.0.code": "encounter-diagnosis",
+    "category.0.coding.0.display": "Encounter Diagnosis",
+    "code.coding.0.system": "http://hl7.org/fhir/sid/icd-10",
+    "code.coding.0.code": "K35.8",
+    "code.coding.0.display": "Acute appendicitis, other and unspecified",
+    "subject.reference": "Patient/100000030009",
+    "subject.display": "Budi Santoso",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "encounter.display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022"
+}
+
+### Condition - Patch
+PATCH http://localhost:3000/api/satusehat/Condition/:id
+Content-Type: application/json-patch+json
+
+{
+    "0.op": "replace",
+    "0.path": "/clinicalStatus/coding/0/code",
+    "0.value": "remission"
+}
+

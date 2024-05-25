@@ -1,5 +1,6 @@
 const Controller = require("../controller");
 const Service = require("../services/questionnaire-response");
+const { merge, unflatten } = require("../../../lib/helper");
 
 class QuestionnaireResponse extends Controller {
     static services = {};
@@ -24,47 +25,48 @@ class QuestionnaireResponse extends Controller {
     static async post(req, res, next) {
         try {
             const {params,query,body} = req
+            const target = {
+                // "resourceType": "QuestionnaireResponse",
+                // "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
+                // "status": "completed",
+                "subject": {
+                    // "reference": "Patient/P02280547535",
+                    // "display": "patient 6"
+                },
+                "encounter": {
+                    // "reference": "Encounter/{{Encounter_uuid}}"
+                },
+                // "authored": "2022-07-26T10:00:00+07:00",
+                "author": {
+                    // "reference": "Practitioner/N10000001"
+                },
+                "source": {
+                    // "reference": "Patient/P02280547535"
+                },
+                "item": [
+                    {
+                        // "linkId": "1",
+                        // "text": "Status Kesejahteraan",
+                        "answer": [
+                            {
+                                "valueCoding": {
+                                    // "system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
+                                    // "code": "KPS",
+                                    // "display": "Keluarga Pra Sejahtera (KPS)"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+            const source = unflatten(body)
+            const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
                 },
                 query: {
                 },
-//                 body: {
-//                     "resourceType": "QuestionnaireResponse",
-//                     "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
-//                     "status": "completed",
-//                     "subject": {
-//                         "reference": "Patient/P02280547535",
-//                         "display": "patient 6"
-//                     },
-//                     "encounter": {
-//                         "reference": "Encounter/{{Encounter_uuid}}"
-//                     },
-//                     "authored": "2022-07-26T10:00:00+07:00",
-//                     "author": {
-//                         "reference": "Practitioner/N10000001"
-//                     },
-//                     "source": {
-//                         "reference": "Patient/P02280547535"
-//                     },
-//                     "item": [
-//                         {
-//                             "linkId": "1",
-//                             "text": "Status Kesejahteraan",
-//                             "answer": [
-//                                 {
-//                                     "valueCoding": {
-//                                         "system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
-//                                         "code": "KPS",
-//                                         "display": "Keluarga Pra Sejahtera (KPS)"
-//                                     }
-//                                 }
-//                             ]
-//                         }
-//                     ]
-//                 },// 
-// 
-                body,
+                body: payload,
             });
             res.json(result);
         } catch (error) {
@@ -75,49 +77,50 @@ class QuestionnaireResponse extends Controller {
     static async putId(req, res, next) {
         try {
             const {params,query,body} = req
+            const target = {
+                // "resourceType": "QuestionnaireResponse",
+                // "id": "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
+                // "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
+                // "status": "completed",
+                "subject": {
+                    // "reference": "Patient/P02280547535",
+                    // "display": "patient 6"
+                },
+                "encounter": {
+                    // "reference": "Encounter/{{Encounter_uuid}}"
+                },
+                // "authored": "2022-07-26T10:00:00+07:00",
+                "author": {
+                    // "reference": "Practitioner/N10000001"
+                },
+                "source": {
+                    // "reference": "Patient/P02280547535"
+                },
+                "item": [
+                    {
+                        // "linkId": "1",
+                        // "text": "Status Kesejahteraan",
+                        "answer": [
+                            {
+                                "valueCoding": {
+                                    // "system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
+                                    // "code": "KPS",
+                                    // "display": "Keluarga Pra Sejahtera (KPS)"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+            const source = unflatten(body)
+            const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
                    "id": params["id"], // "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
                 },
                 query: {
                 },
-//                 body: {
-//                     "resourceType": "QuestionnaireResponse",
-//                     "id": "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
-//                     "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
-//                     "status": "completed",
-//                     "subject": {
-//                         "reference": "Patient/P02280547535",
-//                         "display": "patient 6"
-//                     },
-//                     "encounter": {
-//                         "reference": "Encounter/{{Encounter_uuid}}"
-//                     },
-//                     "authored": "2022-07-26T10:00:00+07:00",
-//                     "author": {
-//                         "reference": "Practitioner/N10000001"
-//                     },
-//                     "source": {
-//                         "reference": "Patient/P02280547535"
-//                     },
-//                     "item": [
-//                         {
-//                             "linkId": "1",
-//                             "text": "Status Kesejahteraan",
-//                             "answer": [
-//                                 {
-//                                     "valueCoding": {
-//                                         "system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
-//                                         "code": "KPS",
-//                                         "display": "Keluarga Pra Sejahtera (KPS)"
-//                                     }
-//                                 }
-//                             ]
-//                         }
-//                     ]
-//                 },// 
-// 
-                body,
+                body: payload,
             });
             res.json(result);
         } catch (error) {

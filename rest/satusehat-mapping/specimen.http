@@ -1,0 +1,103 @@
+@Org_id=
+
+### Specimen - Create (Non Rujukan)
+POST http://localhost:3000/api/satusehat/Specimen
+Content-type: application/json
+
+{
+    "resourceType": "Specimen",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+    "identifier.0.value": "00001",
+    "identifier.0.assigner.reference": "Organization/{{Org_id}}",
+    "status": "available",
+    "type.coding.0.system": "http://snomed.info/sct",
+    "type.coding.0.code": "119294007",
+    "type.coding.0.display": "Dried blood specimen",
+    "collection.collectedDateTime": "2022-06-14T08:15:00+07:00",
+    "collection.extension.0.url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
+    "collection.extension.0.valueReference.reference": "Organization/{{Org_id}}",
+    "subject.reference": "Patient/100000030009",
+    "subject.display": "Budi Santoso",
+    "request.0.reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab",
+    "receivedTime": "2022-06-14T08:25:00+07:00",
+    "extension.0.url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
+    "extension.0.valueDateTime": "2022-06-14T08:23:00+07:00"
+}
+
+### Specimen - Rujukan Sampel (with ReceivedTime & CollectorOrganization)
+PUT http://localhost:3000/api/satusehat/Specimen/:id
+Content-type: application/json
+
+{
+    "resourceType": "Specimen",
+    "id": "dbee2404-e11d-421f-8399-57cee518e0c7",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+    "identifier.0.value": "00001",
+    "identifier.0.assigner.reference": "Organization/{{Org_id}}",
+    "status": "available",
+    "type.coding.0.system": "http://snomed.info/sct",
+    "type.coding.0.code": "119294007",
+    "type.coding.0.display": "Dried blood specimen",
+    "collection.collectedDateTime": "2022-06-14T08:15:00+07:00",
+    "collection.extension.0.url": "https://fhir.kemkes.go.id/r4/StructureDefinition/CollectorOrganization",
+    "collection.extension.0.valueReference.reference": "Organization/{{Org_id}}",
+    "subject.reference": "Patient/100000030004",
+    "subject.display": "Budi Santoso",
+    "request.0.reference": "ServiceRequest/61419a9c-51f9-4491-a6d0-e40e7c0eb7ab",
+    "receivedTime": "2022-06-14T08:25:00+07:00",
+    "extension.0.url": "https://fhir.kemkes.go.id/r4/StructureDefinition/TransportedTime",
+    "extension.0.valueDateTime": "2022-06-14T08:23:00+07:00"
+}
+
+### Specimen - By ID
+GET http://localhost:3000/api/satusehat/Specimen/:id
+
+### Specimen - Search by Subject
+GET http://localhost:3000/api/satusehat/Specimen?subject=100000030009
+
+### Specimen - Search by Request
+GET http://localhost:3000/api/satusehat/Specimen?request=65b8a884-7a79-41e1-96ab-3fc30837ac66
+
+### Specimen - Search by Subject & Collector
+GET http://localhost:3000/api/satusehat/Specimen?subject=100000030009&collector=1001194237
+
+### Specimen - Search by Subject & Date Collected
+GET http://localhost:3000/api/satusehat/Specimen?subject=100000030009&collected=2022-06-28
+
+### Specimen - Search by Identifier Accession Number (Rujukan)
+GET http://localhost:3000/api/satusehat/Specimen?identifier=http://sys-ids.kemkes.go.id/specimen-acsn|1000000004&request=3e8459cc-a9b1-405a-9e20-abfb5e40f8c7
+
+### Specimen - Update
+PUT http://localhost:3000/api/satusehat/Specimen/:id
+Content-type: application/json
+
+{
+    "resourceType": "Specimen",
+    "id": "cb2adef7-3971-4239-9cc2-6ae9981fe57d",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/specimen/{{Org_id}}",
+    "identifier.0.value": "00001",
+    "identifier.0.assigner.reference": "Organization/{{Org_id}}",
+    "status": "unsatisfactory",
+    "type.coding.0.system": "http://snomed.info/sct",
+    "type.coding.0.code": "119297000",
+    "type.coding.0.display": "Blood specimen",
+    "collection.method.coding.0.system": "http://snomed.info/sct",
+    "collection.method.coding.0.code": "82078001",
+    "collection.method.coding.0.display": "Collection of blood specimen for laboratory",
+    "collection.collectedDateTime": "2022-06-14T08:15:00+07:00",
+    "subject.reference": "Patient/100000030009",
+    "subject.display": "Budi Santoso",
+    "request.0.reference": "ServiceRequest/65b8a884-7a79-41e1-96ab-3fc30837ac66",
+    "receivedTime": "2022-06-14T08:25:00+07:00"
+}
+
+### Specimen - PATCH
+PATCH http://localhost:3000/api/satusehat/Specimen/:id
+Content-Type: application/json-patch+json
+
+{
+    "0.op": "replace",
+    "0.path": "/status",
+    "0.value": "unavailable"
+}
+

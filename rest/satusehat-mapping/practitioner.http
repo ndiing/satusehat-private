@@ -1,0 +1,10 @@
+
+### Practitioner - Search NIK
+GET http://localhost:3000/api/satusehat/Practitioner?identifier=https://fhir.kemkes.go.id/id/nik|367400001111222
+
+### Practitioner - Search Name, Gender, Birthdate
+GET http://localhost:3000/api/satusehat/Practitioner?name=Voigt&gender=male&birthdate=1945
+
+### Practitioner - By ID
+GET http://localhost:3000/api/satusehat/Practitioner/:id
+

@@ -1,0 +1,47 @@
+
+### Slot - assign kuota
+POST http://localhost:3000/api/satusehat/Slot
+Content-type: application/json
+
+{
+    "resourceType": "Slot",
+    "appointmentType.coding.0.system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+    "appointmentType.coding.0.code": "ROUTINE",
+    "appointmentType.coding.0.display": "Routine appointment",
+    "schedule.reference": "Schedule/683a85cf-27fe-416d-a830-3d21d031e58a",
+    "status": "free",
+    "start": "2022-10-05T08:00:00+07:00",
+    "end": "2022-10-05T08:15:00+07:00",
+    "comment": "Slot untuk appointment pelayanan pada jam 8.00 WIB s/d 8.15 WIB"
+}
+
+### Slot - search by ID
+GET http://localhost:3000/api/satusehat/Slot/:id
+
+### Slot - PUT
+PUT http://localhost:3000/api/satusehat/Slot/:id
+Content-type: application/json
+
+{
+    "resourceType": "Slot",
+    "id": "6ced63df-93c3-4148-bbfd-af741b373993",
+    "appointmentType.coding.0.system": "http://terminology.hl7.org/CodeSystem/v2-0276",
+    "appointmentType.coding.0.code": "ROUTINE",
+    "appointmentType.coding.0.display": "Routine appointment",
+    "schedule.reference": "Schedule/683a85cf-27fe-416d-a830-3d21d031e58a",
+    "status": "busy",
+    "start": "2022-10-05T08:00:00+07:00",
+    "end": "2022-10-05T08:15:00+07:00",
+    "comment": "Slot untuk appointment pelayanan pada jam 8.00 WIB s/d 8.15 WIB"
+}
+
+### Slot - PATCH
+PATCH http://localhost:3000/api/satusehat/Slot/:id
+Content-Type: application/json-patch+json
+
+{
+    "0.op": "replace",
+    "0.path": "/status",
+    "0.value": "free"
+}
+

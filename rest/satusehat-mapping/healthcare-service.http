@@ -1,0 +1,79 @@
+@Org_id=
+
+### HealthcareService - Buat Poli
+POST http://localhost:3000/api/satusehat/HealthcareService
+Content-type: application/json
+
+{
+    "resourceType": "HealthcareService",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/healthcareservice/{{Org_id}}",
+    "identifier.0.value": "HS-19920029",
+    "active": true,
+    "providedBy.reference": "Organization/{{Org_id}}",
+    "type.0.coding.0.system": "http://sys-ids.kemkes.go.id/bpjs-poli",
+    "type.0.coding.0.code": "JAN",
+    "type.0.coding.0.display": "Poli Jantung",
+    "type.1.coding.0.system": "http://terminology.hl7.org/CodeSystem/service-type",
+    "type.1.coding.0.code": "305",
+    "type.1.coding.0.display": "Counselling",
+    "type.2.coding.0.system": "http://terminology.hl7.org/CodeSystem/service-type",
+    "type.2.coding.0.code": "221",
+    "type.2.coding.0.display": "Surgery - General",
+    "specialty.0.coding.0.system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
+    "specialty.0.coding.0.code": "S001.09",
+    "specialty.0.coding.0.display": "Penyakit dalam kardiovaskular ",
+    "location.0.reference": "Location/b017aa54-f1df-4ec2-9d84-8823815d7228",
+    "location.0.display": "Ruang 1A, Poliklinik Bedah Rawat Jalan Terpadu, Lantai 2, Gedung G",
+    "name": "Poliklinik Bedah Rawat Jalan Terpadu",
+    "program.0.coding.0.system": "http://terminology.kemkes.go.id/CodeSystem/program",
+    "program.0.coding.0.code": "1000200",
+    "program.0.coding.0.display": "Program JKN"
+}
+
+### HealthcareService - GET by ID
+GET http://localhost:3000/api/satusehat/HealthcareService/:id
+
+### HealthcareService - GET by specialty
+GET http://localhost:3000/api/satusehat/HealthcareService?specialty=S001.09
+
+### HealthcareService - PUT
+PUT http://localhost:3000/api/satusehat/HealthcareService/:id
+Content-type: application/json
+
+{
+    "resourceType": "HealthcareService",
+    "id": "8cfb2d6f-dc20-4068-9113-805d426a6f17",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/healthcareservice/{{Org_id}}",
+    "identifier.0.value": "HS-19920029_123",
+    "active": true,
+    "providedBy.reference": "Organization/{{Org_id}}",
+    "type.0.coding.0.system": "http://sys-ids.kemkes.go.id/bpjs-poli",
+    "type.0.coding.0.code": "JAN",
+    "type.0.coding.0.display": "Poli Jantung",
+    "type.1.coding.0.system": "http://terminology.hl7.org/CodeSystem/service-type",
+    "type.1.coding.0.code": "305",
+    "type.1.coding.0.display": "Counselling",
+    "type.2.coding.0.system": "http://terminology.hl7.org/CodeSystem/service-type",
+    "type.2.coding.0.code": "221",
+    "type.2.coding.0.display": "Surgery - General",
+    "specialty.0.coding.0.system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
+    "specialty.0.coding.0.code": "S001.09",
+    "specialty.0.coding.0.display": "Penyakit dalam kardiovaskular ",
+    "location.0.reference": "Location/b017aa54-f1df-4ec2-9d84-8823815d7228",
+    "location.0.display": "Ruang 1A, Poliklinik Bedah Rawat Jalan Terpadu, Lantai 2, Gedung G",
+    "name": "Poliklinik Bedah Rawat Jalan Terpadu",
+    "program.0.coding.0.system": "http://terminology.kemkes.go.id/CodeSystem/program",
+    "program.0.coding.0.code": "1000200",
+    "program.0.coding.0.display": "Program JKN"
+}
+
+### HealthcareService - PATCH
+PATCH http://localhost:3000/api/satusehat/HealthcareService/:id
+Content-Type: application/json-patch+json
+
+{
+    "0.op": "replace",
+    "0.path": "/name",
+    "0.value": "Poliklinik Jantung Konsultan Bedah Thorax Kardiovaskular"
+}
+

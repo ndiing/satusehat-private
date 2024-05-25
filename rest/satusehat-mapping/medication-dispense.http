@@ -1,0 +1,124 @@
+@Org_id=
+@Encounter_uuid=
+
+### MedicationDispense - Create
+POST http://localhost:3000/api/satusehat/MedicationDispense
+Content-type: application/json
+
+{
+    "resourceType": "MedicationDispense",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+    "identifier.0.use": "official",
+    "identifier.0.value": "123456788",
+    "identifier.1.system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+    "identifier.1.use": "official",
+    "identifier.1.value": "123456788-1",
+    "status": "completed",
+    "category.coding.0.system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
+    "category.coding.0.code": "outpatient",
+    "category.coding.0.display": "Outpatient",
+    "medicationReference.reference": "Medication/2b78a453-dd36-4d5f-8264-d575e3321a8b",
+    "medicationReference.display": "Obat Anti Tuberculosis / Rifampicin 150 mg / Isoniazid 75 mg / Pyrazinamide 400 mg / Ethambutol 275 mg Kaplet Salut Selaput (KIMIA FARMA)",
+    "subject.reference": "Patient/100000030009",
+    "subject.display": "Budi Santoso",
+    "context.reference": "Encounter/{{Encounter_uuid}}",
+    "performer.0.actor.reference": "Practitioner/N10000003",
+    "performer.0.actor.display": "John Miller",
+    "location.reference": "Location/52e135eb-1956-4871-ba13-e833e662484d",
+    "location.display": "Apotek RSUD Jati Asih",
+    "authorizingPrescription.0.reference": "MedicationRequest/b5293e6d-31c6-4111-8214-609ae5890838",
+    "quantity.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "quantity.code": "TAB",
+    "quantity.value": 120,
+    "daysSupply.value": 30,
+    "daysSupply.unit": "Day",
+    "daysSupply.system": "http://unitsofmeasure.org",
+    "daysSupply.code": "d",
+    "whenPrepared": "2022-01-15T10:20:00Z",
+    "whenHandedOver": "2022-01-15T16:20:00Z",
+    "dosageInstruction.0.sequence": 1,
+    "dosageInstruction.0.text": "Diminum 4 tablet sekali dalam sehari",
+    "dosageInstruction.0.timing.repeat.frequency": 1,
+    "dosageInstruction.0.timing.repeat.period": 1,
+    "dosageInstruction.0.timing.repeat.periodUnit": "d",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.code": "ordered",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.display": "Ordered",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.value": 4,
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.unit": "TAB",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.code": "TAB"
+}
+
+### MedicationDispense - Search by Subject
+GET http://localhost:3000/api/satusehat/MedicationDispense?subject=100000030009
+
+### MedicationDispense - Search by Subject and MedicationRequest
+GET http://localhost:3000/api/satusehat/MedicationDispense?subject=100000030004&prescription=7617e000-58fe-4bfd-ae20-3c9296f5db0f
+
+### MedicationDispense - Search by Subject and Encounter
+GET http://localhost:3000/api/satusehat/MedicationDispense?subject=100000030004&context=19640281-c21b-41d4-ae73-223ad4f0e8d5
+
+### MedicationDispense - By ID
+GET http://localhost:3000/api/satusehat/MedicationDispense/:id
+
+### MedicationDispense - UPDATE
+PUT http://localhost:3000/api/satusehat/MedicationDispense/:id
+Content-type: application/json
+
+{
+    "resourceType": "MedicationDispense",
+    "id": "71e27aa4-89d1-49a0-80ab-20e970a939cc",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/prescription/{{Org_id}}",
+    "identifier.0.use": "official",
+    "identifier.0.value": "123456788",
+    "identifier.1.system": "http://sys-ids.kemkes.go.id/prescription-item/{{Org_id}}",
+    "identifier.1.use": "official",
+    "identifier.1.value": "123456788-1",
+    "status": "in-progress",
+    "category.coding.0.system": "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category",
+    "category.coding.0.code": "outpatient",
+    "category.coding.0.display": "Outpatient",
+    "medicationReference.reference": "Medication/2b78a453-dd36-4d5f-8264-d575e3321a8b",
+    "medicationReference.display": "Obat Anti Tuberculosis / Rifampicin 150 mg / Isoniazid 75 mg / Pyrazinamide 400 mg / Ethambutol 275 mg Kaplet Salut Selaput (KIMIA FARMA)",
+    "subject.reference": "Patient/100000030009",
+    "subject.display": "Budi Santoso",
+    "context.reference": "Encounter/{{Encounter_uuid}}",
+    "performer.0.actor.reference": "Practitioner/N10000003",
+    "performer.0.actor.display": "John Miller",
+    "location.reference": "Location/52e135eb-1956-4871-ba13-e833e662484d",
+    "location.display": "Apotek RSUD Jati Asih",
+    "authorizingPrescription.0.reference": "MedicationRequest/b5293e6d-31c6-4111-8214-609ae5890838",
+    "quantity.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "quantity.code": "TAB",
+    "quantity.value": 120,
+    "daysSupply.value": 30,
+    "daysSupply.unit": "Day",
+    "daysSupply.system": "http://unitsofmeasure.org",
+    "daysSupply.code": "d",
+    "whenPrepared": "2022-01-15T10:20:00Z",
+    "whenHandedOver": "2022-01-15T16:20:00Z",
+    "dosageInstruction.0.sequence": 1,
+    "dosageInstruction.0.text": "Diminum 4 tablet sekali dalam sehari",
+    "dosageInstruction.0.timing.repeat.frequency": 1,
+    "dosageInstruction.0.timing.repeat.period": 1,
+    "dosageInstruction.0.timing.repeat.periodUnit": "d",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.system": "http://terminology.hl7.org/CodeSystem/dose-rate-type",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.code": "ordered",
+    "dosageInstruction.0.doseAndRate.0.type.coding.0.display": "Ordered",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.value": 4,
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.unit": "TAB",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "dosageInstruction.0.doseAndRate.0.doseQuantity.code": "TAB"
+}
+
+### MedicationDispense - PATCH
+PATCH http://localhost:3000/api/satusehat/MedicationDispense/:id
+Content-Type: application/json-patch+json
+
+{
+    "0.op": "replace",
+    "0.path": "/status",
+    "0.value": "preparation"
+}
+

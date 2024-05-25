@@ -1,0 +1,51 @@
+@Encounter_uuid=
+
+### QuestionnaireResponse - Create
+POST http://localhost:3000/api/satusehat/QuestionnaireResponse
+Content-type: application/json
+
+{
+    "resourceType": "QuestionnaireResponse",
+    "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
+    "status": "completed",
+    "subject.reference": "Patient/P02280547535",
+    "subject.display": "patient 6",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "authored": "2022-07-26T10:00:00+07:00",
+    "author.reference": "Practitioner/N10000001",
+    "source.reference": "Patient/P02280547535",
+    "item.0.linkId": "1",
+    "item.0.text": "Status Kesejahteraan",
+    "item.0.answer.0.valueCoding.system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
+    "item.0.answer.0.valueCoding.code": "KPS",
+    "item.0.answer.0.valueCoding.display": "Keluarga Pra Sejahtera (KPS)"
+}
+
+### QuestionnaireResponse - Update
+PUT http://localhost:3000/api/satusehat/QuestionnaireResponse/:id
+Content-type: application/json
+
+{
+    "resourceType": "QuestionnaireResponse",
+    "id": "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
+    "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
+    "status": "completed",
+    "subject.reference": "Patient/P02280547535",
+    "subject.display": "patient 6",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "authored": "2022-07-26T10:00:00+07:00",
+    "author.reference": "Practitioner/N10000001",
+    "source.reference": "Patient/P02280547535",
+    "item.0.linkId": "1",
+    "item.0.text": "Status Kesejahteraan",
+    "item.0.answer.0.valueCoding.system": "http://terminology.kemkes.go.id/CodeSystem/keluarga-sejahtera",
+    "item.0.answer.0.valueCoding.code": "KPS",
+    "item.0.answer.0.valueCoding.display": "Keluarga Pra Sejahtera (KPS)"
+}
+
+### QuestionnaireResponse - Search by Subject & Encounter
+GET http://localhost:3000/api/satusehat/QuestionnaireResponse?encounter=66533eb2-723d-4e7c-b7aa-500cd67dd4c8&patient=P02280547535
+
+### QuestionnaireResponse - Search by Id
+GET http://localhost:3000/api/satusehat/QuestionnaireResponse/:id
+

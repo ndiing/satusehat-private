@@ -1,6 +1,8 @@
 let fs = require("fs");
+const { flatten } = require("../lib/helper");
 
 let environment = require("./satusehat-public/SATUSEHAT Production.postman_environment.json");
+
 
 let env = Object.fromEntries(environment.values.map(({ key, value }) => [key, value]));
 // env.Org_id = "";
@@ -38,6 +40,7 @@ function toKebabCase(string) {
 }
 
 let data = require("./satusehat-public/00. FHIR Resource - Contoh Penggunaan.postman_collection.json");
+
 
 let group = {};
 let resources = {};
@@ -173,7 +176,7 @@ function parseItem3(item3, names) {
             if (mode == "urlencoded") {
                 group[fileName] += `${new URLSearchParams(rawBody).toString()}\r\n`;
             } else if (mode == "raw") {
-                group[fileName] += `${JSON.stringify(rawBody,null,4)}\r\n`;
+                group[fileName] += `${JSON.stringify(flatten(rawBody),null,4)}\r\n`;
             }
         }
         group[fileName] += `\r\n`;
@@ -211,7 +214,8 @@ for (const fileName in group) {
 
     code += group[fileName];
 
-    fs.writeFileSync(`./rest/satusehat-private/${fileName}.http`,code)
+    // fs.writeFileSync(`./rest/satusehat-private/${fileName}.http`,code)
+    fs.writeFileSync(`./rest/satusehat-mapping/${fileName}.http`,code)
 }
 
 // console.log(code2)

@@ -1,0 +1,76 @@
+@Org_id=
+@Encounter_uuid=
+
+### AllergyIntolerance - Create
+POST http://localhost:3000/api/satusehat/AllergyIntolerance
+Content-type: application/json
+
+{
+    "resourceType": "AllergyIntolerance",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/allergy/{{Org_id}}",
+    "identifier.0.use": "official",
+    "identifier.0.value": "98457729",
+    "clinicalStatus.coding.0.system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+    "clinicalStatus.coding.0.code": "active",
+    "clinicalStatus.coding.0.display": "Active",
+    "verificationStatus.coding.0.system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+    "verificationStatus.coding.0.code": "confirmed",
+    "verificationStatus.coding.0.display": "Confirmed",
+    "category.0": "food",
+    "code.coding.0.system": "http://snomed.info/sct",
+    "code.coding.0.code": "89811004",
+    "code.coding.0.display": "Gluten",
+    "code.text": "Alergi bahan gluten, khususnya ketika makan roti gandum",
+    "patient.reference": "Patient/100000030009",
+    "patient.display": "Budi Santoso",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "encounter.display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022",
+    "recordedDate": "2022-06-14T15:37:31+07:00",
+    "recorder.reference": "Practitioner/N10000001"
+}
+
+### AllergyIntolerance - Search by Subject with/without Allergy Code
+GET http://localhost:3000/api/satusehat/AllergyIntolerance?patient=100000030009&code=89811004
+
+### AllergyIntolerance - Search by ID
+GET http://localhost:3000/api/satusehat/AllergyIntolerance/:id
+
+### AllergyIntolerance - Update
+PUT http://localhost:3000/api/satusehat/AllergyIntolerance/:id
+Content-type: application/json
+
+{
+    "resourceType": "AllergyIntolerance",
+    "id": "94b05c94-7429-4e98-bebe-d9cbda19d3d5",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/allergy/{{Org_id}}",
+    "identifier.0.use": "official",
+    "identifier.0.value": "98457729",
+    "clinicalStatus.coding.0.system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical",
+    "clinicalStatus.coding.0.code": "resolved",
+    "clinicalStatus.coding.0.display": "resolved",
+    "verificationStatus.coding.0.system": "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification",
+    "verificationStatus.coding.0.code": "confirmed",
+    "verificationStatus.coding.0.display": "Confirmed",
+    "category.0": "food",
+    "code.coding.0.system": "http://snomed.info/sct",
+    "code.coding.0.code": "89811004",
+    "code.coding.0.display": "Gluten",
+    "code.text": "Alergi bahan gluten, khususnya ketika makan roti gandum",
+    "patient.reference": "Patient/100000030009",
+    "patient.display": "Budi Santoso",
+    "encounter.reference": "Encounter/{{Encounter_uuid}}",
+    "encounter.display": "Kunjungan Budi Santoso di hari Selasa, 14 Juni 2022",
+    "recordedDate": "2022-06-14T15:37:31+07:00",
+    "recorder.reference": "Practitioner/N10000001"
+}
+
+### AllergyIntolerance - PATCH
+PATCH http://localhost:3000/api/satusehat/AllergyIntolerance/:id
+Content-Type: application/json-patch+json
+
+{
+    "0.op": "replace",
+    "0.path": "/category/0",
+    "0.value": "medication"
+}
+

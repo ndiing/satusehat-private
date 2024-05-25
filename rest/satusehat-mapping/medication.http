@@ -1,0 +1,143 @@
+@Org_id=
+
+### Medication - Create
+POST http://localhost:3000/api/satusehat/Medication
+Content-type: application/json
+
+{
+    "resourceType": "Medication",
+    "meta.profile.0": "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/medication/{{Org_id}}",
+    "identifier.0.use": "official",
+    "identifier.0.value": "123456789",
+    "code.coding.0.system": "http://sys-ids.kemkes.go.id/kfa",
+    "code.coding.0.code": "93001019",
+    "code.coding.0.display": "Obat Anti Tuberculosis / Rifampicin 150 mg / Isoniazid 75 mg / Pyrazinamide 400 mg / Ethambutol 275 mg Kaplet Salut Selaput (KIMIA FARMA)",
+    "status": "active",
+    "manufacturer.reference": "Organization/900001",
+    "form.coding.0.system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
+    "form.coding.0.code": "BS023",
+    "form.coding.0.display": "Kaplet Salut Selaput",
+    "ingredient.0.itemCodeableConcept.coding.0.system": "http://sys-ids.kemkes.go.id/kfa",
+    "ingredient.0.itemCodeableConcept.coding.0.code": "91000330",
+    "ingredient.0.itemCodeableConcept.coding.0.display": "Rifampin",
+    "ingredient.0.isActive": true,
+    "ingredient.0.strength.numerator.value": 150,
+    "ingredient.0.strength.numerator.system": "http://unitsofmeasure.org",
+    "ingredient.0.strength.numerator.code": "mg",
+    "ingredient.0.strength.denominator.value": 1,
+    "ingredient.0.strength.denominator.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "ingredient.0.strength.denominator.code": "TAB",
+    "ingredient.1.itemCodeableConcept.coding.0.system": "http://sys-ids.kemkes.go.id/kfa",
+    "ingredient.1.itemCodeableConcept.coding.0.code": "91000328",
+    "ingredient.1.itemCodeableConcept.coding.0.display": "Isoniazid",
+    "ingredient.1.isActive": true,
+    "ingredient.1.strength.numerator.value": 75,
+    "ingredient.1.strength.numerator.system": "http://unitsofmeasure.org",
+    "ingredient.1.strength.numerator.code": "mg",
+    "ingredient.1.strength.denominator.value": 1,
+    "ingredient.1.strength.denominator.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "ingredient.1.strength.denominator.code": "TAB",
+    "ingredient.2.itemCodeableConcept.coding.0.system": "http://sys-ids.kemkes.go.id/kfa",
+    "ingredient.2.itemCodeableConcept.coding.0.code": "91000329",
+    "ingredient.2.itemCodeableConcept.coding.0.display": "Pyrazinamide",
+    "ingredient.2.isActive": true,
+    "ingredient.2.strength.numerator.value": 400,
+    "ingredient.2.strength.numerator.system": "http://unitsofmeasure.org",
+    "ingredient.2.strength.numerator.code": "mg",
+    "ingredient.2.strength.denominator.value": 1,
+    "ingredient.2.strength.denominator.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "ingredient.2.strength.denominator.code": "TAB",
+    "ingredient.3.itemCodeableConcept.coding.0.system": "http://sys-ids.kemkes.go.id/kfa",
+    "ingredient.3.itemCodeableConcept.coding.0.code": "91000288",
+    "ingredient.3.itemCodeableConcept.coding.0.display": "Ethambutol",
+    "ingredient.3.isActive": true,
+    "ingredient.3.strength.numerator.value": 275,
+    "ingredient.3.strength.numerator.system": "http://unitsofmeasure.org",
+    "ingredient.3.strength.numerator.code": "mg",
+    "ingredient.3.strength.denominator.value": 1,
+    "ingredient.3.strength.denominator.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "ingredient.3.strength.denominator.code": "TAB",
+    "extension.0.url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+    "extension.0.valueCodeableConcept.coding.0.system": "http://terminology.kemkes.go.id/CodeSystem/medication-type",
+    "extension.0.valueCodeableConcept.coding.0.code": "NC",
+    "extension.0.valueCodeableConcept.coding.0.display": "Non-compound"
+}
+
+### Medication - By ID
+GET http://localhost:3000/api/satusehat/Medication/:id
+
+### Medication - UPDATE
+PUT http://localhost:3000/api/satusehat/Medication/:id
+Content-type: application/json
+
+{
+    "resourceType": "Medication",
+    "id": "8f299a19-5887-4b8e-90a2-c2c15ecbe1d1",
+    "meta.profile.0": "https://fhir.kemkes.go.id/r4/StructureDefinition/Medication",
+    "identifier.0.system": "http://sys-ids.kemkes.go.id/medication/{{Org_id}}",
+    "identifier.0.use": "official",
+    "identifier.0.value": "123456789",
+    "code.coding.0.system": "http://sys-ids.kemkes.go.id/kfa",
+    "code.coding.0.display": "Obat Kapsul TB Bintang Toedjoe",
+    "status": "active",
+    "manufacturer.reference": "Organization/900001",
+    "form.coding.0.system": "http://terminology.kemkes.go.id/CodeSystem/medication-form",
+    "form.coding.0.code": "BS019",
+    "form.coding.0.display": "Kapsul",
+    "ingredient.0.itemCodeableConcept.coding.0.system": "http://sys-ids.kemkes.go.id/kfa",
+    "ingredient.0.itemCodeableConcept.coding.0.code": "91000330",
+    "ingredient.0.itemCodeableConcept.coding.0.display": "Rifampin",
+    "ingredient.0.isActive": true,
+    "ingredient.0.strength.numerator.value": 150,
+    "ingredient.0.strength.numerator.system": "http://unitsofmeasure.org",
+    "ingredient.0.strength.numerator.code": "mg",
+    "ingredient.0.strength.denominator.value": 1,
+    "ingredient.0.strength.denominator.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "ingredient.0.strength.denominator.code": "TAB",
+    "ingredient.1.itemCodeableConcept.coding.0.system": "http://sys-ids.kemkes.go.id/kfa",
+    "ingredient.1.itemCodeableConcept.coding.0.code": "91000328",
+    "ingredient.1.itemCodeableConcept.coding.0.display": "Isoniazid",
+    "ingredient.1.isActive": true,
+    "ingredient.1.strength.numerator.value": 75,
+    "ingredient.1.strength.numerator.system": "http://unitsofmeasure.org",
+    "ingredient.1.strength.numerator.code": "mg",
+    "ingredient.1.strength.denominator.value": 1,
+    "ingredient.1.strength.denominator.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "ingredient.1.strength.denominator.code": "TAB",
+    "ingredient.2.itemCodeableConcept.coding.0.system": "http://sys-ids.kemkes.go.id/kfa",
+    "ingredient.2.itemCodeableConcept.coding.0.code": "91000329",
+    "ingredient.2.itemCodeableConcept.coding.0.display": "Pyrazinamide",
+    "ingredient.2.isActive": true,
+    "ingredient.2.strength.numerator.value": 400,
+    "ingredient.2.strength.numerator.system": "http://unitsofmeasure.org",
+    "ingredient.2.strength.numerator.code": "mg",
+    "ingredient.2.strength.denominator.value": 1,
+    "ingredient.2.strength.denominator.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "ingredient.2.strength.denominator.code": "TAB",
+    "ingredient.3.itemCodeableConcept.coding.0.system": "http://sys-ids.kemkes.go.id/kfa",
+    "ingredient.3.itemCodeableConcept.coding.0.code": "91000288",
+    "ingredient.3.itemCodeableConcept.coding.0.display": "Ethambutol",
+    "ingredient.3.isActive": true,
+    "ingredient.3.strength.numerator.value": 275,
+    "ingredient.3.strength.numerator.system": "http://unitsofmeasure.org",
+    "ingredient.3.strength.numerator.code": "mg",
+    "ingredient.3.strength.denominator.value": 1,
+    "ingredient.3.strength.denominator.system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+    "ingredient.3.strength.denominator.code": "TAB",
+    "extension.0.url": "https://fhir.kemkes.go.id/r4/StructureDefinition/MedicationType",
+    "extension.0.valueCodeableConcept.coding.0.system": "http://terminology.kemkes.go.id/CodeSystem/medication-type",
+    "extension.0.valueCodeableConcept.coding.0.code": "NC",
+    "extension.0.valueCodeableConcept.coding.0.display": "Non-compound"
+}
+
+### Medication - PATCH
+PATCH http://localhost:3000/api/satusehat/Medication/:id
+Content-Type: application/json-patch+json
+
+{
+    "0.op": "replace",
+    "0.path": "/status",
+    "0.value": "inactive"
+}
+

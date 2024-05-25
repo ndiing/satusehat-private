@@ -1,5 +1,6 @@
 const Controller = require("../controller");
 const Service = require("../services/practitioner-role");
+const { merge, unflatten } = require("../../../lib/helper");
 
 class PractitionerRole extends Controller {
     static services = {};
@@ -24,63 +25,64 @@ class PractitionerRole extends Controller {
     static async post(req, res, next) {
         try {
             const {params,query,body} = req
+            const target = {
+                // "resourceType": "PractitionerRole",
+                "active": true,
+                "practitioner": {
+                    // "reference": "Practitioner/N10000001",
+                    // "display": "Dokter Bronsig"
+                },
+                "organization": {
+                    // "reference": "Organization/{{Org_id}}"
+                },
+                "code": [
+                    {
+                        "coding": [
+                            {
+                                // "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+                                // "code": "doctor",
+                                // "display": "Doctor"
+                            }
+                        ]
+                    }
+                ],
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                // "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
+                                // "code": "S001.09",
+                                // "display": "Penyakit dalam kardiovaskular "
+                            }
+                        ]
+                    }
+                ],
+                "healthcareService": [
+                    {
+                        // "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17"
+                    }
+                ],
+                "telecom": [
+                    {
+                        // "system": "phone",
+                        // "value": "(021) 14045",
+                        // "use": "work"
+                    },
+                    {
+                        // "system": "email",
+                        // "value": "doctor.bronsig@dto.kemkes.go.id",
+                        // "use": "work"
+                    }
+                ]
+            }
+            const source = unflatten(body)
+            const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
                 },
                 query: {
                 },
-//                 body: {
-//                     "resourceType": "PractitionerRole",
-//                     "active": true,
-//                     "practitioner": {
-//                         "reference": "Practitioner/N10000001",
-//                         "display": "Dokter Bronsig"
-//                     },
-//                     "organization": {
-//                         "reference": "Organization/{{Org_id}}"
-//                     },
-//                     "code": [
-//                         {
-//                             "coding": [
-//                                 {
-//                                     "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
-//                                     "code": "doctor",
-//                                     "display": "Doctor"
-//                                 }
-//                             ]
-//                         }
-//                     ],
-//                     "specialty": [
-//                         {
-//                             "coding": [
-//                                 {
-//                                     "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
-//                                     "code": "S001.09",
-//                                     "display": "Penyakit dalam kardiovaskular "
-//                                 }
-//                             ]
-//                         }
-//                     ],
-//                     "healthcareService": [
-//                         {
-//                             "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17"
-//                         }
-//                     ],
-//                     "telecom": [
-//                         {
-//                             "system": "phone",
-//                             "value": "(021) 14045",
-//                             "use": "work"
-//                         },
-//                         {
-//                             "system": "email",
-//                             "value": "doctor.bronsig@dto.kemkes.go.id",
-//                             "use": "work"
-//                         }
-//                     ]
-//                 },// 
-// 
-                body,
+                body: payload,
             });
             res.json(result);
         } catch (error) {
@@ -123,65 +125,66 @@ class PractitionerRole extends Controller {
     static async putId(req, res, next) {
         try {
             const {params,query,body} = req
+            const target = {
+                // "resourceType": "PractitionerRole",
+                // "id": "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
+                "active": true,
+                "practitioner": {
+                    // "reference": "Practitioner/N10000001",
+                    // "display": "Dokter Bronsig"
+                },
+                "organization": {
+                    // "reference": "Organization/{{Org_id}}"
+                },
+                "code": [
+                    {
+                        "coding": [
+                            {
+                                // "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
+                                // "code": "doctor",
+                                // "display": "Doctor"
+                            }
+                        ]
+                    }
+                ],
+                "specialty": [
+                    {
+                        "coding": [
+                            {
+                                // "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
+                                // "code": "S001.09",
+                                // "display": "Penyakit dalam kardiovaskular "
+                            }
+                        ]
+                    }
+                ],
+                "healthcareService": [
+                    {
+                        // "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17"
+                    }
+                ],
+                "telecom": [
+                    {
+                        // "system": "phone",
+                        // "value": "(021) 14045 I'm Lovin It",
+                        // "use": "work"
+                    },
+                    {
+                        // "system": "email",
+                        // "value": "doctor.bronsig@dto.kemkes.go.id",
+                        // "use": "work"
+                    }
+                ]
+            }
+            const source = unflatten(body)
+            const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
                    "id": params["id"], // "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
                 },
                 query: {
                 },
-//                 body: {
-//                     "resourceType": "PractitionerRole",
-//                     "id": "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
-//                     "active": true,
-//                     "practitioner": {
-//                         "reference": "Practitioner/N10000001",
-//                         "display": "Dokter Bronsig"
-//                     },
-//                     "organization": {
-//                         "reference": "Organization/{{Org_id}}"
-//                     },
-//                     "code": [
-//                         {
-//                             "coding": [
-//                                 {
-//                                     "system": "http://terminology.hl7.org/CodeSystem/practitioner-role",
-//                                     "code": "doctor",
-//                                     "display": "Doctor"
-//                                 }
-//                             ]
-//                         }
-//                     ],
-//                     "specialty": [
-//                         {
-//                             "coding": [
-//                                 {
-//                                     "system": "http://terminology.kemkes.go.id/CodeSystem/clinical-speciality",
-//                                     "code": "S001.09",
-//                                     "display": "Penyakit dalam kardiovaskular "
-//                                 }
-//                             ]
-//                         }
-//                     ],
-//                     "healthcareService": [
-//                         {
-//                             "reference": "HealthcareService/8cfb2d6f-dc20-4068-9113-805d426a6f17"
-//                         }
-//                     ],
-//                     "telecom": [
-//                         {
-//                             "system": "phone",
-//                             "value": "(021) 14045 I'm Lovin It",
-//                             "use": "work"
-//                         },
-//                         {
-//                             "system": "email",
-//                             "value": "doctor.bronsig@dto.kemkes.go.id",
-//                             "use": "work"
-//                         }
-//                     ]
-//                 },// 
-// 
-                body,
+                body: payload,
             });
             res.json(result);
         } catch (error) {
@@ -192,21 +195,22 @@ class PractitionerRole extends Controller {
     static async patchId(req, res, next) {
         try {
             const {params,query,body} = req
+            const target = [
+                {
+                    // "op": "replace",
+                    // "path": "/active",
+                    "value": false
+                }
+            ]
+            const source = unflatten(body)
+            const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
                    "id": params["id"], // "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
                 },
                 query: {
                 },
-//                 body: [
-//                     {
-//                         "op": "replace",
-//                         "path": "/active",
-//                         "value": false
-//                     }
-//                 ],// 
-// 
-                body,
+                body: payload,
             });
             res.json(result);
         } catch (error) {

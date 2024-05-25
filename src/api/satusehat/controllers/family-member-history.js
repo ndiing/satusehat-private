@@ -1,5 +1,6 @@
 const Controller = require("../controller");
 const Service = require("../services/family-member-history");
+const { merge, unflatten } = require("../../../lib/helper");
 
 class FamilyMemberHistory extends Controller {
     static services = {};
@@ -24,53 +25,54 @@ class FamilyMemberHistory extends Controller {
     static async post(req, res, next) {
         try {
             const {params,query,body} = req
+            const target = {
+                // "resourceType": "FamilyMemberHistory",
+                // "status": "completed",
+                "relationship": {
+                    "coding": [
+                        {
+                            // "system": "http://snomed.info/sct",
+                            // "code": "38048003",
+                            // "display": "Uncle"
+                        }
+                    ]
+                },
+                "deceasedBoolean": true,
+                "patient": {
+                    // "reference": "Patient/P02280547535",
+                    // "display": "patient 6"
+                },
+                "condition": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    // "system": "http://snomed.info/sct",
+                                    // "code": "115665000",
+                                    // "display": "Atopy"
+                                }
+                            ]
+                        },
+                        "outcome": {
+                            "coding": [
+                                {
+                                    // "system": "http://snomed.info/sct",
+                                    // "code": "419099009",
+                                    // "display": "Died"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+            const source = unflatten(body)
+            const payload = merge(target,source)
             const result = await res.locals.service.post({
                 params: {
                 },
                 query: {
                 },
-//                 body: {
-//                     "resourceType": "FamilyMemberHistory",
-//                     "status": "completed",
-//                     "relationship": {
-//                         "coding": [
-//                             {
-//                                 "system": "http://snomed.info/sct",
-//                                 "code": "38048003",
-//                                 "display": "Uncle"
-//                             }
-//                         ]
-//                     },
-//                     "deceasedBoolean": true,
-//                     "patient": {
-//                         "reference": "Patient/P02280547535",
-//                         "display": "patient 6"
-//                     },
-//                     "condition": [
-//                         {
-//                             "code": {
-//                                 "coding": [
-//                                     {
-//                                         "system": "http://snomed.info/sct",
-//                                         "code": "115665000",
-//                                         "display": "Atopy"
-//                                     }
-//                                 ]
-//                             },
-//                             "outcome": {
-//                                 "coding": [
-//                                     {
-//                                         "system": "http://snomed.info/sct",
-//                                         "code": "419099009",
-//                                         "display": "Died"
-//                                     }
-//                                 ]
-//                             }
-//                         }
-//                     ]
-//                 },// 
-// 
-                body,
+                body: payload,
             });
             res.json(result);
         } catch (error) {
@@ -114,55 +116,56 @@ class FamilyMemberHistory extends Controller {
     static async putId(req, res, next) {
         try {
             const {params,query,body} = req
+            const target = {
+                // "resourceType": "FamilyMemberHistory",
+                // "id": "0735510d-ad0b-44ca-92be-b695a9b127d1",
+                // "status": "completed",
+                "relationship": {
+                    "coding": [
+                        {
+                            // "system": "http://snomed.info/sct",
+                            // "code": "72705000",
+                            // "display": "Mother"
+                        }
+                    ]
+                },
+                "deceasedBoolean": true,
+                "patient": {
+                    // "reference": "Patient/P02280547535",
+                    // "display": "patient 6"
+                },
+                "condition": [
+                    {
+                        "code": {
+                            "coding": [
+                                {
+                                    // "system": "http://snomed.info/sct",
+                                    // "code": "115665000",
+                                    // "display": "Atopy"
+                                }
+                            ]
+                        },
+                        "outcome": {
+                            "coding": [
+                                {
+                                    // "system": "http://snomed.info/sct",
+                                    // "code": "419099009",
+                                    // "display": "Died"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            }
+            const source = unflatten(body)
+            const payload = merge(target,source)
             const result = await res.locals.service.putId({
                 params: {
                    "id": params["id"], // "0735510d-ad0b-44ca-92be-b695a9b127d1",
                 },
                 query: {
                 },
-//                 body: {
-//                     "resourceType": "FamilyMemberHistory",
-//                     "id": "0735510d-ad0b-44ca-92be-b695a9b127d1",
-//                     "status": "completed",
-//                     "relationship": {
-//                         "coding": [
-//                             {
-//                                 "system": "http://snomed.info/sct",
-//                                 "code": "72705000",
-//                                 "display": "Mother"
-//                             }
-//                         ]
-//                     },
-//                     "deceasedBoolean": true,
-//                     "patient": {
-//                         "reference": "Patient/P02280547535",
-//                         "display": "patient 6"
-//                     },
-//                     "condition": [
-//                         {
-//                             "code": {
-//                                 "coding": [
-//                                     {
-//                                         "system": "http://snomed.info/sct",
-//                                         "code": "115665000",
-//                                         "display": "Atopy"
-//                                     }
-//                                 ]
-//                             },
-//                             "outcome": {
-//                                 "coding": [
-//                                     {
-//                                         "system": "http://snomed.info/sct",
-//                                         "code": "419099009",
-//                                         "display": "Died"
-//                                     }
-//                                 ]
-//                             }
-//                         }
-//                     ]
-//                 },// 
-// 
-                body,
+                body: payload,
             });
             res.json(result);
         } catch (error) {
@@ -173,21 +176,22 @@ class FamilyMemberHistory extends Controller {
     static async patchId(req, res, next) {
         try {
             const {params,query,body} = req
+            const target = [
+                {
+                    // "op": "replace",
+                    // "path": "/deceasedBoolean",
+                    "value": true
+                }
+            ]
+            const source = unflatten(body)
+            const payload = merge(target,source)
             const result = await res.locals.service.patchId({
                 params: {
                    "id": params["id"], // "0735510d-ad0b-44ca-92be-b695a9b127d1",
                 },
                 query: {
                 },
-//                 body: [
-//                     {
-//                         "op": "replace",
-//                         "path": "/deceasedBoolean",
-//                         "value": true
-//                     }
-//                 ],// 
-// 
-                body,
+                body: payload,
             });
             res.json(result);
         } catch (error) {
