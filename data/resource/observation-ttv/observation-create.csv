@@ -1,2 +1,0 @@
-"status","category.0.coding.0.code","category.0.coding.0.display","code.coding.0.code","code.coding.0.display","subject.reference","performer.0.reference","encounter.reference","encounter.display","effectiveDateTime","issued","valueQuantity.value","valueQuantity.unit","valueQuantity.code"
-"final","vital-signs","Vital Signs","8867-4","Heart rate","Patient/100000030009","Practitioner/N10000001","Encounter/{{Encounter_uuid}}","Pemeriksaan Fisik Nadi Budi Santoso di hari Selasa, 14 Juni 2022","2022-07-14","2022-07-14T14:27:00+07:00","80","beats/minute","/min"

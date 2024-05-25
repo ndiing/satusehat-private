@@ -165,24 +165,24 @@ function parseItem3(item3, names) {
 
         if(rawBody){
             let pathname=(names.map(name=>toKebabCase(name)).join('/'))
-            // write(`./data/${pathname}.json`,JSON.stringify(helper.flatten(rawBody),null,4))
+            write(`./data/${pathname}.json`,JSON.stringify(helper.flatten(rawBody),null,4))
 
             // let json = JSON.stringify(rawBody)
             // for(const [,url] of json.matchAll(/"(http[^"]+)"/g)){
             //     set.add(url)
             // }
 
-            let body=(
-                JSON.stringify(helper.flatten(rawBody),null,4)
-                .replace(/"(resourceType|telecom.*?|address.*?|.*?system)": .*?\n/gm,'')
-                .replace(/ {4,}"/gm,'    "')
-            )
-            body=JSON.parse(body)
+            // let body=(
+            //     JSON.stringify(helper.flatten(rawBody),null,4)
+            //     .replace(/"(resourceType|telecom.*?|address.*?|.*?system)": .*?\n/gm,'')
+            //     .replace(/ {4,}"/gm,'    "')
+            // )
+            // body=JSON.parse(body)
 
-            let code = ''
-            code +=`${Object.keys(body).map(key=>`"${key}"`)}\r\n`
-            code +=`${Object.values(body).map(value=>`"${value}"`)}\r\n`
-            write(`./data/${pathname}.csv`,code)
+            // let code = ''
+            // code +=`${Object.keys(body).map(key=>`"${key}"`)}\r\n`
+            // code +=`${Object.values(body).map(value=>`"${value}"`)}\r\n`
+            // write(`./data/${pathname}.csv`,code)
         }
     }
 }

@@ -1,2 +1,0 @@
-"id","identifier.0.value","status","name","description","mode","physicalType.coding.0.code","physicalType.coding.0.display","position.longitude","position.latitude","position.altitude","managingOrganization.reference"
-"dc01c797-547a-4e4d-97cd-4ece0630e380","G-2-R-1A","inactive","Ruang 1A IRJT","Ruang 1A, Poliklinik Bedah Rawat Jalan Terpadu, Lantai 2, Gedung G","instance","ro","Room","-6.23115426275766","106.83239885393944","0","Organization/{{Org_id}}"
