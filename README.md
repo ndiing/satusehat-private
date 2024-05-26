@@ -46,30 +46,125 @@ Master
 
 HL7
 
--   **<code>GET</code> [/hl7/CodeSystem-allergyintolerance-clinical](./rest/hl7/hl7.http) - AllergyIntoleranceClinicalStatusCodes**
--   **<code>GET</code> [/hl7/CodeSystem-allergyintolerance-verification](./rest/hl7/hl7.http) - AllergyIntoleranceVerificationStatus**
--   **<code>GET</code> [/hl7/CodeSystem-condition-category](./rest/hl7/hl7.http) - ConditionCategoryCodes**
--   **<code>GET</code> [/hl7/CodeSystem-condition-clinical](./rest/hl7/hl7.http) - ConditionClinicalStatusCodes**
--   **<code>GET</code> [/hl7/CodeSystem-diagnosis-role](./rest/hl7/hl7.http) - DiagnosisRole**
--   **<code>GET</code> [/hl7/CodeSystem-discharge-disposition](./rest/hl7/hl7.http) - DischargeDisposition**
--   **<code>GET</code> [/hl7/CodeSystem-dose-rate-type](./rest/hl7/hl7.http) - DoseAndRateType**
--   **<code>GET</code> [/hl7/CodeSystem-location-physical-type](./rest/hl7/hl7.http) - LocationType**
--   **<code>GET</code> [/hl7/CodeSystem-medicationrequest-category](./rest/hl7/hl7.http) - MedicationRequestCategoryCodes**
--   **<code>GET</code> [/hl7/CodeSystem-medicationrequest-course-of-therapy](./rest/hl7/hl7.http) - MedicationRequestCourseOfTherapyCodes**
--   **<code>GET</code> [/hl7/CodeSystem-observation-category](./rest/hl7/hl7.http) - ObservationCategoryCodes**
--   **<code>GET</code> [/hl7/CodeSystem-organization-type](./rest/hl7/hl7.http) - OrganizationType**
--   **<code>GET</code> [/hl7/CodeSystem-practitioner-role](./rest/hl7/hl7.http) - PractitionerRole**
--   **<code>GET</code> [/hl7/CodeSystem-service-type](./rest/hl7/hl7.http) - ServiceType**
--   **<code>GET</code> [/hl7/CodeSystem-v2-0074](./rest/hl7/hl7.http) - DiagnosticServiceSectionId**
--   **<code>GET</code> [/hl7/CodeSystem-v2-0131](./rest/hl7/hl7.http) - ContactRole2**
--   **<code>GET</code> [/hl7/CodeSystem-v2-0203](./rest/hl7/hl7.http) - IdentifierType**
--   **<code>GET</code> [/hl7/CodeSystem-v2-0276](./rest/hl7/hl7.http) - AppointmentReason**
--   **<code>GET</code> [/hl7/CodeSystem-v2-0443](./rest/hl7/hl7.http) - ProviderRole**
--   **<code>GET</code> [/hl7/CodeSystem-v3-ActCode](./rest/hl7/hl7.http) - ActCode**
--   **<code>GET</code> [/hl7/CodeSystem-v3-MaritalStatus](./rest/hl7/hl7.http) - MaritalStatus**
--   **<code>GET</code> [/hl7/CodeSystem-v3-ParticipationType](./rest/hl7/hl7.http) - ParticipationType**
--   **<code>GET</code> [/hl7/CodeSystem-v3-RoleCode](./rest/hl7/hl7.http) - RoleCode**
--   **<code>GET</code> [/hl7/CodeSystem-v3-orderableDrugForm](./rest/hl7/hl7.http) - OrderableDrugForm**
+#### AllergyIntoleranceClinicalStatusCodes
+
+-   **<code>GET</code> [/hl7/CodeSystem-allergyintolerance-clinical](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-allergyintolerance-clinical/:\_id](./rest/hl7/hl7.http)**
+
+#### AllergyIntoleranceVerificationStatus
+
+-   **<code>GET</code> [/hl7/CodeSystem-allergyintolerance-verification](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-allergyintolerance-verification/:\_id](./rest/hl7/hl7.http)**
+
+#### ConditionCategoryCodes
+
+-   **<code>GET</code> [/hl7/CodeSystem-condition-category](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-condition-category/:\_id](./rest/hl7/hl7.http)**
+
+#### ConditionClinicalStatusCodes
+
+-   **<code>GET</code> [/hl7/CodeSystem-condition-clinical](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-condition-clinical/:\_id](./rest/hl7/hl7.http)**
+
+#### DiagnosisRole
+
+-   **<code>GET</code> [/hl7/CodeSystem-diagnosis-role](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-diagnosis-role/:\_id](./rest/hl7/hl7.http)**
+
+#### DischargeDisposition
+
+-   **<code>GET</code> [/hl7/CodeSystem-discharge-disposition](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-discharge-disposition/:\_id](./rest/hl7/hl7.http)**
+
+#### DoseAndRateType
+
+-   **<code>GET</code> [/hl7/CodeSystem-dose-rate-type](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-dose-rate-type/:\_id](./rest/hl7/hl7.http)**
+
+#### LocationType
+
+-   **<code>GET</code> [/hl7/CodeSystem-location-physical-type](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-location-physical-type/:\_id](./rest/hl7/hl7.http)**
+
+#### MedicationRequestCategoryCodes
+
+-   **<code>GET</code> [/hl7/CodeSystem-medicationrequest-category](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-medicationrequest-category/:\_id](./rest/hl7/hl7.http)**
+
+#### MedicationRequestCourseOfTherapyCodes
+
+-   **<code>GET</code> [/hl7/CodeSystem-medicationrequest-course-of-therapy](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-medicationrequest-course-of-therapy/:\_id](./rest/hl7/hl7.http)**
+
+#### ObservationCategoryCodes
+
+-   **<code>GET</code> [/hl7/CodeSystem-observation-category](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-observation-category/:\_id](./rest/hl7/hl7.http)**
+
+#### OrganizationType
+
+-   **<code>GET</code> [/hl7/CodeSystem-organization-type](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-organization-type/:\_id](./rest/hl7/hl7.http)**
+
+#### PractitionerRole
+
+-   **<code>GET</code> [/hl7/CodeSystem-practitioner-role](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-practitioner-role/:\_id](./rest/hl7/hl7.http)**
+
+#### ServiceType
+
+-   **<code>GET</code> [/hl7/CodeSystem-service-type](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-service-type/:\_id](./rest/hl7/hl7.http)**
+
+#### DiagnosticServiceSectionId
+
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0074](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0074/:\_id](./rest/hl7/hl7.http)**
+
+#### ContactRole2
+
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0131](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0131/:\_id](./rest/hl7/hl7.http)**
+
+#### IdentifierType
+
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0203](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0203/:\_id](./rest/hl7/hl7.http)**
+
+#### AppointmentReason
+
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0276](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0276/:\_id](./rest/hl7/hl7.http)**
+
+#### ProviderRole
+
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0443](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-v2-0443/:\_id](./rest/hl7/hl7.http)**
+
+#### ActCode
+
+-   **<code>GET</code> [/hl7/CodeSystem-v3-ActCode](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-v3-ActCode/:\_id](./rest/hl7/hl7.http)**
+
+#### MaritalStatus
+
+-   **<code>GET</code> [/hl7/CodeSystem-v3-MaritalStatus](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-v3-MaritalStatus/:\_id](./rest/hl7/hl7.http)**
+
+#### ParticipationType
+
+-   **<code>GET</code> [/hl7/CodeSystem-v3-ParticipationType](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-v3-ParticipationType/:\_id](./rest/hl7/hl7.http)**
+
+#### RoleCode
+
+-   **<code>GET</code> [/hl7/CodeSystem-v3-RoleCode](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-v3-RoleCode/:\_id](./rest/hl7/hl7.http)**
+
+#### OrderableDrugForm
+
+-   **<code>GET</code> [/hl7/CodeSystem-v3-orderableDrugForm](./rest/hl7/hl7.http)**
+-   **<code>GET</code> [/hl7/CodeSystem-v3-orderableDrugForm/:\_id](./rest/hl7/hl7.http)**
 
 ### **[Satusehat]()**
 

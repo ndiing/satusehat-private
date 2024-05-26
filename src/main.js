@@ -1,15 +1,8 @@
 const { app, BrowserWindow } = require("electron");
-const path = require("node:path");
-const { updateElectronApp, UpdateSourceType } = require('update-electron-app')
-updateElectronApp({
-  updateSource: {
-    type: UpdateSourceType.ElectronPublicUpdateService,
-    repo: 'ndiing/satusehat-public'
-  },
-  updateInterval: '5 minutes',
-//   logger: require('electron-log')
-})
-require('./index')
+const path = require("path");
+const { updateElectronApp } = require("update-electron-app");
+updateElectronApp();
+require("./index");
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require("electron-squirrel-startup")) {

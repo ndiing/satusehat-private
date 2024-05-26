@@ -101,7 +101,13 @@ class Controller {
         try {
             const model = new AllergyIntoleranceClinicalStatusCodes()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -111,7 +117,13 @@ class Controller {
         try {
             const model = new AllergyIntoleranceVerificationStatus()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -121,7 +133,13 @@ class Controller {
         try {
             const model = new ConditionCategoryCodes()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -131,7 +149,13 @@ class Controller {
         try {
             const model = new ConditionClinicalStatusCodes()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -141,7 +165,13 @@ class Controller {
         try {
             const model = new DiagnosisRole()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -151,7 +181,13 @@ class Controller {
         try {
             const model = new DischargeDisposition()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -161,7 +197,13 @@ class Controller {
         try {
             const model = new DoseAndRateType()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -171,7 +213,13 @@ class Controller {
         try {
             const model = new LocationType()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -181,7 +229,13 @@ class Controller {
         try {
             const model = new MedicationRequestCategoryCodes()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -191,7 +245,13 @@ class Controller {
         try {
             const model = new MedicationRequestCourseOfTherapyCodes()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -201,7 +261,13 @@ class Controller {
         try {
             const model = new ObservationCategoryCodes()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -211,7 +277,13 @@ class Controller {
         try {
             const model = new OrganizationType()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -221,7 +293,13 @@ class Controller {
         try {
             const model = new PractitionerRole()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -231,7 +309,13 @@ class Controller {
         try {
             const model = new ServiceType()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -241,7 +325,13 @@ class Controller {
         try {
             const model = new DiagnosticServiceSectionId()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -251,7 +341,13 @@ class Controller {
         try {
             const model = new ContactRole2()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -261,7 +357,13 @@ class Controller {
         try {
             const model = new IdentifierType()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -271,7 +373,13 @@ class Controller {
         try {
             const model = new AppointmentReason()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -281,7 +389,13 @@ class Controller {
         try {
             const model = new ProviderRole()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -291,7 +405,13 @@ class Controller {
         try {
             const model = new ActCode()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -301,7 +421,13 @@ class Controller {
         try {
             const model = new MaritalStatus()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -311,7 +437,13 @@ class Controller {
         try {
             const model = new ParticipationType()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -321,7 +453,13 @@ class Controller {
         try {
             const model = new RoleCode()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
@@ -331,7 +469,13 @@ class Controller {
         try {
             const model = new OrderableDrugForm()
             await model.init()
-            const result = await model.allDocs()
+            let result
+            if(req.params._id){
+                result = await model.get(req.params._id)
+            }else{
+                result = await model.allDocs()
+
+            }
             res.json(result)
         } catch (error) {
             next(error)
