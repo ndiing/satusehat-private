@@ -64,24 +64,24 @@ We cannot build for Linux and macOS due to the lack of available devices. Please
 
 ### Clone the Project
 
-<pre>
+```bash
 git clone https://github.com/ndiing/satusehat-private.git
-</pre>
+```
 
 ### Install Project Dependencies
 
-<pre>
+```bash
 cd satusehat-private
 npm install
-</pre>
+```
 
 ### Run the Project
 
-<pre>
+```bash
 npm run dev
 # or
 npm run start
-</pre>
+```
 
 ## Example Requests
 
@@ -89,7 +89,7 @@ npm run start
 
 #### Organization - Create
 
-<pre>
+```http
 POST http://localhost:3000/api/satusehat/Organization
 Authorization: Bearer {{token}}
 Content-type: application/json
@@ -120,7 +120,7 @@ Content-type: application/json
         "reference": "Organization/{{Org_id}}"
     }
 }
-</pre>
+```
 
 ### Automated Session (satusehat-private)
 
@@ -128,7 +128,7 @@ Content-type: application/json
 
 Open the `.env` file and set the following configurations:
 
-<pre>
+```bash
 # Web Service Port Configuration
 port=3000
 
@@ -139,11 +139,11 @@ proxy=http://127.0.0.1:8888
 client_id=
 client_secret=
 organization_id=
-</pre>
+```
 
 #### Organization - Create
 
-<pre>
+```http
 POST http://localhost:3000/api/satusehat/Organization
 Content-type: application/json
 
@@ -173,13 +173,13 @@ Content-type: application/json
         "reference": "Organization/{{Org_id}}"
     }
 }
-</pre>
+```
 
 ### SatuSehat-Mapping
 
 #### Organization - Create (Simplified Payload)
 
-<pre>
+```http
 POST http://localhost:3000/api/satusehat/Organization
 Content-type: application/json
 
@@ -195,49 +195,49 @@ Content-type: application/json
     "name": "Pos Imunisasi",
     "partOf.reference": "Organization/{{Org_id}}"
 }
-</pre>
+```
 
 ## REST Examples
 
 ### HL7
 
-<pre>
+```http
 ./rest/hl7.http
-</pre>
+```
 
 ### Master
 
 #### Address
 
-<pre>
+```http
 ./rest/master/address.http
-</pre>
+```
 
 #### Telecomm
 
-<pre>
+```http
 ./rest/master/telecomm.http
-</pre>
+```
 
 ### SatuSehat
 
 #### Public
 
-<pre>
+```http
 ./rest/satusehat-public/*.http
-</pre>
+```
 
 #### Private
 
-<pre>
+```http
 ./rest/satusehat-private/*.http
-</pre>
+```
 
 #### Mapping
 
-<pre>
+```http
 ./rest/satusehat-mapping/*.http
-</pre>
+```
 
 ## License
 
