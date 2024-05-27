@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### Encounter - Create
-POST {{base_url}}/Encounter
+POST http://localhost:3000/api/satusehat/Encounter
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -67,15 +67,15 @@ Content-type: application/json
 }
 
 ### Encounter - By ID
-GET {{base_url}}/Encounter/:id
+GET http://localhost:3000/api/satusehat/Encounter/:id
 Authorization: Bearer {{token}}
 
 ### Encounter - by Subject
-GET {{base_url}}/Encounter?subject=100000030009
+GET http://localhost:3000/api/satusehat/Encounter?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### Encounter - Update Inprogress
-PUT {{base_url}}/Encounter/:id
+PUT http://localhost:3000/api/satusehat/Encounter/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -151,7 +151,7 @@ Content-type: application/json
 }
 
 ### Encounter - Update dischargeDisposition
-PUT {{base_url}}/Encounter/:id
+PUT http://localhost:3000/api/satusehat/Encounter/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -239,7 +239,7 @@ Content-type: application/json
 }
 
 ### Encounter - Update Finished
-PUT {{base_url}}/Encounter/:id
+PUT http://localhost:3000/api/satusehat/Encounter/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -356,7 +356,7 @@ Content-type: application/json
 }
 
 ### Encounter - PATCH Array
-PATCH {{base_url}}/Encounter/:id
+PATCH http://localhost:3000/api/satusehat/Encounter/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 
@@ -369,7 +369,7 @@ Authorization: Bearer {{token}}
 ]
 
 ### Encounter - PATCH Dictionary
-PATCH {{base_url}}/Encounter/:id
+PATCH http://localhost:3000/api/satusehat/Encounter/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

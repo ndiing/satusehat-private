@@ -1,6 +1,6 @@
 
 ### EpisodeOfCare - Create
-POST {{base_url}}/EpisodeOfCare
+POST http://localhost:3000/api/satusehat/EpisodeOfCare
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -76,19 +76,19 @@ Content-type: application/json
 }
 
 ### EpisodeOfCare - Search by Subject
-GET {{base_url}}/EpisodeOfCare?subject=100000030009
+GET http://localhost:3000/api/satusehat/EpisodeOfCare?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### EpisodeOfCare - Search by Practitioner / Caregiver
-GET {{base_url}}/EpisodeOfCare?subject=100000030009&organization={{Org_id}}&care-manager=N10000001
+GET http://localhost:3000/api/satusehat/EpisodeOfCare?subject=100000030009&organization={{Org_id}}&care-manager=N10000001
 Authorization: Bearer {{token}}
 
 ### EpisodeOfCare - Search by ID
-GET {{base_url}}/EpisodeOfCare/:id
+GET http://localhost:3000/api/satusehat/EpisodeOfCare/:id
 Authorization: Bearer {{token}}
 
 ### EpisodeOfCare - Update
-PUT {{base_url}}/EpisodeOfCare/:id
+PUT http://localhost:3000/api/satusehat/EpisodeOfCare/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -165,7 +165,7 @@ Content-type: application/json
 }
 
 ### EpisodeOfCare - PATCH
-PATCH {{base_url}}/EpisodeOfCare/:id
+PATCH http://localhost:3000/api/satusehat/EpisodeOfCare/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

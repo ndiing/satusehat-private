@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### DiagnosticReport - Create
-POST {{base_url}}/DiagnosticReport
+POST http://localhost:3000/api/satusehat/DiagnosticReport
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -75,27 +75,27 @@ Content-type: application/json
 }
 
 ### DiagnosticReport - Search by Subject
-GET {{base_url}}/DiagnosticReport?subject=100000030009
+GET http://localhost:3000/api/satusehat/DiagnosticReport?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### DiagnosticReport - Search by Subject and Encounter
-GET {{base_url}}/DiagnosticReport?subject=100000030009&encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/DiagnosticReport?subject=100000030009&encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### DiagnosticReport - Search by Encounter
-GET {{base_url}}/DiagnosticReport?encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/DiagnosticReport?encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### DiagnosticReport - By Specimen & Subject
-GET {{base_url}}/DiagnosticReport?specimen=c336f80b-f033-45bf-a979-6f0c796c7849&subject=100000030009
+GET http://localhost:3000/api/satusehat/DiagnosticReport?specimen=c336f80b-f033-45bf-a979-6f0c796c7849&subject=100000030009
 Authorization: Bearer {{token}}
 
 ### DiagnosticReport - By ID
-GET {{base_url}}/DiagnosticReport/:id
+GET http://localhost:3000/api/satusehat/DiagnosticReport/:id
 Authorization: Bearer {{token}}
 
 ### DiagnosticReport - Update
-PUT {{base_url}}/DiagnosticReport/:id
+PUT http://localhost:3000/api/satusehat/DiagnosticReport/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -170,7 +170,7 @@ Content-type: application/json
 }
 
 ### DiagnosticReport - PATCH
-PATCH {{base_url}}/DiagnosticReport/:id
+PATCH http://localhost:3000/api/satusehat/DiagnosticReport/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

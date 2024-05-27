@@ -4,7 +4,7 @@ class FamilyMemberHistory extends Service {
 
     async post(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/FamilyMemberHistory`, {
                 params,
                 query,
@@ -12,6 +12,7 @@ class FamilyMemberHistory extends Service {
                 headers: {
                     "Authorization": "Bearer {{token}}",
                     "Content-type": "application/json",
+                    ...headers,
                 },
                 body: JSON.stringify(body),
             });
@@ -24,13 +25,14 @@ class FamilyMemberHistory extends Service {
 
     async getId(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/FamilyMemberHistory/:id`, {
                 params,
                 query,
                 method: "GET",
                 headers: {
                     "Authorization": "Bearer {{token}}",
+                    ...headers,
                 },
             });
             const json = response.json();
@@ -42,13 +44,14 @@ class FamilyMemberHistory extends Service {
 
     async get(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/FamilyMemberHistory`, {
                 params,
                 query,
                 method: "GET",
                 headers: {
                     "Authorization": "Bearer {{token}}",
+                    ...headers,
                 },
             });
             const json = response.json();
@@ -60,7 +63,7 @@ class FamilyMemberHistory extends Service {
 
     async putId(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/FamilyMemberHistory/:id`, {
                 params,
                 query,
@@ -68,6 +71,7 @@ class FamilyMemberHistory extends Service {
                 headers: {
                     "Authorization": "Bearer {{token}}",
                     "Content-type": "application/json",
+                    ...headers,
                 },
                 body: JSON.stringify(body),
             });
@@ -80,7 +84,7 @@ class FamilyMemberHistory extends Service {
 
     async patchId(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/FamilyMemberHistory/:id`, {
                 params,
                 query,
@@ -88,6 +92,7 @@ class FamilyMemberHistory extends Service {
                 headers: {
                     "Content-Type": "application/json-patch+json",
                     "Authorization": "Bearer {{token}}",
+                    ...headers,
                 },
                 body: JSON.stringify(body),
             });

@@ -93,7 +93,7 @@ class OAuth2 extends Controller {
             const {params,query,body} = req
             const result = await res.locals.service.get({params,query,body});
             // console.log(JSON.stringify(result))
-            if(result?.issue?.[0]?.code=='invalid-access-token'){
+            if(result?.issue?.[0]?.code=='invalid-access-token'&&process.env.client_id){
                 // refresh
                 const result = await res.locals.service.post({
                     params: {

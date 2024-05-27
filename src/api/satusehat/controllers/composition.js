@@ -24,7 +24,7 @@ class Composition extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "Composition",
 //                 "identifier": {
@@ -100,6 +100,7 @@ class Composition extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -110,7 +111,7 @@ class Composition extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -119,6 +120,7 @@ class Composition extends Controller {
                     ...query,
                    ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -128,7 +130,7 @@ class Composition extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -137,6 +139,7 @@ class Composition extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -146,7 +149,7 @@ class Composition extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "Composition",
 //                 "id": "e511fb00-3641-4816-a9fd-db2a55d1897d",
@@ -224,6 +227,7 @@ class Composition extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -234,7 +238,7 @@ class Composition extends Controller {
 
     static async patchId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = [
 //                 {
 //                     "op": "replace",
@@ -254,6 +258,7 @@ class Composition extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

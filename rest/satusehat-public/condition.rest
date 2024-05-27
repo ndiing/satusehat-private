@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### Condition - Diagnosis
-POST {{base_url}}/Condition
+POST http://localhost:3000/api/satusehat/Condition
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -47,7 +47,7 @@ Content-type: application/json
 }
 
 ### Condition - Meninggalkan Faskes
-POST {{base_url}}/Condition
+POST http://localhost:3000/api/satusehat/Condition
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -93,23 +93,23 @@ Content-type: application/json
 }
 
 ### Condition - Search by Subject
-GET {{base_url}}/Condition?subject=100000030009
+GET http://localhost:3000/api/satusehat/Condition?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### Condition - Search by Subject and Encounter
-GET {{base_url}}/Condition?subject=100000030009&encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/Condition?subject=100000030009&encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### Condition - Search by Encounter
-GET {{base_url}}/Condition?encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/Condition?encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### Condition - By ID
-GET {{base_url}}/Condition/:id
+GET http://localhost:3000/api/satusehat/Condition/:id
 Authorization: Bearer {{token}}
 
 ### Condition - Update
-PUT {{base_url}}/Condition/:id
+PUT http://localhost:3000/api/satusehat/Condition/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -156,7 +156,7 @@ Content-type: application/json
 }
 
 ### Condition - Patch
-PATCH {{base_url}}/Condition/:id
+PATCH http://localhost:3000/api/satusehat/Condition/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

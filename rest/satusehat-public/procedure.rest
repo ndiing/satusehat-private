@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### Procedure - Create
-POST {{base_url}}/Procedure
+POST http://localhost:3000/api/satusehat/Procedure
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -77,23 +77,23 @@ Content-type: application/json
 }
 
 ### Procedure - Search by Subject
-GET {{base_url}}/Procedure?subject=100000030009
+GET http://localhost:3000/api/satusehat/Procedure?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### Procedure - Search by Subject and Encounter
-GET {{base_url}}/Procedure?subject=100000030009&encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/Procedure?subject=100000030009&encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### Procedure - Search by Encounter
-GET {{base_url}}/Procedure?encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/Procedure?encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### Procedure - By ID
-GET {{base_url}}/Procedure/:id
+GET http://localhost:3000/api/satusehat/Procedure/:id
 Authorization: Bearer {{token}}
 
 ### Procedure - Update
-PUT {{base_url}}/Procedure/:id
+PUT http://localhost:3000/api/satusehat/Procedure/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -170,7 +170,7 @@ Content-type: application/json
 }
 
 ### Procedure - PATCH
-PATCH {{base_url}}/Procedure/:id
+PATCH http://localhost:3000/api/satusehat/Procedure/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

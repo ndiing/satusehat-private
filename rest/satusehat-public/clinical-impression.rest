@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### ClinicalImpression - Create
-POST {{base_url}}/ClinicalImpression
+POST http://localhost:3000/api/satusehat/ClinicalImpression
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -80,15 +80,15 @@ Content-type: application/json
 }
 
 ### ClinicalImpression- Search by Subject with/without Encounter
-GET {{base_url}}/ClinicalImpression?subject=100000030009&encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/ClinicalImpression?subject=100000030009&encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### ClinicalImpression - Search by ID
-GET {{base_url}}/ClinicalImpression/:id
+GET http://localhost:3000/api/satusehat/ClinicalImpression/:id
 Authorization: Bearer {{token}}
 
 ### ClinicalImpression - Update
-PUT {{base_url}}/ClinicalImpression/:id
+PUT http://localhost:3000/api/satusehat/ClinicalImpression/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -168,7 +168,7 @@ Content-type: application/json
 }
 
 ### ClinicalImpression - PATCH
-PATCH {{base_url}}/ClinicalImpression/:id
+PATCH http://localhost:3000/api/satusehat/ClinicalImpression/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

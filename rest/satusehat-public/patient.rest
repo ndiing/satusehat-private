@@ -1,26 +1,26 @@
 
 ### Patient - Search NIK
-GET {{base_url}}/Patient?identifier=https://fhir.kemkes.go.id/id/nik|9271060312000001
+GET http://localhost:3000/api/satusehat/Patient?identifier=https://fhir.kemkes.go.id/id/nik|9271060312000001
 Authorization: Bearer {{token}}
 
 ### Patient - Bayi Search NIK Ibu
-GET {{base_url}}/Patient?identifier=https://fhir.kemkes.go.id/id/nik-ibu|367400001111222
+GET http://localhost:3000/api/satusehat/Patient?identifier=https://fhir.kemkes.go.id/id/nik-ibu|367400001111222
 Authorization: Bearer {{token}}
 
 ### Patient - Search Name, Birtdate, NIK
-GET {{base_url}}/Patient?name=patient&birthdate=1980-12-03&identifier=https://fhir.kemkes.go.id/id/nik|9271060312000001
+GET http://localhost:3000/api/satusehat/Patient?name=patient&birthdate=1980-12-03&identifier=https://fhir.kemkes.go.id/id/nik|9271060312000001
 Authorization: Bearer {{token}}
 
 ### Patient - Search Name, Birthdate, Gender
-GET {{base_url}}/Patient?name=patient 1&birthdate=1980-12-03&gender=male
+GET http://localhost:3000/api/satusehat/Patient?name=patient 1&birthdate=1980-12-03&gender=male
 Authorization: Bearer {{token}}
 
 ### Patient - By ID
-GET {{base_url}}/Patient/:id
+GET http://localhost:3000/api/satusehat/Patient/:id
 Authorization: Bearer {{token}}
 
 ### Patient - Create by NIK
-POST {{base_url}}/Patient
+POST http://localhost:3000/api/satusehat/Patient
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -184,7 +184,7 @@ Content-type: application/json
 }
 
 ### Patient - Create by Mother's NIK (Newborn)
-POST {{base_url}}/Patient
+POST http://localhost:3000/api/satusehat/Patient
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -337,7 +337,3 @@ Content-type: application/json
     ]
 }
 
-
-
-###
-GET {{base_url}}

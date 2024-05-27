@@ -24,7 +24,7 @@ class CarePlan extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "CarePlan",
 //                 "status": "active",
@@ -53,6 +53,7 @@ class CarePlan extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -63,7 +64,7 @@ class CarePlan extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -72,6 +73,7 @@ class CarePlan extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -81,7 +83,7 @@ class CarePlan extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -91,6 +93,7 @@ class CarePlan extends Controller {
                    ...(query["subject"]&&{"subject": query["subject"]}), // "100000030004",
                    ...(query["encounter"]&&{"encounter": query["encounter"]}), // "{{Encounter_uuid}}",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -100,7 +103,7 @@ class CarePlan extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "CarePlan",
 //                 "id": "d16e2819-be08-40f7-888b-3f81a3a3518d",
@@ -131,6 +134,7 @@ class CarePlan extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -141,7 +145,7 @@ class CarePlan extends Controller {
 
     static async patchId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = [
 //                 {
 //                     "op": "replace",
@@ -161,6 +165,7 @@ class CarePlan extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

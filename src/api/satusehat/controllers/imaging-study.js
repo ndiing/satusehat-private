@@ -24,7 +24,7 @@ class ImagingStudy extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "ImagingStudy",
 //                 "identifier": [
@@ -99,6 +99,7 @@ class ImagingStudy extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -109,7 +110,7 @@ class ImagingStudy extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -118,6 +119,7 @@ class ImagingStudy extends Controller {
                     ...query,
                    ...(query["identifier"]&&{"identifier": query["identifier"]}), // "http://sys-ids.kemkes.go.id/acsn/10000004|MR.221102.062",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -127,7 +129,7 @@ class ImagingStudy extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "ImagingStudy",
 //                 "id": "c4f3bfe3-91cd-40c4-b986-000c2150f051",
@@ -919,6 +921,7 @@ class ImagingStudy extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

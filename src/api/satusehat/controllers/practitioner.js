@@ -24,7 +24,7 @@ class Practitioner extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -33,6 +33,7 @@ class Practitioner extends Controller {
                     ...query,
                    ...(query["identifier"]&&{"identifier": query["identifier"]}), // "https://fhir.kemkes.go.id/id/nik|367400001111222",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -42,7 +43,7 @@ class Practitioner extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -51,6 +52,7 @@ class Practitioner extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {

@@ -24,7 +24,7 @@ class FamilyMemberHistory extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "FamilyMemberHistory",
 //                 "status": "completed",
@@ -76,6 +76,7 @@ class FamilyMemberHistory extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -86,7 +87,7 @@ class FamilyMemberHistory extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -95,6 +96,7 @@ class FamilyMemberHistory extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -104,7 +106,7 @@ class FamilyMemberHistory extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -114,6 +116,7 @@ class FamilyMemberHistory extends Controller {
                    ...(query["relationship"]&&{"relationship": query["relationship"]}), // "72705000",
                    ...(query["patient"]&&{"patient": query["patient"]}), // "P02280547535",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -123,7 +126,7 @@ class FamilyMemberHistory extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "FamilyMemberHistory",
 //                 "id": "0735510d-ad0b-44ca-92be-b695a9b127d1",
@@ -177,6 +180,7 @@ class FamilyMemberHistory extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -187,7 +191,7 @@ class FamilyMemberHistory extends Controller {
 
     static async patchId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = [
 //                 {
 //                     "op": "replace",
@@ -207,6 +211,7 @@ class FamilyMemberHistory extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

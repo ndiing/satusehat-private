@@ -162,7 +162,7 @@ function parseItem3(item3, names) {
         // group[fileName] += `    // ${name}\r\n`;
         group[fileName] += `    async ${methodName2}(req = {}) {\r\n`;
         group[fileName] += `        try {\r\n`;
-        group[fileName] += `            const { params, query, body } = req;\r\n`;
+        group[fileName] += `            const { params, query, headers,body } = req;\r\n`;
         group[fileName] += `            const response = await this.fetch(\`${rawUrl}\`, {\r\n`;
 
         group[fileName] += `                params,\r\n`;
@@ -188,6 +188,7 @@ function parseItem3(item3, names) {
             const value = header[name];
             group[fileName] += `                    "${name}": "${value}",\r\n`;
         }
+        group[fileName] += `                    ...headers,\r\n`;
         group[fileName] += `                },\r\n`;
         if (rawBody) {
             if (mode == "urlencoded") {

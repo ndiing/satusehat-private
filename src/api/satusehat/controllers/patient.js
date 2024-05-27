@@ -24,7 +24,7 @@ class Patient extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -33,6 +33,7 @@ class Patient extends Controller {
                     ...query,
                    ...(query["identifier"]&&{"identifier": query["identifier"]}), // "https://fhir.kemkes.go.id/id/nik|9271060312000001",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -42,7 +43,7 @@ class Patient extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -51,6 +52,7 @@ class Patient extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -60,7 +62,7 @@ class Patient extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "Patient",
 //                 "meta": {
@@ -230,6 +232,7 @@ class Patient extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

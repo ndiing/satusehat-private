@@ -1,6 +1,6 @@
 
 ### FamilyMemberHistory - POST
-POST {{base_url}}/FamilyMemberHistory
+POST http://localhost:3000/api/satusehat/FamilyMemberHistory
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -46,15 +46,15 @@ Content-type: application/json
 }
 
 ### FamilyMemberHistory - Search by ID
-GET {{base_url}}/FamilyMemberHistory/:id
+GET http://localhost:3000/api/satusehat/FamilyMemberHistory/:id
 Authorization: Bearer {{token}}
 
 ### FamilyMemberHistory - Search by Subject & Relationship
-GET {{base_url}}/FamilyMemberHistory?relationship=72705000&patient=P02280547535
+GET http://localhost:3000/api/satusehat/FamilyMemberHistory?relationship=72705000&patient=P02280547535
 Authorization: Bearer {{token}}
 
 ### FamilyMemberHistory - UPDATE
-PUT {{base_url}}/FamilyMemberHistory/:id
+PUT http://localhost:3000/api/satusehat/FamilyMemberHistory/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -101,7 +101,7 @@ Content-type: application/json
 }
 
 ### FamilyMemberHistory - PATCH
-PATCH {{base_url}}/FamilyMemberHistory/:id
+PATCH http://localhost:3000/api/satusehat/FamilyMemberHistory/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

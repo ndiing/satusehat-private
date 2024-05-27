@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### MedicationDispense - Create
-POST {{base_url}}/MedicationDispense
+POST http://localhost:3000/api/satusehat/MedicationDispense
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -105,23 +105,23 @@ Content-type: application/json
 }
 
 ### MedicationDispense - Search by Subject
-GET {{base_url}}/MedicationDispense?subject=100000030009
+GET http://localhost:3000/api/satusehat/MedicationDispense?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### MedicationDispense - Search by Subject and MedicationRequest
-GET {{base_url}}/MedicationDispense?subject=100000030004&prescription=7617e000-58fe-4bfd-ae20-3c9296f5db0f
+GET http://localhost:3000/api/satusehat/MedicationDispense?subject=100000030004&prescription=7617e000-58fe-4bfd-ae20-3c9296f5db0f
 Authorization: Bearer {{token}}
 
 ### MedicationDispense - Search by Subject and Encounter
-GET {{base_url}}/MedicationDispense?subject=100000030004&context=19640281-c21b-41d4-ae73-223ad4f0e8d5
+GET http://localhost:3000/api/satusehat/MedicationDispense?subject=100000030004&context=19640281-c21b-41d4-ae73-223ad4f0e8d5
 Authorization: Bearer {{token}}
 
 ### MedicationDispense - By ID
-GET {{base_url}}/MedicationDispense/:id
+GET http://localhost:3000/api/satusehat/MedicationDispense/:id
 Authorization: Bearer {{token}}
 
 ### MedicationDispense - UPDATE
-PUT {{base_url}}/MedicationDispense/:id
+PUT http://localhost:3000/api/satusehat/MedicationDispense/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -226,7 +226,7 @@ Content-type: application/json
 }
 
 ### MedicationDispense - PATCH
-PATCH {{base_url}}/MedicationDispense/:id
+PATCH http://localhost:3000/api/satusehat/MedicationDispense/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

@@ -24,7 +24,7 @@ class HealthcareService extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "HealthcareService",
 //                 "identifier": [
@@ -107,6 +107,7 @@ class HealthcareService extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -117,7 +118,7 @@ class HealthcareService extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -126,6 +127,7 @@ class HealthcareService extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -135,7 +137,7 @@ class HealthcareService extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -144,6 +146,7 @@ class HealthcareService extends Controller {
                     ...query,
                    ...(query["specialty"]&&{"specialty": query["specialty"]}), // "S001.09",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -153,7 +156,7 @@ class HealthcareService extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "HealthcareService",
 //                 "id": "8cfb2d6f-dc20-4068-9113-805d426a6f17",
@@ -238,6 +241,7 @@ class HealthcareService extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -248,7 +252,7 @@ class HealthcareService extends Controller {
 
     static async patchId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = [
 //                 {
 //                     "op": "replace",
@@ -268,6 +272,7 @@ class HealthcareService extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

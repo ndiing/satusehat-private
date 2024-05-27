@@ -1,6 +1,6 @@
 
 ### Slot - assign kuota
-POST {{base_url}}/Slot
+POST http://localhost:3000/api/satusehat/Slot
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -25,11 +25,11 @@ Content-type: application/json
 }
 
 ### Slot - search by ID
-GET {{base_url}}/Slot/:id
+GET http://localhost:3000/api/satusehat/Slot/:id
 Authorization: Bearer {{token}}
 
 ### Slot - PUT
-PUT {{base_url}}/Slot/:id
+PUT http://localhost:3000/api/satusehat/Slot/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -55,7 +55,7 @@ Content-type: application/json
 }
 
 ### Slot - PATCH
-PATCH {{base_url}}/Slot/:id
+PATCH http://localhost:3000/api/satusehat/Slot/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

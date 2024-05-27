@@ -24,7 +24,7 @@ class AppointmentResponse extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "AppointmentResponse",
 //                 "appointment": {
@@ -48,6 +48,7 @@ class AppointmentResponse extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -58,7 +59,7 @@ class AppointmentResponse extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -67,6 +68,7 @@ class AppointmentResponse extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -76,7 +78,7 @@ class AppointmentResponse extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -85,6 +87,7 @@ class AppointmentResponse extends Controller {
                     ...query,
                    ...(query["appointment"]&&{"appointment": query["appointment"]}), // "0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -94,7 +97,7 @@ class AppointmentResponse extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "AppointmentResponse",
 //                 "id": "96bbe117-1738-4e93-abd7-23178dad38d3",
@@ -120,6 +123,7 @@ class AppointmentResponse extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -130,7 +134,7 @@ class AppointmentResponse extends Controller {
 
     static async patchId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = [
 //                 {
 //                     "op": "replace",
@@ -150,6 +154,7 @@ class AppointmentResponse extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

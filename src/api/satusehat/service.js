@@ -47,7 +47,8 @@ class Service {
         // Replacing dynamic placeholders in headers with corresponding environment variables or storage values
         for (const name in headers) {
             const value = headers[name];
-            headers[name] = value?.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
+            delete headers[name]
+            headers[name.toLowerCase()] = value?.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
                 return process.env?.[$1] || this.storage?.[$1];
             });
         }

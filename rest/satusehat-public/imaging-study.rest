@@ -1,6 +1,6 @@
 
 ### ImagingStudy - POST (Single Image)
-POST {{base_url}}/ImagingStudy
+POST http://localhost:3000/api/satusehat/ImagingStudy
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -69,11 +69,11 @@ Content-type: application/json
 }
 
 ### ImagingStudy - Get ID based on Accession Number
-GET {{base_url}}/ImagingStudy?identifier=http://sys-ids.kemkes.go.id/acsn/10000004|MR.221102.062
+GET http://localhost:3000/api/satusehat/ImagingStudy?identifier=http://sys-ids.kemkes.go.id/acsn/10000004|MR.221102.062
 Authorization: Bearer {{token}}
 
 ### ImagingStudy - PUT (Multiple Image)
-PUT {{base_url}}/ImagingStudy/:id
+PUT http://localhost:3000/api/satusehat/ImagingStudy/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 

@@ -1,6 +1,6 @@
 
 ### HealthcareService - Buat Poli
-POST {{base_url}}/HealthcareService
+POST http://localhost:3000/api/satusehat/HealthcareService
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -77,15 +77,15 @@ Content-type: application/json
 }
 
 ### HealthcareService - GET by ID
-GET {{base_url}}/HealthcareService/:id
+GET http://localhost:3000/api/satusehat/HealthcareService/:id
 Authorization: Bearer {{token}}
 
 ### HealthcareService - GET by specialty
-GET {{base_url}}/HealthcareService?specialty=S001.09
+GET http://localhost:3000/api/satusehat/HealthcareService?specialty=S001.09
 Authorization: Bearer {{token}}
 
 ### HealthcareService - PUT
-PUT {{base_url}}/HealthcareService/:id
+PUT http://localhost:3000/api/satusehat/HealthcareService/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -163,7 +163,7 @@ Content-type: application/json
 }
 
 ### HealthcareService - PATCH
-PATCH {{base_url}}/HealthcareService/:id
+PATCH http://localhost:3000/api/satusehat/HealthcareService/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

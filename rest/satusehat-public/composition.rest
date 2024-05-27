@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### Composition - Edukasi Diet
-POST {{base_url}}/Composition
+POST http://localhost:3000/api/satusehat/Composition
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -71,23 +71,23 @@ Content-type: application/json
 }
 
 ### Composition - Search by Subject
-GET {{base_url}}/Composition?subject=100000030009
+GET http://localhost:3000/api/satusehat/Composition?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### Composition - Search by Subject and Encounter
-GET {{base_url}}/Composition?subject=100000030009&encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/Composition?subject=100000030009&encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### Composition - Search by Encounter
-GET {{base_url}}/Composition?encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/Composition?encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### Composition - By ID
-GET {{base_url}}/Composition/:id
+GET http://localhost:3000/api/satusehat/Composition/:id
 Authorization: Bearer {{token}}
 
 ### Composition - Update
-PUT {{base_url}}/Composition/:id
+PUT http://localhost:3000/api/satusehat/Composition/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -158,7 +158,7 @@ Content-type: application/json
 }
 
 ### Composition - PATCH
-PATCH {{base_url}}/Composition/:id
+PATCH http://localhost:3000/api/satusehat/Composition/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

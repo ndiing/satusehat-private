@@ -24,7 +24,7 @@ class RelatedPerson extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "RelatedPerson",
 //                 "meta": {
@@ -118,6 +118,7 @@ class RelatedPerson extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -128,7 +129,7 @@ class RelatedPerson extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "RelatedPerson",
 //                 "id": "c093eab9-a0e5-41b9-a543-51096653cd92",
@@ -224,6 +225,7 @@ class RelatedPerson extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -234,7 +236,7 @@ class RelatedPerson extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -243,6 +245,7 @@ class RelatedPerson extends Controller {
                     ...query,
                    ...(query["identifier"]&&{"identifier": query["identifier"]}), // "https://fhir.kemkes.go.id/id/nik|367400001111222",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -252,7 +255,7 @@ class RelatedPerson extends Controller {
 
     static async patchId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = [
 //                 {
 //                     "op": "replace",
@@ -272,6 +275,7 @@ class RelatedPerson extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

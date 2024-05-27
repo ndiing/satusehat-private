@@ -24,7 +24,7 @@ class QuestionnaireResponse extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "QuestionnaireResponse",
 //                 "questionnaire": "https://fhir.kemkes.go.id/Questionnaire/Q0002",
@@ -70,6 +70,7 @@ class QuestionnaireResponse extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -80,7 +81,7 @@ class QuestionnaireResponse extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "QuestionnaireResponse",
 //                 "id": "0070bf6c-ec6f-46d4-98a0-b5089492fdb0",
@@ -128,6 +129,7 @@ class QuestionnaireResponse extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -138,7 +140,7 @@ class QuestionnaireResponse extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -148,6 +150,7 @@ class QuestionnaireResponse extends Controller {
                    ...(query["encounter"]&&{"encounter": query["encounter"]}), // "66533eb2-723d-4e7c-b7aa-500cd67dd4c8",
                    ...(query["patient"]&&{"patient": query["patient"]}), // "P02280547535",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -157,7 +160,7 @@ class QuestionnaireResponse extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -166,6 +169,7 @@ class QuestionnaireResponse extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {

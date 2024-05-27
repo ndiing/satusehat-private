@@ -104,6 +104,7 @@ function parseItem3(item3, names) {
             group[fileName] = "";
         }
 
+        rawUrl = rawUrl.replace(/\{\{\w+\}\}/, "http://localhost:3000/api/satusehat");
         group[fileName] += `### ${name}\r\n`;
         group[fileName] += `${method} ${rawUrl}`;
         if (Object.keys(query).length) {

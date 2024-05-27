@@ -180,7 +180,7 @@ function parseItem3(item3, names) {
         group[fileName] += `\r\n`
         group[fileName] += `    static async ${methodName2}(req, res, next) {\r\n`
         group[fileName] += `        try {\r\n`
-        group[fileName] += `            const {params,query,body} = req\r\n`
+        group[fileName] += `            const {params,query,headers,body} = req\r\n`
         if(rawBody){
             group[fileName] += `            const target = ${JSON.stringify(rawBody,null,4)
                 .replace(/^/gm,'            ')
@@ -211,6 +211,7 @@ function parseItem3(item3, names) {
             group[fileName] += `                   ...(query["${name}"]&&{"${name}": query["${name}"]}), // "${value}",\r\n`
         }
         group[fileName] += `                },\r\n`
+        group[fileName] += `                headers,\r\n`
         if(rawBody){
             // group[fileName] += `                body: ${JSON.stringify(rawBody,null,4)
             //     .replace(/^/gm,'                ')

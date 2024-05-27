@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### QuestionnaireResponse - Create
-POST {{base_url}}/QuestionnaireResponse
+POST http://localhost:3000/api/satusehat/QuestionnaireResponse
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -41,7 +41,7 @@ Content-type: application/json
 }
 
 ### QuestionnaireResponse - Update
-PUT {{base_url}}/QuestionnaireResponse/:id
+PUT http://localhost:3000/api/satusehat/QuestionnaireResponse/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -82,10 +82,10 @@ Content-type: application/json
 }
 
 ### QuestionnaireResponse - Search by Subject & Encounter
-GET {{base_url}}/QuestionnaireResponse?encounter=66533eb2-723d-4e7c-b7aa-500cd67dd4c8&patient=P02280547535
+GET http://localhost:3000/api/satusehat/QuestionnaireResponse?encounter=66533eb2-723d-4e7c-b7aa-500cd67dd4c8&patient=P02280547535
 Authorization: Bearer {{token}}
 
 ### QuestionnaireResponse - Search by Id
-GET {{base_url}}/QuestionnaireResponse/:id
+GET http://localhost:3000/api/satusehat/QuestionnaireResponse/:id
 Authorization: Bearer {{token}}
 

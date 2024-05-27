@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### AllergyIntolerance - Create
-POST {{base_url}}/AllergyIntolerance
+POST http://localhost:3000/api/satusehat/AllergyIntolerance
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -60,15 +60,15 @@ Content-type: application/json
 }
 
 ### AllergyIntolerance - Search by Subject with/without Allergy Code
-GET {{base_url}}/AllergyIntolerance?patient=100000030009&code=89811004
+GET http://localhost:3000/api/satusehat/AllergyIntolerance?patient=100000030009&code=89811004
 Authorization: Bearer {{token}}
 
 ### AllergyIntolerance - Search by ID
-GET {{base_url}}/AllergyIntolerance/:id
+GET http://localhost:3000/api/satusehat/AllergyIntolerance/:id
 Authorization: Bearer {{token}}
 
 ### AllergyIntolerance - Update
-PUT {{base_url}}/AllergyIntolerance/:id
+PUT http://localhost:3000/api/satusehat/AllergyIntolerance/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -128,7 +128,7 @@ Content-type: application/json
 }
 
 ### AllergyIntolerance - PATCH
-PATCH {{base_url}}/AllergyIntolerance/:id
+PATCH http://localhost:3000/api/satusehat/AllergyIntolerance/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

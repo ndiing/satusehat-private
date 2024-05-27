@@ -1,14 +1,14 @@
 
 ### Immunization - Search by Patient with/without date administered
-GET {{base_url}}/Immunization?date=2022-01-11&patient=100000030009
+GET http://localhost:3000/api/satusehat/Immunization?date=2022-01-11&patient=100000030009
 Authorization: Bearer {{token}}
 
 ### Immunization - Search by ID
-GET {{base_url}}/Immunization/:id
+GET http://localhost:3000/api/satusehat/Immunization/:id
 Authorization: Bearer {{token}}
 
 ### Immunization - UPDATE
-PUT {{base_url}}/Immunization/:id
+PUT http://localhost:3000/api/satusehat/Immunization/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -105,7 +105,7 @@ Content-type: application/json
 }
 
 ### Immunization - PATCH
-PATCH {{base_url}}/Immunization/:id
+PATCH http://localhost:3000/api/satusehat/Immunization/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

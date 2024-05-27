@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### MedicationRequest - Create
-POST {{base_url}}/MedicationRequest
+POST http://localhost:3000/api/satusehat/MedicationRequest
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -147,23 +147,23 @@ Content-type: application/json
 }
 
 ### MedicationRequest - Search by Subject
-GET {{base_url}}/MedicationRequest?subject=100000030009
+GET http://localhost:3000/api/satusehat/MedicationRequest?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### MedicationRequest - Search by Subject and Encounter
-GET {{base_url}}/MedicationRequest?subject=100000030009&encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/MedicationRequest?subject=100000030009&encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### MedicationRequest - Search by Encounter
-GET {{base_url}}/MedicationRequest?encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/MedicationRequest?encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### MedicationRequest - By ID
-GET {{base_url}}/MedicationRequest/:id
+GET http://localhost:3000/api/satusehat/MedicationRequest/:id
 Authorization: Bearer {{token}}
 
 ### MedicationRequest - PUT
-PUT {{base_url}}/MedicationRequest/:id
+PUT http://localhost:3000/api/satusehat/MedicationRequest/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -310,7 +310,7 @@ Content-type: application/json
 }
 
 ### MedicationRequest - PATCH
-PATCH {{base_url}}/MedicationRequest/:id
+PATCH http://localhost:3000/api/satusehat/MedicationRequest/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

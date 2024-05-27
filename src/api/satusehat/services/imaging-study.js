@@ -4,7 +4,7 @@ class ImagingStudy extends Service {
 
     async post(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/ImagingStudy`, {
                 params,
                 query,
@@ -12,6 +12,7 @@ class ImagingStudy extends Service {
                 headers: {
                     "Authorization": "Bearer {{token}}",
                     "Content-type": "application/json",
+                    ...headers,
                 },
                 body: JSON.stringify(body),
             });
@@ -24,13 +25,14 @@ class ImagingStudy extends Service {
 
     async get(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/ImagingStudy`, {
                 params,
                 query,
                 method: "GET",
                 headers: {
                     "Authorization": "Bearer {{token}}",
+                    ...headers,
                 },
             });
             const json = response.json();
@@ -42,7 +44,7 @@ class ImagingStudy extends Service {
 
     async putId(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/ImagingStudy/:id`, {
                 params,
                 query,
@@ -50,6 +52,7 @@ class ImagingStudy extends Service {
                 headers: {
                     "Authorization": "Bearer {{token}}",
                     "Content-type": "application/json",
+                    ...headers,
                 },
                 body: JSON.stringify(body),
             });

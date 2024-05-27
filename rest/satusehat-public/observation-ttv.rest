@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### Observation - Create
-POST {{base_url}}/Observation
+POST http://localhost:3000/api/satusehat/Observation
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -51,27 +51,27 @@ Content-type: application/json
 }
 
 ### Observation - Search by Subject
-GET {{base_url}}/Observation?subject=100000030009
+GET http://localhost:3000/api/satusehat/Observation?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### Observation - Search by Subject and Encounter
-GET {{base_url}}/Observation?subject=100000030009&encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/Observation?subject=100000030009&encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### Observation - Search by Encounter
-GET {{base_url}}/Observation?encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/Observation?encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### Observation - Search by ServiceRequest BasedOn
-GET {{base_url}}/Observation?based-on=124dfb1f-b817-47d6-82ab-7bfed09e8594&subject=100000030009
+GET http://localhost:3000/api/satusehat/Observation?based-on=124dfb1f-b817-47d6-82ab-7bfed09e8594&subject=100000030009
 Authorization: Bearer {{token}}
 
 ### Observation - By ID
-GET {{base_url}}/Observation/:id
+GET http://localhost:3000/api/satusehat/Observation/:id
 Authorization: Bearer {{token}}
 
 ### Observation - Update
-PUT {{base_url}}/Observation/:id
+PUT http://localhost:3000/api/satusehat/Observation/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -117,7 +117,7 @@ Content-type: application/json
 }
 
 ### Observation - PATCH
-PATCH {{base_url}}/Observation/:id
+PATCH http://localhost:3000/api/satusehat/Observation/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

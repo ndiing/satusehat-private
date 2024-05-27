@@ -24,7 +24,7 @@ class Organization extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "Organization",
 //                 "active": true,
@@ -114,6 +114,7 @@ class Organization extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -124,7 +125,7 @@ class Organization extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -133,6 +134,7 @@ class Organization extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -142,7 +144,7 @@ class Organization extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -151,6 +153,7 @@ class Organization extends Controller {
                     ...query,
                    ...(query["name"]&&{"name": query["name"]}), // "paramarta",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -160,7 +163,7 @@ class Organization extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "Organization",
 //                 "id": "abddd50b-b22f-4d68-a1c3-d2c29a27698b",
@@ -252,6 +255,7 @@ class Organization extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -262,7 +266,7 @@ class Organization extends Controller {
 
     static async patchId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = [
 //                 {
 //                     "op": "replace",
@@ -282,6 +286,7 @@ class Organization extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

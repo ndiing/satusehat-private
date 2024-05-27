@@ -24,7 +24,7 @@ class Procedure extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "Procedure",
 //                 "status": "completed",
@@ -106,6 +106,7 @@ class Procedure extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -116,7 +117,7 @@ class Procedure extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -125,6 +126,7 @@ class Procedure extends Controller {
                     ...query,
                    ...(query["subject"]&&{"subject": query["subject"]}), // "100000030009",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -134,7 +136,7 @@ class Procedure extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -143,6 +145,7 @@ class Procedure extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -152,7 +155,7 @@ class Procedure extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "Procedure",
 //                 "id": "87859868-c35b-4f7b-86dd-da9830ae58c5",
@@ -236,6 +239,7 @@ class Procedure extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -246,7 +250,7 @@ class Procedure extends Controller {
 
     static async patchId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = [
 //                 {
 //                     "op": "replace",
@@ -266,6 +270,7 @@ class Procedure extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

@@ -1,6 +1,6 @@
 
 ### RelatedPerson - Patient Bayi dan NIK Ibu
-POST {{base_url}}/RelatedPerson
+POST http://localhost:3000/api/satusehat/RelatedPerson
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -88,7 +88,7 @@ Content-type: application/json
 }
 
 ### RelatedPerson - Update
-PUT {{base_url}}/RelatedPerson/:id
+PUT http://localhost:3000/api/satusehat/RelatedPerson/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -177,11 +177,11 @@ Content-type: application/json
 }
 
 ### RelatedPerson - Get by NIK
-GET {{base_url}}/RelatedPerson?identifier=https://fhir.kemkes.go.id/id/nik|367400001111222
+GET http://localhost:3000/api/satusehat/RelatedPerson?identifier=https://fhir.kemkes.go.id/id/nik|367400001111222
 Authorization: Bearer {{token}}
 
 ### RelatedPerson - PATCH
-PATCH {{base_url}}/RelatedPerson/:id
+PATCH http://localhost:3000/api/satusehat/RelatedPerson/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### ServiceRequest - Laboratorium Non Rujukan Eksternal
-POST {{base_url}}/ServiceRequest
+POST http://localhost:3000/api/satusehat/ServiceRequest
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -64,7 +64,7 @@ Content-type: application/json
 }
 
 ### ServiceRequest - Rujukan/Kontrol Internal (Faskes sama)
-POST {{base_url}}/ServiceRequest
+POST http://localhost:3000/api/satusehat/ServiceRequest
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -161,7 +161,7 @@ Content-type: application/json
 }
 
 ### ServiceRequest - Rujukan Radiologi Eksternal
-POST {{base_url}}/ServiceRequest
+POST http://localhost:3000/api/satusehat/ServiceRequest
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -258,31 +258,31 @@ Content-type: application/json
 }
 
 ### ServiceRequest - Search by Identifier
-GET {{base_url}}/ServiceRequest?identifier=http://sys-ids.kemkes.go.id/acsn/{{Org_id}}|21120054
+GET http://localhost:3000/api/satusehat/ServiceRequest?identifier=http://sys-ids.kemkes.go.id/acsn/{{Org_id}}|21120054
 Authorization: Bearer {{token}}
 
 ### ServiceRequest - Search by Subject
-GET {{base_url}}/ServiceRequest?subject=100000030009
+GET http://localhost:3000/api/satusehat/ServiceRequest?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### ServiceRequest - Search by Subject and Encounter
-GET {{base_url}}/ServiceRequest?subject=100000030009&encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/ServiceRequest?subject=100000030009&encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### ServiceRequest - Search by Encounter
-GET {{base_url}}/ServiceRequest?encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/ServiceRequest?encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### ServiceRequest - By ID
-GET {{base_url}}/ServiceRequest/:id
+GET http://localhost:3000/api/satusehat/ServiceRequest/:id
 Authorization: Bearer {{token}}
 
 ### ServiceRequest - Search by Nomor Rujukan Nasional
-GET {{base_url}}/ServiceRequest?identifier=http://sys-ids.kemkes.go.id/referral-number|1000000005
+GET http://localhost:3000/api/satusehat/ServiceRequest?identifier=http://sys-ids.kemkes.go.id/referral-number|1000000005
 Authorization: Bearer {{token}}
 
 ### ServiceRequest - Update
-PUT {{base_url}}/ServiceRequest/:id
+PUT http://localhost:3000/api/satusehat/ServiceRequest/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -346,7 +346,7 @@ Content-type: application/json
 }
 
 ### ServiceRequest - PATCH
-PATCH {{base_url}}/ServiceRequest/:id
+PATCH http://localhost:3000/api/satusehat/ServiceRequest/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

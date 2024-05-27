@@ -1,7 +1,7 @@
 @Encounter_uuid=
 
 ### CarePlan - Post
-POST {{base_url}}/CarePlan
+POST http://localhost:3000/api/satusehat/CarePlan
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -24,15 +24,15 @@ Content-type: application/json
 }
 
 ### CarePlan - Search by ID Copy
-GET {{base_url}}/CarePlan/:id
+GET http://localhost:3000/api/satusehat/CarePlan/:id
 Authorization: Bearer {{token}}
 
 ### CarePlan - Search by Patient with/without Encounter
-GET {{base_url}}/CarePlan?subject=100000030004&encounter={{Encounter_uuid}}
+GET http://localhost:3000/api/satusehat/CarePlan?subject=100000030004&encounter={{Encounter_uuid}}
 Authorization: Bearer {{token}}
 
 ### CarePlan - UPDATE
-PUT {{base_url}}/CarePlan/:id
+PUT http://localhost:3000/api/satusehat/CarePlan/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -56,7 +56,7 @@ Content-type: application/json
 }
 
 ### CarePlan - PATCH
-PATCH {{base_url}}/CarePlan/:id
+PATCH http://localhost:3000/api/satusehat/CarePlan/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

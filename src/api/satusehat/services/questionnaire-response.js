@@ -4,7 +4,7 @@ class QuestionnaireResponse extends Service {
 
     async post(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/QuestionnaireResponse`, {
                 params,
                 query,
@@ -12,6 +12,7 @@ class QuestionnaireResponse extends Service {
                 headers: {
                     "Authorization": "Bearer {{token}}",
                     "Content-type": "application/json",
+                    ...headers,
                 },
                 body: JSON.stringify(body),
             });
@@ -24,7 +25,7 @@ class QuestionnaireResponse extends Service {
 
     async putId(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/QuestionnaireResponse/:id`, {
                 params,
                 query,
@@ -32,6 +33,7 @@ class QuestionnaireResponse extends Service {
                 headers: {
                     "Authorization": "Bearer {{token}}",
                     "Content-type": "application/json",
+                    ...headers,
                 },
                 body: JSON.stringify(body),
             });
@@ -44,13 +46,14 @@ class QuestionnaireResponse extends Service {
 
     async get(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/QuestionnaireResponse`, {
                 params,
                 query,
                 method: "GET",
                 headers: {
                     "Authorization": "Bearer {{token}}",
+                    ...headers,
                 },
             });
             const json = response.json();
@@ -62,13 +65,14 @@ class QuestionnaireResponse extends Service {
 
     async getId(req = {}) {
         try {
-            const { params, query, body } = req;
+            const { params, query, headers,body } = req;
             const response = await this.fetch(`{{base_url}}/QuestionnaireResponse/:id`, {
                 params,
                 query,
                 method: "GET",
                 headers: {
                     "Authorization": "Bearer {{token}}",
+                    ...headers,
                 },
             });
             const json = response.json();

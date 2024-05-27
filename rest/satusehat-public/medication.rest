@@ -1,6 +1,6 @@
 
 ### Medication - Create
-POST {{base_url}}/Medication
+POST http://localhost:3000/api/satusehat/Medication
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -155,11 +155,11 @@ Content-type: application/json
 }
 
 ### Medication - By ID
-GET {{base_url}}/Medication/:id
+GET http://localhost:3000/api/satusehat/Medication/:id
 Authorization: Bearer {{token}}
 
 ### Medication - UPDATE
-PUT {{base_url}}/Medication/:id
+PUT http://localhost:3000/api/satusehat/Medication/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -314,7 +314,7 @@ Content-type: application/json
 }
 
 ### Medication - PATCH
-PATCH {{base_url}}/Medication/:id
+PATCH http://localhost:3000/api/satusehat/Medication/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

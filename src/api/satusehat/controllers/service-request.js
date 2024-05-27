@@ -24,7 +24,7 @@ class ServiceRequest extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "ServiceRequest",
 //                 "identifier": [
@@ -93,6 +93,7 @@ class ServiceRequest extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -103,7 +104,7 @@ class ServiceRequest extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -112,6 +113,7 @@ class ServiceRequest extends Controller {
                     ...query,
                    ...(query["identifier"]&&{"identifier": query["identifier"]}), // "http://sys-ids.kemkes.go.id/acsn/{{Org_id}}|21120054",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -121,7 +123,7 @@ class ServiceRequest extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -130,6 +132,7 @@ class ServiceRequest extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -139,7 +142,7 @@ class ServiceRequest extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "ServiceRequest",
 //                 "id": "1204ee6c-4af3-4448-946c-f2f1c2bbc50a",
@@ -210,6 +213,7 @@ class ServiceRequest extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -220,7 +224,7 @@ class ServiceRequest extends Controller {
 
     static async patchId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = [
 //                 {
 //                     "op": "replace",
@@ -240,6 +244,7 @@ class ServiceRequest extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

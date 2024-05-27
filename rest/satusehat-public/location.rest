@@ -1,6 +1,6 @@
 
 ### Location - Create
-POST {{base_url}}/Location
+POST http://localhost:3000/api/satusehat/Location
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -97,23 +97,23 @@ Content-type: application/json
 }
 
 ### Location - Search by Identifier
-GET {{base_url}}/Location?identifier=http://sys-ids.kemkes.go.id/location/1000001|G-2-R-1A
+GET http://localhost:3000/api/satusehat/Location?identifier=http://sys-ids.kemkes.go.id/location/1000001|G-2-R-1A
 Authorization: Bearer {{token}}
 
 ### Location - Search by Name
-GET {{base_url}}/Location?name=ruang
+GET http://localhost:3000/api/satusehat/Location?name=ruang
 Authorization: Bearer {{token}}
 
 ### Location - Search by OrgID
-GET {{base_url}}/Location?organization={{Org_id}}
+GET http://localhost:3000/api/satusehat/Location?organization={{Org_id}}
 Authorization: Bearer {{token}}
 
 ### Location - By ID
-GET {{base_url}}/Location/:id
+GET http://localhost:3000/api/satusehat/Location/:id
 Authorization: Bearer {{token}}
 
 ### Location - Update
-PUT {{base_url}}/Location/:id
+PUT http://localhost:3000/api/satusehat/Location/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -211,7 +211,7 @@ Content-type: application/json
 }
 
 ### Location - Patch
-PATCH {{base_url}}/Location/:id
+PATCH http://localhost:3000/api/satusehat/Location/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

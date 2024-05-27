@@ -1,6 +1,6 @@
 
 ### Appointment - buat booking
-POST {{base_url}}/Appointment
+POST http://localhost:3000/api/satusehat/Appointment
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -52,15 +52,15 @@ Content-type: application/json
 }
 
 ### Appointment - search booking by healthcareService
-GET {{base_url}}/Appointment?actor=8cfb2d6f-dc20-4068-9113-805d426a6f17
+GET http://localhost:3000/api/satusehat/Appointment?actor=8cfb2d6f-dc20-4068-9113-805d426a6f17
 Authorization: Bearer {{token}}
 
 ### Appointment - search booking by ID
-GET {{base_url}}/Appointment/:id
+GET http://localhost:3000/api/satusehat/Appointment/:id
 Authorization: Bearer {{token}}
 
 ### Appointment - PUT
-PUT {{base_url}}/Appointment/:id
+PUT http://localhost:3000/api/satusehat/Appointment/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -113,7 +113,7 @@ Content-type: application/json
 }
 
 ### Appointment - PATCH
-PATCH {{base_url}}/Appointment/:id
+PATCH http://localhost:3000/api/satusehat/Appointment/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

@@ -1,6 +1,6 @@
 
 ### Organization - Create
-POST {{base_url}}/Organization
+POST http://localhost:3000/api/satusehat/Organization
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -84,23 +84,23 @@ Content-type: application/json
 }
 
 ### Organization - By ID
-GET {{base_url}}/Organization/:id
+GET http://localhost:3000/api/satusehat/Organization/:id
 Authorization: Bearer {{token}}
 
 ### Organization - Update
-GET {{base_url}}/Organization/:id
+GET http://localhost:3000/api/satusehat/Organization/:id
 Authorization: Bearer {{token}}
 
 ### Organization - Search by Name
-GET {{base_url}}/Organization?name=paramarta
+GET http://localhost:3000/api/satusehat/Organization?name=paramarta
 Authorization: Bearer {{token}}
 
 ### Organization - Search by PartOf
-GET {{base_url}}/Organization?partof={{Org_id}}
+GET http://localhost:3000/api/satusehat/Organization?partof={{Org_id}}
 Authorization: Bearer {{token}}
 
 ### Organization - Update
-PUT {{base_url}}/Organization/:id
+PUT http://localhost:3000/api/satusehat/Organization/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -185,7 +185,7 @@ Content-type: application/json
 }
 
 ### Organization - Patch
-PATCH {{base_url}}/Organization/:id
+PATCH http://localhost:3000/api/satusehat/Organization/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

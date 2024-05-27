@@ -1,6 +1,6 @@
 
 ### Specimen - Create (Non Rujukan)
-POST {{base_url}}/Specimen
+POST http://localhost:3000/api/satusehat/Specimen
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -55,7 +55,7 @@ Content-type: application/json
 }
 
 ### Specimen - Rujukan Sampel (with ReceivedTime & CollectorOrganization)
-PUT {{base_url}}/Specimen/:id
+PUT http://localhost:3000/api/satusehat/Specimen/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -111,31 +111,31 @@ Content-type: application/json
 }
 
 ### Specimen - By ID
-GET {{base_url}}/Specimen/:id
+GET http://localhost:3000/api/satusehat/Specimen/:id
 Authorization: Bearer {{token}}
 
 ### Specimen - Search by Subject
-GET {{base_url}}/Specimen?subject=100000030009
+GET http://localhost:3000/api/satusehat/Specimen?subject=100000030009
 Authorization: Bearer {{token}}
 
 ### Specimen - Search by Request
-GET {{base_url}}/Specimen?request=65b8a884-7a79-41e1-96ab-3fc30837ac66
+GET http://localhost:3000/api/satusehat/Specimen?request=65b8a884-7a79-41e1-96ab-3fc30837ac66
 Authorization: Bearer {{token}}
 
 ### Specimen - Search by Subject & Collector
-GET {{base_url}}/Specimen?subject=100000030009&collector=1001194237
+GET http://localhost:3000/api/satusehat/Specimen?subject=100000030009&collector=1001194237
 Authorization: Bearer {{token}}
 
 ### Specimen - Search by Subject & Date Collected
-GET {{base_url}}/Specimen?subject=100000030009&collected=2022-06-28
+GET http://localhost:3000/api/satusehat/Specimen?subject=100000030009&collected=2022-06-28
 Authorization: Bearer {{token}}
 
 ### Specimen - Search by Identifier Accession Number (Rujukan)
-GET {{base_url}}/Specimen?identifier=http://sys-ids.kemkes.go.id/specimen-acsn|1000000004&request=3e8459cc-a9b1-405a-9e20-abfb5e40f8c7
+GET http://localhost:3000/api/satusehat/Specimen?identifier=http://sys-ids.kemkes.go.id/specimen-acsn|1000000004&request=3e8459cc-a9b1-405a-9e20-abfb5e40f8c7
 Authorization: Bearer {{token}}
 
 ### Specimen - Update
-PUT {{base_url}}/Specimen/:id
+PUT http://localhost:3000/api/satusehat/Specimen/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -186,7 +186,7 @@ Content-type: application/json
 }
 
 ### Specimen - PATCH
-PATCH {{base_url}}/Specimen/:id
+PATCH http://localhost:3000/api/satusehat/Specimen/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

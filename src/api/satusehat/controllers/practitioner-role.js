@@ -24,7 +24,7 @@ class PractitionerRole extends Controller {
 
     static async post(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "PractitionerRole",
 //                 "active": true,
@@ -86,6 +86,7 @@ class PractitionerRole extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -96,7 +97,7 @@ class PractitionerRole extends Controller {
 
     static async getId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.getId({
                 params: {
                     ...params,
@@ -105,6 +106,7 @@ class PractitionerRole extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -114,7 +116,7 @@ class PractitionerRole extends Controller {
 
     static async get(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
             const result = await res.locals.service.get({
                 params: {
                     ...params,
@@ -123,6 +125,7 @@ class PractitionerRole extends Controller {
                     ...query,
                    ...(query["practitioner"]&&{"practitioner": query["practitioner"]}), // "N10000001",
                 },
+                headers,
             });
             res.json(result);
         } catch (error) {
@@ -132,7 +135,7 @@ class PractitionerRole extends Controller {
 
     static async putId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = {
 //                 "resourceType": "PractitionerRole",
 //                 "id": "5b4dc020-80b0-40f8-b4f4-5c385b28e1a7",
@@ -196,6 +199,7 @@ class PractitionerRole extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);
@@ -206,7 +210,7 @@ class PractitionerRole extends Controller {
 
     static async patchId(req, res, next) {
         try {
-            const {params,query,body} = req
+            const {params,query,headers,body} = req
 //             const target = [
 //                 {
 //                     "op": "replace",
@@ -226,6 +230,7 @@ class PractitionerRole extends Controller {
                 query: {
                     ...query,
                 },
+                headers,
                 body: payload,
             });
             res.json(result);

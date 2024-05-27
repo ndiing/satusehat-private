@@ -1,6 +1,6 @@
 
 ### AppointmentResponse - approved
-POST {{base_url}}/AppointmentResponse
+POST http://localhost:3000/api/satusehat/AppointmentResponse
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -18,15 +18,15 @@ Content-type: application/json
 }
 
 ### AppointmentResponse - search by ID
-GET {{base_url}}/AppointmentResponse/:id
+GET http://localhost:3000/api/satusehat/AppointmentResponse/:id
 Authorization: Bearer {{token}}
 
 ### AppointmentResponse - search by appointment
-GET {{base_url}}/AppointmentResponse?appointment=0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a
+GET http://localhost:3000/api/satusehat/AppointmentResponse?appointment=0e0f2ff3-cf5c-48d8-9db2-b0f710fe514a
 Authorization: Bearer {{token}}
 
 ### AppointmentResponse - PUT
-PUT {{base_url}}/AppointmentResponse/:id
+PUT http://localhost:3000/api/satusehat/AppointmentResponse/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -45,7 +45,7 @@ Content-type: application/json
 }
 
 ### AppointmentResponse - PATCH
-PATCH {{base_url}}/AppointmentResponse/:id
+PATCH http://localhost:3000/api/satusehat/AppointmentResponse/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 

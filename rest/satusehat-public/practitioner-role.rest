@@ -1,6 +1,6 @@
 
 ### PractitionerRole - Create
-POST {{base_url}}/PractitionerRole
+POST http://localhost:3000/api/satusehat/PractitionerRole
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -56,19 +56,19 @@ Content-type: application/json
 }
 
 ### PractitionerRole - Get by ID
-GET {{base_url}}/PractitionerRole/:id
+GET http://localhost:3000/api/satusehat/PractitionerRole/:id
 Authorization: Bearer {{token}}
 
 ### PractitionerRole - Get by Practitioner
-GET {{base_url}}/PractitionerRole?practitioner=N10000001
+GET http://localhost:3000/api/satusehat/PractitionerRole?practitioner=N10000001
 Authorization: Bearer {{token}}
 
 ### PractitionerRole - Get by Practitioner and Organization
-GET {{base_url}}/PractitionerRole?practitioner=N10000001&organization={{Org_id}}
+GET http://localhost:3000/api/satusehat/PractitionerRole?practitioner=N10000001&organization={{Org_id}}
 Authorization: Bearer {{token}}
 
 ### PractitionerRole - PUT
-PUT {{base_url}}/PractitionerRole/:id
+PUT http://localhost:3000/api/satusehat/PractitionerRole/:id
 Authorization: Bearer {{token}}
 Content-type: application/json
 
@@ -125,7 +125,7 @@ Content-type: application/json
 }
 
 ### PractitionerRole - PATCH
-PATCH {{base_url}}/PractitionerRole/:id
+PATCH http://localhost:3000/api/satusehat/PractitionerRole/:id
 Content-Type: application/json-patch+json
 Authorization: Bearer {{token}}
 
