@@ -18,20 +18,32 @@ module.exports = {
                 iconUrl: "https://raw.githubusercontent.com/ndiing/satusehat-private/master/src/img/icon.ico",
                 setupIcon: "./src/img/icon.ico",
             },
-        },
-        {
-            name: "@electron-forge/maker-zip",
-            platforms: ["darwin"],
+            platforms: ["win32"], // Maker for Windows
         },
         {
             name: "@electron-forge/maker-deb",
             config: {
                 icon: "./src/img/icon.png",
             },
+            platforms: ["linux"], // Maker for Linux
         },
         {
             name: "@electron-forge/maker-rpm",
-            config: {},
+            config: {
+                icon: "./src/img/icon.png",
+            },
+            platforms: ["linux"], // Maker for Linux
+        },
+        {
+            name: "@electron-forge/maker-dmg",
+            config: {
+                icon: "./src/img/icon.icns",
+            },
+            platforms: ["darwin"], // Maker for macOS
+        },
+        {
+            name: "@electron-forge/maker-zip",
+            platforms: ["darwin", "win32"], // Additional maker for macOS and Windows
         },
     ],
     plugins: [
