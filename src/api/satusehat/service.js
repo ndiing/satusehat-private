@@ -13,7 +13,7 @@ process.env.consent_url = "https://api-satusehat.kemkes.go.id/consent/v1";
 // Service class for handling API requests
 class Service {
     constructor(options = {}) {
-        const { storage, } = options;
+        const { storage } = options;
         this.storage = storage;
         // Initializing SQLite database for logging
         this.log = new DB("log");
@@ -45,13 +45,14 @@ class Service {
         input = url.toString();
 
         // Replacing dynamic placeholders in headers with corresponding environment variables or storage values
+        const newHeaders={}
         for (const name in headers) {
             const value = headers[name];
-            delete headers[name]
-            headers[name.toLowerCase()] = value?.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
+            newHeaders[name.toLowerCase()]=(value?.replace(/\{\{([^\}]+)\}\}/g, ($, $1) => {
                 return process.env?.[$1] || this.storage?.[$1];
-            });
+            }));
         }
+        headers=newHeaders
 
         // Replacing dynamic placeholders in request body with corresponding environment variables or storage values
         if (body) {
@@ -113,24 +114,23 @@ class Service {
         //     }
         // }
 
-
         const doc = {
             // Generating UUID for log entry
             _id: crypto.randomUUID(),
             request,
         };
         // Logging the request
-        this.log.put(doc)
+        this.log.put(doc);
         // .then(console.log)
         // .catch(console.error)
 
         // Sending request and receiving response
         const res = await fetch(input, {
             dispatcher,
+            ...init,
             method: init.method,
             headers,
             ...(body && { body }),
-            ...init,
         });
 
         // Extracting and storing cookie from response headers
@@ -152,7 +152,7 @@ class Service {
             // Adding response to log entry
             doc.response = response;
             // Logging the response
-            this.log.put(doc)
+            this.log.put(doc);
             // .then(console.log)
             // .catch(console.error)
         });
