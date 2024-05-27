@@ -66,32 +66,38 @@ organization_id=
 
 Replace the placeholders with your actual credentials and configuration values.
 
+### Running the Application
+
+For development, you can use `nodemon` to automatically restart the server on file changes:
+
+<pre>
+npm run dev
+</pre>
+
+This will run the command `nodemon src/index.js`.
+
+To start the application in a production environment, use:
+
+<pre>
+npm start
+</pre>
+
+This will run the command `node src/index.js`.
+
 ### satusehat-mapping
 
 This example demonstrates automatic session management with a simplified payload.
 
-<pre>
-cd rest/satusehat-mapping
-node index.js
-</pre>
 
 ### satusehat-private
 
 This example manages sessions automatically using environment settings.
 
-<pre>
-cd rest/satusehat-private
-node index.js
-</pre>
 
 ### satusehat-public
 
 This example manages each session individually.
 
-<pre>
-cd rest/satusehat-public
-node index.js
-</pre>
 
 ## REST Examples
 
