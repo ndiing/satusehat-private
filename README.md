@@ -1,42 +1,95 @@
-## download untuk windows
-[download](https://github.com/ndiing/satusehat-public/releases)
+# SatuSehat Integration with FHIR
 
-## linux dan macos
-untuk linux dan macos tidak bisa kami build, tidak ada device yang digunakan,
-gunakan node enviroment untuk menjalankan
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen)
+![License](https://img.shields.io/badge/license-MIT-blue)
 
-### nodejs
+This repository demonstrates the integration of FHIR with SatuSehat, developed by Abiyosoft. This project aims to facilitate the seamless integration and interaction between healthcare applications and the SatuSehat platform using the FHIR standard.
 
-#### download nodejs dan install
-[download](https://nodejs.org/dist/v20.13.1/node-v20.13.1-x64.msi) dan install ke komputer
+## Table of Contents
 
-#### clone project
+- [Repositories](#repositories)
+- [Contact](#contact)
+- [Downloads](#downloads)
+  - [Windows](#windows)
+  - [Linux and macOS](#linux-and-macos)
+- [Node.js Setup](#nodejs-setup)
+  - [Download and Install Node.js](#download-and-install-nodejs)
+  - [Clone the Project](#clone-the-project)
+  - [Install Project Dependencies](#install-project-dependencies)
+  - [Run the Project](#run-the-project)
+- [Example Requests](#example-requests)
+  - [Manual Session (satusehat-public)](#manual-session-satusehat-public)
+    - [Organization - Create](#organization---create)
+  - [Automated Session (satusehat-private)](#automated-session-satusehat-private)
+    - [Configure .env](#configure-env)
+    - [Organization - Create](#organization---create)
+  - [SatuSehat-Mapping](#satusehat-mapping)
+    - [Organization - Create (Simplified Payload)](#organization---create-simplified-payload)
+- [REST Examples](#rest-examples)
+  - [HL7](#hl7)
+  - [Master](#master)
+    - [Address](#address)
+    - [Telecomm](#telecomm)
+  - [SatuSehat](#satusehat)
+    - [Public](#public)
+    - [Private](#private)
+    - [Mapping](#mapping)
+- [License](#license)
+
+## Repositories
+
+- **Public Repository:** [satusehat-public](https://github.com/ndiing/satusehat-public)
+- **Private Repository:** [satusehat-private](https://github.com/ndiing/satusehat-private)
+
+## Contact
+
+- **GitHub Username:** ndiing
+- **Email:** ndiing.inc@gmail.com
+
+## Downloads
+
+### Windows
+
+[Download](https://github.com/ndiing/satusehat-public/releases)
+
+### Linux and macOS
+
+We cannot build for Linux and macOS due to the lack of available devices. Please use a Node.js environment to run the application.
+
+## Node.js Setup
+
+### Download and Install Node.js
+
+[Download](https://nodejs.org/dist/v20.13.1/node-v20.13.1-x64.msi) and install Node.js on your computer.
+
+### Clone the Project
+
 <pre>
 git clone https://github.com/ndiing/satusehat-private.git
 </pre>
 
-#### install project
+### Install Project Dependencies
+
 <pre>
 cd satusehat-private
-npm i
+npm install
 </pre>
 
-#### jalankan project
+### Run the Project
+
 <pre>
 npm run dev
-# atau
+# or
 npm run start
 </pre>
 
-## contoh request (sesi manual)
+## Example Requests
 
+### Manual Session (satusehat-public)
 
-### satusehat-public
-contoh request menggunakan multi sesi
+#### Organization - Create
 
 <pre>
-
-### Organization - Create
 POST http://localhost:3000/api/satusehat/Organization
 Authorization: Bearer {{token}}
 Content-type: application/json
@@ -69,31 +122,28 @@ Content-type: application/json
 }
 </pre>
 
-## contoh request (sesi otomatis)
+### Automated Session (satusehat-private)
 
-### mengatur .env
-buka .env lalu sesuaikan settingan
+#### Configure .env
+
+Open the `.env` file and set the following configurations:
+
 <pre>
-# Konfigurasi untuk Port Layanan Web
+# Web Service Port Configuration
 port=3000
 
-# Konfigurasi Server Proxy
-# Jika Anda menggunakan server proxy, aktifkan baris di atas dengan menghapus tanda pagar (#) di awal baris dan sesuaikan dengan alamat dan port server proxy Anda.
+# Proxy Server Configuration
 proxy=http://127.0.0.1:8888
 
-# Kredensial Satusehat
-# Kredensial yang diperlukan untuk mengautentikasi aplikasi dengan Satusehat.
-# Pastikan kredensial ini tetap rahasia dan aman.
+# SatuSehat Credentials
 client_id=
 client_secret=
 organization_id=
 </pre>
 
-### satusehat-private
-contoh request menggunakan sesi otomatis
+#### Organization - Create
 
 <pre>
-### Organization - Create
 POST http://localhost:3000/api/satusehat/Organization
 Content-type: application/json
 
@@ -125,11 +175,11 @@ Content-type: application/json
 }
 </pre>
 
-### satusehat-mapping
-contoh request menggunakan sesi otomatis, dengan payload yang di sederhanakan
+### SatuSehat-Mapping
+
+#### Organization - Create (Simplified Payload)
 
 <pre>
-### Organization - Create
 POST http://localhost:3000/api/satusehat/Organization
 Content-type: application/json
 
@@ -146,3 +196,49 @@ Content-type: application/json
     "partOf.reference": "Organization/{{Org_id}}"
 }
 </pre>
+
+## REST Examples
+
+### HL7
+
+<pre>
+./rest/hl7.http
+</pre>
+
+### Master
+
+#### Address
+
+<pre>
+./rest/master/address.http
+</pre>
+
+#### Telecomm
+
+<pre>
+./rest/master/telecomm.http
+</pre>
+
+### SatuSehat
+
+#### Public
+
+<pre>
+./rest/satusehat-public/*.http
+</pre>
+
+#### Private
+
+<pre>
+./rest/satusehat-private/*.http
+</pre>
+
+#### Mapping
+
+<pre>
+./rest/satusehat-mapping/*.http
+</pre>
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
