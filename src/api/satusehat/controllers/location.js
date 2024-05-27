@@ -115,11 +115,13 @@ class Location extends Controller {
 //                 "managingOrganization": {
 //                     "reference": "Organization/{{Org_id}}"
 //                 }
-//             }// 
+//             }
+// 
 // 
             const target = {}
             const source = unflatten(body)
             const payload = merge(target,source)
+            // console.log(payload)
             const result = await res.locals.service.post({
                 params: {
                     ...params,
@@ -268,7 +270,8 @@ class Location extends Controller {
 //                 "managingOrganization": {
 //                     "reference": "Organization/{{Org_id}}"
 //                 }
-//             }// 
+//             }
+// 
 // 
             const target = {}
             const source = unflatten(body)
@@ -299,7 +302,8 @@ class Location extends Controller {
 //                     "path": "/status",
 //                     "value": "inactive"
 //                 }
-//             ]// 
+//             ]
+// 
 // 
             const target = {}
             const source = unflatten(body)

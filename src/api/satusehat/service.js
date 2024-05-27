@@ -61,6 +61,8 @@ class Service {
             });
         }
 
+        // console.log(body)
+
         let dispatcher;
         // Setting up proxy if in development environment and proxy is defined in environment variables
         if (process.env.proxy) {
@@ -125,9 +127,15 @@ class Service {
         // .catch(console.error)
 
         // Sending request and receiving response
+        // console.log({
+        //     method: init.method,
+        //     headers,
+        //     ...(body && { body }),
+        // })
+        delete headers['content-length']
         const res = await fetch(input, {
             dispatcher,
-            ...init,
+            // ...init,
             method: init.method,
             headers,
             ...(body && { body }),

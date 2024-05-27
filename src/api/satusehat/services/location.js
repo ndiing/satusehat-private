@@ -5,6 +5,7 @@ class Location extends Service {
     async post(req = {}) {
         try {
             const { params, query, headers,body } = req;
+            // console.log(body)
             const response = await this.fetch(`{{base_url}}/Location`, {
                 params,
                 query,
@@ -16,6 +17,7 @@ class Location extends Service {
                 },
                 body: JSON.stringify(body),
             });
+           
             const json = response.json();
             return json;
         } catch (error) {
